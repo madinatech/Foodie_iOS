@@ -13,11 +13,9 @@ class CartVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, Cu
     
     var plusItemssArray = NSMutableArray()
     var minusItemssArray = NSMutableArray()
-    var isFromRestaurant = Bool()
     
-    class func initViewController(isFromRestaurant : Bool) -> CartVC {
+    class func initViewController() -> CartVC {
         let vc = CartVC.init(nibName: "CartVC", bundle: nil)
-        vc.isFromRestaurant = isFromRestaurant
         vc.title = "Gamthi Kathiyawadi"
         return vc
     }
@@ -30,23 +28,17 @@ class CartVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, Cu
         btnBrowse.layer.borderWidth = 1
         tblView.tableFooterView = UIView()
         tblView.tableHeaderView = headerView
-        if(isFromRestaurant == false){
             self.isBackButtonHidden = true
-        }
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if(isFromRestaurant == true){
-            self.tabBarController?.tabBar.isHidden = true
-            self.isBackButtonHidden = false
-        } else {
             self.tabBarController?.tabBar.isHidden = false
-            self.isBackButtonHidden = true
-        }
         blurView.isHidden = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
         tblView.reloadData()
     }
     

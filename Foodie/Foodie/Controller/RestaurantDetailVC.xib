@@ -171,7 +171,7 @@
                         <constraint firstAttribute="height" constant="30" id="NhG-Go-ENB"/>
                         <constraint firstAttribute="width" constant="30" id="Udt-m3-B1e"/>
                     </constraints>
-                    <state key="normal" image="search_black"/>
+                    <state key="normal" image="Search_un"/>
                     <connections>
                         <action selector="favouriteClicked:" destination="-1" eventType="touchUpInside" id="CUM-cU-bic"/>
                         <action selector="searchClicked:" destination="-1" eventType="touchUpInside" id="DmH-wm-qhm"/>
@@ -219,11 +219,11 @@
         </view>
     </objects>
     <resources>
-        <image name="Favourite" width="42.5" height="42.5"/>
+        <image name="Favourite" width="20" height="20"/>
         <image name="Left_Arrow" width="12" height="20.5"/>
-        <image name="UnFavourite" width="42.5" height="42.5"/>
+        <image name="Search_un" width="20" height="20"/>
+        <image name="UnFavourite" width="20" height="20"/>
         <image name="foodBG" width="291" height="173"/>
-        <image name="search_black" width="25" height="25"/>
         <image name="star" width="170.5" height="170.5"/>
     </resources>
 </document>

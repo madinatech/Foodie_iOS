@@ -13,24 +13,24 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
         setViews()
     }
-
+    
     @objc func setViews ()  {
         self.tabBar.tintColor =  UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: 1.0)
         self.tabBar.unselectedItemTintColor = UIColor.darkGray
         self.tabBar.barTintColor = UIColor.white
-         UITabBar.appearance().isTranslucent = true
+        UITabBar.appearance().isTranslucent = true
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 12) ?? ""], for: .normal)
         
-        let v1 = RestaurantsVC.initViewController()//DeliveryLoactionVC.initViewController()
+        let v1 = RestaurantsVC.initViewController()
         let v2 = SearchVC.initViewController()
-        let v3 = CartVC.initViewController(isFromRestaurant: false)
+        let v3 = CartVC.initViewController()
         let v4 = MyAccountViewController.initViewController()
-
+        
         
         let myTabBarItem1 = UITabBarItem()
         myTabBarItem1.tag = 0
-//        myTabBarItem1.image = UIImage(named: "patient")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-//        myTabBarItem1.selectedImage = UIImage(named: "patient_s")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        //        myTabBarItem1.image = UIImage(named: "patient")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        //        myTabBarItem1.selectedImage = UIImage(named: "patient_s")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         myTabBarItem1.title = "Restaurants"
         v1.tabBarItem = myTabBarItem1
         
@@ -60,19 +60,9 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         let nav2 = UINavigationController.init(rootViewController: v2)
         let nav3 = UINavigationController.init(rootViewController: v3)
         let nav4 = UINavigationController.init(rootViewController: v4)
-        
-//        setNavBar(nav: nav1)
-//        setNavBar(nav: nav2)
-//        setNavBar(nav: nav3)
-//        setNavBar(nav: nav4)
-        
         let controllers = [nav1, nav2, nav3, nav4]
         self.viewControllers = controllers
         self.selectedViewController = nav1
-        
-//        if selectedViewController == nav2{
-//            Utils.setBoolForKey(false, key: "FromAddAppointment")
-//        }
     }
     
     override func viewWillLayoutSubviews() {

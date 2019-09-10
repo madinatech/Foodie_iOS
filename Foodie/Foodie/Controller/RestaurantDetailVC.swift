@@ -114,7 +114,7 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
     
     @IBAction func viewCartClicked(_ sender: Any) {
         self.tabBarController?.tabBar.isHidden = true
-        let vc = CartVC.initViewController(isFromRestaurant: true)
+        let vc = CartVC.initViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

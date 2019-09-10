@@ -151,6 +151,10 @@ class SearchVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tblView.deselectRow(at: indexPath, animated: true)
+        if(segment.selectedSegmentIndex == 0){
+            let vc = RestaurantDetailVC.initViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func showCartView ()  {

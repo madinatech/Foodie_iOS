@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
             label.font = UIFont.init(name: "Helvetica Bold", size: 18)
             label.textColor = .white
             label.sizeToFit()
-            //            label.center = view.center
+//            label.center = view.center
             label.frame.origin.y = view.center.y - 10
             label.textAlignment = NSTextAlignment.center
             view.addSubview(label)
@@ -58,6 +58,7 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = appThemeColor
+//        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
     }
     
     override func viewWillDisappear(_ animated: Bool) {
