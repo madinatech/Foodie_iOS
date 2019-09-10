@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangePasswodVC" customModule="Foodie" customModuleProvider="target">
+            <connections>
+                <outlet property="txtConfirmPassword" destination="JFf-Mb-nFH" id="OlQ-FG-9tx"/>
+                <outlet property="txtCurrentPassword" destination="o6M-Pn-ahZ" id="g1a-VS-Eo4"/>
+                <outlet property="txtNewPassword" destination="Til-Ok-2aO" id="6jA-Fv-4DE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Current Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6M-Pn-ahZ" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                    <rect key="frame" x="15" y="50" width="345" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fQ4-PK-04t"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54S-xh-wzL">
+                    <rect key="frame" x="329" y="57" width="31" height="26"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Show">
+                        <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" title="Hide">
+                        <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showCurrentPassword:" destination="-1" eventType="touchUpInside" id="SEz-kc-RsX"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Til-Ok-2aO" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                    <rect key="frame" x="15" y="100" width="345" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="TPx-un-RF8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhg-lp-ric">
+                    <rect key="frame" x="329" y="107" width="31" height="26"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Show">
+                        <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" title="Hide">
+                        <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showNewPassword:" destination="-1" eventType="touchUpInside" id="DIr-ZF-55U"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JFf-Mb-nFH" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                    <rect key="frame" x="15" y="150" width="345" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="jmU-nv-UGu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCJ-ZF-V4C">
+                    <rect key="frame" x="329" y="157" width="31" height="26"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Show">
+                        <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" title="Hide">
+                        <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showConfirmPassword:" destination="-1" eventType="touchUpInside" id="HkW-EP-MdT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbS-am-uTg">
+                    <rect key="frame" x="15" y="240" width="345" height="50"/>
+                    <color key="backgroundColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ANf-bk-gka">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                    <integer key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                    <state key="normal" title="Save"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="saveClicked:" destination="-1" eventType="touchUpInside" id="L9R-Cr-Cee"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Til-Ok-2aO" secondAttribute="trailing" constant="15" id="3nl-Og-HuP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="o6M-Pn-ahZ" secondAttribute="trailing" constant="15" id="42K-HN-aph"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pbS-am-uTg" secondAttribute="trailing" constant="15" id="6gp-f5-Zgb"/>
+                <constraint firstItem="o6M-Pn-ahZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="7SI-Gz-NSK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yhg-lp-ric" secondAttribute="trailing" constant="15" id="91v-Fw-zX4"/>
+                <constraint firstItem="JFf-Mb-nFH" firstAttribute="top" secondItem="Til-Ok-2aO" secondAttribute="bottom" constant="10" id="CCI-Ar-ahF"/>
+                <constraint firstItem="Til-Ok-2aO" firstAttribute="top" secondItem="o6M-Pn-ahZ" secondAttribute="bottom" constant="10" id="CGD-Uy-1k2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DCJ-ZF-V4C" secondAttribute="trailing" constant="15" id="Hzw-TF-396"/>
+                <constraint firstItem="DCJ-ZF-V4C" firstAttribute="centerY" secondItem="JFf-Mb-nFH" secondAttribute="centerY" id="NyW-pE-o2A"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="54S-xh-wzL" secondAttribute="trailing" constant="15" id="PHW-og-4vt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JFf-Mb-nFH" secondAttribute="trailing" constant="15" id="Y5w-Da-MpI"/>
+                <constraint firstItem="JFf-Mb-nFH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="dcK-5v-Q1Z"/>
+                <constraint firstItem="yhg-lp-ric" firstAttribute="centerY" secondItem="Til-Ok-2aO" secondAttribute="centerY" id="gUF-lE-s0k"/>
+                <constraint firstItem="pbS-am-uTg" firstAttribute="top" secondItem="JFf-Mb-nFH" secondAttribute="bottom" constant="50" id="gwB-gM-ZCn"/>
+                <constraint firstItem="Til-Ok-2aO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="hG8-I4-p3P"/>
+                <constraint firstItem="pbS-am-uTg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="mxM-bU-laA"/>
+                <constraint firstItem="o6M-Pn-ahZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="qgs-AE-jIT"/>
+                <constraint firstItem="54S-xh-wzL" firstAttribute="centerY" secondItem="o6M-Pn-ahZ" secondAttribute="centerY" id="sFr-B6-gMt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

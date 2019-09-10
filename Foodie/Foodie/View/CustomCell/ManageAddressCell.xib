@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="ManageAddressCell" customModule="Foodie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="huy-eT-SQm">
+                        <rect key="frame" x="10" y="10" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="OCo-a4-h3h"/>
+                            <constraint firstAttribute="width" constant="30" id="msE-ip-tcx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="185-PJ-HhN">
+                        <rect key="frame" x="50" y="10" width="260" height="16.5"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="B8, Bapod jakatnaka Vrundavan crossroad, wagodiya road Vrundavan crossroad, wagodiya road " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-GZ-omE">
+                        <rect key="frame" x="50" y="36.5" width="260" height="6"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="av2-a5-A3t">
+                        <rect key="frame" x="50" y="52.5" width="30" height="27"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
+                        <state key="normal" title="Edit">
+                            <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vin-T6-Ogb">
+                        <rect key="frame" x="100" y="52.5" width="40" height="27"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
+                        <state key="normal" title="Delete">
+                            <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="huy-eT-SQm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="2MH-WH-BKL"/>
+                    <constraint firstItem="7Cl-GZ-omE" firstAttribute="leading" secondItem="huy-eT-SQm" secondAttribute="trailing" constant="10" id="6YS-j2-mo4"/>
+                    <constraint firstItem="av2-a5-A3t" firstAttribute="top" secondItem="7Cl-GZ-omE" secondAttribute="bottom" constant="10" id="7mn-DW-QbF"/>
+                    <constraint firstItem="av2-a5-A3t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="8t2-sW-wVf"/>
+                    <constraint firstItem="185-PJ-HhN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9vG-5s-Gje"/>
+                    <constraint firstItem="7Cl-GZ-omE" firstAttribute="top" secondItem="185-PJ-HhN" secondAttribute="bottom" constant="10" id="TNN-Cw-ZAy"/>
+                    <constraint firstAttribute="trailing" secondItem="185-PJ-HhN" secondAttribute="trailing" constant="10" id="jY3-Ez-eKb"/>
+                    <constraint firstAttribute="bottom" secondItem="av2-a5-A3t" secondAttribute="bottom" constant="20" id="oFI-2S-DA0"/>
+                    <constraint firstItem="185-PJ-HhN" firstAttribute="leading" secondItem="huy-eT-SQm" secondAttribute="trailing" constant="10" id="stn-4Z-QXl"/>
+                    <constraint firstAttribute="trailing" secondItem="7Cl-GZ-omE" secondAttribute="trailing" constant="10" id="tBz-eC-Dqq"/>
+                    <constraint firstItem="Vin-T6-Ogb" firstAttribute="top" secondItem="av2-a5-A3t" secondAttribute="top" id="xHP-1W-Ae3"/>
+                    <constraint firstItem="Vin-T6-Ogb" firstAttribute="leading" secondItem="av2-a5-A3t" secondAttribute="trailing" constant="20" id="xZv-zG-DIR"/>
+                    <constraint firstItem="huy-eT-SQm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="zPU-79-TFW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnDelete" destination="Vin-T6-Ogb" id="nul-Bd-n0e"/>
+                <outlet property="btnEdit" destination="av2-a5-A3t" id="nb3-Qc-bTg"/>
+                <outlet property="imgView" destination="huy-eT-SQm" id="Tl8-Mu-wg7"/>
+                <outlet property="lblAddress" destination="7Cl-GZ-omE" id="bk3-NU-xyM"/>
+                <outlet property="lblType" destination="185-PJ-HhN" id="AWX-LC-wCc"/>
+            </connections>
+            <point key="canvasLocation" x="-43.478260869565219" y="97.767857142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

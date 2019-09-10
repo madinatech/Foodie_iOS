@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeliveryLoactionVC" customModule="Foodie" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select your city" placeholder="Select your city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-On-XA4" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
+                    <rect key="frame" x="15" y="70" width="345" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="aRS-sB-G0U"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select your area" placeholder="Select your area" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gkk-kO-gnT" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
+                    <rect key="frame" x="15" y="143" width="345" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="V3x-kW-ghB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr3-vR-MLt">
+                    <rect key="frame" x="15" y="216" width="345" height="32"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                    <state key="normal" title="Use my current location">
+                        <color key="titleColor" red="0.88627450980392153" green="0.26666666666666666" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="currentLocationClicked:" destination="-1" eventType="touchUpInside" id="fO7-ol-Hlg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjW-Tg-0gz">
+                    <rect key="frame" x="15" y="567" width="345" height="50"/>
+                    <color key="backgroundColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="9Sr-c3-IVn">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                    <integer key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                    <state key="normal" title="Confirm Location"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="seeAllVendors:" destination="-1" eventType="touchUpInside" id="sX8-jH-Huj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfl-RU-wVK">
+                    <rect key="frame" x="15" y="70" width="345" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="jPt-LJ-ZAL"/>
+                    </constraints>
+                    <connections>
+                        <action selector="cityClicked:" destination="-1" eventType="touchUpInside" id="67i-5W-4iZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLI-TE-hxz">
+                    <rect key="frame" x="15" y="143" width="345" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="jew-hT-Pfe"/>
+                    </constraints>
+                    <connections>
+                        <action selector="areaClicked:" destination="-1" eventType="touchUpInside" id="BTl-lj-dLI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gfl-RU-wVK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="3ZE-KF-PtL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gfl-RU-wVK" secondAttribute="trailing" constant="15" id="5sI-E7-mlB"/>
+                <constraint firstItem="FLI-TE-hxz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="9fs-YQ-bC8"/>
+                <constraint firstItem="Gkk-kO-gnT" firstAttribute="top" secondItem="cMN-On-XA4" secondAttribute="bottom" constant="30" id="Akr-eE-Omc"/>
+                <constraint firstItem="Gr3-vR-MLt" firstAttribute="top" secondItem="Gkk-kO-gnT" secondAttribute="bottom" constant="30" id="BVU-hN-hiX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gkk-kO-gnT" secondAttribute="trailing" constant="15" id="DXY-U4-kZF"/>
+                <constraint firstItem="cMN-On-XA4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="GQb-y0-Sxa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xjW-Tg-0gz" secondAttribute="trailing" constant="15" id="KuO-fo-Qvq"/>
+                <constraint firstItem="Gr3-vR-MLt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="MnY-Ok-QfY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xjW-Tg-0gz" secondAttribute="bottom" constant="50" id="Ud5-BC-DKC"/>
+                <constraint firstItem="gfl-RU-wVK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="XH1-VB-yHm"/>
+                <constraint firstItem="Gkk-kO-gnT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="dpU-II-VIU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gr3-vR-MLt" secondAttribute="trailing" constant="15" id="ewr-NF-y1D"/>
+                <constraint firstItem="FLI-TE-hxz" firstAttribute="top" secondItem="cMN-On-XA4" secondAttribute="bottom" constant="30" id="fQU-uJ-YTJ"/>
+                <constraint firstAttribute="trailing" secondItem="cMN-On-XA4" secondAttribute="trailing" constant="15" id="gko-Fi-sJn"/>
+                <constraint firstItem="cMN-On-XA4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="hqV-VL-MWj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FLI-TE-hxz" secondAttribute="trailing" constant="15" id="mVo-b4-DdN"/>
+                <constraint firstItem="xjW-Tg-0gz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="tLK-es-XDI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+</document>

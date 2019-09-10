@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Wfb-Sf-h1a" customClass="AccountHeader" customModule="Foodie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdh-ms-loE">
+                    <rect key="frame" x="10" y="10" width="93.5" height="25.5"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Addresses, Payments, Favourites, Refferals &amp; Offers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAn-s0-hZe">
+                    <rect key="frame" x="10" y="43.5" width="460" height="16.5"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkT-Mf-jvi">
+                    <rect key="frame" x="10" y="69" width="460" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="P5H-zj-1sC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-jO-93K">
+                    <rect key="frame" x="0.0" y="0.0" width="470" height="80"/>
+                    <state key="normal" image="rightArrow"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="jdh-ms-loE" firstAttribute="top" secondItem="Xo3-aM-ekB" secondAttribute="top" constant="10" id="0HH-ur-Ak6"/>
+                <constraint firstItem="3wd-jO-93K" firstAttribute="trailing" secondItem="Xo3-aM-ekB" secondAttribute="trailing" constant="-10" id="88B-CM-xZw"/>
+                <constraint firstItem="IkT-Mf-jvi" firstAttribute="leading" secondItem="Wfb-Sf-h1a" secondAttribute="leading" constant="10" id="Caq-JK-WwS"/>
+                <constraint firstAttribute="trailing" secondItem="IkT-Mf-jvi" secondAttribute="trailing" constant="10" id="Coi-yA-M2b"/>
+                <constraint firstItem="Xo3-aM-ekB" firstAttribute="bottom" secondItem="LAn-s0-hZe" secondAttribute="bottom" constant="20" id="M6g-1d-ndz"/>
+                <constraint firstItem="LAn-s0-hZe" firstAttribute="top" secondItem="jdh-ms-loE" secondAttribute="bottom" constant="8" id="SPM-Pe-qUq"/>
+                <constraint firstItem="3wd-jO-93K" firstAttribute="bottom" secondItem="Xo3-aM-ekB" secondAttribute="bottom" id="Tph-2c-m2B"/>
+                <constraint firstItem="3wd-jO-93K" firstAttribute="leading" secondItem="Xo3-aM-ekB" secondAttribute="leading" id="UVS-VZ-CsG"/>
+                <constraint firstItem="LAn-s0-hZe" firstAttribute="leading" secondItem="Xo3-aM-ekB" secondAttribute="leading" constant="10" id="cEH-to-p3f"/>
+                <constraint firstItem="Xo3-aM-ekB" firstAttribute="trailing" secondItem="LAn-s0-hZe" secondAttribute="trailing" constant="10" id="cyH-sL-q7c"/>
+                <constraint firstItem="jdh-ms-loE" firstAttribute="leading" secondItem="Xo3-aM-ekB" secondAttribute="leading" constant="10" id="dIp-EP-GS2"/>
+                <constraint firstAttribute="bottom" secondItem="IkT-Mf-jvi" secondAttribute="bottom" constant="10" id="jJ1-sC-SyW"/>
+                <constraint firstItem="3wd-jO-93K" firstAttribute="top" secondItem="Xo3-aM-ekB" secondAttribute="top" id="lBF-7S-chA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Xo3-aM-ekB"/>
+            <connections>
+                <outlet property="btnHeader" destination="3wd-jO-93K" id="RD5-8w-g9A"/>
+                <outlet property="lblDesc" destination="LAn-s0-hZe" id="W6Q-QN-W9s"/>
+                <outlet property="lblLine" destination="IkT-Mf-jvi" id="5Eg-WU-tEb"/>
+                <outlet property="lblTitle" destination="jdh-ms-loE" id="LA8-Zh-D50"/>
+            </connections>
+            <point key="canvasLocation" x="-72" y="-297.75112443778113"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rightArrow" width="9" height="16"/>
+    </resources>
+</document>

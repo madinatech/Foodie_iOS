@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PaymentCell" customModule="Foodie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WT8-hp-TPc">
+                        <rect key="frame" x="10" y="10" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="aj2-CV-hXw"/>
+                            <constraint firstAttribute="height" constant="30" id="kSC-Lg-4MY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freecharge" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aay-QW-1vQ">
+                        <rect key="frame" x="50" y="16.5" width="216" height="16.5"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5k-O4-qxq">
+                        <rect key="frame" x="276" y="11.5" width="34" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="29H-rq-xr6"/>
+                            <constraint firstAttribute="height" constant="27" id="gVb-2J-iZX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
+                        <state key="normal" title="Retry">
+                            <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="x5k-O4-qxq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9HU-Vc-M7L"/>
+                    <constraint firstItem="WT8-hp-TPc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Qm3-bI-O8L"/>
+                    <constraint firstAttribute="trailing" secondItem="x5k-O4-qxq" secondAttribute="trailing" constant="10" id="fs8-gT-tlM"/>
+                    <constraint firstItem="aay-QW-1vQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iMK-I8-2dy"/>
+                    <constraint firstItem="WT8-hp-TPc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qhA-b2-I8U"/>
+                    <constraint firstItem="x5k-O4-qxq" firstAttribute="leading" secondItem="aay-QW-1vQ" secondAttribute="trailing" constant="10" id="rKS-sN-NZK"/>
+                    <constraint firstItem="aay-QW-1vQ" firstAttribute="leading" secondItem="WT8-hp-TPc" secondAttribute="trailing" constant="10" id="wQ1-fd-Occ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnRetry" destination="x5k-O4-qxq" id="gDL-6X-LTW"/>
+                <outlet property="img" destination="WT8-hp-TPc" id="mUy-Xw-58j"/>
+                <outlet property="lblTitle" destination="aay-QW-1vQ" id="zIq-CZ-qHu"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </tableViewCell>
+    </objects>
+</document>
