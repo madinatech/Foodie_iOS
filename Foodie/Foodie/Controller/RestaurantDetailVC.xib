@@ -123,16 +123,16 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cMO-dO-qOQ">
-                    <rect key="frame" x="10" y="228" width="10" height="10"/>
-                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="cMO-dO-qOQ">
+                    <rect key="frame" x="10" y="228" width="12" height="12"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="10" id="lny-sx-ei8"/>
-                        <constraint firstAttribute="height" constant="10" id="weX-BU-5MT"/>
+                        <constraint firstAttribute="width" constant="12" id="lny-sx-ei8"/>
+                        <constraint firstAttribute="height" constant="12" id="weX-BU-5MT"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hB-Qw-keA">
-                    <rect key="frame" x="59" y="228" width="1" height="10"/>
+                    <rect key="frame" x="58" y="229" width="1" height="10"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="10" id="Dgz-Rm-Z23"/>
@@ -143,13 +143,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azQ-Ys-8KS">
-                    <rect key="frame" x="28" y="224.5" width="21" height="17.5"/>
+                    <rect key="frame" x="27" y="225.5" width="21" height="17.5"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="400 for two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujT-IV-SZT">
-                    <rect key="frame" x="70" y="224.5" width="74.5" height="17.5"/>
+                    <rect key="frame" x="69" y="225.5" width="74.5" height="17.5"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -207,7 +207,7 @@
                 <constraint firstItem="cMO-dO-qOQ" firstAttribute="top" secondItem="9r2-aW-9h7" secondAttribute="bottom" constant="10" id="i9u-Eb-JVq"/>
                 <constraint firstItem="NlQ-lo-hXw" firstAttribute="top" secondItem="5O8-to-OJU" secondAttribute="bottom" constant="10" id="ieo-EU-QPR"/>
                 <constraint firstItem="5O8-to-OJU" firstAttribute="leading" secondItem="yB0-LD-PTk" secondAttribute="leading" id="inI-4n-9jy"/>
-                <constraint firstItem="azQ-Ys-8KS" firstAttribute="leading" secondItem="cMO-dO-qOQ" secondAttribute="trailing" constant="8" id="ojb-1a-tDC"/>
+                <constraint firstItem="azQ-Ys-8KS" firstAttribute="leading" secondItem="cMO-dO-qOQ" secondAttribute="trailing" constant="5" id="ojb-1a-tDC"/>
                 <constraint firstItem="ujT-IV-SZT" firstAttribute="centerY" secondItem="azQ-Ys-8KS" secondAttribute="centerY" id="p1j-eF-EWr"/>
                 <constraint firstItem="NlQ-lo-hXw" firstAttribute="leading" secondItem="0Eq-Dl-ozn" secondAttribute="trailing" constant="10" id="qRj-UI-Ji4"/>
                 <constraint firstItem="9r2-aW-9h7" firstAttribute="top" secondItem="5O8-to-OJU" secondAttribute="bottom" constant="15" id="yHh-bA-qup"/>
@@ -224,5 +224,6 @@
         <image name="UnFavourite" width="42.5" height="42.5"/>
         <image name="foodBG" width="291" height="173"/>
         <image name="search_black" width="25" height="25"/>
+        <image name="star" width="170.5" height="170.5"/>
     </resources>
 </document>

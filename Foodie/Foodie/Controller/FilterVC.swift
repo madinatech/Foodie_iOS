@@ -145,7 +145,6 @@ class FilterVC: UIViewController , UITableViewDelegate, UITableViewDataSource{
                     selectedArry.add(filterArray[indexPath.row])
                 }
             }
-            
         }
         tblViewMain.reloadData()
         tblViewSub.reloadData()

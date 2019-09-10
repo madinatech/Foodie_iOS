@@ -59,7 +59,7 @@ class RestaurantsVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         let image = UIImageView()
         image.image = UIImage(named: "downArrow")
         image.contentMode = UIView.ContentMode.scaleAspectFit
-        image.frame = CGRect.init(x: label.frame.width + label.frame.origin.x + 5, y: label.frame.origin.y + 5 , width: 10, height: 10 )
+        image.frame = CGRect.init(x: label.frame.width + label.frame.origin.x + 5, y: label.frame.origin.y + 7 , width: 10, height: 10 )
         view.addSubview(image)
         let button =  UIButton(type: .custom)
         button.frame = CGRect(x: label.frame.origin.x, y: label.frame.origin.y, width: label.frame.width + image.frame.width + 20, height: label.frame.height)
