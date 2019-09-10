@@ -20,14 +20,14 @@ class BaseViewController: UIViewController {
             label.font = UIFont.init(name: "Helvetica Bold", size: 18)
             label.textColor = .white
             label.sizeToFit()
-//            label.center = view.center
+            //            label.center = view.center
             label.frame.origin.y = view.center.y - 10
             label.textAlignment = NSTextAlignment.center
             view.addSubview(label)
             let image = UIImageView()
-            image.image = UIImage(named: "downArrow")
+            image.image = UIImage(named: "downArrow_white")
             image.contentMode = UIView.ContentMode.scaleAspectFit
-            image.frame = CGRect.init(x: label.frame.width + label.frame.origin.x + 5, y: label.frame.origin.y + 7 , width: 10, height: 10 )
+            image.frame = CGRect.init(x: label.frame.width + label.frame.origin.x + 5, y: label.frame.origin.y + 6 , width: 10, height: 10 )
             view.addSubview(image)
             let button =  UIButton(type: .custom)
             button.frame = CGRect(x: label.frame.origin.x, y: label.frame.origin.y, width: label.frame.width + image.frame.width + 20, height: label.frame.height)
@@ -35,7 +35,6 @@ class BaseViewController: UIViewController {
             view.addSubview(button)
             let barbutton = UIBarButtonItem.init(customView: view)
             navigationItem.leftBarButtonItem = barbutton
-//            navigationItem.titleView = view
         } else {
             var left_img = UIImage(named: "Left_Arrow")
             left_img = left_img?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
@@ -59,7 +58,6 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = appThemeColor
-//        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
     }
     
     override func viewWillDisappear(_ animated: Bool) {

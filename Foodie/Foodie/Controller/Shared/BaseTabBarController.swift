@@ -36,22 +36,22 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let myTabBarItem2 = UITabBarItem()
         myTabBarItem2.tag = 1
-//        myTabBarItem2.image = UIImage(named: "menu3")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-//        myTabBarItem2.selectedImage = UIImage(named: "menu3_select")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        myTabBarItem2.image = UIImage(named: "Search_un")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem2.selectedImage = UIImage(named: "Search_sel")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         myTabBarItem2.title = "Search"
         v2.tabBarItem = myTabBarItem2
         
         let myTabBarItem3 = UITabBarItem()
         myTabBarItem3.tag = 2
-//        myTabBarItem3.image = UIImage(named: "MainAppointment")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-//        myTabBarItem3.selectedImage = UIImage(named: "MainAppointment")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        myTabBarItem3.image = UIImage(named: "Cart_un")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem3.selectedImage = UIImage(named: "Cart_sel")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         myTabBarItem3.title = "Cart"
         v3.tabBarItem = myTabBarItem3
         
         let myTabBarItem4 = UITabBarItem()
         myTabBarItem4.tag = 3
-//        myTabBarItem4.image = UIImage(named: "menu4_deselect")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-//        myTabBarItem4.selectedImage = UIImage(named: "menu4")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        myTabBarItem4.image = UIImage(named: "user_un")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem4.selectedImage = UIImage(named: "user_sel")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         myTabBarItem4.title = "Account"
         v4.tabBarItem = myTabBarItem4
         
