@@ -7,7 +7,7 @@ typealias ItemLoadedBlock = (_ result: Any, _ error : String) -> (Void)
 @available(iOS 10.0, *)
 
 let appDelegateShared = UIApplication.shared.delegate as? AppDelegate
-let appThemeColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: 1.0)
+let appThemeColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: 1.0)
 let appLigtGrayColor = UIColor.init(red: 221.0/255.0, green: 222.0/255.0, blue: 223.0/255.0, alpha: 1.0)
 let appBorderColor = UIColor.init(red: 186.0/255.0, green: 186.0/255.0, blue: 186.0/255.0, alpha: 1.0)
 let appGreenColor = UIColor.init(red: 43.0/255.0, green: 183.0/255.0, blue: 124.0/255.0, alpha: 1.0)

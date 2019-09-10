@@ -11,13 +11,14 @@ class RestaurantsVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     
     class func initViewController() -> RestaurantsVC {
         let vc = RestaurantsVC.init(nibName: "RestaurantsVC", bundle: nil)
-        vc.title = "Restaurants"
+//        vc.title = "Restaurants"
         return vc
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.isBackButtonHidden = true
+        self.isHome = true
         searchView.dropShadow()
         tblView.tableFooterView = UIView()
         tblView.rowHeight = 110
@@ -47,31 +48,16 @@ class RestaurantsVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func navigationSetup (){
-        let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 40))
-        let label = UILabel()
-        label.text = "Location"
-        label.font = UIFont.init(name: "Helvetica Bold", size: 18)
-        label.textColor = .white
-        label.sizeToFit()
-        label.center = view.center
-        label.textAlignment = NSTextAlignment.center
-        view.addSubview(label)
-        let image = UIImageView()
-        image.image = UIImage(named: "downArrow")
-        image.contentMode = UIView.ContentMode.scaleAspectFit
-        image.frame = CGRect.init(x: label.frame.width + label.frame.origin.x + 5, y: label.frame.origin.y + 7 , width: 10, height: 10 )
-        view.addSubview(image)
-        let button =  UIButton(type: .custom)
-        button.frame = CGRect(x: label.frame.origin.x, y: label.frame.origin.y, width: label.frame.width + image.frame.width + 20, height: label.frame.height)
-        button.addTarget(self, action: #selector(clickOnButton(_:)), for: .touchUpInside)
-        view.addSubview(button)
-        navigationItem.titleView = view
+        
+//        let barbutton = UIBarButtonItem.init(image: UIImage.init(named: "Logo_white"), style: .plain, target: self, action: nil)
+        
+        let button1 = UIButton.init(type: .custom)
+        button1.setImage(UIImage.init(named: "Logo1"), for: .normal)
+        button1.frame = CGRect.init(x: 0, y: 0, width: 50, height: 40)
+        let barButton = UIBarButtonItem.init(customView: button1)
+        self.navigationItem.rightBarButtonItem = barButton
     }
     
-    @IBAction func clickOnButton(_ sender: Any) {
-        let vc = ManageAddressVC.initViewController()
-        self.navigationController?.present(vc, animated: true, completion: nil)
-    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2

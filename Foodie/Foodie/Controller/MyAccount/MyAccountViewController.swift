@@ -54,11 +54,11 @@ class MyAccountViewController: BaseViewController, UITableViewDelegate, UITableV
         var offset = scrollView.contentOffset.y / 150
         if(offset > 1){
             offset = 1
-            self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: offset)
-            UIApplication.shared.statusbarView?.backgroundColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: offset)
+            self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: offset)
+            UIApplication.shared.statusbarView?.backgroundColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: offset)
         } else {
-            self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: offset)
-            UIApplication.shared.statusbarView?.backgroundColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: offset)
+            self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: offset)
+            UIApplication.shared.statusbarView?.backgroundColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: offset)
         }
         
         if(tblView.contentOffset.y > 0){

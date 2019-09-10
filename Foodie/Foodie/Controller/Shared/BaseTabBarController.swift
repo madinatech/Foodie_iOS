@@ -15,7 +15,7 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
 
     @objc func setViews ()  {
-        self.tabBar.tintColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: 1.0)
+        self.tabBar.tintColor =  UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: 1.0)
         self.tabBar.unselectedItemTintColor = UIColor.darkGray
         self.tabBar.barTintColor = UIColor.white
          UITabBar.appearance().isTranslucent = true

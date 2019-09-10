@@ -50,7 +50,7 @@
                     <rect key="frame" x="15" y="216" width="345" height="32"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                     <state key="normal" title="Use my current location">
-                        <color key="titleColor" red="0.88627450980392153" green="0.26666666666666666" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="currentLocationClicked:" destination="-1" eventType="touchUpInside" id="fO7-ol-Hlg"/>
@@ -58,7 +58,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjW-Tg-0gz">
                     <rect key="frame" x="15" y="567" width="345" height="50"/>
-                    <color key="backgroundColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="9Sr-c3-IVn">
                             <userDefinedRuntimeAttributes>

@@ -164,5 +164,4 @@ class FilterVC: UIViewController , UITableViewDelegate, UITableViewDataSource{
         }
         tblViewSub.reloadData()
     }
-    
 }

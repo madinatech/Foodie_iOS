@@ -78,14 +78,10 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
             sender.isSelected = true
         }
         sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        UIView.animate(withDuration: 2.0,
-                       delay: 0,
-                       usingSpringWithDamping: 0.2,
-                       initialSpringVelocity: 6.0,
-                       options: .allowUserInteraction,
-                       animations: { [weak self] in
-                        sender.transform = .identity
-            }, completion: nil)
+        
+        UIView.animate(withDuration: 2.0, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 6.0, options: .allowUserInteraction, animations: {
+            sender.transform = .identity
+        }, completion: nil)
     }
     
     @IBAction func backClicked(_ sender: Any) {
@@ -97,11 +93,11 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
         var offset = scrollView.contentOffset.y / 150
         if(offset > 1){
             offset = 1
-            self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: offset)
-            UIApplication.shared.statusbarView?.backgroundColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: offset)
+            self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: offset)
+            UIApplication.shared.statusbarView?.backgroundColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: offset)
         } else {
-            self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: offset)
-            UIApplication.shared.statusbarView?.backgroundColor = UIColor.init(red: 226.0/255.0, green: 68.0/255.0, blue: 37.0/255.0, alpha: offset)
+            self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: offset)
+            UIApplication.shared.statusbarView?.backgroundColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: offset)
         }
         
         if(tblView.contentOffset.y > 0){

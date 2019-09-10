@@ -30,7 +30,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGu-qm-iKO">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qq6-CY-HEs" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qq6-CY-HEs" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
                                     <rect key="frame" x="15" y="347.5" width="345" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="gGx-o1-sfJ"/>
@@ -43,7 +43,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7X4-Bn-FgN" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7X4-Bn-FgN" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
                                     <rect key="frame" x="15" y="197.5" width="345" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="mKQ-uQ-igO"/>
@@ -56,7 +56,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-nS-oxI" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-nS-oxI" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
                                     <rect key="frame" x="15" y="247.5" width="345" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="lgX-fK-rvE"/>
@@ -101,7 +101,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-ui-JwF" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-ui-JwF" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
                                     <rect key="frame" x="15" y="297.5" width="345" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="LRd-Lb-QmS"/>
@@ -139,7 +139,7 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pM9-DS-AQa">
                                     <rect key="frame" x="15" y="587" width="345" height="50"/>
-                                    <color key="backgroundColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="Yyf-4X-DzH">
                                             <userDefinedRuntimeAttributes>
@@ -165,7 +165,7 @@
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Show">
-                                        <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                     <state key="selected" title="Hide"/>
                                     <connections>

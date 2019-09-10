@@ -23,7 +23,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcS-kb-tgQ">
                     <rect key="frame" x="15" y="399" width="345" height="50"/>
-                    <color key="backgroundColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="TEP-1x-QYi">
                             <userDefinedRuntimeAttributes>
@@ -76,7 +76,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HnW-7o-eYb" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HnW-7o-eYb" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
                     <rect key="frame" x="15" y="306" width="345" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="LKW-Vo-qBS"/>
@@ -93,7 +93,7 @@
                     <rect key="frame" x="129" y="479" width="117" height="32"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                     <state key="normal" title="Create Account">
-                        <color key="titleColor" red="0.8862745098" green="0.2666666667" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="CreateAccountClicked:" destination="-1" eventType="touchUpInside" id="rUK-yd-bXB"/>
