@@ -16,6 +16,10 @@ class LoginVc: BaseViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
 
     @IBAction func fbClicked(_ sender: Any) {
     }

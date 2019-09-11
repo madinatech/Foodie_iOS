@@ -18,6 +18,10 @@ class AreaVC: BaseViewController , UITableViewDelegate, UITableViewDataSource{
         searchView.dropShadow()
         tblView.tableFooterView = UIView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }

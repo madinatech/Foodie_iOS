@@ -16,6 +16,9 @@ class OffersVC: BaseViewController {
         self.tabBarController?.tabBar.isHidden = true
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
     
 }

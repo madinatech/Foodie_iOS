@@ -13,6 +13,7 @@ class PaymentVC: BaseViewController, UITableViewDelegate, UITableViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = true
         tblView.tableFooterView = UIView()

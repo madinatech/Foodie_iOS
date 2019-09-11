@@ -34,6 +34,8 @@ class CartVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, Cu
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = .clear
+         self.tabBarController?.selectedIndex = 2
             self.tabBarController?.tabBar.isHidden = false
         blurView.isHidden = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)

@@ -29,6 +29,7 @@ class RestaurantsVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
         self.tabBarController?.tabBar.items?[0].title = "Restaurants"
         self.tabBarController?.tabBar.items?[1].title = "Search"
         self.tabBarController?.tabBar.items?[2].title = "Cart"
@@ -48,12 +49,10 @@ class RestaurantsVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func navigationSetup (){
-        
-//        let barbutton = UIBarButtonItem.init(image: UIImage.init(named: "Logo_white"), style: .plain, target: self, action: nil)
-        
         let button1 = UIButton.init(type: .custom)
         button1.setImage(UIImage.init(named: "Logo1"), for: .normal)
         button1.frame = CGRect.init(x: 0, y: 0, width: 50, height: 40)
+        button1.isUserInteractionEnabled = false
         let barButton = UIBarButtonItem.init(customView: button1)
         self.navigationItem.rightBarButtonItem = barButton
     }

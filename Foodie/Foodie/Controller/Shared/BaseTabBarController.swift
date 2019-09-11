@@ -16,7 +16,7 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     @objc func setViews ()  {
         self.tabBar.tintColor =  UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: 1.0)
-        self.tabBar.unselectedItemTintColor = UIColor.darkGray
+        self.tabBar.unselectedItemTintColor = UIColor.black
         self.tabBar.barTintColor = UIColor.white
         UITabBar.appearance().isTranslucent = true
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 12) ?? ""], for: .normal)
@@ -66,10 +66,10 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     override func viewWillLayoutSubviews() {
-        var tabFrame = self.tabBar.frame
-        tabFrame.size.height = 60
-        tabFrame.origin.y = self.view.frame.height - 60
-        self.tabBar.frame = tabFrame
+//        var tabFrame = self.tabBar.frame
+//        tabFrame.size.height = 60
+//        tabFrame.origin.y = self.view.frame.height - 60
+//        self.tabBar.frame = tabFrame
     }
     
     override func didReceiveMemoryWarning() {

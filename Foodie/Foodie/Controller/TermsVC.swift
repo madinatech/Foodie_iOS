@@ -17,5 +17,9 @@ class TermsVC: BaseViewController {
         super.viewDidLoad()
         webView.loadRequest(URLRequest.init(url: URL.init(string: "https://www.google.com")!))
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
 
 }

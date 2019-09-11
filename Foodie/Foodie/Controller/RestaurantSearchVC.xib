@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0y-Pn-bx3">
-                    <rect key="frame" x="0.0" y="67" width="375" height="600"/>
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                     <subviews>
                         <searchBar clipsSubviews="YES" contentMode="redraw" searchBarStyle="minimal" placeholder="Search in farm house europe restaurant" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSA-TK-1jY">
                             <rect key="frame" x="0.0" y="20" width="375" height="50"/>
@@ -43,7 +43,7 @@
                             </connections>
                         </searchBar>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GIw-9g-JOZ">
-                            <rect key="frame" x="0.0" y="85" width="375" height="515"/>
+                            <rect key="frame" x="0.0" y="85" width="375" height="512"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="D6t-LQ-UTU"/>
@@ -55,7 +55,6 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="GIw-9g-JOZ" secondAttribute="trailing" id="1Cl-lU-69c"/>
                         <constraint firstItem="GIw-9g-JOZ" firstAttribute="top" secondItem="aSA-TK-1jY" secondAttribute="bottom" constant="15" id="HIu-b1-MCz"/>
-                        <constraint firstAttribute="height" constant="600" id="JsC-Yg-ayu"/>
                         <constraint firstItem="aSA-TK-1jY" firstAttribute="top" secondItem="u0y-Pn-bx3" secondAttribute="top" constant="20" id="PAt-k9-36f"/>
                         <constraint firstItem="aSA-TK-1jY" firstAttribute="leading" secondItem="u0y-Pn-bx3" secondAttribute="leading" id="hkn-Wp-6oq"/>
                         <constraint firstAttribute="trailing" secondItem="aSA-TK-1jY" secondAttribute="trailing" id="jq5-3e-Mm8"/>
@@ -66,6 +65,7 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="u0y-Pn-bx3" firstAttribute="top" secondItem="d0O-Lj-2YX" secondAttribute="top" constant="50" id="HQQ-Zv-VRx"/>
                 <constraint firstItem="u0y-Pn-bx3" firstAttribute="trailing" secondItem="d0O-Lj-2YX" secondAttribute="trailing" id="a4D-RE-CJF"/>
                 <constraint firstItem="u0y-Pn-bx3" firstAttribute="bottom" secondItem="d0O-Lj-2YX" secondAttribute="bottom" id="bQn-9a-LeF"/>
                 <constraint firstItem="u0y-Pn-bx3" firstAttribute="leading" secondItem="d0O-Lj-2YX" secondAttribute="leading" id="tAK-NT-wwJ"/>

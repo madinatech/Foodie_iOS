@@ -19,6 +19,7 @@ class ChooseCountryVC: UIViewController , UITableViewDelegate, UITableViewDataSo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

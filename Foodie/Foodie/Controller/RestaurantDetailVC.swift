@@ -48,6 +48,7 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
         blurView.isHidden = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+         UIApplication.shared.statusbarView?.backgroundColor = .clear
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

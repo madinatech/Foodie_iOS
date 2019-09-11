@@ -17,5 +17,8 @@ class ReferralsVC: BaseViewController {
     }
     
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
 }

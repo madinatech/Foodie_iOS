@@ -18,7 +18,10 @@ class CityVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
        searchView.dropShadow()
         tblView.tableFooterView = UIView()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }

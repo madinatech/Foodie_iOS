@@ -33,7 +33,7 @@ class SearchVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
         selectedSection = -1
@@ -164,6 +164,10 @@ class SearchVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, 
             cartView.isHidden = true
         }
     }
+    @IBAction func vireCartClicked(_ sender: Any) {
+        let vc = CartVC.initViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     @IBAction func viewMenuClicked(_ sender: UIButton) {
         let vc = RestaurantDetailVC.initViewController()
@@ -199,7 +203,7 @@ class SearchVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, 
         tblView.endUpdates()
     }
     
-//    UISearchBarDelegate
+    //    UISearchBarDelegate
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         search.endEditing(true)
     }

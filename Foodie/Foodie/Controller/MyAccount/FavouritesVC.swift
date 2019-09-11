@@ -18,6 +18,7 @@ class FavouritesVC: BaseViewController,  UITableViewDataSource, UITableViewDeleg
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = true
         tblView.tableFooterView = UIView()

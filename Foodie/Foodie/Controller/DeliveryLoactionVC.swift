@@ -17,6 +17,7 @@ class DeliveryLoactionVC: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
     }
 
     @IBAction func currentLocationClicked(_ sender: Any) {

@@ -66,7 +66,7 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = appThemeColor
-        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+//        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
     }
     
     @objc func backClicked() {

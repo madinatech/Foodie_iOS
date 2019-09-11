@@ -19,6 +19,10 @@ class ManageAddressVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         tblView.rowHeight = UITableView.automaticDimension
         tblView.estimatedRowHeight = 100
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

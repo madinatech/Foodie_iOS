@@ -30,6 +30,7 @@ class RestaurantSearchVC: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         search.becomeFirstResponder()
+        UIApplication.shared.statusbarView?.backgroundColor = .clear
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -141,7 +142,7 @@ class RestaurantSearchVC: UIViewController, UITableViewDelegate, UITableViewData
     
     //    UISearchBarDelegate
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        search.endEditing(true)
+        //        search.endEditing(true)
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         search.endEditing(true)

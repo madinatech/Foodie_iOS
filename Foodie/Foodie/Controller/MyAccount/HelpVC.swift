@@ -14,12 +14,13 @@ class HelpVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = true
         tblView.tableFooterView = UIView()
         sectionArray = ["General issues", "Legal, Terms & Conditions", "FAQs"]
     }
+
 
 
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -19,6 +19,10 @@ class ChangePasswodVC: BaseViewController {
 
        
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
 
     @IBAction func saveClicked(_ sender: Any) {
     }
