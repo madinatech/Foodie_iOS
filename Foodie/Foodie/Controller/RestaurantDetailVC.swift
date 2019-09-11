@@ -115,8 +115,9 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
     
     @IBAction func viewCartClicked(_ sender: Any) {
         self.tabBarController?.tabBar.isHidden = true
-        let vc = CartVC.initViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+         self.tabBarController?.selectedIndex = 2
+//        let vc = CartVC.initViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

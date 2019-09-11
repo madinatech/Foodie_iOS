@@ -165,8 +165,9 @@ class SearchVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, 
         }
     }
     @IBAction func vireCartClicked(_ sender: Any) {
-        let vc = CartVC.initViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.tabBarController?.selectedIndex = 2
+        //        let vc = CartVC.initViewController()
+        //        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func viewMenuClicked(_ sender: UIButton) {

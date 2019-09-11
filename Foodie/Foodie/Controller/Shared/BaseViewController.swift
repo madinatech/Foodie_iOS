@@ -13,6 +13,12 @@ class BaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       let controllers = self.navigationController?.viewControllers
+        
+        if(controllers!.count > 1){
+               self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        }
+    
         if(isHome == true){
             let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 40))
             let label = UILabel()

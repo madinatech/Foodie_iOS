@@ -196,7 +196,6 @@ class MyAccountViewController: BaseViewController, UITableViewDelegate, UITableV
                 rouCount = 5
             }
             tblView.reloadData()
-            
         } else {
             let vc = HelpVC.initViewController()
             self.navigationController?.pushViewController(vc, animated: true)

@@ -32,14 +32,6 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-GP-beh">
-                        <rect key="frame" x="10" y="15" width="10" height="10"/>
-                        <color key="backgroundColor" red="0.33333333329999998" green="0.70980392160000005" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="10" id="TnE-8u-lhx"/>
-                            <constraint firstAttribute="height" constant="10" id="XNT-kT-j7G"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqQ-VU-tPD">
                         <rect key="frame" x="0.0" y="63.5" width="320" height="1"/>
                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,22 +51,29 @@
                         </constraints>
                         <state key="normal" image="close icon"/>
                     </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Veg" translatesAutoresizingMaskIntoConstraints="NO" id="2uK-1R-8MR">
+                        <rect key="frame" x="10" y="18" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="Agr-wy-sTI"/>
+                            <constraint firstAttribute="height" constant="10" id="aoE-5g-SJU"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="GqQ-VU-tPD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6dn-UB-xfl"/>
+                    <constraint firstItem="DRO-cQ-R7i" firstAttribute="leading" secondItem="2uK-1R-8MR" secondAttribute="trailing" constant="5" id="A2m-cl-TEB"/>
+                    <constraint firstItem="2uK-1R-8MR" firstAttribute="centerY" secondItem="DRO-cQ-R7i" secondAttribute="centerY" id="AEg-62-2tE"/>
+                    <constraint firstItem="2uK-1R-8MR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="G9z-S3-KWC"/>
                     <constraint firstItem="DRO-cQ-R7i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Idk-U7-dM0"/>
                     <constraint firstItem="AY0-Dm-IJ6" firstAttribute="trailing" secondItem="DRO-cQ-R7i" secondAttribute="trailing" id="JkX-sS-GOZ"/>
                     <constraint firstItem="wav-rM-EBI" firstAttribute="leading" secondItem="DRO-cQ-R7i" secondAttribute="trailing" constant="5" id="Sx9-wO-eCK"/>
                     <constraint firstAttribute="trailing" secondItem="wav-rM-EBI" secondAttribute="trailing" id="Uxb-fG-kC0"/>
                     <constraint firstItem="AY0-Dm-IJ6" firstAttribute="leading" secondItem="DRO-cQ-R7i" secondAttribute="leading" id="X8g-fr-acp"/>
-                    <constraint firstItem="DRO-cQ-R7i" firstAttribute="leading" secondItem="pfL-GP-beh" secondAttribute="trailing" constant="5" id="egP-ZI-8Rs"/>
-                    <constraint firstItem="pfL-GP-beh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="jdh-xR-kUq"/>
                     <constraint firstItem="GqQ-VU-tPD" firstAttribute="top" secondItem="AY0-Dm-IJ6" secondAttribute="bottom" constant="12" id="mtx-Er-3k4"/>
                     <constraint firstAttribute="bottom" secondItem="GqQ-VU-tPD" secondAttribute="bottom" id="oWt-US-dmU"/>
                     <constraint firstItem="wav-rM-EBI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tnA-jY-ct9"/>
                     <constraint firstAttribute="trailing" secondItem="GqQ-VU-tPD" secondAttribute="trailing" id="tod-Sp-6aG"/>
                     <constraint firstItem="AY0-Dm-IJ6" firstAttribute="top" secondItem="DRO-cQ-R7i" secondAttribute="bottom" constant="5" id="uxU-0W-Lgo"/>
-                    <constraint firstItem="pfL-GP-beh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="v0b-Hu-NFq"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -88,6 +87,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Veg" width="32" height="32"/>
         <image name="close icon" width="15" height="15"/>
     </resources>
 </document>

@@ -10,6 +10,7 @@ class CustomizeCartVC: UIViewController , UITableViewDelegate, UITableViewDataSo
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
+    
     var delegate :  CustomizeDelegate? = nil
     var checkedArray = NSMutableArray()
     
@@ -27,10 +28,16 @@ class CustomizeCartVC: UIViewController , UITableViewDelegate, UITableViewDataSo
         super.viewWillAppear(animated)
         viewHeight.constant = tblView.contentSize.height
         self.view.layoutIfNeeded()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.viewHeight.constant = self.tblView.contentSize.height
+            self.view.layoutIfNeeded()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        tblView.reloadData()
         viewHeight.constant = tblView.contentSize.height
         self.view.layoutIfNeeded()
     }
@@ -136,5 +143,4 @@ class CustomizeCartVC: UIViewController , UITableViewDelegate, UITableViewDataSo
             }
         }
     }
-    
 }

@@ -5,13 +5,12 @@ class CreateAccountVC: BaseViewController {
     
     @IBOutlet weak var txtLName: CommonTextfield!
     @IBOutlet weak var txtFName: CommonTextfield!
-    
     @IBOutlet weak var txtEmail: CommonTextfield!
-    
     @IBOutlet weak var txtPasssword: CommonTextfield!
+    
     class func initViewController() -> CreateAccountVC {
         let vc = CreateAccountVC.init(nibName: "CreateAccountVC", bundle: nil)
-        vc.title = "Login"
+        vc.title = "Create Account"
         return vc
     }
     
@@ -19,16 +18,17 @@ class CreateAccountVC: BaseViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
     }
-
+    
     @IBAction func fbClicked(_ sender: Any) {
     }
     
     @IBAction func showClicked(_ sender: UIButton) {
-        if(sender.isSelected == true){
+        if(sender.isSelected == true) {
             sender.isSelected = false
             txtPasssword.isSecureTextEntry = true
         } else {
@@ -41,6 +41,7 @@ class CreateAccountVC: BaseViewController {
         let vc = TermsVC.initViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func termsandConditionClicked(_ sender: UIButton) {
         if(sender.isSelected == true){
             sender.isSelected = false
@@ -48,6 +49,7 @@ class CreateAccountVC: BaseViewController {
             sender.isSelected = true
         }
     }
+    
     @IBAction func newsLetterCLicked(_ sender: UIButton) {
         if(sender.isSelected == true){
             sender.isSelected = false

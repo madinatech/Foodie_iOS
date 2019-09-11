@@ -49,17 +49,9 @@
                             <color key="titleColor" red="0.33333333329999998" green="0.70980392160000005" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                     </button>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vem-om-TfL">
-                        <rect key="frame" x="0.0" y="140" width="10" height="10"/>
-                        <color key="backgroundColor" red="0.33333333329999998" green="0.70980392160000005" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="10" id="RXj-rQ-vp2"/>
-                            <constraint firstAttribute="width" constant="10" id="WRb-dV-7dh"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Must Try" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bg-oj-H46">
                         <rect key="frame" x="5" y="15" width="50" height="21"/>
-                        <color key="backgroundColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="MPI-W3-FxC"/>
                             <constraint firstAttribute="height" constant="21" id="fSE-FW-soY"/>
@@ -112,6 +104,13 @@
                             <constraint firstItem="TT4-YC-xC1" firstAttribute="leading" secondItem="QSR-CV-sIx" secondAttribute="leading" id="wta-yT-jji"/>
                         </constraints>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Veg" translatesAutoresizingMaskIntoConstraints="NO" id="cjd-FY-ajd">
+                        <rect key="frame" x="0.0" y="141.5" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="4Ra-Kg-qmn"/>
+                            <constraint firstAttribute="height" constant="10" id="6xG-hW-yI4"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
@@ -119,17 +118,17 @@
                 <constraint firstAttribute="bottom" secondItem="QSR-CV-sIx" secondAttribute="bottom" constant="10" id="4fL-uM-A3T"/>
                 <constraint firstItem="AfV-NB-WIM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HO4-nx-3NE"/>
                 <constraint firstAttribute="bottom" secondItem="l7B-cS-Kem" secondAttribute="bottom" constant="10" id="IF4-de-DYd"/>
-                <constraint firstItem="qi1-mA-x2m" firstAttribute="leading" secondItem="Vem-om-TfL" secondAttribute="trailing" constant="5" id="LAc-nK-cOl"/>
                 <constraint firstItem="vTi-G3-FbL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="RXB-fC-ACD"/>
                 <constraint firstItem="l7B-cS-Kem" firstAttribute="top" secondItem="qi1-mA-x2m" secondAttribute="bottom" constant="5" id="S5M-dL-cYV"/>
                 <constraint firstItem="7bg-oj-H46" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="Xes-hD-Qpd"/>
                 <constraint firstItem="AfV-NB-WIM" firstAttribute="top" secondItem="qi1-mA-x2m" secondAttribute="bottom" constant="5" id="b8v-GY-U5f"/>
                 <constraint firstAttribute="trailing" secondItem="vTi-G3-FbL" secondAttribute="trailing" id="drV-2V-JFS"/>
                 <constraint firstAttribute="trailing" secondItem="qi1-mA-x2m" secondAttribute="trailing" constant="5" id="ete-XS-IDU"/>
-                <constraint firstItem="Vem-om-TfL" firstAttribute="top" secondItem="vTi-G3-FbL" secondAttribute="bottom" constant="10" id="jBG-mf-5W8"/>
                 <constraint firstAttribute="trailing" secondItem="l7B-cS-Kem" secondAttribute="trailing" id="kma-yi-Cps"/>
+                <constraint firstItem="cjd-FY-ajd" firstAttribute="centerY" secondItem="qi1-mA-x2m" secondAttribute="centerY" id="ojY-AS-N4C"/>
                 <constraint firstItem="7bg-oj-H46" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="orl-3G-ED7"/>
-                <constraint firstItem="Vem-om-TfL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sq5-HC-LYo"/>
+                <constraint firstItem="cjd-FY-ajd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qLP-5m-R99"/>
+                <constraint firstItem="qi1-mA-x2m" firstAttribute="leading" secondItem="cjd-FY-ajd" secondAttribute="trailing" constant="5" id="teg-9S-mMJ"/>
                 <constraint firstItem="vTi-G3-FbL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uNU-1L-oMj"/>
                 <constraint firstItem="qi1-mA-x2m" firstAttribute="top" secondItem="vTi-G3-FbL" secondAttribute="bottom" constant="8" id="vb7-pH-dxu"/>
                 <constraint firstAttribute="trailing" secondItem="QSR-CV-sIx" secondAttribute="trailing" id="zjV-I5-2d9"/>
@@ -150,6 +149,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="Veg" width="32" height="32"/>
         <image name="foodBG" width="291" height="173"/>
     </resources>
 </document>

@@ -20,21 +20,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Masala" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-KJ-0M6">
-                        <rect key="frame" x="58" y="13" width="39" height="14"/>
+                        <rect key="frame" x="55" y="13" width="39" height="14"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoR-uA-d3R">
-                        <rect key="frame" x="10" y="15" width="10" height="10"/>
-                        <color key="backgroundColor" red="0.33333333329999998" green="0.70980392160000005" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="10" id="99s-qu-laZ"/>
-                            <constraint firstAttribute="height" constant="10" id="NRu-4j-UsS"/>
-                        </constraints>
-                    </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlT-Wr-VCI">
-                        <rect key="frame" x="28" y="10" width="20" height="20"/>
+                        <rect key="frame" x="25" y="10" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="gmd-cH-aEL"/>
                             <constraint firstAttribute="height" constant="20" id="wnO-nE-DeH"/>
@@ -43,21 +35,28 @@
                         <state key="selected" image="select"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 80" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAs-Jx-vWY">
-                        <rect key="frame" x="107" y="13" width="203" height="14"/>
+                        <rect key="frame" x="104" y="13" width="206" height="14"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Veg" translatesAutoresizingMaskIntoConstraints="NO" id="u4S-3i-0BZ">
+                        <rect key="frame" x="10" y="15" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="Y7O-L9-10l"/>
+                            <constraint firstAttribute="width" constant="10" id="e9F-e5-lEq"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="A5V-KJ-0M6" firstAttribute="leading" secondItem="nlT-Wr-VCI" secondAttribute="trailing" constant="10" id="4sY-vT-00A"/>
-                    <constraint firstItem="nlT-Wr-VCI" firstAttribute="leading" secondItem="VoR-uA-d3R" secondAttribute="trailing" constant="8" id="7pw-u8-6f3"/>
-                    <constraint firstItem="VoR-uA-d3R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="EHK-cf-hiG"/>
+                    <constraint firstItem="u4S-3i-0BZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DyF-eR-cDC"/>
                     <constraint firstAttribute="trailing" secondItem="AAs-Jx-vWY" secondAttribute="trailing" constant="10" id="Qzu-hs-2Se"/>
-                    <constraint firstItem="VoR-uA-d3R" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VoU-sh-50H"/>
                     <constraint firstItem="A5V-KJ-0M6" firstAttribute="centerY" secondItem="nlT-Wr-VCI" secondAttribute="centerY" id="Vq1-Ey-eup"/>
                     <constraint firstItem="nlT-Wr-VCI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dE7-i5-FeH"/>
+                    <constraint firstItem="u4S-3i-0BZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ks3-xt-axv"/>
+                    <constraint firstItem="nlT-Wr-VCI" firstAttribute="leading" secondItem="u4S-3i-0BZ" secondAttribute="trailing" constant="5" id="q8T-Fg-u0w"/>
                     <constraint firstItem="AAs-Jx-vWY" firstAttribute="centerY" secondItem="A5V-KJ-0M6" secondAttribute="centerY" id="rEb-8v-QEq"/>
                     <constraint firstItem="AAs-Jx-vWY" firstAttribute="leading" secondItem="A5V-KJ-0M6" secondAttribute="trailing" constant="10" id="rX0-7Z-ZNP"/>
                 </constraints>
@@ -72,6 +71,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Veg" width="32" height="32"/>
         <image name="select" width="42.5" height="42.5"/>
         <image name="unSelect" width="42.5" height="42.5"/>
     </resources>

@@ -13,6 +13,7 @@ PODS:
   - ReachabilitySwift (4.3.0)
   - RSReusable (1.0.12)
   - SnapKit (4.2.0)
+  - WOWRibbonView (0.1.1)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - ReachabilitySwift
   - RSReusable
   - SnapKit
+  - WOWRibbonView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -40,6 +42,7 @@ SPEC REPOS:
     - ReachabilitySwift
     - RSReusable
     - SnapKit
+    - WOWRibbonView
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
@@ -53,7 +56,8 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   RSReusable: e7888dff90fbaf01b9b01169875730be4a04e818
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  WOWRibbonView: 651063fb557d4af568f9fe93cba31bd950463f1c
 
-PODFILE CHECKSUM: 4540681d26878a72a2510ae756579abac29a0e5a
+PODFILE CHECKSUM: ba60bbe2a22bfc7a69a43498097c9125697d8c02
 
 COCOAPODS: 1.6.1

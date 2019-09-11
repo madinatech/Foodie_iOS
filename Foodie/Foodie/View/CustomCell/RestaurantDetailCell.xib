@@ -54,14 +54,6 @@
                             <color key="titleColor" red="0.33333333329999998" green="0.70980392160000005" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                     </button>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkL-8D-mcF">
-                        <rect key="frame" x="10" y="37.5" width="10" height="10"/>
-                        <color key="backgroundColor" red="0.33333333329999998" green="0.70980392160000005" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="10" id="4jv-MP-DkM"/>
-                            <constraint firstAttribute="width" constant="10" id="EAN-FK-iEj"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-XK-3WL">
                         <rect key="frame" x="240" y="27.5" width="70" height="30"/>
                         <subviews>
@@ -106,22 +98,31 @@
                             <constraint firstItem="lKv-g4-7ds" firstAttribute="centerY" secondItem="Uoq-XK-3WL" secondAttribute="centerY" id="uCY-os-d8A"/>
                         </constraints>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Veg" translatesAutoresizingMaskIntoConstraints="NO" id="hdI-rp-duo">
+                        <rect key="frame" x="10" y="37.5" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="BtV-sq-PlV"/>
+                            <constraint firstAttribute="width" constant="10" id="Bw0-wX-AbI"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="bky-1O-XnV"/>
+                            <constraint firstAttribute="height" constant="10" id="hZz-nz-9Z5"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="hdI-rp-duo" firstAttribute="centerY" secondItem="kt6-ta-MaR" secondAttribute="centerY" id="0ey-wd-Xo8"/>
                     <constraint firstItem="Uoq-XK-3WL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6Xc-W9-PIl"/>
                     <constraint firstItem="aLW-Iv-HVL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="9iK-rU-ghl"/>
                     <constraint firstItem="Rlv-XB-Xco" firstAttribute="trailing" secondItem="kt6-ta-MaR" secondAttribute="trailing" id="Ckf-rK-cIU"/>
                     <constraint firstItem="kt6-ta-MaR" firstAttribute="top" secondItem="aLW-Iv-HVL" secondAttribute="bottom" constant="5" id="FpS-Yp-dlN"/>
                     <constraint firstItem="N0g-LU-LdD" firstAttribute="leading" secondItem="kt6-ta-MaR" secondAttribute="trailing" constant="5" id="N5M-qC-2iC"/>
                     <constraint firstAttribute="trailing" secondItem="N0g-LU-LdD" secondAttribute="trailing" constant="10" id="Ryc-4D-D06"/>
+                    <constraint firstItem="hdI-rp-duo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="UWP-uk-Ihd"/>
                     <constraint firstItem="N0g-LU-LdD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YBx-KU-ocN"/>
                     <constraint firstItem="Rlv-XB-Xco" firstAttribute="leading" secondItem="kt6-ta-MaR" secondAttribute="leading" id="YYM-P2-63B"/>
                     <constraint firstAttribute="trailing" secondItem="Uoq-XK-3WL" secondAttribute="trailing" constant="10" id="a3e-pv-FfC"/>
-                    <constraint firstItem="UkL-8D-mcF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dbN-Vh-H7E"/>
-                    <constraint firstItem="UkL-8D-mcF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nTe-Ev-xjW"/>
+                    <constraint firstItem="kt6-ta-MaR" firstAttribute="leading" secondItem="hdI-rp-duo" secondAttribute="trailing" constant="5" id="cAD-08-1n0"/>
                     <constraint firstItem="Rlv-XB-Xco" firstAttribute="top" secondItem="kt6-ta-MaR" secondAttribute="bottom" constant="5" id="oy5-qN-av6"/>
                     <constraint firstItem="kt6-ta-MaR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rm8-QH-NTC"/>
-                    <constraint firstItem="kt6-ta-MaR" firstAttribute="leading" secondItem="UkL-8D-mcF" secondAttribute="trailing" constant="5" id="uBJ-VB-dXw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -138,4 +139,7 @@
             <point key="canvasLocation" x="-43.478260869565219" y="67.96875"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Veg" width="32" height="32"/>
+    </resources>
 </document>

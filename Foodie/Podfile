@@ -4,10 +4,10 @@
 target 'Foodie' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for Foodie
-pod 'IQKeyboardManagerSwift'
-
+  pod 'IQKeyboardManagerSwift'
+  
   pod 'Alamofire'
   pod 'ReachabilitySwift'
   pod 'AlamofireNetworkActivityLogger', '~> 2.0'
@@ -15,19 +15,20 @@ pod 'IQKeyboardManagerSwift'
   pod 'FastEasyMapping', '~> 1.2'
   pod 'ActionSheetPicker-3.0'
   pod 'Kingfisher'
-#  pod 'ParallaxHeader'
+  #  pod 'ParallaxHeader'
   pod 'RSReusable'
   pod 'SnapKit'
- pod 'AMShimmer'
-
+  pod 'AMShimmer'
+  pod 'WOWRibbonView'
+  
   target 'FoodieTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
   target 'FoodieUITests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
 end
