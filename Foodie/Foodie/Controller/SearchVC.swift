@@ -43,6 +43,7 @@ class SearchVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, 
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         tblView.reloadData()
         AMShimmer.start(for: tblView)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {

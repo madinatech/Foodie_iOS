@@ -1,7 +1,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var isFromPresentVC : Bool = false
     var isBackButtonHidden : Bool = false
@@ -9,15 +9,20 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       let controllers = self.navigationController?.viewControllers
-        
-        if(controllers!.count > 1){
-               self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        if(self.navigationController != nil){
+//            let controllers = self.navigationController?.viewControllers
+//
+//            if(controllers!.count > 1){
+//                self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+//            }
         }
+      
     
         if(isHome == true){
             let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 40))
@@ -73,6 +78,11 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = appThemeColor
 //        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
     
     @objc func backClicked() {

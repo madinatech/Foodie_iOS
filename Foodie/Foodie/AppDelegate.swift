@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-          IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enable = true
+        
+        Thread.sleep(forTimeInterval: 2.0)
         
         let controller  = WelcomeVC.initViewController()
         self.navigationController = UINavigationController.init(rootViewController: controller)
@@ -87,8 +89,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
 }
+
 extension UIApplication{
     var statusbarView : UIView?{
         return value(forKey: "statusBar") as? UIView

@@ -46,6 +46,7 @@ class MyAccountViewController: BaseViewController, UITableViewDelegate, UITableV
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         blurView.isHidden = true
     }
     

@@ -40,6 +40,7 @@ class RestaurantsVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+          self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         filterView.isHidden = true
         tblView.reloadData()
         AMShimmer.start(for: tblView)

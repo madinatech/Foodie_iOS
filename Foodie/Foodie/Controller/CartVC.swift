@@ -46,10 +46,11 @@ class CartVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, Cu
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if(tabBarController?.tabBar.isHidden == false){
-            payViewBottom.constant = -10
-            self.view.layoutIfNeeded()
-        }
+         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+//        if(tabBarController?.tabBar.isHidden == false){
+//            payViewBottom.constant = -10
+//            self.view.layoutIfNeeded()
+//        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
