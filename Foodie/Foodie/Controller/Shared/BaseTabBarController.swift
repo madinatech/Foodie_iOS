@@ -29,8 +29,8 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let myTabBarItem1 = UITabBarItem()
         myTabBarItem1.tag = 0
-        //        myTabBarItem1.image = UIImage(named: "patient")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-        //        myTabBarItem1.selectedImage = UIImage(named: "patient_s")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        myTabBarItem1.image = UIImage(named: "black_face")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        myTabBarItem1.selectedImage = UIImage(named: "red_face")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         myTabBarItem1.title = "Restaurants"
         v1.tabBarItem = myTabBarItem1
         

@@ -20,6 +20,8 @@ target 'Foodie' do
   pod 'SnapKit'
   pod 'AMShimmer'
   pod 'WOWRibbonView'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
   
   target 'FoodieTests' do
     inherit! :search_paths

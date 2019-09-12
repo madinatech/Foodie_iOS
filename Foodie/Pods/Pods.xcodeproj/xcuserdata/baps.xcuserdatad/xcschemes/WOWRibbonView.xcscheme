@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1AB20074272B11AE098ABDEDE4C1FCF"
+               BlueprintIdentifier = "23E0D01FB23FCE9304E66DBDD67D8118"
                BuildableName = "WOWRibbonView.framework"
                BlueprintName = "WOWRibbonView"
                ReferencedContainer = "container:Pods.xcodeproj">

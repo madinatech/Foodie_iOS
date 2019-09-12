@@ -5,7 +5,7 @@ import UIKit
 typealias ItemLoadedBlock = (_ result: Any, _ error : String) -> (Void)
 
 @available(iOS 10.0, *)
-
+let GoogleApiKey = "AIzaSyCx3P5XvbQj7jCtDiGKicIpO4ghjK-68fA"//"AIzaSyBqNHZg05Thqmmoz7OOe3WH71OrhnMJfRA"
 let appDelegateShared = UIApplication.shared.delegate as? AppDelegate
 let appThemeColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: 1.0)
 let appLigtGrayColor = UIColor.init(red: 221.0/255.0, green: 222.0/255.0, blue: 223.0/255.0, alpha: 1.0)

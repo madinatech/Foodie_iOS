@@ -1,14 +1,9 @@
-//
-//  AppDelegate.swift
-//  Foodie
-//
-//  Created by CrossGrids on 03/09/19.
-//  Copyright © 2019 CrossGrids. All rights reserved.
-//
 
 import UIKit
 import CoreData
 import IQKeyboardManagerSwift
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,10 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         IQKeyboardManager.shared.enable = true
-        
+         GMSServices.provideAPIKey(GoogleApiKey)
+        GMSPlacesClient.provideAPIKey(GoogleApiKey)
         Thread.sleep(forTimeInterval: 2.0)
         
-        let controller  = WelcomeVC.initViewController()
+        let controller  = DeliveryLoactionVC.initViewController()
         self.navigationController = UINavigationController.init(rootViewController: controller)
         setNavigationBarColor()
         window?.rootViewController = navigationController
