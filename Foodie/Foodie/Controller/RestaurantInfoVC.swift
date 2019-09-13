@@ -31,7 +31,7 @@ class RestaurantInfoVC: BaseViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func backClicked(_ sender: Any) {
-         self.navigationController?.popViewController(animated: true)
+         self.navigationController?.popViewController(animated: false)
     }
     func addBlackGradientLayerInForeground(){
          let layer = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 60))
