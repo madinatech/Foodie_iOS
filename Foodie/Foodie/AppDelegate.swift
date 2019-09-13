@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setNavigationBarColor() {
         UINavigationBar.appearance().barTintColor =  UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Helvetica Bold", size: 18) ?? ""]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Calibri-Bold", size: 20) ?? ""]
         self.navigationController.navigationBar.isTranslucent = false
     }
     

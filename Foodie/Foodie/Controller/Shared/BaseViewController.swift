@@ -28,7 +28,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
             let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 40))
             let label = UILabel()
             label.text = "Location"
-            label.font = UIFont.init(name: "Helvetica Bold", size: 18)
+            label.font = UIFont.init(name: "Calibri-Bold", size: 20)
             label.textColor = .white
             label.sizeToFit()
 //            label.center = view.center

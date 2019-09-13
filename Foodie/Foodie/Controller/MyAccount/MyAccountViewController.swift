@@ -119,7 +119,7 @@ class MyAccountViewController: BaseViewController, UITableViewDelegate, UITableV
             let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tblView.frame.width, height: 50))
             let lblTitle = UILabel.init(frame: CGRect.init(x: 10, y: 0, width: tblView.frame.width, height: 50))
             lblTitle.text = "Past Orders"
-            lblTitle.font = UIFont.init(name: "Helvetica Bold", size: 12)
+            lblTitle.font = UIFont.init(name: "Calibri-Bold", size: 14)
             lblTitle.textColor = .lightGray
             view.backgroundColor = .groupTableViewBackground
             view.addSubview(lblTitle)

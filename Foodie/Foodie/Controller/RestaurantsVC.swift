@@ -74,12 +74,12 @@ class RestaurantsVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tblView.frame.width, height: 50))
         headerView.backgroundColor = UIColor.groupTableViewBackground
         let lblTitle = UILabel.init(frame: CGRect.init(x: 10, y: 0, width: tblView.frame.width - 10, height: 50))
-        lblTitle.font = UIFont.init(name: "Helvetica Bold", size: 15)
+        lblTitle.font = UIFont.init(name: "Calibri-Bold", size: 16)
         
         let btnFiler = UIButton.init(frame: CGRect.init(x: tblView.frame.width - 100, y: 0, width: 100, height: 50))
         btnFiler.setTitle("Sort / Filter", for: .normal)
         btnFiler.setTitleColor(.black, for: .normal)
-        btnFiler.titleLabel?.font = UIFont.init(name: "Helvetica", size: 15)
+        btnFiler.titleLabel?.font = UIFont.init(name: "Calibri", size: 16)
         if(section == 0){
             lblTitle.text = "Delivers in under 40 minutes"
             btnFiler.isHidden = true

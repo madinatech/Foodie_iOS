@@ -10,8 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="circularstd_bold.ttf">
-            <string>CircularStd-Bold</string>
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -38,18 +41,18 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your OTP code here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oM-Ke-Izb">
-                                    <rect key="frame" x="90.333333333333329" y="166.33333333333334" width="233.33333333333337" height="23"/>
+                                    <rect key="frame" x="90.333333333333329" y="162" width="233.33333333333337" height="23"/>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your mobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPK-tW-8ZZ">
-                                    <rect key="frame" x="90.000000000000014" y="119.99999999999999" width="234.33333333333337" height="31.333333333333329"/>
-                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="27"/>
+                                    <rect key="frame" x="103.66666666666669" y="120" width="207" height="27"/>
+                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="27"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Scj-2F-dcZ">
-                                    <rect key="frame" x="16" y="245" width="382" height="43"/>
+                                    <rect key="frame" x="16" y="240.66666666666663" width="382" height="43"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CmH-0E-82s" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="43"/>
@@ -57,7 +60,7 @@
                                                 <constraint firstAttribute="height" constant="43" id="uxJ-hV-jDt"/>
                                             </constraints>
                                             <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -75,7 +78,7 @@
                                                 <constraint firstAttribute="height" constant="43" id="lAo-Ft-UVH"/>
                                             </constraints>
                                             <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -93,7 +96,7 @@
                                                 <constraint firstAttribute="height" constant="43" id="7Gx-Xf-C26"/>
                                             </constraints>
                                             <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -111,7 +114,7 @@
                                                 <constraint firstAttribute="height" constant="43" id="5X7-l4-OFU"/>
                                             </constraints>
                                             <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -129,7 +132,7 @@
                                                 <constraint firstAttribute="height" constant="43" id="tMi-Tf-iJM"/>
                                             </constraints>
                                             <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -147,7 +150,7 @@
                                                 <constraint firstAttribute="height" constant="43" id="yHi-qJ-1ir"/>
                                             </constraints>
                                             <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -170,7 +173,7 @@
                                     </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8m-cq-D7Y">
-                                    <rect key="frame" x="30" y="333" width="354" height="50"/>
+                                    <rect key="frame" x="30" y="328.66666666666669" width="354" height="50"/>
                                     <color key="backgroundColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="cGT-0f-AFZ">
@@ -181,7 +184,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </constraint>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
                                     <state key="normal" title="Verify now"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">

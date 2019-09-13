@@ -37,7 +37,8 @@ class SearchVC: BaseViewController, UITableViewDelegate, UITableViewDataSource, 
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
         selectedSection = -1
-        segment.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Helvetica Bold", size: 15)!], for: .normal)
+        segment.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Calibri-Bold", size: 16)!], for: .normal)
+        
         search.endEditing(true)
     }
     

@@ -20,6 +20,9 @@
 		34358AE1232B95D600AC1DB5 /* RestaurantInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34358ADF232B95D600AC1DB5 /* RestaurantInfoVC.xib */; };
 		34358AE4232B984F00AC1DB5 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34358AE2232B984F00AC1DB5 /* InfoCell.swift */; };
 		34358AE5232B984F00AC1DB5 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34358AE3232B984F00AC1DB5 /* InfoCell.xib */; };
+		34358B27232BAD4400AC1DB5 /* calibril.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34358B24232BAD4400AC1DB5 /* calibril.ttf */; };
+		34358B28232BAD4400AC1DB5 /* calibrib.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34358B25232BAD4400AC1DB5 /* calibrib.ttf */; };
+		34358B29232BAD4400AC1DB5 /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34358B26232BAD4400AC1DB5 /* Calibri.ttf */; };
 		3479A01723221ECB00CD04BB /* PastOrderButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479A01523221ECB00CD04BB /* PastOrderButtonCell.swift */; };
 		3479A01823221ECB00CD04BB /* PastOrderButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3479A01623221ECB00CD04BB /* PastOrderButtonCell.xib */; };
 		3479A01B2322212F00CD04BB /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479A0192322212F00CD04BB /* CartVC.swift */; };
@@ -174,6 +177,9 @@
 		34358ADF232B95D600AC1DB5 /* RestaurantInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantInfoVC.xib; sourceTree = "<group>"; };
 		34358AE2232B984F00AC1DB5 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		34358AE3232B984F00AC1DB5 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
+		34358B24232BAD4400AC1DB5 /* calibril.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = calibril.ttf; sourceTree = "<group>"; };
+		34358B25232BAD4400AC1DB5 /* calibrib.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = calibrib.ttf; sourceTree = "<group>"; };
+		34358B26232BAD4400AC1DB5 /* Calibri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calibri.ttf; sourceTree = "<group>"; };
 		3479A01523221ECB00CD04BB /* PastOrderButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrderButtonCell.swift; sourceTree = "<group>"; };
 		3479A01623221ECB00CD04BB /* PastOrderButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastOrderButtonCell.xib; sourceTree = "<group>"; };
 		3479A0192322212F00CD04BB /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
@@ -331,9 +337,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34358B23232BAD4400AC1DB5 /* Calibri */ = {
+			isa = PBXGroup;
+			children = (
+				34358B24232BAD4400AC1DB5 /* calibril.ttf */,
+				34358B25232BAD4400AC1DB5 /* calibrib.ttf */,
+				34358B26232BAD4400AC1DB5 /* Calibri.ttf */,
+			);
+			path = Calibri;
+			sourceTree = "<group>";
+		};
 		3479A04523227B7700CD04BB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				34358B23232BAD4400AC1DB5 /* Calibri */,
 				34358ADC232B6E8600AC1DB5 /* UIViewExtension.swift */,
 				3479A0482322847000CD04BB /* UIWindowTransitions.swift */,
 				3479A04623227B7700CD04BB /* Utils.swift */,
@@ -704,6 +721,7 @@
 				34921CDA231F970E0030EE23 /* FilterVC.xib in Resources */,
 				3479A02C232235FF00CD04BB /* BillDetailCell.xib in Resources */,
 				34F0BBB42321206F00810E3C /* OffersVC.xib in Resources */,
+				34358B29232BAD4400AC1DB5 /* Calibri.ttf in Resources */,
 				34A348D0231E88030051345B /* AccountVC.xib in Resources */,
 				34A348C0231E73380051345B /* CreateAccountVC.xib in Resources */,
 				34358AE1232B95D600AC1DB5 /* RestaurantInfoVC.xib in Resources */,
@@ -731,6 +749,7 @@
 				3479A0342322447500CD04BB /* CustomizeItemCell.xib in Resources */,
 				34F0BBA22321202000810E3C /* ManageAddressVC.xib in Resources */,
 				34F0BB9F2321202000810E3C /* MyAccountViewController.xib in Resources */,
+				34358B27232BAD4400AC1DB5 /* calibril.ttf in Resources */,
 				34A3489A231E41540051345B /* ChooseCountryVC.xib in Resources */,
 				34A34871231E40BE0051345B /* LaunchScreen.storyboard in Resources */,
 				34F0BB8F23210EB500810E3C /* PastOrderCell.xib in Resources */,
@@ -742,6 +761,7 @@
 				34F0BB862321087100810E3C /* CountryCell.xib in Resources */,
 				34F0BB5E2320EFBA00810E3C /* AccountHeader.xib in Resources */,
 				34F0BBB82321227800810E3C /* ManageAddressCell.xib in Resources */,
+				34358B28232BAD4400AC1DB5 /* calibrib.ttf in Resources */,
 				3479A01823221ECB00CD04BB /* PastOrderButtonCell.xib in Resources */,
 				34A3486E231E40BE0051345B /* Assets.xcassets in Resources */,
 				34A348C4231E7CB20051345B /* MoreVC.xib in Resources */,

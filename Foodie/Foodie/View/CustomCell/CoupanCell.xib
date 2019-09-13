@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,14 +33,14 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply Coupon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxZ-rB-e6T">
-                        <rect key="frame" x="50" y="21" width="260" height="17.5"/>
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                        <rect key="frame" x="50" y="22" width="260" height="16"/>
+                        <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On any order above $99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZ3-te-E9T">
-                        <rect key="frame" x="50" y="38.5" width="260" height="11.5"/>
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                        <rect key="frame" x="50" y="38" width="260" height="11"/>
+                        <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="11"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -51,7 +56,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSi-du-DFM">
-                        <rect key="frame" x="301" y="19" width="9" height="22"/>
+                        <rect key="frame" x="301" y="21.5" width="9" height="17"/>
+                        <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
                         <state key="normal" image="rightArrow">
                             <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         </state>

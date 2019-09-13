@@ -36,7 +36,7 @@ class ManageAddressVC: BaseViewController, UITableViewDelegate, UITableViewDataS
         let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tblView.frame.width, height: 60))
         let btn = UIButton.init(frame: CGRect.init(x: 10, y: 10, width: tblView.frame.width - 20, height: 40))
         btn.setTitle( "Add New Address", for: .normal)
-        btn.titleLabel!.font = UIFont.init(name: "Helvetica Bold", size: 15)
+        btn.titleLabel!.font = UIFont.init(name: "Calibri-Bold", size: 16)
         btn.setTitleColor(appGreenColor, for: .normal)
         btn.layer.borderWidth = 2
         btn.layer.borderColor = appGreenColor.cgColor

@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartVC" customModule="Foodie" customModuleProvider="target">
             <connections>
@@ -27,7 +35,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyS-Gf-0r9">
-                    <rect key="frame" x="100" y="476" width="175" height="40"/>
+                    <rect key="frame" x="100" y="475" width="175" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="175" id="mdi-1X-08x"/>
                         <constraint firstAttribute="height" constant="40" id="v7l-Nr-dDx"/>
@@ -41,20 +49,20 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Food is always cooking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtS-dY-Wfo">
-                    <rect key="frame" x="81.5" y="380" width="212" height="18"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <rect key="frame" x="86.5" y="380" width="202.5" height="17"/>
+                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your cart is empty." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ned-2w-JBD">
-                    <rect key="frame" x="138" y="413" width="99" height="14"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <rect key="frame" x="135" y="412" width="105" height="14"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="14"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add someting from the menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un5-aa-3hx">
-                    <rect key="frame" x="110" y="432" width="155" height="14"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <rect key="frame" x="103.5" y="431" width="168" height="14"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="14"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -78,8 +86,8 @@
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$250.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xde-v8-ET5">
-                            <rect key="frame" x="10" y="8" width="51" height="17"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                            <rect key="frame" x="10" y="8" width="53" height="16"/>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6V5-eY-QsB">
@@ -88,7 +96,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="188" id="C9u-RX-enl"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="17"/>
                             <state key="normal" title="Preceed To Pay">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -98,7 +106,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRR-Of-OQ1">
                             <rect key="frame" x="0.0" y="0.0" width="187" height="45"/>
-                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="16"/>
                             <state key="normal" title="  View Detailed bill"/>
                             <connections>
                                 <action selector="viewBillClicked:" destination="-1" eventType="touchUpInside" id="jeD-bN-FMu"/>

@@ -19,7 +19,7 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         self.tabBar.unselectedItemTintColor = UIColor.black
         self.tabBar.barTintColor = UIColor.white
         UITabBar.appearance().isTranslucent = true
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 12) ?? ""], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Calibri", size: 14) ?? ""], for: .normal)
         
         let v1 = RestaurantsVC.initViewController()
         let v2 = SearchVC.initViewController()

@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangePasswodVC" customModule="Foodie" customModuleProvider="target">
             <connections>
@@ -28,7 +36,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="fQ4-PK-04t"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -37,8 +45,8 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54S-xh-wzL">
-                    <rect key="frame" x="329" y="57" width="31" height="26"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <rect key="frame" x="330" y="57.5" width="30" height="25"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="13"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Show">
                         <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,7 +63,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="TPx-un-RF8"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -64,8 +72,8 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhg-lp-ric">
-                    <rect key="frame" x="329" y="107" width="31" height="26"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <rect key="frame" x="330" y="107.5" width="30" height="25"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="13"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Show">
                         <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,7 +90,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="jmU-nv-UGu"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -91,8 +99,8 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCJ-ZF-V4C">
-                    <rect key="frame" x="329" y="157" width="31" height="26"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <rect key="frame" x="330" y="157.5" width="30" height="25"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="13"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Show">
                         <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,7 +124,7 @@
                             </userDefinedRuntimeAttributes>
                         </constraint>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
                     <state key="normal" title="Save"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">

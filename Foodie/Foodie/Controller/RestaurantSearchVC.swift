@@ -41,7 +41,7 @@ class RestaurantSearchVC: UIViewController, UITableViewDelegate, UITableViewData
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tblView.frame.width, height: 50))
         headerView.backgroundColor = UIColor.white
         let lblTitle = UILabel.init(frame: CGRect.init(x: 10, y: 0, width: tblView.frame.width - 10, height: 50))
-        lblTitle.font = UIFont.init(name: "Helvetica Bold", size: 15)
+        lblTitle.font = UIFont.init(name: "Calibri-Bold", size: 16)
         if(section == 0){
             lblTitle.text = "Dal"
         } else {

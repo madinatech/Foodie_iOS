@@ -10,8 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="CircularStd-Medium.ttf">
-            <string>CircularStd-Medium</string>
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -165,13 +168,13 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login / Create account quickly to manage orders " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK4-hI-zL3">
-                                    <rect key="frame" x="20" y="176" width="335" height="34.5"/>
-                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                    <rect key="frame" x="20" y="176" width="335" height="40"/>
+                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="17"/>
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCa-z1-8lo">
-                                    <rect key="frame" x="20" y="250.5" width="335" height="163"/>
+                                    <rect key="frame" x="20" y="256" width="335" height="163"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-tw-9aE">
                                             <rect key="frame" x="10" y="10" width="315" height="50"/>
@@ -184,18 +187,18 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(+255)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i9-go-tde">
-                                                    <rect key="frame" x="54" y="14.5" width="50.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="18"/>
+                                                    <rect key="frame" x="54" y="14" width="53" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0754 636 363" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="au9-NW-XHi">
-                                                    <rect key="frame" x="112.5" y="10" width="194.5" height="30"/>
+                                                    <rect key="frame" x="115" y="10" width="192" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="dom-35-7VW"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="19"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                             </subviews>
@@ -228,7 +231,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </constraint>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
                                             <state key="normal" title="Login"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
@@ -257,23 +260,23 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3AL-Rn-LnB">
-                                    <rect key="frame" x="44" y="433.5" width="287.5" height="20"/>
+                                    <rect key="frame" x="42.5" y="439" width="290.5" height="20"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbE-4I-lcH">
-                                            <rect key="frame" x="0.0" y="0.0" width="287.5" height="20"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="290.5" height="20"/>
                                             <connections>
                                                 <action selector="createaccountClicked:" destination="-1" eventType="touchUpInside" id="QQ8-XT-g50"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-PV-dJR">
-                                            <rect key="frame" x="0.0" y="0.0" width="169" height="17.5"/>
-                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170.5" height="19"/>
+                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="16"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu2-j4-ypa">
-                                            <rect key="frame" x="179" y="0.0" width="108.5" height="17.5"/>
-                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                            <rect key="frame" x="180.5" y="0.0" width="110" height="19"/>
+                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="16"/>
                                             <color key="textColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>

@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestaurantDetailVC" customModule="Foodie" customModuleProvider="target">
             <connections>
@@ -39,19 +47,19 @@
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ial-TH-tvw">
-                            <rect key="frame" x="10" y="16.5" width="41" height="17"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                            <rect key="frame" x="10" y="17" width="42.5" height="16"/>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$135" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBU-k8-Pig">
-                            <rect key="frame" x="72" y="16.5" width="32" height="17"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                            <rect key="frame" x="73.5" y="17" width="32.5" height="16"/>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz5-pT-Qu2">
-                            <rect key="frame" x="61" y="20" width="1" height="10"/>
+                            <rect key="frame" x="62.5" y="20" width="1" height="10"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="10" id="2Lz-sl-0L5"/>
@@ -62,8 +70,8 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxx-NF-Ffa">
-                            <rect key="frame" x="296" y="10" width="69" height="30"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                            <rect key="frame" x="296" y="10.5" width="69" height="29"/>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="17"/>
                             <state key="normal" title="View Cart">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -119,13 +127,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Farm House Europe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-aW-9h7">
-                    <rect key="frame" x="10" y="215" width="280" height="23"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                    <rect key="frame" x="10" y="215" width="280" height="22"/>
+                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="cMO-dO-qOQ">
-                    <rect key="frame" x="10" y="248" width="12" height="12"/>
+                    <rect key="frame" x="10" y="247" width="12" height="12"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="12" id="lny-sx-ei8"/>
@@ -133,7 +141,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hB-Qw-keA">
-                    <rect key="frame" x="58" y="249" width="1" height="10"/>
+                    <rect key="frame" x="59" y="248" width="1" height="10"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="10" id="Dgz-Rm-Z23"/>
@@ -144,14 +152,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azQ-Ys-8KS">
-                    <rect key="frame" x="27" y="245.5" width="21" height="17.5"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <rect key="frame" x="27" y="244.5" width="22" height="17"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="400 for two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujT-IV-SZT">
-                    <rect key="frame" x="69" y="245.5" width="74.5" height="17.5"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <rect key="frame" x="70" y="244.5" width="80" height="17"/>
+                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>

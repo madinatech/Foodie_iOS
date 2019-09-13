@@ -45,7 +45,7 @@ class CityVC: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 extension UIView {
     
     func dropShadow() {
-        self.layer.shadowColor = UIColor(white: 0.0, alpha: 0.5).cgColor
+        self.layer.shadowColor = UIColor(white: 0.0, alpha: 0.2).cgColor
         self.layer.shadowOffset = CGSize.init(width: 0.0, height: 0.0)
         self.layer.shadowOpacity = 0.40
         self.layer.shadowRadius = 6.0
