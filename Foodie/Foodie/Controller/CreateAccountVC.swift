@@ -3,10 +3,10 @@ import UIKit
 
 class CreateAccountVC: BaseViewController {
     
-    @IBOutlet weak var txtLName: CommonTextfield!
-    @IBOutlet weak var txtFName: CommonTextfield!
+    @IBOutlet weak var txtName: CommonTextfield!
+    @IBOutlet weak var txtMobile: CommonTextfield!
     @IBOutlet weak var txtEmail: CommonTextfield!
-    @IBOutlet weak var txtPasssword: CommonTextfield!
+ 
     
     class func initViewController() -> CreateAccountVC {
         let vc = CreateAccountVC.init(nibName: "CreateAccountVC", bundle: nil)
@@ -24,18 +24,7 @@ class CreateAccountVC: BaseViewController {
         UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
     }
     
-    @IBAction func fbClicked(_ sender: Any) {
-    }
-    
-    @IBAction func showClicked(_ sender: UIButton) {
-        if(sender.isSelected == true) {
-            sender.isSelected = false
-            txtPasssword.isSecureTextEntry = true
-        } else {
-            sender.isSelected = true
-            txtPasssword.isSecureTextEntry = false
-        }
-    }
+
     
     @IBAction func termsClicked(_ sender: Any) {
         let vc = TermsVC.initViewController()
@@ -59,5 +48,7 @@ class CreateAccountVC: BaseViewController {
     }
     
     @IBAction func createAccountClicked(_ sender: Any) {
+        let vc = VerifyOtpVC.initViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

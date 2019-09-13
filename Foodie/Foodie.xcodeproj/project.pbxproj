@@ -13,6 +13,9 @@
 		34000A8323265B4C00D980D3 /* SearchHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34000A8223265B4C00D980D3 /* SearchHeader.xib */; };
 		3409A92023278669001DFA01 /* RestaurantSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409A91E23278669001DFA01 /* RestaurantSearchVC.swift */; };
 		3409A92123278669001DFA01 /* RestaurantSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3409A91F23278669001DFA01 /* RestaurantSearchVC.xib */; };
+		34358ADA232B617200AC1DB5 /* VerifyOtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34358AD8232B617200AC1DB5 /* VerifyOtpVC.swift */; };
+		34358ADB232B617200AC1DB5 /* VerifyOtpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34358AD9232B617200AC1DB5 /* VerifyOtpVC.xib */; };
+		34358ADD232B6E8600AC1DB5 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34358ADC232B6E8600AC1DB5 /* UIViewExtension.swift */; };
 		3479A01723221ECB00CD04BB /* PastOrderButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479A01523221ECB00CD04BB /* PastOrderButtonCell.swift */; };
 		3479A01823221ECB00CD04BB /* PastOrderButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3479A01623221ECB00CD04BB /* PastOrderButtonCell.xib */; };
 		3479A01B2322212F00CD04BB /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479A0192322212F00CD04BB /* CartVC.swift */; };
@@ -160,6 +163,9 @@
 		34000A8223265B4C00D980D3 /* SearchHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeader.xib; sourceTree = "<group>"; };
 		3409A91E23278669001DFA01 /* RestaurantSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchVC.swift; sourceTree = "<group>"; };
 		3409A91F23278669001DFA01 /* RestaurantSearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantSearchVC.xib; sourceTree = "<group>"; };
+		34358AD8232B617200AC1DB5 /* VerifyOtpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyOtpVC.swift; sourceTree = "<group>"; };
+		34358AD9232B617200AC1DB5 /* VerifyOtpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyOtpVC.xib; sourceTree = "<group>"; };
+		34358ADC232B6E8600AC1DB5 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		3479A01523221ECB00CD04BB /* PastOrderButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrderButtonCell.swift; sourceTree = "<group>"; };
 		3479A01623221ECB00CD04BB /* PastOrderButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastOrderButtonCell.xib; sourceTree = "<group>"; };
 		3479A0192322212F00CD04BB /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
@@ -320,6 +326,7 @@
 		3479A04523227B7700CD04BB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				34358ADC232B6E8600AC1DB5 /* UIViewExtension.swift */,
 				3479A0482322847000CD04BB /* UIWindowTransitions.swift */,
 				3479A04623227B7700CD04BB /* Utils.swift */,
 			);
@@ -405,6 +412,8 @@
 		34A34896231E413E0051345B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				34358AD8232B617200AC1DB5 /* VerifyOtpVC.swift */,
+				34358AD9232B617200AC1DB5 /* VerifyOtpVC.xib */,
 				34000A7D2326506100D980D3 /* SearchVC.swift */,
 				34000A7C2326506100D980D3 /* SearchVC.xib */,
 				34F0BB982321202000810E3C /* MyAccount */,
@@ -736,6 +745,7 @@
 				34921CE2231FBDAA0030EE23 /* RestaurantDetailVC.xib in Resources */,
 				34F0BB7A2321087100810E3C /* RecomandedDetailCell.xib in Resources */,
 				34F0BB812321087100810E3C /* FilterCell.xib in Resources */,
+				34358ADB232B617200AC1DB5 /* VerifyOtpVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,6 +942,7 @@
 				3479A04723227B7700CD04BB /* Utils.swift in Sources */,
 				3479A04323226DB800CD04BB /* WelcomeCell.swift in Sources */,
 				34000A7F2326506100D980D3 /* SearchVC.swift in Sources */,
+				34358ADD232B6E8600AC1DB5 /* UIViewExtension.swift in Sources */,
 				34A348BF231E73380051345B /* CreateAccountVC.swift in Sources */,
 				34A34864231E40BC0051345B /* AppDelegate.swift in Sources */,
 				34921CE1231FBDAA0030EE23 /* RestaurantDetailVC.swift in Sources */,
@@ -942,6 +953,7 @@
 				34A348B2231E4F310051345B /* BaseViewController.swift in Sources */,
 				34A34899231E41540051345B /* ChooseCountryVC.swift in Sources */,
 				3479A01F232229EF00CD04BB /* CartItemCell.swift in Sources */,
+				34358ADA232B617200AC1DB5 /* VerifyOtpVC.swift in Sources */,
 				34A348D6231E91EE0051345B /* BaseTabBarController.swift in Sources */,
 				34A348D3231E8D340051345B /* ChangePasswodVC.swift in Sources */,
 				3479A02B232235FF00CD04BB /* BillDetailCell.swift in Sources */,

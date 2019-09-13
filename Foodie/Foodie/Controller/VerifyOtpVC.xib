@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="circularstd_bold.ttf">
+            <string>CircularStd-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyOtpVC" customModule="Foodie" customModuleProvider="target">
+            <connections>
+                <outlet property="txt1" destination="CmH-0E-82s" id="6fW-d5-DJS"/>
+                <outlet property="txt2" destination="Gc3-M3-Fpd" id="1qv-Kq-xcM"/>
+                <outlet property="txt3" destination="GqW-Bt-avw" id="jOI-PL-6X7"/>
+                <outlet property="txt4" destination="aeW-O3-AYg" id="0Az-3j-HSj"/>
+                <outlet property="txt5" destination="t6y-ZA-NHy" id="SEp-Jd-2dm"/>
+                <outlet property="txt6" destination="rv8-Ci-2sp" id="9Ak-0W-Fos"/>
+                <outlet property="view" destination="Yxx-mv-F0m" id="eEl-eH-BLt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Yxx-mv-F0m">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4x-wZ-A0W">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M41-aY-5O3">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your OTP code here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oM-Ke-Izb">
+                                    <rect key="frame" x="90.333333333333329" y="166.33333333333334" width="233.33333333333337" height="23"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your mobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPK-tW-8ZZ">
+                                    <rect key="frame" x="90.000000000000014" y="119.99999999999999" width="234.33333333333337" height="31.333333333333329"/>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="27"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Scj-2F-dcZ">
+                                    <rect key="frame" x="16" y="245" width="382" height="43"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CmH-0E-82s" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43" id="uxJ-hV-jDt"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                                                    <color key="value" red="0.86666666670000003" green="0.87058823529999996" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="UFk-5t-ara"/>
+                                                <outlet property="delegate" destination="-1" id="9hr-do-mWO"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gc3-M3-Fpd" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
+                                            <rect key="frame" x="66.333333333333329" y="0.0" width="51" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43" id="lAo-Ft-UVH"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                                                    <color key="value" red="0.86666666670000003" green="0.87058823529999996" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="YOO-U6-JpJ"/>
+                                                <outlet property="delegate" destination="-1" id="nzR-YD-ReM"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GqW-Bt-avw" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
+                                            <rect key="frame" x="132.33333333333334" y="0.0" width="51.333333333333343" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43" id="7Gx-Xf-C26"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                                                    <color key="value" red="0.86666666670000003" green="0.87058823529999996" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="kAN-sY-9wR"/>
+                                                <outlet property="delegate" destination="-1" id="Dce-6w-CcY"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeW-O3-AYg" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
+                                            <rect key="frame" x="198.66666666666666" y="0.0" width="51" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43" id="5X7-l4-OFU"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                                                    <color key="value" red="0.86666666670000003" green="0.87058823529999996" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="yOf-do-6xB"/>
+                                                <outlet property="delegate" destination="-1" id="w9j-aN-J4k"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6y-ZA-NHy" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
+                                            <rect key="frame" x="264.66666666666669" y="0.0" width="51.333333333333314" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43" id="tMi-Tf-iJM"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                                                    <color key="value" red="0.86666666670000003" green="0.87058823529999996" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="QEF-Mk-fXg"/>
+                                                <outlet property="delegate" destination="-1" id="03a-x2-zrF"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rv8-Ci-2sp" customClass="CommonTextfield" customModule="Foodie" customModuleProvider="target">
+                                            <rect key="frame" x="331" y="0.0" width="51" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43" id="yHi-qJ-1ir"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
+                                                    <color key="value" red="0.86666666670000003" green="0.87058823529999996" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="bVO-FW-Thr"/>
+                                                <outlet property="delegate" destination="-1" id="n7g-he-qEm"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GqW-Bt-avw" firstAttribute="width" secondItem="CmH-0E-82s" secondAttribute="width" id="T3q-OG-kxK"/>
+                                        <constraint firstItem="Gc3-M3-Fpd" firstAttribute="width" secondItem="CmH-0E-82s" secondAttribute="width" id="Z83-4g-CzQ"/>
+                                        <constraint firstAttribute="height" constant="43" id="dBL-GL-EBR"/>
+                                        <constraint firstItem="rv8-Ci-2sp" firstAttribute="width" secondItem="CmH-0E-82s" secondAttribute="width" id="e1R-Ho-LgS"/>
+                                        <constraint firstItem="aeW-O3-AYg" firstAttribute="width" secondItem="CmH-0E-82s" secondAttribute="width" id="hiJ-G1-jpO"/>
+                                        <constraint firstItem="t6y-ZA-NHy" firstAttribute="width" secondItem="CmH-0E-82s" secondAttribute="width" id="ulf-0X-Lng"/>
+                                    </constraints>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8m-cq-D7Y">
+                                    <rect key="frame" x="30" y="333" width="354" height="50"/>
+                                    <color key="backgroundColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="cGT-0f-AFZ">
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                                    <integer key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </constraint>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                    <state key="normal" title="Verify now"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="verifyClicked:" destination="-1" eventType="touchUpInside" id="Ki7-iE-u3d"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="O8m-cq-D7Y" firstAttribute="top" secondItem="Scj-2F-dcZ" secondAttribute="bottom" constant="45" id="0Nq-JN-V2a"/>
+                                <constraint firstItem="To7-Rg-SL5" firstAttribute="trailing" secondItem="Scj-2F-dcZ" secondAttribute="trailing" constant="16" id="1wO-H2-vf2"/>
+                                <constraint firstItem="O8m-cq-D7Y" firstAttribute="leading" secondItem="To7-Rg-SL5" secondAttribute="leading" constant="30" id="2Dm-17-VdG"/>
+                                <constraint firstAttribute="height" constant="736" id="4y3-Pm-IYe"/>
+                                <constraint firstItem="Scj-2F-dcZ" firstAttribute="leading" secondItem="To7-Rg-SL5" secondAttribute="leading" constant="16" id="E9M-Nx-JHL"/>
+                                <constraint firstItem="tPK-tW-8ZZ" firstAttribute="top" secondItem="To7-Rg-SL5" secondAttribute="top" constant="100" id="Pfj-KL-V4H"/>
+                                <constraint firstItem="To7-Rg-SL5" firstAttribute="trailing" secondItem="O8m-cq-D7Y" secondAttribute="trailing" constant="30" id="VZl-bY-qBC"/>
+                                <constraint firstItem="tPK-tW-8ZZ" firstAttribute="centerX" secondItem="M41-aY-5O3" secondAttribute="centerX" id="axb-dO-FoM"/>
+                                <constraint firstItem="6oM-Ke-Izb" firstAttribute="top" secondItem="tPK-tW-8ZZ" secondAttribute="bottom" constant="15" id="mM4-oW-pdO"/>
+                                <constraint firstItem="Scj-2F-dcZ" firstAttribute="top" secondItem="6oM-Ke-Izb" secondAttribute="bottom" constant="55.670000000000002" id="oKN-7A-8Gy"/>
+                                <constraint firstItem="6oM-Ke-Izb" firstAttribute="centerX" secondItem="M41-aY-5O3" secondAttribute="centerX" id="vx2-9I-NdQ"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="To7-Rg-SL5"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="M41-aY-5O3" secondAttribute="bottom" id="72M-47-xum"/>
+                        <constraint firstItem="M41-aY-5O3" firstAttribute="leading" secondItem="h4x-wZ-A0W" secondAttribute="leading" id="CUR-tS-tBW"/>
+                        <constraint firstItem="M41-aY-5O3" firstAttribute="top" secondItem="h4x-wZ-A0W" secondAttribute="top" id="Gc1-V1-OYJ"/>
+                        <constraint firstAttribute="trailing" secondItem="M41-aY-5O3" secondAttribute="trailing" id="S0W-jx-rab"/>
+                        <constraint firstAttribute="height" constant="736" id="fET-aV-UUv"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="h4x-wZ-A0W" firstAttribute="bottom" secondItem="kD9-bg-Utj" secondAttribute="bottom" id="746-wH-AXs"/>
+                <constraint firstItem="M41-aY-5O3" firstAttribute="height" secondItem="Yxx-mv-F0m" secondAttribute="height" id="Jh0-w3-W4l"/>
+                <constraint firstItem="h4x-wZ-A0W" firstAttribute="leading" secondItem="kD9-bg-Utj" secondAttribute="leading" id="Jmh-rN-G0j"/>
+                <constraint firstItem="h4x-wZ-A0W" firstAttribute="trailing" secondItem="kD9-bg-Utj" secondAttribute="trailing" id="nfX-bS-lwj"/>
+                <constraint firstItem="M41-aY-5O3" firstAttribute="width" secondItem="Yxx-mv-F0m" secondAttribute="width" id="q1a-Xb-zPM"/>
+                <constraint firstItem="h4x-wZ-A0W" firstAttribute="top" secondItem="Yxx-mv-F0m" secondAttribute="top" id="ulJ-8C-xg8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="kD9-bg-Utj"/>
+            <point key="canvasLocation" x="-363.768115942029" y="39.945652173913047"/>
+        </view>
+    </objects>
+</document>

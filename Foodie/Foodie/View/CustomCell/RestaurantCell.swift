@@ -4,6 +4,7 @@ import UIKit
 
 class RestaurantCell: UITableViewCell {
 
+    @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblCusines: UILabel!
@@ -13,7 +14,7 @@ class RestaurantCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-      
+      innerView.dropShadow()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

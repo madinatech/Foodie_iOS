@@ -3,7 +3,7 @@
 import UIKit
 
 class RecommendedCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var imgView: UIImageView!
@@ -14,7 +14,10 @@ class RecommendedCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-     innerView.dropShadow()
+        innerView.dropShadow()
+        imgView.layer.cornerRadius = 10
+        imgView.clipsToBounds = true
+        imgView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
-
+    
 }

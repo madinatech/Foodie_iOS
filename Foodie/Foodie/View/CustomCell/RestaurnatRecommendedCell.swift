@@ -19,5 +19,10 @@ class RestaurnatRecommendedCell: UICollectionViewCell {
         btnAdd.layer.borderColor = appLigtGrayColor.cgColor
         addView.layer.borderWidth = 1
         addView.layer.borderColor = appLigtGrayColor.cgColor
+        self.contentView.dropShadow()
+//        innerView.dropShadow()
+        imgView.layer.cornerRadius = 10
+        imgView.clipsToBounds = true
+        imgView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
 }

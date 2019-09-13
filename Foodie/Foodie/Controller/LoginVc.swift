@@ -4,7 +4,8 @@ import UIKit
 
 class LoginVc: BaseViewController {
     
-    @IBOutlet weak var txtEmail: CommonTextfield!
+    @IBOutlet weak var txtMobile: UITextField!
+    @IBOutlet weak var loginView: UIView!
     
     class func initViewController() -> LoginVc {
         let vc = LoginVc.init(nibName: "LoginVc", bundle: nil)
@@ -15,20 +16,27 @@ class LoginVc: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
-    }
-
-    @IBAction func fbClicked(_ sender: Any) {
-    }
-    @IBAction func nextClicked(_ sender: Any) {
+        self.tabBarController?.tabBar.isHidden = true
+        isBackButtonHidden = true
+        loginView.dropShadow()
     }
     
-    @IBAction func CreateAccountClicked(_ sender: Any) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+        UIApplication.shared.statusbarView?.backgroundColor = appThemeColor
+    }
+    
+    @IBAction func loginclicked(_ sender: Any) {
+        let vc = VerifyOtpVC.initViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func createaccountClicked(_ sender: Any) {
         let vc = CreateAccountVC.initViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
     
 }

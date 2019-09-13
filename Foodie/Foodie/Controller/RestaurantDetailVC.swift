@@ -34,6 +34,7 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = true
+        addBlackGradientLayerInForeground()
         tblView.tableHeaderView = headerView
         cellHeight = 165
         isLoded = false
@@ -42,13 +43,26 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
         
     }
     
+    func addBlackGradientLayerInForeground(){
+        let layer = UIView(frame: CGRect(x: 0, y: 0, width: 376, height: 40))
+        layer.alpha = 0.5
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(x: 0, y: 0, width: imgView.frame.width, height: 40)
+        gradient.colors = [ UIColor.lightGray.cgColor, UIColor.clear.cgColor]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        layer.layer.addSublayer(gradient)
+        imgView.layer.addSublayer(gradient)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         blurView.isHidden = true
+        navigationSetup()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-         UIApplication.shared.statusbarView?.backgroundColor = .clear
+        UIApplication.shared.statusbarView?.backgroundColor = .clear
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -58,6 +72,17 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             AMShimmer.stop(for: self.tblView)
         }
+    }
+    func navigationSetup (){
+        let button1 = UIButton.init(type: .infoDark)
+        button1.tintColor = .white
+        button1.frame = CGRect.init(x: 0, y: 0, width: 30, height: 30)
+        button1.addTarget(self, action: #selector(infoClicked(_:)), for: .touchUpInside)
+        let barButton = UIBarButtonItem.init(customView: button1)
+        self.navigationItem.rightBarButtonItem = barButton
+    }
+    
+    @IBAction func infoClicked(_ sender: Any) {
     }
     
     @IBAction func searchClicked(_ sender: Any) {
@@ -115,9 +140,9 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
     
     @IBAction func viewCartClicked(_ sender: Any) {
         self.tabBarController?.tabBar.isHidden = true
-         self.tabBarController?.selectedIndex = 2
-//        let vc = CartVC.initViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
+        self.tabBarController?.selectedIndex = 2
+        //        let vc = CartVC.initViewController()
+        //        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

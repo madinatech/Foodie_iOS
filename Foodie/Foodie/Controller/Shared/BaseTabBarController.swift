@@ -24,7 +24,7 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         let v1 = RestaurantsVC.initViewController()
         let v2 = SearchVC.initViewController()
         let v3 = CartVC.initViewController()
-        let v4 = MyAccountViewController.initViewController()
+        let v4 = LoginVc.initViewController()
         
         
         let myTabBarItem1 = UITabBarItem()
@@ -52,7 +52,7 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         myTabBarItem4.tag = 3
         myTabBarItem4.image = UIImage(named: "user_un")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         myTabBarItem4.selectedImage = UIImage(named: "user_sel")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-        myTabBarItem4.title = "Account"
+        myTabBarItem4.title = "Login"
         v4.tabBarItem = myTabBarItem4
         
         
