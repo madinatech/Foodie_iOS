@@ -44,10 +44,10 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
     }
     
     func addBlackGradientLayerInForeground(){
-        let layer = UIView(frame: CGRect(x: 0, y: 0, width: 376, height: 40))
+        let layer = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 60))
         layer.alpha = 0.5
         let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x: 0, y: 0, width: imgView.frame.width, height: 40)
+        gradient.frame = CGRect(x: 0, y: 0, width: imgView.frame.width, height: 60)
         gradient.colors = [ UIColor.lightGray.cgColor, UIColor.clear.cgColor]
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 0, y: 1)
@@ -57,7 +57,6 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         blurView.isHidden = true
         navigationSetup()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -83,6 +82,8 @@ class RestaurantDetailVC: BaseViewController,UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func infoClicked(_ sender: Any) {
+        let vc = RestaurantInfoVC.initViewController()
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     @IBAction func searchClicked(_ sender: Any) {

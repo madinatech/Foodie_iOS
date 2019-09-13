@@ -178,10 +178,11 @@ class MyAccountViewController: BaseViewController, UITableViewDelegate, UITableV
             } else if(indexPath.row == 3){
                 let vc = ReferralsVC.initViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
-            } else if(indexPath.row == 4){
-                let vc = OffersVC.initViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
             }
+//            else if(indexPath.row == 4){
+//                let vc = OffersVC.initViewController()
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            }
         }
     }
     
@@ -194,7 +195,7 @@ class MyAccountViewController: BaseViewController, UITableViewDelegate, UITableV
             } else {
                 sender.isSelected = true
                 isHeaderSelected = true
-                rouCount = 5
+                rouCount = 4
             }
             tblView.reloadData()
         } else {

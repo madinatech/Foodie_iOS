@@ -79,11 +79,13 @@ class FilterVC: UIViewController , UITableViewDelegate, UITableViewDataSource{
                 cell = nib?[0] as? CityCell
             }
             cell?.selectionStyle = .none
-            cell?.lblName.textColor = .lightGray
+           
             if(indexPath.row == selectedFilter){
                 cell?.contentView.backgroundColor = .white
+                cell?.lblName.textColor = .black
             } else {
                 cell?.contentView.backgroundColor = .groupTableViewBackground
+                 cell?.lblName.textColor = .lightGray
             }
             cell?.lblName.text = mainArray[indexPath.row]
             return cell!
@@ -96,8 +98,6 @@ class FilterVC: UIViewController , UITableViewDelegate, UITableViewDataSource{
             }
             cell?.selectionStyle = .none
             cell?.img.isHidden = true
-            //            cell?.btnView.outerCircleColor = appThemeColor
-            //            cell?.btnView.innerCircleCircleColor = appThemeColor
             cell?.btnView.tag = indexPath.row
             cell?.lblCountryName.text = filterArray[indexPath.row]
             cell?.btnView.addTarget(self, action: #selector(optionClicked(_:)), for: .touchUpInside)

@@ -23,9 +23,10 @@ class AccountCell: UITableViewCell {
             lblTitle.text = "Favourites"
         } else if(index == 3){
             lblTitle.text = "Refferals"
-        } else if(index == 4){
-            lblTitle.text = "Offers"
         }
+//        else if(index == 4){
+//            lblTitle.text = "Offers"
+//        }
     }
     
 }
