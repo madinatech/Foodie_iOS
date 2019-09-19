@@ -24,7 +24,11 @@ class VerifyOTPVC: UIViewController {
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
     }
-  
+    
+    @IBAction func backClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func textfieldChanged(_ sender: UITextField) {
         let text = sender.text
         

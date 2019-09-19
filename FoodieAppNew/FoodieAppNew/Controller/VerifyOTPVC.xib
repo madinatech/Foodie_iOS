@@ -44,17 +44,28 @@
                                         <constraint firstAttribute="height" constant="320" id="aLz-On-O4B"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQx-tu-xXs">
+                                    <rect key="frame" x="20" y="70" width="38" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="38" id="EeP-t3-guU"/>
+                                        <constraint firstAttribute="height" constant="38" id="HDe-w0-oe8"/>
+                                    </constraints>
+                                    <state key="normal" image="Back"/>
+                                    <connections>
+                                        <action selector="backClicked:" destination="-1" eventType="touchUpInside" id="NTF-CP-J9h"/>
+                                    </connections>
+                                </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mp3-vx-7HY">
                                     <rect key="frame" x="0.0" y="269" width="414" height="627"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Verify your login " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWe-sO-Lxq">
-                                            <rect key="frame" x="20" y="40" width="222" height="35"/>
+                                            <rect key="frame" x="20" y="40" width="211.5" height="30"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-3g-sd9">
-                                            <rect key="frame" x="35" y="278" width="344" height="50"/>
+                                            <rect key="frame" x="35" y="273" width="344" height="50"/>
                                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="tdw-Te-Y4d">
@@ -74,9 +85,9 @@
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qJs-ao-0Ur">
-                                            <rect key="frame" x="20" y="155" width="374" height="43"/>
+                                            <rect key="frame" x="20" y="150" width="374" height="43"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDn-BX-YJ0" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDn-BX-YJ0" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="zNt-zx-dQS"/>
@@ -93,7 +104,7 @@
                                                         <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="D8t-eW-UeM"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3S-lG-QAm" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3S-lG-QAm" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
                                                     <rect key="frame" x="65" y="0.0" width="49.5" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="N1x-fi-VzH"/>
@@ -110,7 +121,7 @@
                                                         <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="3ER-R5-ui7"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7I-TA-3Ae" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7I-TA-3Ae" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
                                                     <rect key="frame" x="129.5" y="0.0" width="50" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="fKb-P6-2Vs"/>
@@ -127,7 +138,7 @@
                                                         <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="KZI-7s-EsC"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8t-jA-AlW" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8t-jA-AlW" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
                                                     <rect key="frame" x="194.5" y="0.0" width="50" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="df1-rO-1ww"/>
@@ -144,7 +155,7 @@
                                                         <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="9FV-PY-du1"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hV2-B7-gAi" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hV2-B7-gAi" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
                                                     <rect key="frame" x="259.5" y="0.0" width="49.5" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="qvm-so-cb0"/>
@@ -161,7 +172,7 @@
                                                         <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="km4-zo-yhM"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-ER-VRU" customClass="CommonTextfield" customModule="Paytz_New" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-ER-VRU" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
                                                     <rect key="frame" x="324" y="0.0" width="50" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="R33-uz-pJv"/>
@@ -204,6 +215,8 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="EQx-tu-xXs" firstAttribute="leading" secondItem="dyX-s3-dBy" secondAttribute="leading" constant="20" id="0VC-kK-rhv"/>
+                                <constraint firstItem="EQx-tu-xXs" firstAttribute="top" secondItem="dyX-s3-dBy" secondAttribute="top" constant="70" id="BKL-RA-pGL"/>
                                 <constraint firstItem="mp3-vx-7HY" firstAttribute="leading" secondItem="dyX-s3-dBy" secondAttribute="leading" id="Dg9-gg-jSy"/>
                                 <constraint firstAttribute="bottom" secondItem="mp3-vx-7HY" secondAttribute="bottom" id="Jx5-Zw-IR8"/>
                                 <constraint firstAttribute="trailing" secondItem="7hs-9T-QvZ" secondAttribute="trailing" id="LqP-ty-ShQ"/>
@@ -236,6 +249,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Back" width="38" height="38"/>
         <image name="Cover111" width="1125" height="900"/>
     </resources>
 </document>
