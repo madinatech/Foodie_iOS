@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9Cr-lL-TQW" customClass="ResDetailTabSection" customModule="FoodieAppNew" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2q-du-DG7">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zfD-v2-8Jq">
+                            <rect key="frame" x="10" y="10" width="394" height="70"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JNo-cY-LzH">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="9Cr-lL-TQW" id="ESY-bk-1vh"/>
+                                <outlet property="delegate" destination="9Cr-lL-TQW" id="BHQ-fA-Fgx"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="zfD-v2-8Jq" secondAttribute="trailing" constant="10" id="4Dv-pc-GVa"/>
+                        <constraint firstItem="zfD-v2-8Jq" firstAttribute="leading" secondItem="z2q-du-DG7" secondAttribute="leading" constant="10" id="Fsj-lK-YW3"/>
+                        <constraint firstAttribute="bottom" secondItem="zfD-v2-8Jq" secondAttribute="bottom" id="Oaf-dR-ByG"/>
+                        <constraint firstItem="zfD-v2-8Jq" firstAttribute="top" secondItem="z2q-du-DG7" secondAttribute="top" constant="10" id="Ug0-HA-PMw"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.98039215690000003" green="0.80392156859999997" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="z2q-du-DG7" secondAttribute="bottom" id="0qF-0R-asg"/>
+                <constraint firstItem="z2q-du-DG7" firstAttribute="top" secondItem="9Cr-lL-TQW" secondAttribute="top" id="DEu-Jr-hjq"/>
+                <constraint firstAttribute="trailing" secondItem="z2q-du-DG7" secondAttribute="trailing" id="w8r-Bp-Vnr"/>
+                <constraint firstItem="z2q-du-DG7" firstAttribute="leading" secondItem="9Cr-lL-TQW" secondAttribute="leading" id="yQw-07-ARM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="zfD-v2-8Jq" id="szy-bH-eJS"/>
+                <outlet property="conainView" destination="z2q-du-DG7" id="pZc-qp-uff"/>
+            </connections>
+            <point key="canvasLocation" x="86" y="-16"/>
+        </view>
+    </objects>
+</document>

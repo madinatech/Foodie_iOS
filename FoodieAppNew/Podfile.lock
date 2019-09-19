@@ -1,0 +1,24 @@
+PODS:
+  - AMShimmer (1.0.0)
+  - CBFlashyTabBarController (0.8.2)
+  - IQKeyboardManagerSwift (6.2.0)
+
+DEPENDENCIES:
+  - AMShimmer
+  - CBFlashyTabBarController
+  - IQKeyboardManagerSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AMShimmer
+    - CBFlashyTabBarController
+    - IQKeyboardManagerSwift
+
+SPEC CHECKSUMS:
+  AMShimmer: f4ca6f25cbdddf8469715e8783ec318dc73f6ccc
+  CBFlashyTabBarController: 8955b82496974b54016dc89207bc9e0704a33507
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+
+PODFILE CHECKSUM: 0e3fcec8592e1cd52d7e09b79dbeb16eb3443da2
+
+COCOAPODS: 1.6.1

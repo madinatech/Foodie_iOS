@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="KGk-i7-Jjw" customClass="ManageAddressCell" customModule="FoodieAppNew" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="101.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abw-eD-4gB">
+                        <rect key="frame" x="15" y="10" width="290" height="81.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qT6-QT-KBm">
+                                <rect key="frame" x="38" y="10" width="242" height="18"/>
+                                <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="141 Station Road, Opp. Welcom Hotel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzl-6F-1pC">
+                                <rect key="frame" x="38" y="38" width="242" height="15"/>
+                                <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Upanga, Dar es Salaam" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kg-zX-If8">
+                                <rect key="frame" x="38" y="63" width="242" height="13"/>
+                                <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAC-Tg-46l" customClass="KGRadioButton" customModule="FoodieAppNew" customModuleProvider="target">
+                                <rect key="frame" x="8" y="10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="HAt-Q2-34c"/>
+                                    <constraint firstAttribute="height" constant="20" id="pvU-D0-Yv1"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outerCircleColor">
+                                        <color key="value" red="0.31764705882352939" green="0.24313725489999999" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerCircleCircleColor">
+                                        <color key="value" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dzl-6F-1pC" firstAttribute="leading" secondItem="qT6-QT-KBm" secondAttribute="leading" id="1E5-YY-PBH"/>
+                            <constraint firstItem="VAC-Tg-46l" firstAttribute="top" secondItem="Abw-eD-4gB" secondAttribute="top" constant="10" id="1f3-KD-MpA"/>
+                            <constraint firstAttribute="bottom" secondItem="1kg-zX-If8" secondAttribute="bottom" constant="5.5" id="6dR-VQ-81X"/>
+                            <constraint firstItem="qT6-QT-KBm" firstAttribute="leading" secondItem="VAC-Tg-46l" secondAttribute="trailing" constant="10" id="7eC-s3-eY6"/>
+                            <constraint firstItem="1kg-zX-If8" firstAttribute="top" secondItem="dzl-6F-1pC" secondAttribute="bottom" constant="10" id="CgZ-In-88A"/>
+                            <constraint firstAttribute="trailing" secondItem="qT6-QT-KBm" secondAttribute="trailing" constant="10" id="GAT-Vw-XUL"/>
+                            <constraint firstAttribute="trailing" secondItem="dzl-6F-1pC" secondAttribute="trailing" constant="10" id="J2F-Y8-1vw"/>
+                            <constraint firstItem="VAC-Tg-46l" firstAttribute="leading" secondItem="Abw-eD-4gB" secondAttribute="leading" constant="8" id="Z0w-qZ-e8Z"/>
+                            <constraint firstItem="1kg-zX-If8" firstAttribute="leading" secondItem="dzl-6F-1pC" secondAttribute="leading" id="dYY-Dm-bdg"/>
+                            <constraint firstItem="dzl-6F-1pC" firstAttribute="top" secondItem="qT6-QT-KBm" secondAttribute="bottom" constant="10" id="i4g-Pw-e06"/>
+                            <constraint firstItem="qT6-QT-KBm" firstAttribute="top" secondItem="Abw-eD-4gB" secondAttribute="top" constant="10" id="r7c-z8-6Yw"/>
+                            <constraint firstAttribute="trailing" secondItem="1kg-zX-If8" secondAttribute="trailing" constant="10" id="zEj-PJ-IYg"/>
+                            <constraint firstItem="dzl-6F-1pC" firstAttribute="top" secondItem="qT6-QT-KBm" secondAttribute="bottom" constant="10" id="zhB-hQ-c82"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="Abw-eD-4gB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5zO-61-d4L"/>
+                    <constraint firstItem="Abw-eD-4gB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="GXM-uu-fPd"/>
+                    <constraint firstAttribute="trailing" secondItem="Abw-eD-4gB" secondAttribute="trailing" constant="15" id="GZe-qE-ehu"/>
+                    <constraint firstAttribute="bottom" secondItem="Abw-eD-4gB" secondAttribute="bottom" constant="10" id="WxO-BS-1F5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnRadio" destination="VAC-Tg-46l" id="cbJ-2y-QPe"/>
+                <outlet property="innerView" destination="Abw-eD-4gB" id="ZwF-uK-Djn"/>
+                <outlet property="lblAddress" destination="dzl-6F-1pC" id="dhL-Nf-hms"/>
+                <outlet property="lblAddress2" destination="1kg-zX-If8" id="yjx-dF-8iB"/>
+                <outlet property="lblType" destination="qT6-QT-KBm" id="bbF-mA-RMn"/>
+            </connections>
+            <point key="canvasLocation" x="-43.478260869565219" y="97.767857142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

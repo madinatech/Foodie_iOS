@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeTopCell" customModule="FoodieAppNew" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPu-VG-dAO">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nEA-4i-cey">
+                                <rect key="frame" x="30" y="20" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Avy-gO-Any"/>
+                                    <constraint firstAttribute="height" constant="60" id="YgR-ab-BKU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivers under 30 mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFq-LQ-Vkb">
+                                <rect key="frame" x="5" y="95" width="110" height="34"/>
+                                <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VFq-LQ-Vkb" firstAttribute="centerX" secondItem="pPu-VG-dAO" secondAttribute="centerX" id="IUQ-zr-Bxo"/>
+                            <constraint firstItem="VFq-LQ-Vkb" firstAttribute="top" secondItem="nEA-4i-cey" secondAttribute="bottom" constant="15" id="Xg3-ZG-ZJ4"/>
+                            <constraint firstAttribute="trailing" secondItem="VFq-LQ-Vkb" secondAttribute="trailing" constant="5" id="bXb-rG-NlY"/>
+                            <constraint firstItem="VFq-LQ-Vkb" firstAttribute="leading" secondItem="pPu-VG-dAO" secondAttribute="leading" constant="5" id="dVH-cY-11t"/>
+                            <constraint firstItem="nEA-4i-cey" firstAttribute="top" secondItem="pPu-VG-dAO" secondAttribute="top" constant="20" id="p6g-kr-ftu"/>
+                            <constraint firstItem="nEA-4i-cey" firstAttribute="centerX" secondItem="pPu-VG-dAO" secondAttribute="centerX" id="qqs-6N-v8s"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pPu-VG-dAO" secondAttribute="bottom" id="G1Q-zo-R98"/>
+                <constraint firstItem="pPu-VG-dAO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lu2-R3-t4f"/>
+                <constraint firstItem="pPu-VG-dAO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="q3Q-Yy-VGI"/>
+                <constraint firstAttribute="trailing" secondItem="pPu-VG-dAO" secondAttribute="trailing" id="wHK-QF-BeV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="109" height="154"/>
+            <connections>
+                <outlet property="imgView" destination="nEA-4i-cey" id="N2w-Xl-PLu"/>
+                <outlet property="innerView" destination="pPu-VG-dAO" id="gFa-65-4OU"/>
+                <outlet property="lblTitle" destination="VFq-LQ-Vkb" id="r5g-fc-Ahb"/>
+            </connections>
+            <point key="canvasLocation" x="173.91304347826087" y="127.90178571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>

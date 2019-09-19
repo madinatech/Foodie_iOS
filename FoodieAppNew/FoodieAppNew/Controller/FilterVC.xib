@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterVC" customModule="FoodieAppNew" customModuleProvider="target">
+            <connections>
+                <outlet property="innerView" destination="dFF-tJ-uyY" id="b7x-fg-OZ8"/>
+                <outlet property="tblView" destination="e40-vR-8Ad" id="lLS-SN-gKf"/>
+                <outlet property="view" destination="Y8F-e7-cQv" id="hwT-Xr-Ok8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Y8F-e7-cQv">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFF-tJ-uyY">
+                    <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWM-sq-Kvu">
+                            <rect key="frame" x="35" y="487" width="305" height="50"/>
+                            <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="fwz-AJ-0Fr">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                            <integer key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </constraint>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                            <state key="normal" title="Apply Filters"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="applyFilterClicked:" destination="-1" eventType="touchUpInside" id="FjD-bs-Uyh"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e40-vR-8Ad">
+                            <rect key="frame" x="0.0" y="10" width="375" height="467"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="wke-Eu-KEH"/>
+                                <outlet property="delegate" destination="-1" id="aqW-hO-xly"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="mWM-sq-Kvu" secondAttribute="bottom" constant="40" id="9R5-vI-RKB"/>
+                        <constraint firstItem="e40-vR-8Ad" firstAttribute="top" secondItem="dFF-tJ-uyY" secondAttribute="top" constant="10" id="FgI-ZA-v4J"/>
+                        <constraint firstItem="e40-vR-8Ad" firstAttribute="leading" secondItem="dFF-tJ-uyY" secondAttribute="leading" id="KCe-Cq-4xW"/>
+                        <constraint firstItem="mWM-sq-Kvu" firstAttribute="leading" secondItem="dFF-tJ-uyY" secondAttribute="leading" constant="35" id="Krp-Mj-rgv"/>
+                        <constraint firstItem="mWM-sq-Kvu" firstAttribute="top" secondItem="e40-vR-8Ad" secondAttribute="bottom" constant="10" id="N6s-e1-Ppr"/>
+                        <constraint firstAttribute="trailing" secondItem="e40-vR-8Ad" secondAttribute="trailing" id="NDv-3A-id2"/>
+                        <constraint firstAttribute="trailing" secondItem="mWM-sq-Kvu" secondAttribute="trailing" constant="35" id="oGP-1Q-QRR"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V76-Uh-OCR">
+                    <rect key="frame" x="152.5" y="70" width="70" height="5"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="3yM-Sc-VH3"/>
+                        <constraint firstAttribute="height" constant="5" id="JZD-R0-50T"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dFF-tJ-uyY" firstAttribute="leading" secondItem="2BH-IF-QEU" secondAttribute="leading" id="2Wh-DV-xtq"/>
+                <constraint firstItem="dFF-tJ-uyY" firstAttribute="top" secondItem="V76-Uh-OCR" secondAttribute="bottom" constant="15" id="Svi-fb-Fsm"/>
+                <constraint firstAttribute="trailing" secondItem="dFF-tJ-uyY" secondAttribute="trailing" id="VPm-3T-njn"/>
+                <constraint firstItem="V76-Uh-OCR" firstAttribute="centerX" secondItem="Y8F-e7-cQv" secondAttribute="centerX" id="axL-z4-BwK"/>
+                <constraint firstItem="dFF-tJ-uyY" firstAttribute="bottom" secondItem="Y8F-e7-cQv" secondAttribute="bottom" id="i6v-F7-cmR"/>
+                <constraint firstItem="dFF-tJ-uyY" firstAttribute="top" secondItem="2BH-IF-QEU" secondAttribute="top" constant="70" id="l7b-Qs-t0n"/>
+                <constraint firstItem="V76-Uh-OCR" firstAttribute="top" secondItem="2BH-IF-QEU" secondAttribute="top" constant="50" id="oel-yA-3x8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="2BH-IF-QEU"/>
+            <point key="canvasLocation" x="34.782608695652179" y="41.576086956521742"/>
+        </view>
+    </objects>
+</document>
