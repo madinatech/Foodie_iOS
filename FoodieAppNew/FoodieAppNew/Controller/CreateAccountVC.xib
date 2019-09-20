@@ -20,6 +20,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
+                <outlet property="innerView" destination="EGu-da-cQf" id="hgr-ok-xZA"/>
+                <outlet property="scrollView" destination="hNN-LC-81b" id="WjU-T6-sXh"/>
+                <outlet property="txt1" destination="kWd-6U-xez" id="4w1-Gy-X23"/>
+                <outlet property="txt2" destination="TiR-38-2nB" id="qkn-Wb-OKS"/>
+                <outlet property="txt3" destination="kPN-sI-w6y" id="PwY-at-8d8"/>
+                <outlet property="txt4" destination="yQC-8g-ulq" id="w3V-eh-cpD"/>
                 <outlet property="view" destination="gkO-Fy-CcU" id="bQp-aL-IQL"/>
             </connections>
         </placeholder>
@@ -32,7 +38,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6i-Lk-APQ">
-                            <rect key="frame" x="0.0" y="-25" width="414" height="896"/>
+                            <rect key="frame" x="0.0" y="-25" width="414" height="921"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cover111" translatesAutoresizingMaskIntoConstraints="NO" id="Z2a-TC-ZsY">
                                     <rect key="frame" x="0.0" y="-20" width="414" height="320"/>
@@ -40,8 +46,19 @@
                                         <constraint firstAttribute="height" constant="320" id="aU2-98-wkV"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WP8-6N-IyN">
+                                    <rect key="frame" x="20" y="70" width="38" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="38" id="8Lm-hM-SBD"/>
+                                        <constraint firstAttribute="width" constant="38" id="P18-Q8-KeT"/>
+                                    </constraints>
+                                    <state key="normal" image="Back"/>
+                                    <connections>
+                                        <action selector="backClicked:" destination="-1" eventType="touchUpInside" id="4fj-2g-Iwi"/>
+                                    </connections>
+                                </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGu-da-cQf">
-                                    <rect key="frame" x="0.0" y="269" width="414" height="627"/>
+                                    <rect key="frame" x="0.0" y="269" width="414" height="657"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHE-1O-7rA">
                                             <rect key="frame" x="20" y="40" width="224" height="30"/>
@@ -49,14 +66,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Sign in or sign up using your mobile number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv7-S2-CzV">
-                                            <rect key="frame" x="20" y="90" width="374" height="48"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Enter verification code received on your mobile number along with your name and email address to become a Foodie today" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv7-S2-CzV">
+                                            <rect key="frame" x="20" y="90" width="374" height="96"/>
                                             <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="24"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-C2-L6F">
-                                            <rect key="frame" x="20" y="246" width="35" height="40"/>
+                                            <rect key="frame" x="20" y="294" width="35" height="40"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User_purple" translatesAutoresizingMaskIntoConstraints="NO" id="10J-KC-Tbq">
                                                     <rect key="frame" x="7.5" y="10" width="20" height="20"/>
@@ -81,13 +98,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jct-5f-Wad">
-                                            <rect key="frame" x="65" y="246" width="37.5" height="15"/>
+                                            <rect key="frame" x="65" y="294" width="37.5" height="15"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k43-ga-8Xt" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="65" y="263" width="349" height="30"/>
+                                            <rect key="frame" x="65" y="311" width="349" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="6Lu-zs-sBm"/>
                                             </constraints>
@@ -101,7 +118,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vn0-KH-OVg">
-                                            <rect key="frame" x="35" y="443" width="344" height="50"/>
+                                            <rect key="frame" x="35" y="491" width="344" height="50"/>
                                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="LSq-j8-AQJ">
@@ -121,7 +138,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0KW-kw-tIE">
-                                            <rect key="frame" x="20" y="316" width="35" height="40"/>
+                                            <rect key="frame" x="20" y="364" width="35" height="40"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="6T0-hq-9xB">
                                                     <rect key="frame" x="7.5" y="10" width="20" height="20"/>
@@ -146,13 +163,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Email Id" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A66-ur-Zyp">
-                                            <rect key="frame" x="65" y="316" width="50" height="15"/>
+                                            <rect key="frame" x="65" y="364" width="50" height="15"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZ2-AS-qPz" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="65" y="333" width="349" height="30"/>
+                                            <rect key="frame" x="65" y="381" width="349" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="x6H-I1-UP3"/>
                                             </constraints>
@@ -166,10 +183,10 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QD7-UG-mxK">
-                                            <rect key="frame" x="20" y="173" width="374" height="43"/>
+                                            <rect key="frame" x="20" y="221" width="374" height="43"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWd-6U-xez" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="82.5" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="FeW-lk-Evl"/>
                                                     </constraints>
@@ -181,9 +198,12 @@
                                                             <color key="value" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="Kyq-Nq-1kk"/>
+                                                    </connections>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TiR-38-2nB" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                                    <rect key="frame" x="65" y="0.0" width="49.5" height="43"/>
+                                                    <rect key="frame" x="97.5" y="0.0" width="82" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="MGm-np-KEb"/>
                                                     </constraints>
@@ -195,9 +215,12 @@
                                                             <color key="value" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="8Sl-S9-ndM"/>
+                                                    </connections>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPN-sI-w6y" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                                    <rect key="frame" x="129.5" y="0.0" width="50" height="43"/>
+                                                    <rect key="frame" x="194.5" y="0.0" width="82.5" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="hXK-Dt-gqR"/>
                                                     </constraints>
@@ -209,9 +232,12 @@
                                                             <color key="value" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="XVG-CJ-L3p"/>
+                                                    </connections>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQC-8g-ulq" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                                    <rect key="frame" x="194.5" y="0.0" width="50" height="43"/>
+                                                    <rect key="frame" x="292" y="0.0" width="82" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="vWS-JY-ruZ"/>
                                                     </constraints>
@@ -223,43 +249,16 @@
                                                             <color key="value" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5LG-BK-fk5" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                                    <rect key="frame" x="259.5" y="0.0" width="49.5" height="43"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43" id="0aM-1w-SV5"/>
-                                                    </constraints>
-                                                    <color key="textColor" red="0.70980392160000005" green="0.047058823530000002" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
-                                                            <color key="value" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ml-s0-qdp" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                                    <rect key="frame" x="324" y="0.0" width="50" height="43"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="43" id="pWg-PB-Vse"/>
-                                                    </constraints>
-                                                    <color key="textColor" red="0.70980392160000005" green="0.047058823530000002" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
-                                                            <color key="value" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="xvS-kn-93D"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="43" id="4Q8-PV-hRK"/>
                                                 <constraint firstItem="kPN-sI-w6y" firstAttribute="width" secondItem="kWd-6U-xez" secondAttribute="width" id="CzE-Vj-3Ez"/>
-                                                <constraint firstItem="4ml-s0-qdp" firstAttribute="width" secondItem="kWd-6U-xez" secondAttribute="width" id="PCz-U8-Md1"/>
                                                 <constraint firstItem="TiR-38-2nB" firstAttribute="width" secondItem="kWd-6U-xez" secondAttribute="width" id="Qxj-Vs-MXO"/>
                                                 <constraint firstItem="yQC-8g-ulq" firstAttribute="width" secondItem="kWd-6U-xez" secondAttribute="width" id="dgD-LL-GhF"/>
-                                                <constraint firstItem="5LG-BK-fk5" firstAttribute="width" secondItem="kWd-6U-xez" secondAttribute="width" id="uDi-fT-Erx"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
@@ -295,13 +294,15 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="WP8-6N-IyN" firstAttribute="leading" secondItem="i6i-Lk-APQ" secondAttribute="leading" constant="20" id="914-VH-5wu"/>
                                 <constraint firstItem="EGu-da-cQf" firstAttribute="top" secondItem="i6i-Lk-APQ" secondAttribute="top" constant="269" id="LTg-yy-SAo"/>
                                 <constraint firstAttribute="trailing" secondItem="Z2a-TC-ZsY" secondAttribute="trailing" id="MTm-Hf-NPh"/>
+                                <constraint firstItem="WP8-6N-IyN" firstAttribute="top" secondItem="i6i-Lk-APQ" secondAttribute="top" constant="70" id="NWN-jC-STQ"/>
                                 <constraint firstItem="EGu-da-cQf" firstAttribute="leading" secondItem="i6i-Lk-APQ" secondAttribute="leading" id="Wpb-L6-seD"/>
                                 <constraint firstAttribute="trailing" secondItem="EGu-da-cQf" secondAttribute="trailing" id="dem-0f-7LD"/>
                                 <constraint firstItem="Z2a-TC-ZsY" firstAttribute="leading" secondItem="i6i-Lk-APQ" secondAttribute="leading" id="ghJ-AH-4ay"/>
                                 <constraint firstItem="Z2a-TC-ZsY" firstAttribute="top" secondItem="i6i-Lk-APQ" secondAttribute="top" constant="-20" id="hXg-cw-yiC"/>
-                                <constraint firstAttribute="bottom" secondItem="EGu-da-cQf" secondAttribute="bottom" id="y2h-VE-DLe"/>
+                                <constraint firstAttribute="bottom" secondItem="EGu-da-cQf" secondAttribute="bottom" constant="-5" id="y2h-VE-DLe"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -311,6 +312,9 @@
                         <constraint firstAttribute="trailing" secondItem="i6i-Lk-APQ" secondAttribute="trailing" id="ANK-KF-yEL"/>
                         <constraint firstItem="i6i-Lk-APQ" firstAttribute="top" secondItem="hNN-LC-81b" secondAttribute="top" constant="-25" id="xda-20-4Ii"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="HIz-dh-L0V"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -319,7 +323,7 @@
                 <constraint firstItem="hNN-LC-81b" firstAttribute="top" secondItem="gkO-Fy-CcU" secondAttribute="top" id="KhL-JM-Dky"/>
                 <constraint firstItem="hNN-LC-81b" firstAttribute="leading" secondItem="1ur-ib-i4b" secondAttribute="leading" id="MjA-IY-4tU"/>
                 <constraint firstItem="hNN-LC-81b" firstAttribute="trailing" secondItem="1ur-ib-i4b" secondAttribute="trailing" id="YLE-pH-zdy"/>
-                <constraint firstItem="i6i-Lk-APQ" firstAttribute="height" secondItem="gkO-Fy-CcU" secondAttribute="height" id="n9u-pg-hHf"/>
+                <constraint firstItem="i6i-Lk-APQ" firstAttribute="height" secondItem="gkO-Fy-CcU" secondAttribute="height" constant="25" id="n9u-pg-hHf"/>
                 <constraint firstItem="i6i-Lk-APQ" firstAttribute="width" secondItem="gkO-Fy-CcU" secondAttribute="width" id="wjv-hv-hnR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="1ur-ib-i4b"/>
@@ -327,6 +331,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Back" width="38" height="38"/>
         <image name="Cover111" width="1125" height="900"/>
         <image name="Email" width="18" height="18"/>
         <image name="User_purple" width="18" height="18"/>

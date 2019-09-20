@@ -2,15 +2,14 @@
 
 import UIKit
 
-class VerifyOTPVC: UIViewController {
+class VerifyOTPVC: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var txt1: CommonTextfield!
     @IBOutlet weak var txt2: CommonTextfield!
     @IBOutlet weak var txt3: CommonTextfield!
     @IBOutlet weak var txt4: CommonTextfield!
-    @IBOutlet weak var txt5: CommonTextfield!
-    @IBOutlet weak var txt6: CommonTextfield!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     class func initViewController() -> VerifyOTPVC {
         let vc = VerifyOTPVC.init(nibName: "VerifyOTPVC", bundle: nil)
@@ -22,12 +21,30 @@ class VerifyOTPVC: UIViewController {
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        txt1.becomeFirstResponder()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+//        scrollView.scrollsToTop = true
+    }
+    @objc func keyboardWillShow(notification: NSNotification) {
+         scrollView.setContentOffset(CGPoint.init(x: 0, y: 70), animated: true)
+        
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        scrollView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
     }
     
     @IBAction func backClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
     
     @IBAction func textfieldChanged(_ sender: UITextField) {
         let text = sender.text
@@ -41,11 +58,7 @@ class VerifyOTPVC: UIViewController {
             case txt3:
                 txt4.becomeFirstResponder()
             case txt4:
-                txt5.becomeFirstResponder()
-            case txt5:
-                txt6.becomeFirstResponder()
-            case txt6:
-                txt6.becomeFirstResponder()
+                txt4.becomeFirstResponder()
             default:
                 break
             }

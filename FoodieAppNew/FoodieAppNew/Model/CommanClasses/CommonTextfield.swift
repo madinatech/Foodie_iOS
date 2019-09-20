@@ -17,7 +17,7 @@ class CommonTextfield: UITextField {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.addLineToView(view: self, position:.LINE_POSITION_BOTTOM, color: .lightGray, width: 2)
+        self.addLineToView(view: self, position:.LINE_POSITION_BOTTOM, color: .black, width: 2)
     }
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {

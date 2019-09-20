@@ -1,10 +1,11 @@
 
 import UIKit
 
-class LoginVC: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
     
     @IBOutlet weak var txtMobile: CommonTextfield!
     @IBOutlet weak var innerView: UIView!
+     @IBOutlet weak var scrollView: UIScrollView!
     class func initViewController() -> LoginVC {
         let vc = LoginVC.init(nibName: "LoginVC", bundle: nil)
         return vc
@@ -15,9 +16,28 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+       
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+         txtMobile.becomeFirstResponder()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+        //        scrollView.scrollsToTop = true
+    }
+    @objc func keyboardWillShow(notification: NSNotification) {
+       
+            scrollView.setContentOffset(CGPoint.init(x: 0, y: 120), animated: true)
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        scrollView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
+    }
 
     @IBAction func proceedClicked(_ sender: Any) {
         let vc = VerifyOTPVC.initViewController()

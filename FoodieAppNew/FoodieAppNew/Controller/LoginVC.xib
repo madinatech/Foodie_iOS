@@ -21,6 +21,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
                 <outlet property="innerView" destination="KVp-D2-5T8" id="Qw0-gS-uYp"/>
+                <outlet property="scrollView" destination="5Ct-xC-oGL" id="3Ch-pH-cEu"/>
                 <outlet property="txtMobile" destination="RPb-B4-WvK" id="2Z3-px-OQf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -167,6 +168,9 @@
                         <constraint firstAttribute="trailing" secondItem="rQQ-El-2dL" secondAttribute="trailing" id="Xjg-ec-YRE"/>
                         <constraint firstItem="rQQ-El-2dL" firstAttribute="top" secondItem="5Ct-xC-oGL" secondAttribute="top" constant="-25" id="voy-KZ-kkt"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="F9W-GI-thc"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
