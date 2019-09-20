@@ -26,6 +26,8 @@
                 <outlet property="txt2" destination="TiR-38-2nB" id="qkn-Wb-OKS"/>
                 <outlet property="txt3" destination="kPN-sI-w6y" id="PwY-at-8d8"/>
                 <outlet property="txt4" destination="yQC-8g-ulq" id="w3V-eh-cpD"/>
+                <outlet property="txtEmail" destination="HZ2-AS-qPz" id="RpD-u6-Ye4"/>
+                <outlet property="txtName" destination="k43-ga-8Xt" id="G3J-Mk-871"/>
                 <outlet property="view" destination="gkO-Fy-CcU" id="bQp-aL-IQL"/>
             </connections>
         </placeholder>
@@ -38,12 +40,12 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6i-Lk-APQ">
-                            <rect key="frame" x="0.0" y="-25" width="414" height="921"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cover111" translatesAutoresizingMaskIntoConstraints="NO" id="Z2a-TC-ZsY">
-                                    <rect key="frame" x="0.0" y="-20" width="414" height="320"/>
+                                    <rect key="frame" x="0.0" y="-44" width="414" height="344"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="320" id="aU2-98-wkV"/>
+                                        <constraint firstAttribute="height" constant="344" id="aU2-98-wkV"/>
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WP8-6N-IyN">
@@ -58,7 +60,7 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGu-da-cQf">
-                                    <rect key="frame" x="0.0" y="269" width="414" height="657"/>
+                                    <rect key="frame" x="0.0" y="269" width="414" height="627"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHE-1O-7rA">
                                             <rect key="frame" x="20" y="40" width="224" height="30"/>
@@ -67,13 +69,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Enter verification code received on your mobile number along with your name and email address to become a Foodie today" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv7-S2-CzV">
-                                            <rect key="frame" x="20" y="90" width="374" height="96"/>
-                                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="24"/>
+                                            <rect key="frame" x="20" y="90" width="374" height="88"/>
+                                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-C2-L6F">
-                                            <rect key="frame" x="20" y="294" width="35" height="40"/>
+                                            <rect key="frame" x="20" y="286" width="35" height="40"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User_purple" translatesAutoresizingMaskIntoConstraints="NO" id="10J-KC-Tbq">
                                                     <rect key="frame" x="7.5" y="10" width="20" height="20"/>
@@ -98,13 +100,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jct-5f-Wad">
-                                            <rect key="frame" x="65" y="294" width="37.5" height="15"/>
+                                            <rect key="frame" x="65" y="286" width="37.5" height="15"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k43-ga-8Xt" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="65" y="311" width="349" height="30"/>
+                                            <rect key="frame" x="65" y="303" width="349" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="6Lu-zs-sBm"/>
                                             </constraints>
@@ -118,7 +120,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vn0-KH-OVg">
-                                            <rect key="frame" x="35" y="491" width="344" height="50"/>
+                                            <rect key="frame" x="35" y="453" width="344" height="50"/>
                                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="LSq-j8-AQJ">
@@ -136,9 +138,12 @@
                                                     <integer key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="proceedClicked:" destination="-1" eventType="touchUpInside" id="5nd-6F-VJc"/>
+                                            </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0KW-kw-tIE">
-                                            <rect key="frame" x="20" y="364" width="35" height="40"/>
+                                            <rect key="frame" x="20" y="356" width="35" height="40"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="6T0-hq-9xB">
                                                     <rect key="frame" x="7.5" y="10" width="20" height="20"/>
@@ -163,13 +168,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Email Id" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A66-ur-Zyp">
-                                            <rect key="frame" x="65" y="364" width="50" height="15"/>
+                                            <rect key="frame" x="65" y="356" width="50" height="15"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZ2-AS-qPz" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="65" y="381" width="349" height="30"/>
+                                            <rect key="frame" x="65" y="373" width="349" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="x6H-I1-UP3"/>
                                             </constraints>
@@ -183,7 +188,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QD7-UG-mxK">
-                                            <rect key="frame" x="20" y="221" width="374" height="43"/>
+                                            <rect key="frame" x="20" y="213" width="374" height="43"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWd-6U-xez" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="82.5" height="43"/>
@@ -265,6 +270,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="bv7-S2-CzV" secondAttribute="trailing" constant="20" id="0qJ-6k-OYi"/>
+                                        <constraint firstItem="hHE-1O-7rA" firstAttribute="leading" secondItem="EGu-da-cQf" secondAttribute="leading" constant="20" id="3Y7-Dx-AQA"/>
                                         <constraint firstItem="0KW-kw-tIE" firstAttribute="top" secondItem="aGR-C2-L6F" secondAttribute="bottom" constant="30" id="6Qe-A1-SoI"/>
                                         <constraint firstItem="jct-5f-Wad" firstAttribute="top" secondItem="QD7-UG-mxK" secondAttribute="bottom" constant="30" id="8uS-fi-D9m"/>
                                         <constraint firstAttribute="trailing" secondItem="QD7-UG-mxK" secondAttribute="trailing" constant="20" id="8z6-Bm-RqY"/>
@@ -277,7 +283,7 @@
                                         <constraint firstItem="QD7-UG-mxK" firstAttribute="top" secondItem="bv7-S2-CzV" secondAttribute="bottom" constant="35" id="W7U-2Z-hOK"/>
                                         <constraint firstItem="Vn0-KH-OVg" firstAttribute="leading" secondItem="EGu-da-cQf" secondAttribute="leading" constant="35" id="WiF-hz-a4U"/>
                                         <constraint firstItem="k43-ga-8Xt" firstAttribute="leading" secondItem="aGR-C2-L6F" secondAttribute="trailing" constant="10" id="YVz-LI-Wrq"/>
-                                        <constraint firstItem="Vn0-KH-OVg" firstAttribute="top" secondItem="HZ2-AS-qPz" secondAttribute="bottom" constant="80" id="YlA-3e-QN0"/>
+                                        <constraint firstItem="Vn0-KH-OVg" firstAttribute="top" secondItem="HZ2-AS-qPz" secondAttribute="bottom" constant="50" id="YlA-3e-QN0"/>
                                         <constraint firstItem="hHE-1O-7rA" firstAttribute="leading" secondItem="EGu-da-cQf" secondAttribute="leading" constant="20" id="aYu-2q-9TZ"/>
                                         <constraint firstItem="A66-ur-Zyp" firstAttribute="leading" secondItem="0KW-kw-tIE" secondAttribute="trailing" constant="10" id="bFb-pz-Ch3"/>
                                         <constraint firstItem="bv7-S2-CzV" firstAttribute="top" secondItem="hHE-1O-7rA" secondAttribute="bottom" constant="20" id="cxB-PH-qiM"/>
@@ -294,23 +300,25 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="WP8-6N-IyN" firstAttribute="leading" secondItem="i6i-Lk-APQ" secondAttribute="leading" constant="20" id="914-VH-5wu"/>
-                                <constraint firstItem="EGu-da-cQf" firstAttribute="top" secondItem="i6i-Lk-APQ" secondAttribute="top" constant="269" id="LTg-yy-SAo"/>
-                                <constraint firstAttribute="trailing" secondItem="Z2a-TC-ZsY" secondAttribute="trailing" id="MTm-Hf-NPh"/>
-                                <constraint firstItem="WP8-6N-IyN" firstAttribute="top" secondItem="i6i-Lk-APQ" secondAttribute="top" constant="70" id="NWN-jC-STQ"/>
-                                <constraint firstItem="EGu-da-cQf" firstAttribute="leading" secondItem="i6i-Lk-APQ" secondAttribute="leading" id="Wpb-L6-seD"/>
-                                <constraint firstAttribute="trailing" secondItem="EGu-da-cQf" secondAttribute="trailing" id="dem-0f-7LD"/>
-                                <constraint firstItem="Z2a-TC-ZsY" firstAttribute="leading" secondItem="i6i-Lk-APQ" secondAttribute="leading" id="ghJ-AH-4ay"/>
-                                <constraint firstItem="Z2a-TC-ZsY" firstAttribute="top" secondItem="i6i-Lk-APQ" secondAttribute="top" constant="-20" id="hXg-cw-yiC"/>
-                                <constraint firstAttribute="bottom" secondItem="EGu-da-cQf" secondAttribute="bottom" constant="-5" id="y2h-VE-DLe"/>
+                                <constraint firstItem="WP8-6N-IyN" firstAttribute="leading" secondItem="i6i-Lk-APQ" secondAttribute="leading" constant="20" id="1tt-AI-pf1"/>
+                                <constraint firstAttribute="trailing" secondItem="EGu-da-cQf" secondAttribute="trailing" id="9pf-qO-PNC"/>
+                                <constraint firstItem="EGu-da-cQf" firstAttribute="top" secondItem="WP8-6N-IyN" secondAttribute="bottom" constant="161" id="BR1-Sx-Nag"/>
+                                <constraint firstItem="EGu-da-cQf" firstAttribute="leading" secondItem="i6i-Lk-APQ" secondAttribute="leading" id="KyG-je-L7C"/>
+                                <constraint firstAttribute="height" constant="896" id="TTe-Uw-dqw"/>
+                                <constraint firstAttribute="bottom" secondItem="EGu-da-cQf" secondAttribute="bottom" id="dmV-d1-xxk"/>
+                                <constraint firstItem="Z2a-TC-ZsY" firstAttribute="top" secondItem="i6i-Lk-APQ" secondAttribute="top" constant="-44" id="fV5-sa-1Yi"/>
+                                <constraint firstItem="WP8-6N-IyN" firstAttribute="top" secondItem="i6i-Lk-APQ" secondAttribute="top" constant="70" id="gBD-XX-md8"/>
+                                <constraint firstItem="Z2a-TC-ZsY" firstAttribute="leading" secondItem="i6i-Lk-APQ" secondAttribute="leading" id="nS6-7w-eEn"/>
+                                <constraint firstAttribute="trailing" secondItem="Z2a-TC-ZsY" secondAttribute="trailing" id="sUi-WT-YRZ"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="i6i-Lk-APQ" firstAttribute="leading" secondItem="hNN-LC-81b" secondAttribute="leading" id="6PG-KP-dt1"/>
-                        <constraint firstAttribute="bottom" secondItem="i6i-Lk-APQ" secondAttribute="bottom" id="92p-ES-LYF"/>
-                        <constraint firstAttribute="trailing" secondItem="i6i-Lk-APQ" secondAttribute="trailing" id="ANK-KF-yEL"/>
-                        <constraint firstItem="i6i-Lk-APQ" firstAttribute="top" secondItem="hNN-LC-81b" secondAttribute="top" constant="-25" id="xda-20-4Ii"/>
+                        <constraint firstAttribute="height" constant="896" id="Lfz-jK-gvt"/>
+                        <constraint firstAttribute="bottom" secondItem="i6i-Lk-APQ" secondAttribute="bottom" id="VIM-yr-1ig"/>
+                        <constraint firstItem="i6i-Lk-APQ" firstAttribute="top" secondItem="hNN-LC-81b" secondAttribute="top" id="fEG-oh-4O8"/>
+                        <constraint firstAttribute="trailing" secondItem="i6i-Lk-APQ" secondAttribute="trailing" id="i96-ne-tH2"/>
+                        <constraint firstItem="i6i-Lk-APQ" firstAttribute="leading" secondItem="hNN-LC-81b" secondAttribute="leading" id="qmy-i8-bSl"/>
                     </constraints>
                     <connections>
                         <outlet property="delegate" destination="-1" id="HIz-dh-L0V"/>
@@ -319,12 +327,11 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="hNN-LC-81b" secondAttribute="bottom" id="Hdq-t7-f7p"/>
-                <constraint firstItem="hNN-LC-81b" firstAttribute="top" secondItem="gkO-Fy-CcU" secondAttribute="top" id="KhL-JM-Dky"/>
-                <constraint firstItem="hNN-LC-81b" firstAttribute="leading" secondItem="1ur-ib-i4b" secondAttribute="leading" id="MjA-IY-4tU"/>
-                <constraint firstItem="hNN-LC-81b" firstAttribute="trailing" secondItem="1ur-ib-i4b" secondAttribute="trailing" id="YLE-pH-zdy"/>
-                <constraint firstItem="i6i-Lk-APQ" firstAttribute="height" secondItem="gkO-Fy-CcU" secondAttribute="height" constant="25" id="n9u-pg-hHf"/>
-                <constraint firstItem="i6i-Lk-APQ" firstAttribute="width" secondItem="gkO-Fy-CcU" secondAttribute="width" id="wjv-hv-hnR"/>
+                <constraint firstItem="hNN-LC-81b" firstAttribute="leading" secondItem="1ur-ib-i4b" secondAttribute="leading" id="GJg-p9-DJF"/>
+                <constraint firstItem="i6i-Lk-APQ" firstAttribute="width" secondItem="gkO-Fy-CcU" secondAttribute="width" id="IXo-ZK-DAx"/>
+                <constraint firstItem="hNN-LC-81b" firstAttribute="top" secondItem="gkO-Fy-CcU" secondAttribute="top" id="eSo-4h-lIW"/>
+                <constraint firstItem="hNN-LC-81b" firstAttribute="trailing" secondItem="1ur-ib-i4b" secondAttribute="trailing" id="i5H-PS-Kti"/>
+                <constraint firstAttribute="bottom" secondItem="hNN-LC-81b" secondAttribute="bottom" id="s9y-8C-4lv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="1ur-ib-i4b"/>
             <point key="canvasLocation" x="131.8840579710145" y="126.5625"/>

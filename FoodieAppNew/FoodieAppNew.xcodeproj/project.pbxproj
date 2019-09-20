@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		34C01D022334D00D0057DEF4 /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 34C01D032334D00D0057DEF4 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				34C01D062334D0160057DEF4 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1070B933E5E015DA504DF187 /* Pods_FoodieAppNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B0C1370D1B58C1E482AB63 /* Pods_FoodieAppNew.framework */; };
 		3400F2F22331EFC100346C9A /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400F2F02331EFC100346C9A /* FilterVC.swift */; };
@@ -43,7 +57,6 @@
 		340D78C6233385CD0084971A /* SearchCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340D78C4233385CD0084971A /* SearchCollCell.swift */; };
 		340D78C7233385CD0084971A /* SearchCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340D78C5233385CD0084971A /* SearchCollCell.xib */; };
 		341B0CD32330CECF00D12504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0CD22330CECF00D12504 /* AppDelegate.swift */; };
-		341B0CDB2330CECF00D12504 /* FoodieAppNew.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 341B0CD92330CECF00D12504 /* FoodieAppNew.xcdatamodeld */; };
 		341B0CDD2330CED000D12504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341B0CDC2330CED000D12504 /* Assets.xcassets */; };
 		341B0CE02330CED000D12504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341B0CDE2330CED000D12504 /* LaunchScreen.storyboard */; };
 		341B0CEB2330CED100D12504 /* FoodieAppNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0CEA2330CED100D12504 /* FoodieAppNewTests.swift */; };
@@ -124,6 +137,45 @@
 		34C01C3F2334A9230057DEF4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C362334A9230057DEF4 /* Constant.swift */; };
 		34C01C402334A9230057DEF4 /* CommonTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C372334A9230057DEF4 /* CommonTextfield.swift */; };
 		34C01C412334A9230057DEF4 /* KGRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C382334A9230057DEF4 /* KGRadioButton.swift */; };
+		34C01CB52334AA780057DEF4 /* mapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34C01C782334AA770057DEF4 /* mapping.plist */; };
+		34C01CB62334AA780057DEF4 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C7A2334AA780057DEF4 /* AccountManager.swift */; };
+		34C01CB72334AA780057DEF4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C7B2334AA780057DEF4 /* Account.swift */; };
+		34C01CB82334AA780057DEF4 /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C7D2334AA780057DEF4 /* CDHelper.swift */; };
+		34C01CB92334AA780057DEF4 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C7F2334AA780057DEF4 /* Manager.swift */; };
+		34C01CBA2334AA780057DEF4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C812334AA780057DEF4 /* Request.swift */; };
+		34C01CBC2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CBB2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel */; };
+		34C01CEC2334AB2C0057DEF4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CBD2334AB2B0057DEF4 /* SwiftyJSON.swift */; };
+		34C01CED2334AB2C0057DEF4 /* URLSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CBE2334AB2B0057DEF4 /* URLSchema.swift */; };
+		34C01CEE2334AB2C0057DEF4 /* NSManagedObject+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CC22334AB2B0057DEF4 /* NSManagedObject+Mapping.m */; };
+		34C01CEF2334AB2C0057DEF4 /* NSManagedObject+Duplicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CC32334AB2B0057DEF4 /* NSManagedObject+Duplicate.m */; };
+		34C01CF02334AB2C0057DEF4 /* NSMutableArray+Join.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CC62334AB2B0057DEF4 /* NSMutableArray+Join.m */; };
+		34C01CF12334AB2C0057DEF4 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CC92334AB2B0057DEF4 /* NSDictionary+Extension.m */; };
+		34C01CF22334AB2C0057DEF4 /* NSString+PropertyKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CCC2334AB2B0057DEF4 /* NSString+PropertyKVC.m */; };
+		34C01CF32334AB2C0057DEF4 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CCD2334AB2B0057DEF4 /* NSObject+Properties.m */; };
+		34C01CF42334AB2C0057DEF4 /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 34C01CD12334AB2B0057DEF4 /* NSDateTimeAgo.bundle */; };
+		34C01CF52334AB2C0057DEF4 /* NSDate+Month.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CD42334AB2B0057DEF4 /* NSDate+Month.m */; };
+		34C01CF62334AB2C0057DEF4 /* NSDate+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CD62334AB2B0057DEF4 /* NSDate+Compare.m */; };
+		34C01CF72334AB2C0057DEF4 /* NSDate+Week.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CDA2334AB2B0057DEF4 /* NSDate+Week.m */; };
+		34C01CF82334AB2C0057DEF4 /* NSDate+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CDC2334AB2B0057DEF4 /* NSDate+Components.m */; };
+		34C01CF92334AB2C0057DEF4 /* NSDate+Year.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CDD2334AB2B0057DEF4 /* NSDate+Year.m */; };
+		34C01CFA2334AB2C0057DEF4 /* NSDate+Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CDE2334AB2B0057DEF4 /* NSDate+Day.m */; };
+		34C01CFB2334AB2C0057DEF4 /* NSDate+Hour.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CE02334AB2B0057DEF4 /* NSDate+Hour.m */; };
+		34C01CFC2334AB2C0057DEF4 /* NSDate+DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CE32334AB2B0057DEF4 /* NSDate+DateTime.m */; };
+		34C01CFD2334AB2C0057DEF4 /* NSDate+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CE42334AB2B0057DEF4 /* NSDate+Time.m */; };
+		34C01CFE2334AB2C0057DEF4 /* NSDate+Extentsion.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CE72334AB2B0057DEF4 /* NSDate+Extentsion.m */; };
+		34C01CFF2334AB2C0057DEF4 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CE82334AB2B0057DEF4 /* NSDate+TimeAgo.m */; };
+		34C01D002334AB2C0057DEF4 /* MD5Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CEA2334AB2B0057DEF4 /* MD5Digest.swift */; };
+		34C01D012334AB2C0057DEF4 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CEB2334AB2B0057DEF4 /* DateUtils.swift */; };
+		34C01D0C2334D3570057DEF4 /* _PaymentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D072334D3570057DEF4 /* _PaymentOption.swift */; };
+		34C01D0D2334D3570057DEF4 /* _UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D082334D3570057DEF4 /* _UserData.swift */; };
+		34C01D0E2334D3570057DEF4 /* _VerifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D092334D3570057DEF4 /* _VerifyUser.swift */; };
+		34C01D0F2334D3570057DEF4 /* _DeliveryOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D0A2334D3570057DEF4 /* _DeliveryOption.swift */; };
+		34C01D102334D3570057DEF4 /* _AppExpires.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D0B2334D3570057DEF4 /* _AppExpires.swift */; };
+		34C01D162334D35E0057DEF4 /* PaymentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D112334D35E0057DEF4 /* PaymentOption.swift */; };
+		34C01D172334D35E0057DEF4 /* DeliveryOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D122334D35E0057DEF4 /* DeliveryOption.swift */; };
+		34C01D182334D35E0057DEF4 /* VerifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D132334D35E0057DEF4 /* VerifyUser.swift */; };
+		34C01D192334D35E0057DEF4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D142334D35E0057DEF4 /* UserData.swift */; };
+		34C01D1A2334D35E0057DEF4 /* AppExpires.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D152334D35E0057DEF4 /* AppExpires.swift */; };
 		34CAC0E62333A44400BFBAB4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E42333A44400BFBAB4 /* LoginVC.swift */; };
 		34CAC0E72333A44400BFBAB4 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34CAC0E52333A44400BFBAB4 /* LoginVC.xib */; };
 		34CAC0EA2333AF6A00BFBAB4 /* VerifyOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */; };
@@ -187,7 +239,6 @@
 		340D78C5233385CD0084971A /* SearchCollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollCell.xib; sourceTree = "<group>"; };
 		341B0CCF2330CECF00D12504 /* FoodieAppNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieAppNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		341B0CD22330CECF00D12504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		341B0CDA2330CECF00D12504 /* FoodieAppNew.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodieAppNew.xcdatamodel; sourceTree = "<group>"; };
 		341B0CDC2330CED000D12504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		341B0CDF2330CED000D12504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341B0CE12330CED000D12504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -273,6 +324,64 @@
 		34C01C362334A9230057DEF4 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		34C01C372334A9230057DEF4 /* CommonTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTextfield.swift; sourceTree = "<group>"; };
 		34C01C382334A9230057DEF4 /* KGRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGRadioButton.swift; sourceTree = "<group>"; };
+		34C01C782334AA770057DEF4 /* mapping.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mapping.plist; sourceTree = "<group>"; };
+		34C01C7A2334AA780057DEF4 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		34C01C7B2334AA780057DEF4 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		34C01C7D2334AA780057DEF4 /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
+		34C01C7F2334AA780057DEF4 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		34C01C812334AA780057DEF4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		34C01CBB2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodieAppNew.xcdatamodel; sourceTree = "<group>"; };
+		34C01CBD2334AB2B0057DEF4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		34C01CBE2334AB2B0057DEF4 /* URLSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSchema.swift; sourceTree = "<group>"; };
+		34C01CC22334AB2B0057DEF4 /* NSManagedObject+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Mapping.m"; sourceTree = "<group>"; };
+		34C01CC32334AB2B0057DEF4 /* NSManagedObject+Duplicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Duplicate.m"; sourceTree = "<group>"; };
+		34C01CC42334AB2B0057DEF4 /* NSManagedObject+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Mapping.h"; sourceTree = "<group>"; };
+		34C01CC52334AB2B0057DEF4 /* NSManagedObject+Duplicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Duplicate.h"; sourceTree = "<group>"; };
+		34C01CC62334AB2B0057DEF4 /* NSMutableArray+Join.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Join.m"; sourceTree = "<group>"; };
+		34C01CC82334AB2B0057DEF4 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
+		34C01CC92334AB2B0057DEF4 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
+		34C01CCB2334AB2B0057DEF4 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
+		34C01CCC2334AB2B0057DEF4 /* NSString+PropertyKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PropertyKVC.m"; sourceTree = "<group>"; };
+		34C01CCD2334AB2B0057DEF4 /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
+		34C01CCE2334AB2B0057DEF4 /* NSString+PropertyKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PropertyKVC.h"; sourceTree = "<group>"; };
+		34C01CCF2334AB2B0057DEF4 /* NSMutableArray+Join.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Join.h"; sourceTree = "<group>"; };
+		34C01CD12334AB2B0057DEF4 /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
+		34C01CD22334AB2B0057DEF4 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		34C01CD42334AB2B0057DEF4 /* NSDate+Month.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Month.m"; sourceTree = "<group>"; };
+		34C01CD52334AB2B0057DEF4 /* NSDate+Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Day.h"; sourceTree = "<group>"; };
+		34C01CD62334AB2B0057DEF4 /* NSDate+Compare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Compare.m"; sourceTree = "<group>"; };
+		34C01CD72334AB2B0057DEF4 /* NSDate+Hour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Hour.h"; sourceTree = "<group>"; };
+		34C01CD82334AB2B0057DEF4 /* NSDate+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Time.h"; sourceTree = "<group>"; };
+		34C01CD92334AB2B0057DEF4 /* NSDate+DateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateTime.h"; sourceTree = "<group>"; };
+		34C01CDA2334AB2B0057DEF4 /* NSDate+Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Week.m"; sourceTree = "<group>"; };
+		34C01CDB2334AB2B0057DEF4 /* NSDate+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calendar.h"; sourceTree = "<group>"; };
+		34C01CDC2334AB2B0057DEF4 /* NSDate+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Components.m"; sourceTree = "<group>"; };
+		34C01CDD2334AB2B0057DEF4 /* NSDate+Year.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Year.m"; sourceTree = "<group>"; };
+		34C01CDE2334AB2B0057DEF4 /* NSDate+Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Day.m"; sourceTree = "<group>"; };
+		34C01CDF2334AB2B0057DEF4 /* NSDate+Month.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Month.h"; sourceTree = "<group>"; };
+		34C01CE02334AB2B0057DEF4 /* NSDate+Hour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Hour.m"; sourceTree = "<group>"; };
+		34C01CE12334AB2B0057DEF4 /* NSDate+Compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Compare.h"; sourceTree = "<group>"; };
+		34C01CE22334AB2B0057DEF4 /* NSDate+Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Week.h"; sourceTree = "<group>"; };
+		34C01CE32334AB2B0057DEF4 /* NSDate+DateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateTime.m"; sourceTree = "<group>"; };
+		34C01CE42334AB2B0057DEF4 /* NSDate+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Time.m"; sourceTree = "<group>"; };
+		34C01CE52334AB2B0057DEF4 /* NSDate+Year.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Year.h"; sourceTree = "<group>"; };
+		34C01CE62334AB2B0057DEF4 /* NSDate+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Components.h"; sourceTree = "<group>"; };
+		34C01CE72334AB2B0057DEF4 /* NSDate+Extentsion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extentsion.m"; sourceTree = "<group>"; };
+		34C01CE82334AB2B0057DEF4 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		34C01CE92334AB2B0057DEF4 /* NSDate+Extentsion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extentsion.h"; sourceTree = "<group>"; };
+		34C01CEA2334AB2B0057DEF4 /* MD5Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5Digest.swift; sourceTree = "<group>"; };
+		34C01CEB2334AB2B0057DEF4 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		34C01D072334D3570057DEF4 /* _PaymentOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _PaymentOption.swift; sourceTree = "<group>"; };
+		34C01D082334D3570057DEF4 /* _UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _UserData.swift; sourceTree = "<group>"; };
+		34C01D092334D3570057DEF4 /* _VerifyUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _VerifyUser.swift; sourceTree = "<group>"; };
+		34C01D0A2334D3570057DEF4 /* _DeliveryOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _DeliveryOption.swift; sourceTree = "<group>"; };
+		34C01D0B2334D3570057DEF4 /* _AppExpires.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _AppExpires.swift; sourceTree = "<group>"; };
+		34C01D112334D35E0057DEF4 /* PaymentOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentOption.swift; sourceTree = "<group>"; };
+		34C01D122334D35E0057DEF4 /* DeliveryOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryOption.swift; sourceTree = "<group>"; };
+		34C01D132334D35E0057DEF4 /* VerifyUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyUser.swift; sourceTree = "<group>"; };
+		34C01D142334D35E0057DEF4 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		34C01D152334D35E0057DEF4 /* AppExpires.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExpires.swift; sourceTree = "<group>"; };
+		34C01D1B2334D4860057DEF4 /* FoodieAppNew-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodieAppNew-Bridging-Header.h"; sourceTree = "<group>"; };
 		34CAC0E42333A44400BFBAB4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		34CAC0E52333A44400BFBAB4 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPVC.swift; sourceTree = "<group>"; };
@@ -357,7 +466,6 @@
 				341B0CDC2330CED000D12504 /* Assets.xcassets */,
 				341B0CDE2330CED000D12504 /* LaunchScreen.storyboard */,
 				341B0CE12330CED000D12504 /* Info.plist */,
-				341B0CD92330CECF00D12504 /* FoodieAppNew.xcdatamodeld */,
 			);
 			path = FoodieAppNew;
 			sourceTree = "<group>";
@@ -518,6 +626,11 @@
 		34C01C2C2334A9230057DEF4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				34C01C792334AA780057DEF4 /* Account */,
+				34C01C422334AA770057DEF4 /* CoreData */,
+				34C01C7C2334AA780057DEF4 /* Helper */,
+				34C01C7E2334AA780057DEF4 /* Manager */,
+				34C01C802334AA780057DEF4 /* Request */,
 				34C01C2D2334A9230057DEF4 /* Shared */,
 				34C01C352334A9230057DEF4 /* CommanClasses */,
 			);
@@ -527,6 +640,11 @@
 		34C01C2D2334A9230057DEF4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				34C01CBF2334AB2B0057DEF4 /* Categories */,
+				34C01CEB2334AB2B0057DEF4 /* DateUtils.swift */,
+				34C01CEA2334AB2B0057DEF4 /* MD5Digest.swift */,
+				34C01CBD2334AB2B0057DEF4 /* SwiftyJSON.swift */,
+				34C01CBE2334AB2B0057DEF4 /* URLSchema.swift */,
 				34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */,
 				34C01C2F2334A9230057DEF4 /* Calibri */,
 				34C01C332334A9230057DEF4 /* UIWindowTransitions.swift */,
@@ -553,6 +671,158 @@
 				34C01C382334A9230057DEF4 /* KGRadioButton.swift */,
 			);
 			path = CommanClasses;
+			sourceTree = "<group>";
+		};
+		34C01C422334AA770057DEF4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				34C01CBB2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel */,
+				34C01C432334AA770057DEF4 /* UserClasses */,
+				34C01C552334AA770057DEF4 /* StaticClasses */,
+				34C01C782334AA770057DEF4 /* mapping.plist */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		34C01C432334AA770057DEF4 /* UserClasses */ = {
+			isa = PBXGroup;
+			children = (
+				34C01D152334D35E0057DEF4 /* AppExpires.swift */,
+				34C01D122334D35E0057DEF4 /* DeliveryOption.swift */,
+				34C01D112334D35E0057DEF4 /* PaymentOption.swift */,
+				34C01D142334D35E0057DEF4 /* UserData.swift */,
+				34C01D132334D35E0057DEF4 /* VerifyUser.swift */,
+			);
+			path = UserClasses;
+			sourceTree = "<group>";
+		};
+		34C01C552334AA770057DEF4 /* StaticClasses */ = {
+			isa = PBXGroup;
+			children = (
+				34C01D0B2334D3570057DEF4 /* _AppExpires.swift */,
+				34C01D0A2334D3570057DEF4 /* _DeliveryOption.swift */,
+				34C01D072334D3570057DEF4 /* _PaymentOption.swift */,
+				34C01D082334D3570057DEF4 /* _UserData.swift */,
+				34C01D092334D3570057DEF4 /* _VerifyUser.swift */,
+			);
+			path = StaticClasses;
+			sourceTree = "<group>";
+		};
+		34C01C792334AA780057DEF4 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				34C01C7A2334AA780057DEF4 /* AccountManager.swift */,
+				34C01C7B2334AA780057DEF4 /* Account.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		34C01C7C2334AA780057DEF4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				34C01C7D2334AA780057DEF4 /* CDHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		34C01C7E2334AA780057DEF4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				34C01C7F2334AA780057DEF4 /* Manager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		34C01C802334AA780057DEF4 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				34C01C812334AA780057DEF4 /* Request.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		34C01CBF2334AB2B0057DEF4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				34C01D1B2334D4860057DEF4 /* FoodieAppNew-Bridging-Header.h */,
+				34C01CC12334AB2B0057DEF4 /* NSManagedObject */,
+				34C01CC62334AB2B0057DEF4 /* NSMutableArray+Join.m */,
+				34C01CC72334AB2B0057DEF4 /* Common */,
+				34C01CCA2334AB2B0057DEF4 /* NSObject */,
+				34C01CCF2334AB2B0057DEF4 /* NSMutableArray+Join.h */,
+				34C01CD02334AB2B0057DEF4 /* NSDate */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		34C01CC12334AB2B0057DEF4 /* NSManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				34C01CC22334AB2B0057DEF4 /* NSManagedObject+Mapping.m */,
+				34C01CC32334AB2B0057DEF4 /* NSManagedObject+Duplicate.m */,
+				34C01CC42334AB2B0057DEF4 /* NSManagedObject+Mapping.h */,
+				34C01CC52334AB2B0057DEF4 /* NSManagedObject+Duplicate.h */,
+			);
+			path = NSManagedObject;
+			sourceTree = "<group>";
+		};
+		34C01CC72334AB2B0057DEF4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				34C01CC82334AB2B0057DEF4 /* NSDictionary+Extension.h */,
+				34C01CC92334AB2B0057DEF4 /* NSDictionary+Extension.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		34C01CCA2334AB2B0057DEF4 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				34C01CCB2334AB2B0057DEF4 /* NSObject+Properties.h */,
+				34C01CCC2334AB2B0057DEF4 /* NSString+PropertyKVC.m */,
+				34C01CCD2334AB2B0057DEF4 /* NSObject+Properties.m */,
+				34C01CCE2334AB2B0057DEF4 /* NSString+PropertyKVC.h */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		34C01CD02334AB2B0057DEF4 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				34C01CD12334AB2B0057DEF4 /* NSDateTimeAgo.bundle */,
+				34C01CD22334AB2B0057DEF4 /* NSDate+TimeAgo.h */,
+				34C01CD32334AB2B0057DEF4 /* DateCompare */,
+				34C01CE72334AB2B0057DEF4 /* NSDate+Extentsion.m */,
+				34C01CE82334AB2B0057DEF4 /* NSDate+TimeAgo.m */,
+				34C01CE92334AB2B0057DEF4 /* NSDate+Extentsion.h */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		34C01CD32334AB2B0057DEF4 /* DateCompare */ = {
+			isa = PBXGroup;
+			children = (
+				34C01CD42334AB2B0057DEF4 /* NSDate+Month.m */,
+				34C01CD52334AB2B0057DEF4 /* NSDate+Day.h */,
+				34C01CD62334AB2B0057DEF4 /* NSDate+Compare.m */,
+				34C01CD72334AB2B0057DEF4 /* NSDate+Hour.h */,
+				34C01CD82334AB2B0057DEF4 /* NSDate+Time.h */,
+				34C01CD92334AB2B0057DEF4 /* NSDate+DateTime.h */,
+				34C01CDA2334AB2B0057DEF4 /* NSDate+Week.m */,
+				34C01CDB2334AB2B0057DEF4 /* NSDate+Calendar.h */,
+				34C01CDC2334AB2B0057DEF4 /* NSDate+Components.m */,
+				34C01CDD2334AB2B0057DEF4 /* NSDate+Year.m */,
+				34C01CDE2334AB2B0057DEF4 /* NSDate+Day.m */,
+				34C01CDF2334AB2B0057DEF4 /* NSDate+Month.h */,
+				34C01CE02334AB2B0057DEF4 /* NSDate+Hour.m */,
+				34C01CE12334AB2B0057DEF4 /* NSDate+Compare.h */,
+				34C01CE22334AB2B0057DEF4 /* NSDate+Week.h */,
+				34C01CE32334AB2B0057DEF4 /* NSDate+DateTime.m */,
+				34C01CE42334AB2B0057DEF4 /* NSDate+Time.m */,
+				34C01CE52334AB2B0057DEF4 /* NSDate+Year.h */,
+				34C01CE62334AB2B0057DEF4 /* NSDate+Components.h */,
+			);
+			path = DateCompare;
 			sourceTree = "<group>";
 		};
 		BCB45D21C08F73B4906E66B0 /* Pods */ = {
@@ -649,6 +919,9 @@
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 341B0CCE2330CECF00D12504;
 					};
+					34C01D022334D00D0057DEF4 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 341B0CCA2330CECF00D12504 /* Build configuration list for PBXProject "FoodieAppNew" */;
@@ -667,6 +940,7 @@
 				341B0CCE2330CECF00D12504 /* FoodieAppNew */,
 				341B0CE52330CED100D12504 /* FoodieAppNewTests */,
 				341B0CF02330CED100D12504 /* FoodieAppNewUITests */,
+				34C01D022334D00D0057DEF4 /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -677,7 +951,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				341B0D8A2330E12500D12504 /* InfoCell.xib in Resources */,
+				34C01CB52334AA780057DEF4 /* mapping.plist in Resources */,
 				341B0D952330E12500D12504 /* AccountCell.xib in Resources */,
+				34C01CF42334AB2C0057DEF4 /* NSDateTimeAgo.bundle in Resources */,
 				340D78B723335D210084971A /* RestDetailHeaderCell.xib in Resources */,
 				3400F30F2332562100346C9A /* InfoVC.xib in Resources */,
 				3400F31323325C4000346C9A /* ViewOrderVC.xib in Resources */,
@@ -819,6 +1095,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		34C01D062334D0160057DEF4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m FoodieAppNew/Model/CoreData/FoodieAppNew.xcdatamodel -O FoodieAppNew/Model/CoreData/StaticClasses --swift template-var arc=true\n";
+		};
 		D7CA29C3C5342CD5607D9F4F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -829,16 +1122,32 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FoodieAppNew/Pods-FoodieAppNew-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AMShimmer/AMShimmer.framework",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/FastEasyMapping/FastEasyMapping.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMShimmer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CBFlashyTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastEasyMapping.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -853,32 +1162,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C01C3F2334A9230057DEF4 /* Constant.swift in Sources */,
+				34C01CBC2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel in Sources */,
+				34C01D0D2334D3570057DEF4 /* _UserData.swift in Sources */,
 				3400F31223325C4000346C9A /* ViewOrderVC.swift in Sources */,
 				341B0D192330D5AE00D12504 /* SearchVC.swift in Sources */,
+				34C01CFF2334AB2C0057DEF4 /* NSDate+TimeAgo.m in Sources */,
+				34C01CF92334AB2C0057DEF4 /* NSDate+Year.m in Sources */,
+				34C01D0F2334D3570057DEF4 /* _DeliveryOption.swift in Sources */,
 				341B0D942330E12500D12504 /* CityCell.swift in Sources */,
-				341B0CDB2330CECF00D12504 /* FoodieAppNew.xcdatamodeld in Sources */,
 				34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */,
+				34C01CF72334AB2C0057DEF4 /* NSDate+Week.m in Sources */,
+				34C01CFE2334AB2C0057DEF4 /* NSDate+Extentsion.m in Sources */,
 				341B0D982330E12500D12504 /* BillDetailCell.swift in Sources */,
 				3400F3072332292400346C9A /* ResDetailTabSection.swift in Sources */,
 				340D78B623335D210084971A /* RestDetailHeaderCell.swift in Sources */,
+				34C01D0C2334D3570057DEF4 /* _PaymentOption.swift in Sources */,
+				34C01CB62334AA780057DEF4 /* AccountManager.swift in Sources */,
+				34C01CF62334AB2C0057DEF4 /* NSDate+Compare.m in Sources */,
+				34C01D012334AB2C0057DEF4 /* DateUtils.swift in Sources */,
+				34C01CB72334AA780057DEF4 /* Account.swift in Sources */,
 				340D78BE233383C10084971A /* RecentSearchCell.swift in Sources */,
 				341B0D9E2330E12500D12504 /* WelcomeCell.swift in Sources */,
+				34C01CF32334AB2C0057DEF4 /* NSObject+Properties.m in Sources */,
+				34C01CEE2334AB2C0057DEF4 /* NSManagedObject+Mapping.m in Sources */,
+				34C01CEC2334AB2C0057DEF4 /* SwiftyJSON.swift in Sources */,
+				34C01CF82334AB2C0057DEF4 /* NSDate+Components.m in Sources */,
 				340D78B22333475F0084971A /* ItemsCell.swift in Sources */,
+				34C01CF12334AB2C0057DEF4 /* NSDictionary+Extension.m in Sources */,
 				3400F2FA2331FC1C00346C9A /* HomeTopCell.swift in Sources */,
 				341B0DAA2330E12500D12504 /* CountryCell.swift in Sources */,
+				34C01D162334D35E0057DEF4 /* PaymentOption.swift in Sources */,
+				34C01D0E2334D3570057DEF4 /* _VerifyUser.swift in Sources */,
 				340D78AE2333464D0084971A /* ViewOrderTopCell.swift in Sources */,
 				340D78C6233385CD0084971A /* SearchCollCell.swift in Sources */,
+				34C01D172334D35E0057DEF4 /* DeliveryOption.swift in Sources */,
 				341B0D852330E12500D12504 /* RecommendedRestaurantCell.swift in Sources */,
+				34C01D002334AB2C0057DEF4 /* MD5Digest.swift in Sources */,
+				34C01CFB2334AB2C0057DEF4 /* NSDate+Hour.m in Sources */,
+				34C01CEF2334AB2C0057DEF4 /* NSManagedObject+Duplicate.m in Sources */,
 				3400F30E2332562100346C9A /* InfoVC.swift in Sources */,
 				341B0D8B2330E12500D12504 /* PaymentCell.swift in Sources */,
 				341B0D822330E12500D12504 /* CoupanCell.swift in Sources */,
 				341B0D862330E12500D12504 /* TabCell.swift in Sources */,
+				34C01CF52334AB2C0057DEF4 /* NSDate+Month.m in Sources */,
+				34C01CB92334AA780057DEF4 /* Manager.swift in Sources */,
 				341B0D7A2330E12500D12504 /* PastOrderButtonCell.swift in Sources */,
+				34C01CFA2334AB2C0057DEF4 /* NSDate+Day.m in Sources */,
 				3400F31623325CB100346C9A /* CategoryCell.swift in Sources */,
 				3400F2F62331F38D00346C9A /* SortingCell.swift in Sources */,
 				341B0D962330E12500D12504 /* AccountCell.swift in Sources */,
 				34C01C3D2334A9230057DEF4 /* UIWindowTransitions.swift in Sources */,
 				341B0D912330E12500D12504 /* RestaurnatRecommendedCell.swift in Sources */,
+				34C01CB82334AA780057DEF4 /* CDHelper.swift in Sources */,
 				341B0D992330E12500D12504 /* HelpCell.swift in Sources */,
 				341B0D8D2330E12500D12504 /* RecomandedDetailCell.swift in Sources */,
 				341B0DA72330E12500D12504 /* CartItemCell.swift in Sources */,
@@ -888,27 +1223,37 @@
 				341B0D9B2330E12500D12504 /* PastOrderCell.swift in Sources */,
 				341B0D972330E12500D12504 /* RestaurantDetailCell.swift in Sources */,
 				341B0D8E2330E12500D12504 /* RecentOrderCell.swift in Sources */,
+				34C01CBA2334AA780057DEF4 /* Request.swift in Sources */,
+				34C01CFD2334AB2C0057DEF4 /* NSDate+Time.m in Sources */,
 				34CAC0E62333A44400BFBAB4 /* LoginVC.swift in Sources */,
 				341B0DA82330E12500D12504 /* CustomizeCell.swift in Sources */,
+				34C01D192334D35E0057DEF4 /* UserData.swift in Sources */,
 				34C01C3E2334A9230057DEF4 /* Utils.swift in Sources */,
 				3400F2F22331EFC100346C9A /* FilterVC.swift in Sources */,
 				340D78C22333855B0084971A /* SearchCategoryCell.swift in Sources */,
 				341B0D152330D57E00D12504 /* HomeVC.swift in Sources */,
 				341B0D292330D6A800D12504 /* OrderListVC.swift in Sources */,
 				3400F3012332117800346C9A /* RestaurantDetailHeader.swift in Sources */,
+				34C01CED2334AB2C0057DEF4 /* URLSchema.swift in Sources */,
 				341B0CD32330CECF00D12504 /* AppDelegate.swift in Sources */,
 				3400F2FE2332115100346C9A /* RestaurantDetailVC.swift in Sources */,
 				341B0DA52330E12500D12504 /* RestaurantCell.swift in Sources */,
 				341B0D8F2330E12500D12504 /* RecommendedCell.swift in Sources */,
+				34C01CF22334AB2C0057DEF4 /* NSString+PropertyKVC.m in Sources */,
 				3400F30A2332450900346C9A /* CusinesCell.swift in Sources */,
+				34C01CFC2334AB2C0057DEF4 /* NSDate+DateTime.m in Sources */,
 				34C01C392334A9230057DEF4 /* UIViewExtension.swift in Sources */,
 				340D78BA233361440084971A /* ViewOrderMoreCell.swift in Sources */,
+				34C01D102334D3570057DEF4 /* _AppExpires.swift in Sources */,
 				341B0DA22330E12500D12504 /* CartRequestCell.swift in Sources */,
 				341B0D8C2330E12500D12504 /* CustomizeItemCell.swift in Sources */,
+				34C01D182334D35E0057DEF4 /* VerifyUser.swift in Sources */,
+				34C01D1A2334D35E0057DEF4 /* AppExpires.swift in Sources */,
 				341B0D0D2330D39F00D12504 /* RestaurantListVC.swift in Sources */,
 				34C01C402334A9230057DEF4 /* CommonTextfield.swift in Sources */,
 				341B0DA02330E12500D12504 /* ManageAddressCell.swift in Sources */,
 				341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */,
+				34C01CF02334AB2C0057DEF4 /* NSMutableArray+Join.m in Sources */,
 				34CAC0EA2333AF6A00BFBAB4 /* VerifyOTPVC.swift in Sources */,
 				341B0D892330E12500D12504 /* CustomizeTotalCell.swift in Sources */,
 				341B0D112330D3E500D12504 /* BaseTabViewController.swift in Sources */,
@@ -1016,6 +1361,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodieAppNew/Model/Shared/Categories/FoodieAppNew-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1070,6 +1416,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodieAppNew/Model/Shared/Categories/FoodieAppNew-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1195,6 +1542,22 @@
 			};
 			name = Release;
 		};
+		34C01D042334D00D0057DEF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		34C01D052334D00D0057DEF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1234,20 +1597,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		341B0CD92330CECF00D12504 /* FoodieAppNew.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				341B0CDA2330CECF00D12504 /* FoodieAppNew.xcdatamodel */,
+		34C01D032334D00D0057DEF4 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C01D042334D00D0057DEF4 /* Debug */,
+				34C01D052334D00D0057DEF4 /* Release */,
 			);
-			currentVersion = 341B0CDA2330CECF00D12504 /* FoodieAppNew.xcdatamodel */;
-			path = FoodieAppNew.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-/* End XCVersionGroup section */
+/* End XCConfigurationList section */
 	};
 	rootObject = 341B0CC72330CECF00D12504 /* Project object */;
 }

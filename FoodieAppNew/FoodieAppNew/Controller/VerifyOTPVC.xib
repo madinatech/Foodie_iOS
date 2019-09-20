@@ -85,6 +85,9 @@
                                                     <integer key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="proceedClicked:" destination="-1" eventType="touchUpInside" id="OUm-Yk-yt5"/>
+                                            </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qJs-ao-0Ur">
                                             <rect key="frame" x="20" y="206" width="374" height="43"/>

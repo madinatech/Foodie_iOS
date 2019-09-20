@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DeliveryOption</key>
+	<dict>
+		<key>entity_id</key>
+		<string>id</string>
+		<key>address</key>
+		<string>address</string>
+		<key>img</key>
+		<string>img</string>
+		<key>latitude</key>
+		<string>latitude</string>
+		<key>longitude</key>
+		<string>longitude</string>
+		<key>method</key>
+		<string>method</string>
+		<key>rate</key>
+		<string>rate</string>
+	</dict>
+	<key>PaymentOption</key>
+	<dict>
+		<key>method</key>
+		<string>method</string>
+		<key>img</key>
+		<string>img</string>
+		<key>entity_id</key>
+		<string>id</string>
+	</dict>
+	<key>AppExpires</key>
+	<dict>
+		<key>warning</key>
+		<string>warning</string>
+		<key>version</key>
+		<string>version</string>
+		<key>update_url</key>
+		<string>update_url</string>
+		<key>expires</key>
+		<string>expires</string>
+	</dict>
+	<key>UserData</key>
+	<dict/>
+	<key>VerifyUser</key>
+	<dict>
+		<key>phone</key>
+		<string>phone</string>
+		<key>name</key>
+		<string>name</string>
+		<key>email</key>
+		<string>email</string>
+		<key>entity_id</key>
+		<string>id</string>
+	</dict>
+</dict>
+</plist>

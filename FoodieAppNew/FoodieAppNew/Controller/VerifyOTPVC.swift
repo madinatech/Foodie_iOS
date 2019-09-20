@@ -1,18 +1,20 @@
 
 
 import UIKit
+import NVActivityIndicatorView
 
-class VerifyOTPVC: UIViewController, UIScrollViewDelegate {
-
+class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable {
+    
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var txt1: CommonTextfield!
     @IBOutlet weak var txt2: CommonTextfield!
     @IBOutlet weak var txt3: CommonTextfield!
     @IBOutlet weak var txt4: CommonTextfield!
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    class func initViewController() -> VerifyOTPVC {
+    var account = Account()
+    class func initViewController(account: Account) -> VerifyOTPVC {
         let vc = VerifyOTPVC.init(nibName: "VerifyOTPVC", bundle: nil)
+        vc.account = account
         return vc
     }
     
@@ -25,14 +27,14 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(scrollView.contentOffset.y)
-//        scrollView.scrollsToTop = true
+        //        scrollView.scrollsToTop = true
     }
     @objc func keyboardWillShow(notification: NSNotification) {
-         scrollView.setContentOffset(CGPoint.init(x: 0, y: 70), animated: true)
+        scrollView.setContentOffset(CGPoint.init(x: 0, y: 70), animated: true)
         
     }
     
@@ -44,6 +46,36 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func proceedClicked(_ sender: Any) {
+        var strMessage = ""
+        let str1 = txt1.text!.trimmingCharacters(in: .whitespaces)
+           let str2 = txt2.text!.trimmingCharacters(in: .whitespaces)
+           let str3 = txt3.text!.trimmingCharacters(in: .whitespaces)
+           let str4 = txt4.text!.trimmingCharacters(in: .whitespaces)
+        
+        if(str1.count <= 0 || str2.count <= 0 || str3.count <= 0 || str4.count <= 0){
+            strMessage = "Please enter OTP"
+        }
+        
+        if(strMessage.count > 0){
+            Utils.showAlert(withMessage: strMessage)
+            return
+        }
+        verifyOtpApiCall()
+    }
+    
+    func verifyOtpApiCall()  {
+        let code : String = txt1.text ?? "" + txt2.text! + txt3.text!
+        self.startAnimating()
+        Manager.sharedManager().verifyExistingUser(mobileNumber: "0\(account.mobileNumber.dropFirst(3))", code: code + txt4.text!) { (response, errorMessage) -> (Void) in
+              self.stopAnimating()
+            if(errorMessage.count > 0){
+                Utils.showAlert(withMessage: errorMessage)
+                return
+            }
+            AccountManager.instance().activeAccount = self.account
+        }
+    }
     
     
     @IBAction func textfieldChanged(_ sender: UITextField) {
@@ -64,5 +96,5 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate {
             }
         }
     }
-
+    
 }

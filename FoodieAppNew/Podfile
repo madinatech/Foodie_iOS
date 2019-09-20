@@ -9,6 +9,16 @@ target 'FoodieAppNew' do
  pod 'CBFlashyTabBarController'
  pod 'IQKeyboardManagerSwift'
   pod 'AMShimmer'
+  pod 'NVActivityIndicatorView'
+  pod 'Alamofire'
+  pod 'ReachabilitySwift'
+  pod 'AlamofireNetworkActivityLogger', '~> 2.0'
+  pod 'MagicalRecord'
+  pod 'FastEasyMapping', '~> 1.2'
+  pod 'ActionSheetPicker-3.0'
+  pod 'Kingfisher'
+
+  
  
   target 'FoodieAppNewTests' do
     inherit! :search_paths

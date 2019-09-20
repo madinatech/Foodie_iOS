@@ -82,7 +82,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
         lblTitle.font = UIFont.init(name: "Calibri-Bold", size: 18)
         
         if(section == 0){
-            lblTitle.text = "Recent earches"
+            lblTitle.text = "Recent Searches"
         } else {
             lblTitle.text = "Cuisines"
         }

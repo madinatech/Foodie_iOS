@@ -1,15 +1,21 @@
 
 import UIKit
+import NVActivityIndicatorView
 
-class CreateAccountVC: UIViewController, UIScrollViewDelegate {
+class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable {
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var txt1: CommonTextfield!
     @IBOutlet weak var txt2: CommonTextfield!
     @IBOutlet weak var txt3: CommonTextfield!
     @IBOutlet weak var txt4: CommonTextfield!
       @IBOutlet weak var scrollView: UIScrollView!
-    class func initViewController() -> CreateAccountVC {
+    @IBOutlet weak var txtName: CommonTextfield!
+    @IBOutlet weak var txtEmail: CommonTextfield!
+    
+    var account = Account()
+    class func initViewController(account : Account) -> CreateAccountVC {
         let vc = CreateAccountVC.init(nibName: "CreateAccountVC", bundle: nil)
+        vc.account = account
         return vc
     }
     
@@ -26,13 +32,14 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          txt1.becomeFirstResponder()
+        scrollView.setContentOffset(CGPoint.init(x: 0, y: 25), animated: true)
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(scrollView.contentOffset.y)
         //        scrollView.scrollsToTop = true
     }
     @objc func keyboardWillShow(notification: NSNotification) {
-        scrollView.setContentOffset(CGPoint.init(x: 0, y: 110), animated: true)
+        scrollView.setContentOffset(CGPoint.init(x: 0, y: 100), animated: true)
         
     }
     
@@ -43,6 +50,45 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate {
     @IBAction func backClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func proceedClicked(_ sender: Any) {
+        var strMessage = ""
+        let str1 = txt1.text!.trimmingCharacters(in: .whitespaces)
+        let str2 = txt2.text!.trimmingCharacters(in: .whitespaces)
+        let str3 = txt3.text!.trimmingCharacters(in: .whitespaces)
+        let str4 = txt4.text!.trimmingCharacters(in: .whitespaces)
+          let strName = txtName.text!.trimmingCharacters(in: .whitespaces)
+          let strEmail = txtEmail.text!.trimmingCharacters(in: .whitespaces)
+        
+        if(str1.count <= 0 || str2.count <= 0 || str3.count <= 0 || str4.count <= 0){
+            strMessage = "Please enter OTP"
+        } else if(strName.count <= 0){
+            strMessage = "Please enter name"
+        } else if(strEmail.count <= 0){
+            strMessage = "Please enter email id"
+        } else if(!Utils.isEmail(txt: strEmail)){
+            strMessage = "Please enter valid email id"
+        }
+        
+        if(strMessage.count > 0){
+            Utils.showAlert(withMessage: strMessage)
+            return
+        }
+        verifyOtpApiCall()
+    }
+    func verifyOtpApiCall()  {
+        let code : String = txt1.text ?? "" + txt2.text! + txt3.text!
+        self.startAnimating()
+        Manager.sharedManager().verifyNewUser(mobileNumber: "0\(account.mobileNumber.dropFirst(3))", code: code + txt4.text!, name: txtName.text ?? "", email: txtEmail.text ?? "") { (response, errorMessage) -> (Void) in
+            self.stopAnimating()
+            if(errorMessage.count > 0){
+                Utils.showAlert(withMessage: errorMessage)
+                return
+            }
+            AccountManager.instance().activeAccount = self.account
+        }
+    }
+    
     @IBAction func textfieldChanged(_ sender: UITextField) {
         let text = sender.text
         

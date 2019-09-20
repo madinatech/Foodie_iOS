@@ -1,10 +1,4 @@
-//
-//  CommonTextfield.swift
-//  Demo
-//
-//  Created by CrossGrids on 26/04/19.
-//  Copyright © 2019 CrossGrids. All rights reserved.
-//
+
 
 import UIKit
 
