@@ -3,7 +3,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable {
+class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable, UITextFieldDelegate {
     
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var txt1: CommonTextfield!
@@ -28,13 +28,17 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        scrollView.setContentOffset(CGPoint.init(x: 0, y: 220), animated: true)
+    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(scrollView.contentOffset.y)
         //        scrollView.scrollsToTop = true
     }
     @objc func keyboardWillShow(notification: NSNotification) {
-        scrollView.setContentOffset(CGPoint.init(x: 0, y: 70), animated: true)
+//        scrollView.setContentOffset(CGPoint.init(x: 0, y: 70), animated: true)
         
     }
     
@@ -65,15 +69,20 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
     }
     
     func verifyOtpApiCall()  {
-        let code : String = txt1.text ?? "" + txt2.text! + txt3.text!
+        let str1 = txt1.text!.trimmingCharacters(in: .whitespaces)
+        let str2 = txt2.text!.trimmingCharacters(in: .whitespaces)
+        let str3 = txt3.text!.trimmingCharacters(in: .whitespaces)
+        let str4 = txt4.text!.trimmingCharacters(in: .whitespaces)
+        let code : String = str1 + str2 + str3
         self.startAnimating()
-        Manager.sharedManager().verifyExistingUser(mobileNumber: "0\(account.mobileNumber.dropFirst(3))", code: code + txt4.text!) { (response, errorMessage) -> (Void) in
+        Manager.sharedManager().verifyExistingUser(mobileNumber: "0\(account.mobileNumber.dropFirst(3))", code: code + str4) { (response, errorMessage) -> (Void) in
               self.stopAnimating()
             if(errorMessage.count > 0){
                 Utils.showAlert(withMessage: errorMessage)
                 return
             }
             AccountManager.instance().activeAccount = self.account
+            appDelegateShared?.showTabbar()
         }
     }
     
@@ -95,6 +104,10 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
                 break
             }
         }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
     }
     
 }

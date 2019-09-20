@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import IQKeyboardManagerSwift
 import AlamofireNetworkActivityLogger
+import MagicalRecord
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,9 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Thread.sleep(forTimeInterval: 2.0)
         NetworkActivityLogger.shared.startLogging()
         NetworkActivityLogger.shared.level = .debug
+          setupCoredata()
        showTabbar()
 //        showLogin()
         return true
+    }
+    
+    func setupCoredata(){
+        MagicalRecord.setupCoreDataStack(withAutoMigratingSqliteStoreNamed: "FoodieAppNew.sqlite")
+        let paths: [Any] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print("path  = \(paths)")
     }
 
     func showLogin () {

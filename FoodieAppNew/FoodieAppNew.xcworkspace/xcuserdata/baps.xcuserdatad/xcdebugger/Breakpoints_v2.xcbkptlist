@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodieAppNew/Controller/VerifyOTPVC.swift"
-            timestampString = "590668982.2618721"
+            timestampString = "590671831.950742"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "verifyOtpApiCall()"
             landmarkType = "7">
             <Locations>
@@ -58,12 +58,12 @@
                   moduleName = "FoodieAppNew"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/VerifyOTPVC.swift"
-                  timestampString = "590668825.424415"
+                  timestampString = "590670565.662841"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "2639">
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "3811">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,11 +73,11 @@
                   moduleName = "FoodieAppNew"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/VerifyOTPVC.swift"
-                  timestampString = "590668825.426129"
+                  timestampString = "590670565.664557"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
                   offsetFromSymbolStart = "157">
                </Location>
             </Locations>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodieAppNew/Controller/CreateAccountVC.swift"
-            timestampString = "590668982.262404"
+            timestampString = "590671831.951192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "verifyOtpApiCall()"
             landmarkType = "7">
             <Locations>
@@ -106,7 +106,7 @@
                   moduleName = "FoodieAppNew"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/CreateAccountVC.swift"
-                  timestampString = "590668825.430149"
+                  timestampString = "590670565.668226"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "82"
@@ -121,7 +121,7 @@
                   moduleName = "FoodieAppNew"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/CreateAccountVC.swift"
-                  timestampString = "590668825.431685"
+                  timestampString = "590670565.669571"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "83"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodieAppNew/Model/Request/Request.swift"
-            timestampString = "590668982.262483"
+            timestampString = "590671831.951259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodieAppNew/Model/Request/Request.swift"
-            timestampString = "590668982.262544"
+            timestampString = "590671831.951314"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -170,12 +170,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodieAppNew/Model/Request/Request.swift"
-            timestampString = "590668982.262611"
+            timestampString = "590671831.951365"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
             landmarkName = "startRequest()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodieAppNew/Controller/VerifyOTPVC.swift"
+            timestampString = "590671831.951414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "verifyOtpApiCall()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodieAppNew/Controller/LoginVC.swift"
+            timestampString = "590671831.951697"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getClientToken()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodieAppNew.LoginVC.getClientToken() -&gt; ()"
+                  moduleName = "FoodieAppNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/LoginVC.swift"
+                  timestampString = "590670565.685661"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, FoodieAppNew.Account, Swift.String) -&gt; () in FoodieAppNew.LoginVC.getClientToken() -&gt; ()"
+                  moduleName = "FoodieAppNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/LoginVC.swift"
+                  timestampString = "590670565.687088"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "161">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodieAppNew/Model/Account/Account.swift"
+            timestampString = "590671831.951755"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getClientToken(block:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

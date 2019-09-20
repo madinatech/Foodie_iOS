@@ -2,7 +2,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable {
+class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable, UITextFieldDelegate {
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var txt1: CommonTextfield!
     @IBOutlet weak var txt2: CommonTextfield!
@@ -25,7 +25,6 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -34,15 +33,13 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
          txt1.becomeFirstResponder()
         scrollView.setContentOffset(CGPoint.init(x: 0, y: 25), animated: true)
     }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
-        //        scrollView.scrollsToTop = true
-    }
-    @objc func keyboardWillShow(notification: NSNotification) {
-        scrollView.setContentOffset(CGPoint.init(x: 0, y: 100), animated: true)
-        
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        scrollView.setContentOffset(CGPoint.init(x: 0, y: 220), animated: true)
     }
     
+
     @objc func keyboardWillHide(notification: NSNotification) {
         scrollView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
     }
@@ -86,6 +83,7 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
                 return
             }
             AccountManager.instance().activeAccount = self.account
+            appDelegateShared?.showTabbar()
         }
     }
     
@@ -108,5 +106,7 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
         }
     }
   
-
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
 }

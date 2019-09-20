@@ -61,7 +61,7 @@ class Account: NSObject ,NSCoding {
             if(request.isSuccess){
                 let serverDict = request.serverData as NSDictionary
                 self.parseUserDict(userDict: serverDict)
-                Utils.setStringForKey("\(serverDict["token_type"] ?? "") \(serverDict["access_token"] ?? "")", key: AuthorizationToken)
+                Utils.setStringForKey("Bearer \(serverDict["access_token"] ?? "")", key: AuthorizationToken)
                 self.accountBlock(true,self,"")
             } else {
                 self.accountBlock(false,self,message as String)

@@ -18,16 +18,20 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        txtMobile.text = "0753443396"
+        txtMobile.text = "0752911101"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         txtMobile.becomeFirstResponder()
+       
         getClientToken()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         scrollView.setContentOffset(CGPoint.init(x: 0, y: 220), animated: true)
     }
     
     func getClientToken ()  {
@@ -38,16 +42,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
             }
         }
     }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
-        //        scrollView.scrollsToTop = true
-    }
-    @objc func keyboardWillShow(notification: NSNotification) {
-        
-        scrollView.setContentOffset(CGPoint.init(x: 0, y: 120), animated: true)
-    }
-    
+
     @objc func keyboardWillHide(notification: NSNotification) {
         scrollView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
     }
@@ -67,6 +62,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
             return
         }
         loginApicall()
+        
     }
     
     func loginApicall ()  {

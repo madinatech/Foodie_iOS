@@ -107,6 +107,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="D8t-eW-UeM"/>
+                                                        <outlet property="delegate" destination="-1" id="LKy-Ut-15f"/>
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3S-lG-QAm" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
@@ -124,6 +125,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="3ER-R5-ui7"/>
+                                                        <outlet property="delegate" destination="-1" id="18G-09-dn9"/>
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7I-TA-3Ae" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
@@ -141,6 +143,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="KZI-7s-EsC"/>
+                                                        <outlet property="delegate" destination="-1" id="PQd-pW-PV6"/>
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8t-jA-AlW" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
@@ -158,6 +161,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="9FV-PY-du1"/>
+                                                        <outlet property="delegate" destination="-1" id="1Rt-DL-oXc"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>

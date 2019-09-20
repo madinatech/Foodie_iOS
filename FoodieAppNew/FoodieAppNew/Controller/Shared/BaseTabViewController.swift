@@ -34,11 +34,18 @@ class BaseTabViewController: CBFlashyTabBarController, UITabBarControllerDelegat
         let v3 = OrderListVC.initViewController()
         v3.tabBarItem.image = UIImage(named: "Cart")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         v3.tabBarItem.title = "Orders"
-        let v4 = LoginVC.initViewController()
-        v4.tabBarItem.image = UIImage(named: "User")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-        v4.tabBarItem.title = "Profile"
-        self.viewControllers = [v1, v2, v3, v4]
         
+        if(AccountManager.instance().activeAccount != nil){
+            let v4 = UserProfileVc.initViewController()
+            v4.tabBarItem.image = UIImage(named: "User")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+            v4.tabBarItem.title = "Profile"
+            self.viewControllers = [v1, v2, v3, v4]
+        } else {
+            let v4 = LoginVC.initViewController()
+            v4.tabBarItem.image = UIImage(named: "User")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+            v4.tabBarItem.title = "Login"
+            self.viewControllers = [v1, v2, v3, v4]
+        }
     }
     
     
