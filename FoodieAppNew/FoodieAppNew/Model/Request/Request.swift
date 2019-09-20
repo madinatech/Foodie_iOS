@@ -55,7 +55,7 @@ class Request: NSObject {
     
     func startRequest()  {
        if(_urlPart.contains(kLogin) || _urlPart.contains(kVerifyUser)){
-                headers = ["Authorization" : Utils.fetchString(forKey: AuthorizationToken)]
+                headers = ["Authorization" : Utils.fetchString(forKey: AuthorizationToken).trimmingCharacters(in: .whitespaces)]
        }
         
         if methodType == RequestMethod.get{

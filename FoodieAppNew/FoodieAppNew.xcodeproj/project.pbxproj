@@ -176,6 +176,8 @@
 		34C01D182334D35E0057DEF4 /* VerifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D132334D35E0057DEF4 /* VerifyUser.swift */; };
 		34C01D192334D35E0057DEF4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D142334D35E0057DEF4 /* UserData.swift */; };
 		34C01D1A2334D35E0057DEF4 /* AppExpires.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D152334D35E0057DEF4 /* AppExpires.swift */; };
+		34C01D1E2334FE0D0057DEF4 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D1C2334FE0D0057DEF4 /* ProfileCell.swift */; };
+		34C01D1F2334FE0D0057DEF4 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C01D1D2334FE0D0057DEF4 /* ProfileCell.xib */; };
 		34CAC0E62333A44400BFBAB4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E42333A44400BFBAB4 /* LoginVC.swift */; };
 		34CAC0E72333A44400BFBAB4 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34CAC0E52333A44400BFBAB4 /* LoginVC.xib */; };
 		34CAC0EA2333AF6A00BFBAB4 /* VerifyOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */; };
@@ -382,6 +384,8 @@
 		34C01D142334D35E0057DEF4 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		34C01D152334D35E0057DEF4 /* AppExpires.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExpires.swift; sourceTree = "<group>"; };
 		34C01D1B2334D4860057DEF4 /* FoodieAppNew-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodieAppNew-Bridging-Header.h"; sourceTree = "<group>"; };
+		34C01D1C2334FE0D0057DEF4 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		34C01D1D2334FE0D0057DEF4 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		34CAC0E42333A44400BFBAB4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		34CAC0E52333A44400BFBAB4 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPVC.swift; sourceTree = "<group>"; };
@@ -619,6 +623,8 @@
 				340D78C12333855B0084971A /* SearchCategoryCell.xib */,
 				340D78C4233385CD0084971A /* SearchCollCell.swift */,
 				340D78C5233385CD0084971A /* SearchCollCell.xib */,
+				34C01D1C2334FE0D0057DEF4 /* ProfileCell.swift */,
+				34C01D1D2334FE0D0057DEF4 /* ProfileCell.xib */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -959,6 +965,7 @@
 				3400F31323325C4000346C9A /* ViewOrderVC.xib in Resources */,
 				341B0D7D2330E12500D12504 /* RecomandedDetailCell.xib in Resources */,
 				3400F2FB2331FC1C00346C9A /* HomeTopCell.xib in Resources */,
+				34C01D1F2334FE0D0057DEF4 /* ProfileCell.xib in Resources */,
 				341B0D812330E12500D12504 /* CustomizeItemCell.xib in Resources */,
 				341B0D1A2330D5AE00D12504 /* SearchVC.xib in Resources */,
 				341B0D2A2330D6A800D12504 /* OrderListVC.xib in Resources */,
@@ -1216,6 +1223,7 @@
 				34C01CB82334AA780057DEF4 /* CDHelper.swift in Sources */,
 				341B0D992330E12500D12504 /* HelpCell.swift in Sources */,
 				341B0D8D2330E12500D12504 /* RecomandedDetailCell.swift in Sources */,
+				34C01D1E2334FE0D0057DEF4 /* ProfileCell.swift in Sources */,
 				341B0DA72330E12500D12504 /* CartItemCell.swift in Sources */,
 				341B0D1D2330D5D200D12504 /* CartVC.swift in Sources */,
 				341B0D252330D67600D12504 /* UserProfileVc.swift in Sources */,

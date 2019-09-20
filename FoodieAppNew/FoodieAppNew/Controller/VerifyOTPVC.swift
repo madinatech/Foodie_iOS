@@ -30,7 +30,7 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        scrollView.setContentOffset(CGPoint.init(x: 0, y: 220), animated: true)
+        scrollView.setContentOffset(CGPoint.init(x: 0, y: 180), animated: true)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

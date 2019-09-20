@@ -31,7 +31,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-         scrollView.setContentOffset(CGPoint.init(x: 0, y: 220), animated: true)
+         scrollView.setContentOffset(CGPoint.init(x: 0, y: 180), animated: true)
     }
     
     func getClientToken ()  {
@@ -41,6 +41,9 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
                 Utils.showAlert(withMessage: errorMessage)
             }
         }
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
     }
 
     @objc func keyboardWillHide(notification: NSNotification) {
@@ -84,6 +87,9 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+         scrollView.setContentOffset(CGPoint.init(x: 0, y: 180), animated: true)
     }
     
     func textField (_ textField :  UITextField, shouldChangeCharactersIn range:  NSRange, replacementString string:  String  )  ->  Bool {
