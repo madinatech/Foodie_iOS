@@ -5,6 +5,7 @@ import UIKit
 class ViewOrderVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var btnPickup: KGRadioButton!
     @IBOutlet weak var btnDine: KGRadioButton!
@@ -23,7 +24,7 @@ class ViewOrderVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         tblView.tableFooterView = UIView()
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tap.delegate = self
-        self.view.addGestureRecognizer(tap)
+        topView.addGestureRecognizer(tap)
         btnDine.isSelected = false
         btnDelivery.isSelected = true
         btnPickup.isSelected = false

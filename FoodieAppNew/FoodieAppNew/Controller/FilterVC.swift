@@ -6,6 +6,7 @@ class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
 
     @IBOutlet weak var tblView: UITableView!
       @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var topView: UIView!
     var selectedSection = Int()
     var selectedIndex = Int()
     
@@ -22,7 +23,7 @@ class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         tblView.tableFooterView = UIView()
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tap.delegate = self
-        self.view.addGestureRecognizer(tap)
+        topView.addGestureRecognizer(tap)
     }
 
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {

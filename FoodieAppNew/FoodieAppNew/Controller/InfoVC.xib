@@ -21,6 +21,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
                 <outlet property="innerView" destination="XON-LN-nqn" id="MmA-Hq-tHG"/>
+                <outlet property="topView" destination="lPg-Ss-3f6" id="60b-cF-WVO"/>
                 <outlet property="view" destination="VhO-XZ-Rll" id="2Y5-DJ-rcw"/>
             </connections>
         </placeholder>
@@ -116,16 +117,24 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPg-Ss-3f6">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="XON-LN-nqn" firstAttribute="bottom" secondItem="VhO-XZ-Rll" secondAttribute="bottom" id="6Dh-Bi-f89"/>
+                <constraint firstAttribute="trailing" secondItem="lPg-Ss-3f6" secondAttribute="trailing" id="BXm-pr-FBh"/>
                 <constraint firstItem="XON-LN-nqn" firstAttribute="leading" secondItem="OyE-Qo-kMz" secondAttribute="leading" id="HpG-yY-gEb"/>
                 <constraint firstItem="XON-LN-nqn" firstAttribute="top" secondItem="xBc-Hi-dS2" secondAttribute="bottom" constant="15" id="VhS-8c-TQM"/>
+                <constraint firstItem="XON-LN-nqn" firstAttribute="top" secondItem="lPg-Ss-3f6" secondAttribute="bottom" id="YJx-lb-eOC"/>
                 <constraint firstItem="XON-LN-nqn" firstAttribute="top" secondItem="OyE-Qo-kMz" secondAttribute="top" constant="70" id="c9B-xK-1YV"/>
                 <constraint firstItem="xBc-Hi-dS2" firstAttribute="centerX" secondItem="VhO-XZ-Rll" secondAttribute="centerX" id="kIo-pU-yWc"/>
+                <constraint firstItem="lPg-Ss-3f6" firstAttribute="top" secondItem="VhO-XZ-Rll" secondAttribute="top" id="mx3-pP-XCg"/>
                 <constraint firstAttribute="trailing" secondItem="XON-LN-nqn" secondAttribute="trailing" id="opl-El-slt"/>
                 <constraint firstItem="xBc-Hi-dS2" firstAttribute="top" secondItem="OyE-Qo-kMz" secondAttribute="top" constant="50" id="sdI-4C-WLg"/>
+                <constraint firstItem="lPg-Ss-3f6" firstAttribute="leading" secondItem="OyE-Qo-kMz" secondAttribute="leading" id="twU-lK-SW8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="OyE-Qo-kMz"/>
             <point key="canvasLocation" x="34.399999999999999" y="40.929535232383813"/>

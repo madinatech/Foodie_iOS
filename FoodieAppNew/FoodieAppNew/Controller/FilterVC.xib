@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="innerView" destination="dFF-tJ-uyY" id="b7x-fg-OZ8"/>
                 <outlet property="tblView" destination="e40-vR-8Ad" id="lLS-SN-gKf"/>
+                <outlet property="topView" destination="kNv-4r-u4i" id="Av1-F0-lBJ"/>
                 <outlet property="view" destination="Y8F-e7-cQv" id="hwT-Xr-Ok8"/>
             </connections>
         </placeholder>
@@ -86,19 +87,27 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-4r-u4i">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="dFF-tJ-uyY" firstAttribute="leading" secondItem="2BH-IF-QEU" secondAttribute="leading" id="2Wh-DV-xtq"/>
+                <constraint firstItem="dFF-tJ-uyY" firstAttribute="top" secondItem="kNv-4r-u4i" secondAttribute="bottom" id="Kt8-Se-1k2"/>
+                <constraint firstItem="kNv-4r-u4i" firstAttribute="top" secondItem="Y8F-e7-cQv" secondAttribute="top" id="MW6-ak-WSu"/>
                 <constraint firstItem="dFF-tJ-uyY" firstAttribute="top" secondItem="V76-Uh-OCR" secondAttribute="bottom" constant="15" id="Svi-fb-Fsm"/>
                 <constraint firstAttribute="trailing" secondItem="dFF-tJ-uyY" secondAttribute="trailing" id="VPm-3T-njn"/>
                 <constraint firstItem="V76-Uh-OCR" firstAttribute="centerX" secondItem="Y8F-e7-cQv" secondAttribute="centerX" id="axL-z4-BwK"/>
                 <constraint firstItem="dFF-tJ-uyY" firstAttribute="bottom" secondItem="Y8F-e7-cQv" secondAttribute="bottom" id="i6v-F7-cmR"/>
                 <constraint firstItem="dFF-tJ-uyY" firstAttribute="top" secondItem="2BH-IF-QEU" secondAttribute="top" constant="70" id="l7b-Qs-t0n"/>
                 <constraint firstItem="V76-Uh-OCR" firstAttribute="top" secondItem="2BH-IF-QEU" secondAttribute="top" constant="50" id="oel-yA-3x8"/>
+                <constraint firstAttribute="trailing" secondItem="kNv-4r-u4i" secondAttribute="trailing" id="wHX-cL-zeV"/>
+                <constraint firstItem="kNv-4r-u4i" firstAttribute="leading" secondItem="2BH-IF-QEU" secondAttribute="leading" id="yb9-CS-DFM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="2BH-IF-QEU"/>
-            <point key="canvasLocation" x="34.782608695652179" y="41.576086956521742"/>
+            <point key="canvasLocation" x="34.399999999999999" y="40.929535232383813"/>
         </view>
     </objects>
 </document>

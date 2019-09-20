@@ -22,6 +22,7 @@
             <connections>
                 <outlet property="innerView" destination="e6k-HN-zyP" id="MSy-qC-YQF"/>
                 <outlet property="tblView" destination="pqQ-np-kkC" id="0hF-yS-f2G"/>
+                <outlet property="topView" destination="dyV-tW-02a" id="uRb-Gh-evv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -117,15 +118,23 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyV-tW-02a">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="e6k-HN-zyP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Kp-40-Guz"/>
                 <constraint firstAttribute="trailing" secondItem="e6k-HN-zyP" secondAttribute="trailing" id="8nk-6N-L0k"/>
+                <constraint firstItem="dyV-tW-02a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hmr-U4-cdB"/>
+                <constraint firstItem="dyV-tW-02a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ebq-qz-eUC"/>
                 <constraint firstItem="e6k-HN-zyP" firstAttribute="top" secondItem="YXp-Ra-EcD" secondAttribute="bottom" constant="15" id="fWa-ea-WWK"/>
                 <constraint firstItem="e6k-HN-zyP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="hbM-oo-G4s"/>
+                <constraint firstAttribute="trailing" secondItem="dyV-tW-02a" secondAttribute="trailing" id="htD-E0-4Za"/>
                 <constraint firstItem="YXp-Ra-EcD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="l12-UV-Fov"/>
                 <constraint firstItem="e6k-HN-zyP" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="lf6-rn-UWo"/>
+                <constraint firstItem="e6k-HN-zyP" firstAttribute="top" secondItem="dyV-tW-02a" secondAttribute="bottom" id="zJO-FH-bJ7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.782608695652179" y="41.576086956521742"/>

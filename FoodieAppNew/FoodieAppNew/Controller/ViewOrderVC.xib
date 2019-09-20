@@ -22,6 +22,7 @@
                 <outlet property="btnPickup" destination="LjG-vN-Md9" id="gmm-0t-RyP"/>
                 <outlet property="innerView" destination="bjg-Bn-JMp" id="uLL-NE-tT3"/>
                 <outlet property="tblView" destination="c13-aZ-eEs" id="riL-M0-M13"/>
+                <outlet property="topView" destination="sxP-5C-zMz" id="y17-DM-qHE"/>
                 <outlet property="view" destination="PfA-El-DdM" id="0iG-fO-N5z"/>
             </connections>
         </placeholder>
@@ -165,13 +166,21 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxP-5C-zMz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="gkc-g8-p7x" firstAttribute="centerX" secondItem="PfA-El-DdM" secondAttribute="centerX" id="A7d-eZ-VoU"/>
                 <constraint firstItem="bjg-Bn-JMp" firstAttribute="trailing" secondItem="tVL-FF-Yy1" secondAttribute="trailing" id="BYE-0m-8YW"/>
+                <constraint firstItem="sxP-5C-zMz" firstAttribute="leading" secondItem="PfA-El-DdM" secondAttribute="leading" id="CLN-3N-oZY"/>
                 <constraint firstItem="gkc-g8-p7x" firstAttribute="top" secondItem="tVL-FF-Yy1" secondAttribute="top" constant="50" id="DgZ-yk-LAz"/>
+                <constraint firstItem="sxP-5C-zMz" firstAttribute="top" secondItem="PfA-El-DdM" secondAttribute="top" id="EsW-B5-Z6a"/>
                 <constraint firstAttribute="bottom" secondItem="bjg-Bn-JMp" secondAttribute="bottom" id="IXt-sp-vc4"/>
+                <constraint firstItem="bjg-Bn-JMp" firstAttribute="top" secondItem="sxP-5C-zMz" secondAttribute="bottom" id="eMW-vv-MO5"/>
+                <constraint firstItem="tVL-FF-Yy1" firstAttribute="trailing" secondItem="sxP-5C-zMz" secondAttribute="trailing" id="fe8-96-MeD"/>
                 <constraint firstItem="bjg-Bn-JMp" firstAttribute="top" secondItem="tVL-FF-Yy1" secondAttribute="top" constant="90" id="rYp-Jt-XqQ"/>
                 <constraint firstItem="bjg-Bn-JMp" firstAttribute="leading" secondItem="tVL-FF-Yy1" secondAttribute="leading" id="xKU-aQ-l3e"/>
             </constraints>

@@ -3,6 +3,7 @@ import UIKit
 
 class InfoVC: UIViewController , UIGestureRecognizerDelegate{
        @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var topView: UIView!
     class func initViewController() -> InfoVC {
         let vc = InfoVC.init(nibName: "InfoVC", bundle: nil)
         return vc
@@ -15,7 +16,7 @@ class InfoVC: UIViewController , UIGestureRecognizerDelegate{
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tap.delegate = self
-        self.view.addGestureRecognizer(tap)
+        topView.addGestureRecognizer(tap)
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {

@@ -6,6 +6,7 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var topView: UIView!
     var selectdButton = Int()
     
     class func initViewController() -> DeliveryAddressVC {
@@ -23,7 +24,7 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
         tblView.estimatedRowHeight = 102
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tap.delegate = self
-        self.view.addGestureRecognizer(tap)
+        topView.addGestureRecognizer(tap)
         tblView.isHidden = true
     }
     
