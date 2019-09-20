@@ -122,6 +122,8 @@
 		341B0DAB2330E12500D12504 /* CartRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D772330E12500D12504 /* CartRequestCell.xib */; };
 		341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */; };
 		341B0DAF2331099800D12504 /* DeliveryAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */; };
+		34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01B53233492E90057DEF4 /* CreateAccountVC.swift */; };
+		34C01B56233492E90057DEF4 /* CreateAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C01B54233492E90057DEF4 /* CreateAccountVC.xib */; };
 		34CAC0E62333A44400BFBAB4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E42333A44400BFBAB4 /* LoginVC.swift */; };
 		34CAC0E72333A44400BFBAB4 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34CAC0E52333A44400BFBAB4 /* LoginVC.xib */; };
 		34CAC0EA2333AF6A00BFBAB4 /* VerifyOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */; };
@@ -269,6 +271,8 @@
 		341B0D772330E12500D12504 /* CartRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartRequestCell.xib; sourceTree = "<group>"; };
 		341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressVC.swift; sourceTree = "<group>"; };
 		341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressVC.xib; sourceTree = "<group>"; };
+		34C01B53233492E90057DEF4 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		34C01B54233492E90057DEF4 /* CreateAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountVC.xib; sourceTree = "<group>"; };
 		34CAC0E42333A44400BFBAB4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		34CAC0E52333A44400BFBAB4 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPVC.swift; sourceTree = "<group>"; };
@@ -406,6 +410,8 @@
 				34CAC0E52333A44400BFBAB4 /* LoginVC.xib */,
 				34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */,
 				34CAC0E92333AF6A00BFBAB4 /* VerifyOTPVC.xib */,
+				34C01B53233492E90057DEF4 /* CreateAccountVC.swift */,
+				34C01B54233492E90057DEF4 /* CreateAccountVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -696,6 +702,7 @@
 				3400F2FF2332115100346C9A /* RestaurantDetailVC.xib in Resources */,
 				341B0D782330E12500D12504 /* RecommendedCell.xib in Resources */,
 				341B0D402330D8FB00D12504 /* Calibri.ttf in Resources */,
+				34C01B56233492E90057DEF4 /* CreateAccountVC.xib in Resources */,
 				341B0D802330E12500D12504 /* RestaurnatRecommendedCell.xib in Resources */,
 				3400F2F72331F38D00346C9A /* SortingCell.xib in Resources */,
 				341B0CE02330CED000D12504 /* LaunchScreen.storyboard in Resources */,
@@ -858,6 +865,7 @@
 				341B0D192330D5AE00D12504 /* SearchVC.swift in Sources */,
 				341B0D942330E12500D12504 /* CityCell.swift in Sources */,
 				341B0CDB2330CECF00D12504 /* FoodieAppNew.xcdatamodeld in Sources */,
+				34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */,
 				341B0D982330E12500D12504 /* BillDetailCell.swift in Sources */,
 				3400F3072332292400346C9A /* ResDetailTabSection.swift in Sources */,
 				340D78B623335D210084971A /* RestDetailHeaderCell.swift in Sources */,
