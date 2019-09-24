@@ -23,7 +23,12 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
-
+    
+    @IBAction func editClicked(_ sender: Any) {
+        let vc = EditProfileVC.initViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }

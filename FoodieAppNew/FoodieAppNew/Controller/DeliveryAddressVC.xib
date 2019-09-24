@@ -75,7 +75,7 @@
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-np-kkC">
                             <rect key="frame" x="0.0" y="65" width="414" height="481"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="Ag4-8Z-mlp"/>
                                 <outlet property="delegate" destination="-1" id="aH6-gw-l5a"/>
@@ -99,11 +99,6 @@
                         <constraint firstItem="pqQ-np-kkC" firstAttribute="top" secondItem="2q3-Yb-127" secondAttribute="bottom" constant="20" id="qhe-bv-Y7G"/>
                         <constraint firstItem="kRB-Gw-53i" firstAttribute="top" secondItem="reQ-Ew-hWo" secondAttribute="bottom" constant="10" id="s3Z-cd-YmB"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="subviews">
-                            <exclude reference="pqQ-np-kkC"/>
-                        </mask>
-                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-Ra-EcD">
                     <rect key="frame" x="172" y="70" width="70" height="5"/>
