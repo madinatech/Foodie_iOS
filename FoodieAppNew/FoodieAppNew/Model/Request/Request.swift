@@ -54,22 +54,32 @@ class Request: NSObject {
     }
     
     func startRequest()  {
-       if(_urlPart.contains(kLogin) || _urlPart.contains(kVerifyUser)){
-                headers = ["Authorization" : Utils.fetchString(forKey: AuthorizationToken).trimmingCharacters(in: .whitespaces)]
-       }
+        if(_urlPart.contains(kGetClientToken)){
+         headers = HTTPHeaders()
+        } else{
+            headers = ["Authorization" : Utils.fetchString(forKey: AuthorizationToken).trimmingCharacters(in: .whitespaces)]
+        }
         
         if methodType == RequestMethod.get{
             self .requestGETURL(_urlPart as String, success: { (JSON) in
-                self.serverData = JSON.dictionaryObject!
-                self.isSuccess = true
-                
-                if let success = self.serverData["success"] as? Bool {
+                if (JSON.arrayObject != nil) {
+                    var dict = [String : Any]()
+                    dict["data"] = JSON.arrayObject
+                    self.serverData = dict
                     self.isSuccess = true
                     self.requestSuccess(msg: "")
                 } else {
-                    self.isSuccess = false
-                    self.requestSuccess(msg: self.serverData["msg"] as! String)
+                     self.serverData = JSON.dictionaryObject!
+                    self.isSuccess = true
+                    if (self.serverData["success"] as? Bool) != nil {
+                        self.isSuccess = true
+                        self.requestSuccess(msg: "")
+                    } else {
+                        self.isSuccess = false
+                        self.requestSuccess(msg: self.serverData["msg"] as! String)
+                    }
                 }
+               
             }, failure: { (Error) in
                 self.isSuccess = false
                 self.requestFailedWithError(error: Error as NSError)

@@ -10,9 +10,15 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tblView: UITableView!
     var categoryArray = [String]()
     var categoryCount = Int()
+    var restaurant = Restaurant()
+    var selectedTab = Int()
+    var menuArray = [Menu]()
+    var itemsArray = [Items]()
+    var selectedMenu = Menu()
     
-    class func initViewController() -> RestaurantDetailVC {
+    class func initViewController(restaurant: Restaurant) -> RestaurantDetailVC {
         let vc = RestaurantDetailVC.init(nibName: "RestaurantDetailVC", bundle: nil)
+        vc.restaurant = restaurant
         return vc
     }
     
@@ -24,10 +30,20 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         tblView.tableFooterView = UIView()
          categoryArray = ["Promo","Burgers", "Meals","Pizza"]
         categoryCount = 0
+        menuArray = restaurant.menus.allObjects as! [Menu]
+        menuArray = menuArray.sorted(by: {
+            ($0.name!.localizedLowercase) <
+                ($1.name!.localizedLowercase)
+        } )
+        selectedMenu = menuArray[0]
+        itemsArray = selectedMenu.items.allObjects as! [Items]
+        tblView.reloadData()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        selectedTab = 0
         tblView.reloadData()
         AMShimmer.start(for: tblView)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -73,12 +89,12 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         if(section == 0){
             let view : RestaurantDetailHeader = RestaurantDetailHeader.instanceFromNib() as! RestaurantDetailHeader
             view.delegate = self
-            view.setData()
+            view.setData(restaurat: restaurant)
             return view
         } else {
             let view : ResDetailTabSection = ResDetailTabSection.instanceFromNib() as! ResDetailTabSection
             view.delegate = self
-            view.setData(sTab: 0, swipeType: "Left")
+            view.setData(sTab: selectedTab, swipeType: "Left", restaurant: restaurant)
             return view
         }
     }
@@ -87,13 +103,10 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         if(section == 0){
             return 0
         }
-        return 10
+        return itemsArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //        if(indexPath.section == 0){
-        //            return 70//cellHeight//165//UITableView.automaticDimension
-        //        }
         return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -126,6 +139,8 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
                 cell = nib?[0] as? RestaurantDetailCell
             }
             cell?.selectionStyle = .none
+            let item = itemsArray [indexPath.row]
+            cell?.showData(item: item)
             return cell!
         }
         
@@ -134,7 +149,9 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
   
     //    ResDetailTabSectionDelegate
     func tabClicked(selectedTab: Int) {
-        //        self.selectedTab = selectedTab
+                self.selectedTab = selectedTab
+        selectedMenu = menuArray[selectedTab]
+        itemsArray = selectedMenu.items.allObjects as! [Items]
         tblView.reloadData()
         AMShimmer.start(for: tblView)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -146,7 +163,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         self.navigationController?.popViewController(animated: true)
     }
     func infoClicked() {
-        let vc = InfoVC.initViewController()
+        let vc = InfoVC.initViewController(restaurant: restaurant)
         self.navigationController?.present(vc, animated: true, completion: nil)
     }
 }

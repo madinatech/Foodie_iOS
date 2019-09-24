@@ -63,4 +63,22 @@ class Manager: NSObject {
         
     }
     
+    func loadRestaurentList(area : String, block : @escaping ItemLoadedBlock) {
+        itemLoadedBlock = block
+        let request = Request.init(url: "\(kBaseUrl)\(kGetRestaurantList)", method: RequestMethod(rawValue: "GET")!) { (success:Bool, request:Request, errorMessage:NSString) -> (Void) in
+            if(request.isSuccess){
+                let arry : [[String: Any]] = request.serverData["data"] as! [[String: Any]]
+                MagicalRecord.save({ (localContext: NSManagedObjectContext) in
+                    let dict = FEMDeserializer.collection(fromRepresentation: arry, mapping: Restaurant.defaultMapping(), context: localContext)
+                    
+                }, completion: { (isSuccess, error) in
+                    self.itemLoadedBlock(arry,"")
+                })
+            } else {
+                self.itemLoadedBlock("",errorMessage as String)
+            }
+        }
+        request.setParameter("kisutu", forKey: "area")
+        request.startRequest()
+    }
 }

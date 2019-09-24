@@ -9,5 +9,5 @@ let kBaseUrl                            =  "https://app.foodie.co.tz/api/" // Li
 let kGetClientToken                     =  "get-token"
 let kLogin                              =  "get-code"
 let kVerifyUser                         =  "verify-code"
-
+let kGetRestaurantList                  =  "get-restaurants"
 

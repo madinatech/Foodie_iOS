@@ -21,27 +21,18 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        txtMobile.text = "0752911101"
+//        txtMobile.text = "0752911101"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         txtMobile.becomeFirstResponder()
-       
-        getClientToken()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
          scrollView.setContentOffset(CGPoint.init(x: 0, y: 180), animated: true)
     }
     
-    func getClientToken ()  {
-        let account = Account()
-        account.getClientToken { (isSuccess, account, errorMessage) -> (Void) in
-            if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
-            }
-        }
-    }
+   
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(scrollView.contentOffset.y)
     }
@@ -99,9 +90,9 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
             let components = newString.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "") as NSString
             let length = components.length
             let hasLeadingOne = length > 0 && components.character(at: 0) == (1 as unichar)
-            if length == 0 || (length > 10 && !hasLeadingOne) || length > 11 {
+            if length == 0 || (length > 9 && !hasLeadingOne) || length > 10 {
                 let newLength = textString.length + (string as NSString).length - range.length as Int
-                return (newLength > 9) ? false : true
+                return (newLength > 8) ? false : true
             }
             var index = 0 as Int
             let formattedString = NSMutableString()
@@ -109,20 +100,20 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
                 formattedString.append("1 ")
                 index += 1
             }
-            if (length - index) > 4 {
-                let areaCode = components.substring(with: NSMakeRange(index, 4))
+            if (length - index) > 3 {
+                let areaCode = components.substring(with: NSMakeRange(index, 3))
                 formattedString.appendFormat("%@ ", areaCode)
-                index += 4
+                index += 3
             }
             if length - index > 3 {
                 let prefix = components.substring(with: NSMakeRange(index, 3))
                 formattedString.appendFormat("%@ ", prefix)
                 index += 3
             }
-            if (textString.length) == 0 &&  newString != "0" {
-                formattedString.appendFormat("0%@",textString)
-                textField.text = formattedString as String
-            }
+//            if (textString.length) == 0 &&  newString != "0" {
+//                formattedString.appendFormat("0%@",textString)
+//                textField.text = formattedString as String
+//            }
             let remainder = components.substring(from: index)
             formattedString.append(remainder)
             textField.text = formattedString as String

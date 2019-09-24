@@ -45,6 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window?.makeKeyAndVisible()
     }
     
+    func userLogout () {
+       AccountManager.instance().activeAccount = nil
+        showTabbar()
+    }
+    
     func showTabbar(){
         let controller : BaseTabViewController = BaseTabViewController.initViewController()
         self.navigationController = UINavigationController.init(rootViewController: controller)

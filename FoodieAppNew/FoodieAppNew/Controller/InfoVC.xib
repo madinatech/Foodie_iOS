@@ -21,6 +21,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
                 <outlet property="innerView" destination="XON-LN-nqn" id="MmA-Hq-tHG"/>
+                <outlet property="lblOpening" destination="42F-RJ-cxE" id="6sn-n0-UZI"/>
                 <outlet property="topView" destination="lPg-Ss-3f6" id="60b-cF-WVO"/>
                 <outlet property="view" destination="VhO-XZ-Rll" id="2Y5-DJ-rcw"/>
             </connections>

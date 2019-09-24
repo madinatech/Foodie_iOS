@@ -22,6 +22,12 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        sowData()
+    }
+    
+    func sowData ()  {
+        let user : VerifyUser = VerifyUser.getUserByNumber(number: AccountManager.instance().activeAccount?.mobileNumber ?? "")
+        lblUserName.text = user.name
     }
     
     @IBAction func editClicked(_ sender: Any) {

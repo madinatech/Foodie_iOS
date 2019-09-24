@@ -5,6 +5,8 @@ import AMShimmer
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, RecommendedDelegate {
     
     @IBOutlet weak var tblView: UITableView!
+    var isLoaded = Bool()
+    var restaurantArray = [Restaurant]()
     class func initViewController() -> HomeVC {
         let vc = HomeVC.init(nibName: "HomeVC", bundle: nil)
         return vc
@@ -17,17 +19,45 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         tblView.rowHeight = 110
         tblView.estimatedRowHeight = UITableView.automaticDimension
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        isLoaded = false
+        getClientToken()
+//        getRestaurantListapi()
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         tblView.reloadData()
-        AMShimmer.start(for: tblView)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            AMShimmer.stop(for: self.tblView)
+//        AMShimmer.start(for: tblView)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//            AMShimmer.stop(for: self.tblView)
+//        }
+    }
+    
+    func getClientToken ()  {
+        let account = Account()
+        account.getClientToken { (isSuccess, account, errorMessage) -> (Void) in
+            if(errorMessage.count > 0){
+                Utils.showAlert(withMessage: errorMessage)
+            }
+            self.getRestaurantListapi()
         }
     }
+    
+    func getRestaurantListapi () {
+        Manager.sharedManager().loadRestaurentList(area: "kisutu") { (response, errorMessage) -> (Void) in
+            if(errorMessage.count > 0){
+                Utils.showAlert(withMessage: errorMessage)
+            }
+            self.isLoaded = true
+            self.restaurantArray = Restaurant.getAll()
+            self.tblView.reloadData()
+        }
+    }
+    
     @IBAction func deliveryAddressClicked(_ sender: Any) {
         let vc = DeliveryAddressVC.initViewController()
         self.navigationController?.present(vc, animated: true, completion: nil)
@@ -41,7 +71,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         if(section == 0){
             return 1
         }
-        return 10
+        return restaurantArray.count
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -98,6 +128,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
             }
             cell?.selectionStyle = .none
             cell?.delegate = self
+            AMShimmer.stop(for: cell!.contentView)
             return cell!
         }
         var cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as? RestaurantCell
@@ -106,13 +137,21 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
             cell = nib?[0] as? RestaurantCell
         }
         cell?.selectionStyle = .none
-      
+        let restaurant : Restaurant = restaurantArray[indexPath.row]
+        if isLoaded == true{
+            cell?.hideLoader()
+        } else {
+             cell?.showLoader()
+        }
+       
+        cell?.showData(restaurant: restaurant)
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tblView.deselectRow(at: indexPath, animated: true)
-        let vc = RestaurantDetailVC.initViewController()
+          let restaurant : Restaurant = restaurantArray[indexPath.row]
+        let vc = RestaurantDetailVC.initViewController(restaurant: restaurant)
                 self.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -21,6 +21,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
                 <outlet property="btnSave" destination="IN3-BW-CBZ" id="xoL-Uf-cpg"/>
+                <outlet property="btnogout" destination="XyG-c7-B0N" id="6HX-ke-bgC"/>
                 <outlet property="imgView" destination="CUn-6T-lAi" id="vAG-Bl-jkn"/>
                 <outlet property="innerView" destination="sMj-AG-RKa" id="jGD-9U-Rnp"/>
                 <outlet property="lblName" destination="chz-LZ-cbR" id="f2c-Ab-Zbw"/>
@@ -69,7 +70,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lu-uA-LVD">
-                                            <rect key="frame" x="65" y="43" width="37.5" height="15"/>
+                                            <rect key="frame" x="75" y="43" width="37.5" height="15"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -87,6 +88,9 @@
                                                     <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textChanged:" destination="-1" eventType="editingChanged" id="CD8-WM-mDC"/>
+                                            </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IN3-BW-CBZ">
                                             <rect key="frame" x="20" y="302" width="335" height="50"/>
@@ -111,8 +115,33 @@
                                                 <action selector="saveClicked:" destination="-1" eventType="touchUpInside" id="ECt-vs-lQ6"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyG-c7-B0N">
+                                            <rect key="frame" x="20" y="362" width="335" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="24g-3c-gY5">
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                                            <integer key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </constraint>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                            <state key="normal" title="Logout">
+                                                <color key="titleColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="logoutClicked:" destination="-1" eventType="touchUpInside" id="4Wg-zm-lyy"/>
+                                            </connections>
+                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Email address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpE-SU-L5h">
-                                            <rect key="frame" x="65" y="123" width="86" height="15"/>
+                                            <rect key="frame" x="75" y="123" width="86" height="15"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -130,9 +159,12 @@
                                                     <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textChanged:" destination="-1" eventType="editingChanged" id="Zu3-5F-OZ1"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcY-hR-L4m">
-                                            <rect key="frame" x="65" y="203" width="95" height="15"/>
+                                            <rect key="frame" x="75" y="203" width="95" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="95" id="5b7-Cx-Kdc"/>
                                             </constraints>
@@ -167,10 +199,13 @@
                                         <constraint firstAttribute="trailing" secondItem="N6B-CF-i7m" secondAttribute="trailing" constant="10" id="IyH-Mq-FH4"/>
                                         <constraint firstItem="IcY-hR-L4m" firstAttribute="leading" secondItem="5lu-uA-LVD" secondAttribute="leading" id="JUY-7K-Ops"/>
                                         <constraint firstItem="NpE-SU-L5h" firstAttribute="top" secondItem="0vK-ng-1Zd" secondAttribute="bottom" constant="31" id="LBR-wQ-0gm"/>
+                                        <constraint firstItem="XyG-c7-B0N" firstAttribute="leading" secondItem="6xG-CQ-0TW" secondAttribute="leading" constant="20" id="Me0-AG-Z54"/>
                                         <constraint firstItem="0vK-ng-1Zd" firstAttribute="leading" secondItem="Aq7-Hr-UTU" secondAttribute="trailing" constant="10" id="Naa-ZZ-2Xj"/>
+                                        <constraint firstItem="XyG-c7-B0N" firstAttribute="top" secondItem="IN3-BW-CBZ" secondAttribute="bottom" constant="10" id="RCt-KD-V5N"/>
                                         <constraint firstItem="5lu-uA-LVD" firstAttribute="top" secondItem="6xG-CQ-0TW" secondAttribute="top" constant="43" id="Sq6-1d-ZFr"/>
                                         <constraint firstItem="sJ0-dp-6x4" firstAttribute="top" secondItem="T2V-c0-IkE" secondAttribute="bottom" constant="30" id="Ti1-VW-RC8"/>
-                                        <constraint firstItem="IcY-hR-L4m" firstAttribute="leading" secondItem="sJ0-dp-6x4" secondAttribute="trailing" constant="5" id="VP7-Dp-T7K"/>
+                                        <constraint firstAttribute="trailing" secondItem="XyG-c7-B0N" secondAttribute="trailing" constant="20" id="Uqr-8J-qfI"/>
+                                        <constraint firstItem="IcY-hR-L4m" firstAttribute="leading" secondItem="sJ0-dp-6x4" secondAttribute="trailing" constant="15" id="VP7-Dp-T7K"/>
                                         <constraint firstItem="N6B-CF-i7m" firstAttribute="top" secondItem="IcY-hR-L4m" secondAttribute="bottom" constant="4" id="W56-Vx-QHy"/>
                                         <constraint firstItem="sJ0-dp-6x4" firstAttribute="leading" secondItem="6xG-CQ-0TW" secondAttribute="leading" constant="20" id="aL6-bt-ogW"/>
                                         <constraint firstAttribute="height" constant="442" id="agr-5v-vED"/>
@@ -244,7 +279,7 @@
             <constraints>
                 <constraint firstItem="KLN-OO-orG" firstAttribute="top" secondItem="1Ih-4y-vxW" secondAttribute="top" constant="30" id="4Do-XJ-s8a"/>
                 <constraint firstItem="dhb-jN-azV" firstAttribute="top" secondItem="chz-LZ-cbR" secondAttribute="bottom" constant="5" id="6oS-1o-ENh"/>
-                <constraint firstItem="1Ih-4y-vxW" firstAttribute="bottom" secondItem="sMj-AG-RKa" secondAttribute="bottom" id="7HR-Yp-Dfr"/>
+                <constraint firstAttribute="bottom" secondItem="sMj-AG-RKa" secondAttribute="bottom" id="7HR-Yp-Dfr"/>
                 <constraint firstItem="CUn-6T-lAi" firstAttribute="leading" secondItem="q9N-Nj-BTe" secondAttribute="leading" constant="20" id="8Jr-Dd-D83"/>
                 <constraint firstItem="1Ih-4y-vxW" firstAttribute="trailing" secondItem="chz-LZ-cbR" secondAttribute="trailing" constant="20" id="ChA-o1-JSq"/>
                 <constraint firstItem="1Ih-4y-vxW" firstAttribute="trailing" secondItem="sMj-AG-RKa" secondAttribute="trailing" id="Dob-wR-ngD"/>

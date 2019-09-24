@@ -74,12 +74,6 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger • Fastfood • Pizza " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZQ-IX-Tgh">
-                            <rect key="frame" x="20" y="70" width="374" height="20"/>
-                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="20"/>
-                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU8-AI-dCh">
                             <rect key="frame" x="368" y="105" width="26" height="20"/>
                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
@@ -196,16 +190,13 @@
                         <constraint firstItem="iU8-AI-dCh" firstAttribute="top" secondItem="ibr-su-qzr" secondAttribute="top" id="8xl-XR-IZv"/>
                         <constraint firstAttribute="bottom" secondItem="Pis-Pn-CGv" secondAttribute="bottom" constant="14" id="9ts-R8-HDi"/>
                         <constraint firstAttribute="trailing" secondItem="qLf-4s-gN2" secondAttribute="trailing" constant="20" id="AtP-jI-QNO"/>
-                        <constraint firstItem="6ZQ-IX-Tgh" firstAttribute="leading" secondItem="ehP-UW-apq" secondAttribute="leading" constant="20" id="Hbj-El-FGH"/>
                         <constraint firstItem="Pis-Pn-CGv" firstAttribute="leading" secondItem="ehP-UW-apq" secondAttribute="leading" constant="20" id="OJo-7h-Tlj"/>
-                        <constraint firstAttribute="trailing" secondItem="6ZQ-IX-Tgh" secondAttribute="trailing" constant="20" id="OTV-L4-dLL"/>
                         <constraint firstItem="ibr-su-qzr" firstAttribute="top" secondItem="F3B-wm-VfI" secondAttribute="bottom" constant="10" id="R0t-AR-z6O"/>
                         <constraint firstItem="oKa-4P-Izr" firstAttribute="leading" secondItem="ehP-UW-apq" secondAttribute="leading" constant="20" id="SOn-f8-PBE"/>
                         <constraint firstItem="iXI-Xt-tqr" firstAttribute="centerY" secondItem="qLf-4s-gN2" secondAttribute="centerY" id="TGC-uc-Ve8"/>
                         <constraint firstItem="lFm-Ki-Ira" firstAttribute="leading" secondItem="ehP-UW-apq" secondAttribute="leading" constant="20" id="Tac-ph-Z8K"/>
                         <constraint firstItem="iU8-AI-dCh" firstAttribute="leading" secondItem="nr6-kh-iXc" secondAttribute="trailing" constant="5" id="UMZ-TU-gSz"/>
                         <constraint firstItem="qLf-4s-gN2" firstAttribute="leading" secondItem="iXI-Xt-tqr" secondAttribute="trailing" constant="5" id="YYu-dl-lbl"/>
-                        <constraint firstItem="6ZQ-IX-Tgh" firstAttribute="top" secondItem="Hem-Kd-Ffg" secondAttribute="bottom" constant="10" id="Zes-dW-CAC"/>
                         <constraint firstItem="oKa-4P-Izr" firstAttribute="top" secondItem="ibr-su-qzr" secondAttribute="bottom" constant="9" id="czs-Ho-9yg"/>
                         <constraint firstItem="qLf-4s-gN2" firstAttribute="top" secondItem="nr6-kh-iXc" secondAttribute="bottom" constant="10" id="d2w-Ze-53y"/>
                         <constraint firstItem="F3B-wm-VfI" firstAttribute="leading" secondItem="ehP-UW-apq" secondAttribute="leading" constant="20" id="g8E-z4-FOa"/>
@@ -244,10 +235,12 @@
             <connections>
                 <outlet property="collectionView" destination="F3B-wm-VfI" id="rI7-ON-6Mw"/>
                 <outlet property="contaainerView" destination="ehP-UW-apq" id="5V6-U6-x4R"/>
+                <outlet property="imgView" destination="izJ-Eb-rB5" id="Rfa-ys-Jev"/>
                 <outlet property="lblCost" destination="ibr-su-qzr" id="Za9-eD-Tj6"/>
-                <outlet property="lblCusines" destination="6ZQ-IX-Tgh" id="hNW-Pc-0FG"/>
+                <outlet property="lblOpen" destination="lFm-Ki-Ira" id="DrG-Hj-rAT"/>
                 <outlet property="lblRating" destination="iU8-AI-dCh" id="cJa-MG-W1h"/>
                 <outlet property="lblResName" destination="Hem-Kd-Ffg" id="2eH-Z7-eRb"/>
+                <outlet property="lblTime" destination="fog-OX-3vv" id="Pfm-Aj-Adx"/>
             </connections>
             <point key="canvasLocation" x="186.95652173913044" y="-969.97767857142856"/>
         </view>

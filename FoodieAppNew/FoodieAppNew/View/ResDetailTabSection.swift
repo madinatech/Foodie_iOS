@@ -12,17 +12,24 @@ class ResDetailTabSection: UIView, UICollectionViewDelegate, UICollectionViewDat
     var delegate :  ResDetailTabSectionDelegate? = nil
     var selectedIndex = Int()
     var swipeType = String()
-    var categoryArray = [String]()
+    var menuArray  = [Menu]()
+    
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "ResDetailTabSection", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        categoryArray = ["Promo","Burgers", "Meals","Pizza"]
+        
     }
     
-    func setData (sTab : Int, swipeType: String)  {
+    func setData (sTab : Int, swipeType: String, restaurant : Restaurant)  {
+        menuArray = restaurant.menus.allObjects as! [Menu]
+        menuArray = menuArray.sorted(by: {
+            ($0.name!.localizedLowercase) <
+                ($1.name!.localizedLowercase)
+        } )
+        
         selectedIndex = sTab
         self.swipeType = swipeType
         conainView.layer.cornerRadius = 20
@@ -36,30 +43,30 @@ class ResDetailTabSection: UIView, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-//        if(swipeType == "Right"){
-//            if (selectedIndex  < 10){
-//                var indexPath1 = IndexPath.init(row: selectedIndex , section: 0)
-//                if(selectedIndex == 9){
-//                    indexPath1 = IndexPath.init(row: selectedIndex, section: 0)
-//                }
-//                collectionView.scrollToItem(at: indexPath1, at: .right, animated: true)
-//            }
-//        } else {
-//            if (selectedIndex  > 0){
-//                var indexPath1 = IndexPath.init(row: selectedIndex , section: 0)
-//                if(selectedIndex == 0){
-//                    indexPath1 = IndexPath.init(row: selectedIndex, section: 0)
-//                }
-//                collectionView.scrollToItem(at: indexPath1, at: .left, animated: true)
-//            }
-//        }
-//
+        //        if(swipeType == "Right"){
+        //            if (selectedIndex  < 10){
+        //                var indexPath1 = IndexPath.init(row: selectedIndex , section: 0)
+        //                if(selectedIndex == 9){
+        //                    indexPath1 = IndexPath.init(row: selectedIndex, section: 0)
+        //                }
+        //                collectionView.scrollToItem(at: indexPath1, at: .right, animated: true)
+        //            }
+        //        } else {
+        //            if (selectedIndex  > 0){
+        //                var indexPath1 = IndexPath.init(row: selectedIndex , section: 0)
+        //                if(selectedIndex == 0){
+        //                    indexPath1 = IndexPath.init(row: selectedIndex, section: 0)
+        //                }
+        //                collectionView.scrollToItem(at: indexPath1, at: .left, animated: true)
+        //            }
+        //        }
+        //
         let indexPath1 = IndexPath.init(row: selectedIndex , section: 0)
         collectionView.scrollToItem(at: indexPath1, at: .left, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryArray.count
+        return menuArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -71,13 +78,15 @@ class ResDetailTabSection: UIView, UICollectionViewDelegate, UICollectionViewDat
             cell.lineView.backgroundColor = appPurpleColor
             cell.lblItem.textColor = appPurpleColor
         }
-    cell.lblItem.text = categoryArray[indexPath.row]
+        let menu : Menu = menuArray[indexPath.row]
+        cell.lblItem.text = menu.name
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let menu : Menu = menuArray[indexPath.row]
         let lbl = UILabel()
-        lbl.text = categoryArray[indexPath.row]
+        lbl.text = menu.name
         lbl.sizeToFit()
         return CGSize(width: lbl.frame.width + 5, height: 40)
     }

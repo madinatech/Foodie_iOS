@@ -10,7 +10,7 @@ class RestaurantDetailCell: UITableViewCell {
     @IBOutlet weak var lblAmount: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
     @IBOutlet weak var lbItem: UILabel!
-    @IBOutlet weak var imgView: UIImageView!
+  
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +22,10 @@ class RestaurantDetailCell: UITableViewCell {
 
     }
     
+    
+    func showData (item : Items)  {
+        lbItem.text = item.name
+        lblDesc.text = item.desc
+    }
 
 }

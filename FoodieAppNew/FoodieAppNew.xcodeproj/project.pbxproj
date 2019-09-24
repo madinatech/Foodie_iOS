@@ -132,6 +132,24 @@
 		34899B0D2339D9E300A5FBA2 /* FavouriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34899B0B2339D9E300A5FBA2 /* FavouriteCell.xib */; };
 		34899B102339EDB600A5FBA2 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B0E2339EDB600A5FBA2 /* EditProfileVC.swift */; };
 		34899B112339EDB600A5FBA2 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34899B0F2339EDB600A5FBA2 /* EditProfileVC.xib */; };
+		34899B20233A2E0900A5FBA2 /* _Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B12233A2E0700A5FBA2 /* _Location.swift */; };
+		34899B23233A2E0900A5FBA2 /* _Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B15233A2E0800A5FBA2 /* _Menu.swift */; };
+		34899B24233A2E0900A5FBA2 /* _Offerings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B16233A2E0800A5FBA2 /* _Offerings.swift */; };
+		34899B26233A2E0900A5FBA2 /* _Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B18233A2E0800A5FBA2 /* _Options.swift */; };
+		34899B27233A2E0900A5FBA2 /* _Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B19233A2E0800A5FBA2 /* _Images.swift */; };
+		34899B28233A2E0900A5FBA2 /* _Cusines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B1A233A2E0800A5FBA2 /* _Cusines.swift */; };
+		34899B29233A2E0900A5FBA2 /* _Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B1B233A2E0800A5FBA2 /* _Items.swift */; };
+		34899B2B233A2E0900A5FBA2 /* _OpeningTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B1D233A2E0900A5FBA2 /* _OpeningTimes.swift */; };
+		34899B2C233A2E0900A5FBA2 /* _Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B1E233A2E0900A5FBA2 /* _Restaurant.swift */; };
+		34899B37233A2E2500A5FBA2 /* Offerings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B2E233A2E2400A5FBA2 /* Offerings.swift */; };
+		34899B38233A2E2500A5FBA2 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B2F233A2E2400A5FBA2 /* Restaurant.swift */; };
+		34899B39233A2E2500A5FBA2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B30233A2E2500A5FBA2 /* Location.swift */; };
+		34899B3A233A2E2500A5FBA2 /* OpeningTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B31233A2E2500A5FBA2 /* OpeningTimes.swift */; };
+		34899B3B233A2E2500A5FBA2 /* Cusines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B32233A2E2500A5FBA2 /* Cusines.swift */; };
+		34899B3C233A2E2500A5FBA2 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B33233A2E2500A5FBA2 /* Items.swift */; };
+		34899B3D233A2E2500A5FBA2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B34233A2E2500A5FBA2 /* Images.swift */; };
+		34899B3E233A2E2500A5FBA2 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B35233A2E2500A5FBA2 /* Menu.swift */; };
+		34899B3F233A2E2500A5FBA2 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B36233A2E2500A5FBA2 /* Options.swift */; };
 		34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01B53233492E90057DEF4 /* CreateAccountVC.swift */; };
 		34C01B56233492E90057DEF4 /* CreateAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C01B54233492E90057DEF4 /* CreateAccountVC.xib */; };
 		34C01C392334A9230057DEF4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */; };
@@ -327,6 +345,24 @@
 		34899B0B2339D9E300A5FBA2 /* FavouriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCell.xib; sourceTree = "<group>"; };
 		34899B0E2339EDB600A5FBA2 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		34899B0F2339EDB600A5FBA2 /* EditProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileVC.xib; sourceTree = "<group>"; };
+		34899B12233A2E0700A5FBA2 /* _Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Location.swift; sourceTree = "<group>"; };
+		34899B15233A2E0800A5FBA2 /* _Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Menu.swift; sourceTree = "<group>"; };
+		34899B16233A2E0800A5FBA2 /* _Offerings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Offerings.swift; sourceTree = "<group>"; };
+		34899B18233A2E0800A5FBA2 /* _Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Options.swift; sourceTree = "<group>"; };
+		34899B19233A2E0800A5FBA2 /* _Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Images.swift; sourceTree = "<group>"; };
+		34899B1A233A2E0800A5FBA2 /* _Cusines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Cusines.swift; sourceTree = "<group>"; };
+		34899B1B233A2E0800A5FBA2 /* _Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Items.swift; sourceTree = "<group>"; };
+		34899B1D233A2E0900A5FBA2 /* _OpeningTimes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _OpeningTimes.swift; sourceTree = "<group>"; };
+		34899B1E233A2E0900A5FBA2 /* _Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Restaurant.swift; sourceTree = "<group>"; };
+		34899B2E233A2E2400A5FBA2 /* Offerings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offerings.swift; sourceTree = "<group>"; };
+		34899B2F233A2E2400A5FBA2 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		34899B30233A2E2500A5FBA2 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		34899B31233A2E2500A5FBA2 /* OpeningTimes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningTimes.swift; sourceTree = "<group>"; };
+		34899B32233A2E2500A5FBA2 /* Cusines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cusines.swift; sourceTree = "<group>"; };
+		34899B33233A2E2500A5FBA2 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		34899B34233A2E2500A5FBA2 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		34899B35233A2E2500A5FBA2 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		34899B36233A2E2500A5FBA2 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		34C01B53233492E90057DEF4 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		34C01B54233492E90057DEF4 /* CreateAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountVC.xib; sourceTree = "<group>"; };
 		34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -711,6 +747,15 @@
 		34C01C432334AA770057DEF4 /* UserClasses */ = {
 			isa = PBXGroup;
 			children = (
+				34899B32233A2E2500A5FBA2 /* Cusines.swift */,
+				34899B34233A2E2500A5FBA2 /* Images.swift */,
+				34899B33233A2E2500A5FBA2 /* Items.swift */,
+				34899B30233A2E2500A5FBA2 /* Location.swift */,
+				34899B35233A2E2500A5FBA2 /* Menu.swift */,
+				34899B2E233A2E2400A5FBA2 /* Offerings.swift */,
+				34899B31233A2E2500A5FBA2 /* OpeningTimes.swift */,
+				34899B36233A2E2500A5FBA2 /* Options.swift */,
+				34899B2F233A2E2400A5FBA2 /* Restaurant.swift */,
 				34C01D152334D35E0057DEF4 /* AppExpires.swift */,
 				34C01D122334D35E0057DEF4 /* DeliveryOption.swift */,
 				34C01D112334D35E0057DEF4 /* PaymentOption.swift */,
@@ -723,6 +768,15 @@
 		34C01C552334AA770057DEF4 /* StaticClasses */ = {
 			isa = PBXGroup;
 			children = (
+				34899B1A233A2E0800A5FBA2 /* _Cusines.swift */,
+				34899B19233A2E0800A5FBA2 /* _Images.swift */,
+				34899B1B233A2E0800A5FBA2 /* _Items.swift */,
+				34899B12233A2E0700A5FBA2 /* _Location.swift */,
+				34899B15233A2E0800A5FBA2 /* _Menu.swift */,
+				34899B16233A2E0800A5FBA2 /* _Offerings.swift */,
+				34899B1D233A2E0900A5FBA2 /* _OpeningTimes.swift */,
+				34899B18233A2E0800A5FBA2 /* _Options.swift */,
+				34899B1E233A2E0900A5FBA2 /* _Restaurant.swift */,
 				34C01D0B2334D3570057DEF4 /* _AppExpires.swift */,
 				34C01D0A2334D3570057DEF4 /* _DeliveryOption.swift */,
 				34C01D072334D3570057DEF4 /* _PaymentOption.swift */,
@@ -1193,6 +1247,7 @@
 				34C01CBC2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel in Sources */,
 				34C01D0D2334D3570057DEF4 /* _UserData.swift in Sources */,
 				3400F31223325C4000346C9A /* ViewOrderVC.swift in Sources */,
+				34899B3D233A2E2500A5FBA2 /* Images.swift in Sources */,
 				341B0D192330D5AE00D12504 /* SearchVC.swift in Sources */,
 				34C01CFF2334AB2C0057DEF4 /* NSDate+TimeAgo.m in Sources */,
 				34C01CF92334AB2C0057DEF4 /* NSDate+Year.m in Sources */,
@@ -1200,6 +1255,7 @@
 				341B0D942330E12500D12504 /* CityCell.swift in Sources */,
 				34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */,
 				34C01CF72334AB2C0057DEF4 /* NSDate+Week.m in Sources */,
+				34899B27233A2E0900A5FBA2 /* _Images.swift in Sources */,
 				34C01CFE2334AB2C0057DEF4 /* NSDate+Extentsion.m in Sources */,
 				341B0D982330E12500D12504 /* BillDetailCell.swift in Sources */,
 				3400F3072332292400346C9A /* ResDetailTabSection.swift in Sources */,
@@ -1212,6 +1268,7 @@
 				34C01CB72334AA780057DEF4 /* Account.swift in Sources */,
 				340D78BE233383C10084971A /* RecentSearchCell.swift in Sources */,
 				341B0D9E2330E12500D12504 /* WelcomeCell.swift in Sources */,
+				34899B3B233A2E2500A5FBA2 /* Cusines.swift in Sources */,
 				34C01CF32334AB2C0057DEF4 /* NSObject+Properties.m in Sources */,
 				34C01CEE2334AB2C0057DEF4 /* NSManagedObject+Mapping.m in Sources */,
 				34C01CEC2334AB2C0057DEF4 /* SwiftyJSON.swift in Sources */,
@@ -1221,27 +1278,34 @@
 				3400F2FA2331FC1C00346C9A /* HomeTopCell.swift in Sources */,
 				341B0DAA2330E12500D12504 /* CountryCell.swift in Sources */,
 				34C01D162334D35E0057DEF4 /* PaymentOption.swift in Sources */,
+				34899B2C233A2E0900A5FBA2 /* _Restaurant.swift in Sources */,
 				34C01D0E2334D3570057DEF4 /* _VerifyUser.swift in Sources */,
 				340D78AE2333464D0084971A /* ViewOrderTopCell.swift in Sources */,
 				340D78C6233385CD0084971A /* SearchCollCell.swift in Sources */,
 				34C01D172334D35E0057DEF4 /* DeliveryOption.swift in Sources */,
 				341B0D852330E12500D12504 /* RecommendedRestaurantCell.swift in Sources */,
 				34C01D002334AB2C0057DEF4 /* MD5Digest.swift in Sources */,
+				34899B29233A2E0900A5FBA2 /* _Items.swift in Sources */,
 				34C01CFB2334AB2C0057DEF4 /* NSDate+Hour.m in Sources */,
 				34C01CEF2334AB2C0057DEF4 /* NSManagedObject+Duplicate.m in Sources */,
 				3400F30E2332562100346C9A /* InfoVC.swift in Sources */,
 				341B0D8B2330E12500D12504 /* PaymentCell.swift in Sources */,
 				341B0D822330E12500D12504 /* CoupanCell.swift in Sources */,
 				341B0D862330E12500D12504 /* TabCell.swift in Sources */,
+				34899B20233A2E0900A5FBA2 /* _Location.swift in Sources */,
 				34C01CF52334AB2C0057DEF4 /* NSDate+Month.m in Sources */,
 				34C01CB92334AA780057DEF4 /* Manager.swift in Sources */,
 				341B0D7A2330E12500D12504 /* PastOrderButtonCell.swift in Sources */,
+				34899B37233A2E2500A5FBA2 /* Offerings.swift in Sources */,
+				34899B38233A2E2500A5FBA2 /* Restaurant.swift in Sources */,
+				34899B3F233A2E2500A5FBA2 /* Options.swift in Sources */,
 				34C01CFA2334AB2C0057DEF4 /* NSDate+Day.m in Sources */,
 				3400F31623325CB100346C9A /* CategoryCell.swift in Sources */,
 				3400F2F62331F38D00346C9A /* SortingCell.swift in Sources */,
 				341B0D962330E12500D12504 /* AccountCell.swift in Sources */,
 				34C01C3D2334A9230057DEF4 /* UIWindowTransitions.swift in Sources */,
 				341B0D912330E12500D12504 /* RestaurnatRecommendedCell.swift in Sources */,
+				34899B3C233A2E2500A5FBA2 /* Items.swift in Sources */,
 				34899B102339EDB600A5FBA2 /* EditProfileVC.swift in Sources */,
 				34C01CB82334AA780057DEF4 /* CDHelper.swift in Sources */,
 				341B0D992330E12500D12504 /* HelpCell.swift in Sources */,
@@ -1252,11 +1316,13 @@
 				341B0D252330D67600D12504 /* UserProfileVc.swift in Sources */,
 				341B0D902330E12500D12504 /* InfoCell.swift in Sources */,
 				341B0D9B2330E12500D12504 /* PastOrderCell.swift in Sources */,
+				34899B28233A2E0900A5FBA2 /* _Cusines.swift in Sources */,
 				341B0D972330E12500D12504 /* RestaurantDetailCell.swift in Sources */,
 				341B0D8E2330E12500D12504 /* RecentOrderCell.swift in Sources */,
 				34C01CBA2334AA780057DEF4 /* Request.swift in Sources */,
 				34C01CFD2334AB2C0057DEF4 /* NSDate+Time.m in Sources */,
 				34CAC0E62333A44400BFBAB4 /* LoginVC.swift in Sources */,
+				34899B3A233A2E2500A5FBA2 /* OpeningTimes.swift in Sources */,
 				341B0DA82330E12500D12504 /* CustomizeCell.swift in Sources */,
 				34C01D192334D35E0057DEF4 /* UserData.swift in Sources */,
 				34C01C3E2334A9230057DEF4 /* Utils.swift in Sources */,
@@ -1264,6 +1330,7 @@
 				340D78C22333855B0084971A /* SearchCategoryCell.swift in Sources */,
 				341B0D152330D57E00D12504 /* HomeVC.swift in Sources */,
 				341B0D292330D6A800D12504 /* OrderListVC.swift in Sources */,
+				34899B39233A2E2500A5FBA2 /* Location.swift in Sources */,
 				3400F3012332117800346C9A /* RestaurantDetailHeader.swift in Sources */,
 				34C01CED2334AB2C0057DEF4 /* URLSchema.swift in Sources */,
 				341B0CD32330CECF00D12504 /* AppDelegate.swift in Sources */,
@@ -1275,14 +1342,19 @@
 				34C01CFC2334AB2C0057DEF4 /* NSDate+DateTime.m in Sources */,
 				34C01C392334A9230057DEF4 /* UIViewExtension.swift in Sources */,
 				340D78BA233361440084971A /* ViewOrderMoreCell.swift in Sources */,
+				34899B23233A2E0900A5FBA2 /* _Menu.swift in Sources */,
 				34C01D102334D3570057DEF4 /* _AppExpires.swift in Sources */,
 				341B0DA22330E12500D12504 /* CartRequestCell.swift in Sources */,
 				341B0D8C2330E12500D12504 /* CustomizeItemCell.swift in Sources */,
+				34899B3E233A2E2500A5FBA2 /* Menu.swift in Sources */,
 				34C01D182334D35E0057DEF4 /* VerifyUser.swift in Sources */,
 				34C01D1A2334D35E0057DEF4 /* AppExpires.swift in Sources */,
+				34899B24233A2E0900A5FBA2 /* _Offerings.swift in Sources */,
 				341B0D0D2330D39F00D12504 /* RestaurantListVC.swift in Sources */,
+				34899B2B233A2E0900A5FBA2 /* _OpeningTimes.swift in Sources */,
 				34C01C402334A9230057DEF4 /* CommonTextfield.swift in Sources */,
 				34899B082339D6C900A5FBA2 /* MyFavouritesVC.swift in Sources */,
+				34899B26233A2E0900A5FBA2 /* _Options.swift in Sources */,
 				341B0DA02330E12500D12504 /* ManageAddressCell.swift in Sources */,
 				341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */,
 				34C01CF02334AB2C0057DEF4 /* NSMutableArray+Join.m in Sources */,

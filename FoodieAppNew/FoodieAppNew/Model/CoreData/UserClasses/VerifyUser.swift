@@ -14,4 +14,12 @@ open class VerifyUser: _VerifyUser {
         mapping.primaryKey = "entity_id"
         return mapping
     }
+    
+    class func getUserByNumber(number: String) -> VerifyUser {
+        let pre = NSPredicate(format: "phone == %@", number)
+        if let user = VerifyUser.mr_findFirst(with: pre) {
+            return user
+        }
+        return VerifyUser.mr_createEntity()!
+    }
 }

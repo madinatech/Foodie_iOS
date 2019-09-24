@@ -39,7 +39,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36j-JV-rsX">
                                 <rect key="frame" x="15" y="10" width="90" height="90"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burgerKing" translatesAutoresizingMaskIntoConstraints="NO" id="qPO-XZ-OFe">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burgerKing" translatesAutoresizingMaskIntoConstraints="NO" id="qPO-XZ-OFe">
                                         <rect key="frame" x="5" y="5" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
@@ -70,7 +70,7 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Burger • Fastfood • Pizza " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqo-Do-pdW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger • Fastfood • Pizza " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqo-Do-pdW">
                                 <rect key="frame" x="115" y="57" width="195" height="15"/>
                                 <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,9 +191,18 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imgBag" destination="l6L-7r-SIx" id="5Rt-Fu-anj"/>
+                <outlet property="imgScooter" destination="Fl4-ui-Z5z" id="Ifu-4e-0eE"/>
+                <outlet property="imgStar" destination="Jym-lY-QZf" id="tqt-tN-l9U"/>
+                <outlet property="imgTable" destination="n41-Tz-vB5" id="LbG-Y1-u2z"/>
                 <outlet property="imgView" destination="qPO-XZ-OFe" id="kgx-O8-UwQ"/>
                 <outlet property="innerView" destination="BJ8-19-Pku" id="GBB-In-EwP"/>
+                <outlet property="lblAmount" destination="6j7-4c-oFj" id="PHw-O5-ZWy"/>
+                <outlet property="lblCusines" destination="vqo-Do-pdW" id="4P9-0O-jf4"/>
                 <outlet property="lblName" destination="dBq-q5-OwU" id="bd8-qy-fq9"/>
+                <outlet property="lblRating" destination="kQu-iG-4H4" id="dIl-np-xCo"/>
+                <outlet property="lblTime" destination="2Mj-0y-Q4c" id="vQU-Ri-UiX"/>
+                <outlet property="timeView" destination="fTe-mE-vCN" id="VgT-Ki-u5Q"/>
             </connections>
             <point key="canvasLocation" x="-97.101449275362327" y="79.352678571428569"/>
         </tableViewCell>
@@ -201,7 +210,7 @@
     <resources>
         <image name="bag" width="50" height="50"/>
         <image name="burgerKing" width="223" height="226"/>
-        <image name="scooter" width="170.5" height="170.5"/>
+        <image name="scooter" width="30" height="30"/>
         <image name="star" width="170.5" height="170.5"/>
         <image name="table" width="50" height="50"/>
     </resources>

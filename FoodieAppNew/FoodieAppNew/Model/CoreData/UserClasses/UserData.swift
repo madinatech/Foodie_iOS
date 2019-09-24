@@ -14,4 +14,6 @@ open class UserData: _UserData {
            mapping.addToManyRelationshipMapping(DeliveryOption.defaultMapping(), forProperty: "delivery_options", keyPath: "delivery_options")
         return mapping
     }
+    
+    
 }

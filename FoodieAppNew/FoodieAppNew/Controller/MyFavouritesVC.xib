@@ -68,7 +68,7 @@
             </subviews>
             <color key="backgroundColor" red="0.98039215690000003" green="0.80392156859999997" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="yPL-X3-gVu" firstAttribute="bottom" secondItem="2tr-SE-8bA" secondAttribute="bottom" id="K94-07-O1s"/>
+                <constraint firstAttribute="bottom" secondItem="2tr-SE-8bA" secondAttribute="bottom" id="K94-07-O1s"/>
                 <constraint firstItem="COD-sr-WNf" firstAttribute="leading" secondItem="VLT-9Q-rn7" secondAttribute="leading" constant="20" id="VVK-ox-Egp"/>
                 <constraint firstItem="fYl-Cy-d55" firstAttribute="leading" secondItem="yPL-X3-gVu" secondAttribute="leading" constant="20" id="exJ-SK-aFt"/>
                 <constraint firstItem="2tr-SE-8bA" firstAttribute="leading" secondItem="yPL-X3-gVu" secondAttribute="leading" id="gGf-Za-hts"/>

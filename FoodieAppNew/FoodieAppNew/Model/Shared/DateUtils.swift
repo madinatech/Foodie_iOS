@@ -10,6 +10,13 @@ class DateUtils: NSObject {
         return strMonth
     }
     
+   class func getTodayWeekDay()-> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let weekDay = dateFormatter.string(from: Date())
+        return weekDay
+    }
+    
    class func getDateFromDatetime(_ dateString : String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -46,9 +53,9 @@ class DateUtils: NSObject {
     
     class func getStringFormat(str:String) -> String {
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        dateFormatterGet.dateFormat = "HH:mm"
         let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "dd/M/yy"
+        dateFormatterPrint.dateFormat = "h:mm a"
         let date: Date = dateFormatterGet.date(from: str)!
         return dateFormatterPrint.string(from: date)
     }
