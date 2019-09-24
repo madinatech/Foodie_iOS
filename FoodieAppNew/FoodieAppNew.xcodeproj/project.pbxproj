@@ -126,6 +126,10 @@
 		341B0DAB2330E12500D12504 /* CartRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D772330E12500D12504 /* CartRequestCell.xib */; };
 		341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */; };
 		341B0DAF2331099800D12504 /* DeliveryAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */; };
+		34899B082339D6C900A5FBA2 /* MyFavouritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B062339D6C900A5FBA2 /* MyFavouritesVC.swift */; };
+		34899B092339D6C900A5FBA2 /* MyFavouritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34899B072339D6C900A5FBA2 /* MyFavouritesVC.xib */; };
+		34899B0C2339D9E300A5FBA2 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B0A2339D9E300A5FBA2 /* FavouriteCell.swift */; };
+		34899B0D2339D9E300A5FBA2 /* FavouriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34899B0B2339D9E300A5FBA2 /* FavouriteCell.xib */; };
 		34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01B53233492E90057DEF4 /* CreateAccountVC.swift */; };
 		34C01B56233492E90057DEF4 /* CreateAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C01B54233492E90057DEF4 /* CreateAccountVC.xib */; };
 		34C01C392334A9230057DEF4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */; };
@@ -315,6 +319,10 @@
 		341B0D772330E12500D12504 /* CartRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartRequestCell.xib; sourceTree = "<group>"; };
 		341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressVC.swift; sourceTree = "<group>"; };
 		341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressVC.xib; sourceTree = "<group>"; };
+		34899B062339D6C900A5FBA2 /* MyFavouritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavouritesVC.swift; sourceTree = "<group>"; };
+		34899B072339D6C900A5FBA2 /* MyFavouritesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFavouritesVC.xib; sourceTree = "<group>"; };
+		34899B0A2339D9E300A5FBA2 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
+		34899B0B2339D9E300A5FBA2 /* FavouriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCell.xib; sourceTree = "<group>"; };
 		34C01B53233492E90057DEF4 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		34C01B54233492E90057DEF4 /* CreateAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountVC.xib; sourceTree = "<group>"; };
 		34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -524,6 +532,8 @@
 				34CAC0E92333AF6A00BFBAB4 /* VerifyOTPVC.xib */,
 				34C01B53233492E90057DEF4 /* CreateAccountVC.swift */,
 				34C01B54233492E90057DEF4 /* CreateAccountVC.xib */,
+				34899B062339D6C900A5FBA2 /* MyFavouritesVC.swift */,
+				34899B072339D6C900A5FBA2 /* MyFavouritesVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -625,6 +635,8 @@
 				340D78C5233385CD0084971A /* SearchCollCell.xib */,
 				34C01D1C2334FE0D0057DEF4 /* ProfileCell.swift */,
 				34C01D1D2334FE0D0057DEF4 /* ProfileCell.xib */,
+				34899B0A2339D9E300A5FBA2 /* FavouriteCell.swift */,
+				34899B0B2339D9E300A5FBA2 /* FavouriteCell.xib */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -961,6 +973,7 @@
 				341B0D952330E12500D12504 /* AccountCell.xib in Resources */,
 				34C01CF42334AB2C0057DEF4 /* NSDateTimeAgo.bundle in Resources */,
 				340D78B723335D210084971A /* RestDetailHeaderCell.xib in Resources */,
+				34899B092339D6C900A5FBA2 /* MyFavouritesVC.xib in Resources */,
 				3400F30F2332562100346C9A /* InfoVC.xib in Resources */,
 				3400F31323325C4000346C9A /* ViewOrderVC.xib in Resources */,
 				341B0D7D2330E12500D12504 /* RecomandedDetailCell.xib in Resources */,
@@ -968,6 +981,7 @@
 				34C01D1F2334FE0D0057DEF4 /* ProfileCell.xib in Resources */,
 				341B0D812330E12500D12504 /* CustomizeItemCell.xib in Resources */,
 				341B0D1A2330D5AE00D12504 /* SearchVC.xib in Resources */,
+				34899B0D2339D9E300A5FBA2 /* FavouriteCell.xib in Resources */,
 				341B0D2A2330D6A800D12504 /* OrderListVC.xib in Resources */,
 				341B0D842330E12500D12504 /* TabCell.xib in Resources */,
 				341B0DA62330E12500D12504 /* PaymentCell.xib in Resources */,
@@ -1183,6 +1197,7 @@
 				341B0D982330E12500D12504 /* BillDetailCell.swift in Sources */,
 				3400F3072332292400346C9A /* ResDetailTabSection.swift in Sources */,
 				340D78B623335D210084971A /* RestDetailHeaderCell.swift in Sources */,
+				34899B0C2339D9E300A5FBA2 /* FavouriteCell.swift in Sources */,
 				34C01D0C2334D3570057DEF4 /* _PaymentOption.swift in Sources */,
 				34C01CB62334AA780057DEF4 /* AccountManager.swift in Sources */,
 				34C01CF62334AB2C0057DEF4 /* NSDate+Compare.m in Sources */,
@@ -1259,6 +1274,7 @@
 				34C01D1A2334D35E0057DEF4 /* AppExpires.swift in Sources */,
 				341B0D0D2330D39F00D12504 /* RestaurantListVC.swift in Sources */,
 				34C01C402334A9230057DEF4 /* CommonTextfield.swift in Sources */,
+				34899B082339D6C900A5FBA2 /* MyFavouritesVC.swift in Sources */,
 				341B0DA02330E12500D12504 /* ManageAddressCell.swift in Sources */,
 				341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */,
 				34C01CF02334AB2C0057DEF4 /* NSMutableArray+Join.m in Sources */,

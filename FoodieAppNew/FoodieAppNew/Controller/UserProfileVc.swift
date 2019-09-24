@@ -5,6 +5,8 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var imgProfile: UIImageView!
+    @IBOutlet weak var lblUserName: UILabel!
     class func initViewController() -> UserProfileVc {
         let vc = UserProfileVc.init(nibName: "UserProfileVc", bundle: nil)
         return vc
@@ -66,5 +68,13 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
         cell?.accessoryType = .disclosureIndicator
             return cell!
        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tblView.deselectRow(at: indexPath, animated: true)
+        if(indexPath.section == 0 && indexPath.row == 1){
+            let vc = MyFavouritesVC.initViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

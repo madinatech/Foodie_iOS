@@ -10,6 +10,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tblView: UITableView!
     var categoryArray = [String]()
     var categoryCount = Int()
+    
     class func initViewController() -> RestaurantDetailVC {
         let vc = RestaurantDetailVC.init(nibName: "RestaurantDetailVC", bundle: nil)
         return vc
