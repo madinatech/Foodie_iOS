@@ -145,7 +145,6 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         }
         
     }
-
   
     //    ResDetailTabSectionDelegate
     func tabClicked(selectedTab: Int) {
