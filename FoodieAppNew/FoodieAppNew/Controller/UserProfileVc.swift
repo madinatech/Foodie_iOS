@@ -83,7 +83,10 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tblView.deselectRow(at: indexPath, animated: true)
-        if(indexPath.section == 0 && indexPath.row == 1){
+        if(indexPath.section == 0 && indexPath.row == 0){
+            let vc = DeliveryAddressVC.initViewController()
+            self.navigationController?.present(vc, animated: true, completion: nil)
+        } else if(indexPath.section == 0 && indexPath.row == 1){
             let vc = MyFavouritesVC.initViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }

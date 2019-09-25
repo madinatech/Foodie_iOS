@@ -40,7 +40,7 @@
                                 <rect key="frame" x="15" y="10" width="90" height="90"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burgerKing" translatesAutoresizingMaskIntoConstraints="NO" id="qPO-XZ-OFe">
-                                        <rect key="frame" x="5" y="5" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
@@ -51,11 +51,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="qPO-XZ-OFe" firstAttribute="leading" secondItem="36j-JV-rsX" secondAttribute="leading" constant="5" id="GId-1d-GIa"/>
+                                    <constraint firstItem="qPO-XZ-OFe" firstAttribute="leading" secondItem="36j-JV-rsX" secondAttribute="leading" id="GId-1d-GIa"/>
                                     <constraint firstAttribute="width" constant="90" id="Qif-pp-KUC"/>
-                                    <constraint firstItem="qPO-XZ-OFe" firstAttribute="top" secondItem="36j-JV-rsX" secondAttribute="top" constant="5" id="RgK-8n-Z9e"/>
-                                    <constraint firstAttribute="bottom" secondItem="qPO-XZ-OFe" secondAttribute="bottom" constant="5" id="hXE-xH-dVy"/>
-                                    <constraint firstAttribute="trailing" secondItem="qPO-XZ-OFe" secondAttribute="trailing" constant="5" id="oaS-8T-pnA"/>
+                                    <constraint firstItem="qPO-XZ-OFe" firstAttribute="top" secondItem="36j-JV-rsX" secondAttribute="top" id="RgK-8n-Z9e"/>
+                                    <constraint firstAttribute="bottom" secondItem="qPO-XZ-OFe" secondAttribute="bottom" id="hXE-xH-dVy"/>
+                                    <constraint firstAttribute="trailing" secondItem="qPO-XZ-OFe" secondAttribute="trailing" id="oaS-8T-pnA"/>
                                     <constraint firstAttribute="height" constant="90" id="qp1-IZ-A2A"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

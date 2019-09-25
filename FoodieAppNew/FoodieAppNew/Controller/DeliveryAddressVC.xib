@@ -59,6 +59,9 @@
                                     <integer key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="addNewAddressClicked:" destination="-1" eventType="touchUpInside" id="sKB-Du-MQX"/>
+                            </connections>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find" translatesAutoresizingMaskIntoConstraints="NO" id="reQ-Ew-hWo">
                             <rect key="frame" x="46" y="115" width="322" height="200"/>

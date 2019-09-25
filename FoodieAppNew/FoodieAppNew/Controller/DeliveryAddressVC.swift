@@ -27,12 +27,21 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
         topView.addGestureRecognizer(tap)
 //        tblView.isHidden = true
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         self.dismiss(animated: true, completion: nil)
     }
 
-  
+    @IBAction func addNewAddressClicked(_ sender: Any) {
+       let vc = AddNewAddressVC.initViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+       
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }

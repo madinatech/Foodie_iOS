@@ -4,8 +4,9 @@ import UIKit
 class CategoryCell: UITableViewCell  , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var collectionHeight: NSLayoutConstraint!
+    var selectedCusines = NSMutableArray()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.register(UINib(nibName: "CusinesCell", bundle: nil), forCellWithReuseIdentifier: "CusinesCell")
@@ -26,7 +27,21 @@ class CategoryCell: UITableViewCell  , UICollectionViewDelegate, UICollectionVie
         let cell : CusinesCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CusinesCell", for: indexPath) as! CusinesCell
         cell.contentView.backgroundColor = appLigtGrayColor
         cell.lblTag.textColor = UIColor.lightGray
+        if(selectedCusines.contains(indexPath.row)){
+            cell.lblTag.textColor = appThemeColor
+        }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        print("Niki")
+        if(selectedCusines.contains(indexPath.row)){
+            selectedCusines.remove(indexPath.row)
+        } else {
+            selectedCusines.add(indexPath.row)
+        }
+        collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

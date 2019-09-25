@@ -60,7 +60,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     
     @IBAction func deliveryAddressClicked(_ sender: Any) {
         let vc = DeliveryAddressVC.initViewController()
-        self.navigationController?.present(vc, animated: true, completion: nil)
+        let nav = UINavigationController.init(rootViewController: vc)
+        self.present(nav, animated: true, completion: nil)
+//        self.navigationController?.present(vc, animated: true, completion: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

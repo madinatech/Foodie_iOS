@@ -47,7 +47,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
         
         if(strNumber.count <= 0){
             strMessage = "Please enter mobile number"
-        } else if (strNumber.count < 12) {
+        } else if (strNumber.count < 11) {
             strMessage = "Please enter valid mobile number"
         }
         

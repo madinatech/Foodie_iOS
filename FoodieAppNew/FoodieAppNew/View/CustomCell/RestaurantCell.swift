@@ -83,7 +83,9 @@ class RestaurantCell: UITableViewCell {
         for cusine in cusines{
             cusinesNameArray.append(cusine.name ?? "")
         }
+        cusinesNameArray.sort()
         let joined = cusinesNameArray.joined(separator: " • ")
+    
         lblCusines.text = joined
         let url = URL(string: restaurant.images?.display ?? "")
         imgView.kf.indicatorType = .activity

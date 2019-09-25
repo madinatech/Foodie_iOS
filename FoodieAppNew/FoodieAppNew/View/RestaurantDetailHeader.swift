@@ -38,6 +38,10 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
     }
     func showData () {
         cusinesArray = rest.cuisines.allObjects as! [Cusines]
+        cusinesArray = cusinesArray.sorted(by: {
+            ($0.name!.localizedLowercase) <
+                ($1.name!.localizedLowercase)
+        } )
         openingTimes = rest.opening_times.allObjects as! [OpeningTimes]
         collectionView.reloadData()
         lblResName.text = rest.name
@@ -54,7 +58,6 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
             }
         })
         
-      let weekday = Calendar.current.component(.weekday, from: Date())
         print(DateUtils.getTodayWeekDay())
         for openTime in openingTimes{
             if(DateUtils.getTodayWeekDay() == openTime.day){

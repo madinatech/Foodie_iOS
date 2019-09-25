@@ -5,6 +5,7 @@ import UIKit
 class HomeTopCell: UICollectionViewCell {
 
     @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var lblOptions: UILabel!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     
@@ -27,6 +28,7 @@ class HomeTopCell: UICollectionViewCell {
             innerView.backgroundColor = appYellowColor
               lblTitle.text = "Restaurants offering dine in"
             lblTitle.textColor = .black
+            lblOptions.textColor = .black
             imgView.image = UIImage.init(named: "DineIn")
         }
     }
