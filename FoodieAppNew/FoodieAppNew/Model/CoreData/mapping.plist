@@ -2,20 +2,34 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Options</key>
+	<key>GroupValues</key>
+	<dict>
+		<key>item_name</key>
+		<string>item_name</string>
+		<key>price</key>
+		<string>price</string>
+	</dict>
+	<key>Price</key>
+	<dict>
+		<key>price</key>
+		<string>price</string>
+		<key>valid_from</key>
+		<string>valid_from</string>
+		<key>valid_to</key>
+		<string>valid_to</string>
+	</dict>
+	<key>CustomizationGroup</key>
 	<dict>
 		<key>entity_id</key>
 		<string>id</string>
-		<key>added_price</key>
-		<string>added_price</string>
-		<key>option_key</key>
-		<string>option_key</string>
-		<key>option_type</key>
-		<string>option_type</string>
-		<key>option_type_code</key>
-		<string>option_type_code</string>
-		<key>option_value</key>
-		<string>option_value</string>
+		<key>group_name</key>
+		<string>group_name</string>
+		<key>group_type</key>
+		<string>group_type</string>
+		<key>group_type_code</key>
+		<string>group_type_code</string>
+		<key>select_max</key>
+		<string>select_max</string>
 	</dict>
 	<key>Items</key>
 	<dict>

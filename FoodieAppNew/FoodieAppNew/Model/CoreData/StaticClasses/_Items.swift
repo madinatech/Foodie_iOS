@@ -14,7 +14,8 @@ public enum ItemsAttributes: String {
 }
 
 public enum ItemsRelationships: String {
-    case options = "options"
+    case customization_groups = "customization_groups"
+    case price = "price"
 }
 
 open class _Items: NSManagedObject {
@@ -68,38 +69,73 @@ open class _Items: NSManagedObject {
     // MARK: - Relationships
 
     @NSManaged open
-    var options: NSSet
+    var customization_groups: NSSet
 
-    open func optionsSet() -> NSMutableSet {
-        return self.options.mutableCopy() as! NSMutableSet
+    open func customization_groupsSet() -> NSMutableSet {
+        return self.customization_groups.mutableCopy() as! NSMutableSet
+    }
+
+    @NSManaged open
+    var price: NSSet
+
+    open func priceSet() -> NSMutableSet {
+        return self.price.mutableCopy() as! NSMutableSet
     }
 
 }
 
 extension _Items {
 
-    open func addOptions(_ objects: NSSet) {
-        let mutable = self.options.mutableCopy() as! NSMutableSet
+    open func addCustomization_groups(_ objects: NSSet) {
+        let mutable = self.customization_groups.mutableCopy() as! NSMutableSet
         mutable.union(objects as Set<NSObject>)
-        self.options = mutable.copy() as! NSSet
+        self.customization_groups = mutable.copy() as! NSSet
     }
 
-    open func removeOptions(_ objects: NSSet) {
-        let mutable = self.options.mutableCopy() as! NSMutableSet
+    open func removeCustomization_groups(_ objects: NSSet) {
+        let mutable = self.customization_groups.mutableCopy() as! NSMutableSet
         mutable.minus(objects as Set<NSObject>)
-        self.options = mutable.copy() as! NSSet
+        self.customization_groups = mutable.copy() as! NSSet
     }
 
-    open func addOptionsObject(_ value: Options) {
-        let mutable = self.options.mutableCopy() as! NSMutableSet
+    open func addCustomization_groupsObject(_ value: CustomizationGroup) {
+        let mutable = self.customization_groups.mutableCopy() as! NSMutableSet
         mutable.add(value)
-        self.options = mutable.copy() as! NSSet
+        self.customization_groups = mutable.copy() as! NSSet
     }
 
-    open func removeOptionsObject(_ value: Options) {
-        let mutable = self.options.mutableCopy() as! NSMutableSet
+    open func removeCustomization_groupsObject(_ value: CustomizationGroup) {
+        let mutable = self.customization_groups.mutableCopy() as! NSMutableSet
         mutable.remove(value)
-        self.options = mutable.copy() as! NSSet
+        self.customization_groups = mutable.copy() as! NSSet
+    }
+
+}
+
+extension _Items {
+
+    open func addPrice(_ objects: NSSet) {
+        let mutable = self.price.mutableCopy() as! NSMutableSet
+        mutable.union(objects as Set<NSObject>)
+        self.price = mutable.copy() as! NSSet
+    }
+
+    open func removePrice(_ objects: NSSet) {
+        let mutable = self.price.mutableCopy() as! NSMutableSet
+        mutable.minus(objects as Set<NSObject>)
+        self.price = mutable.copy() as! NSSet
+    }
+
+    open func addPriceObject(_ value: Price) {
+        let mutable = self.price.mutableCopy() as! NSMutableSet
+        mutable.add(value)
+        self.price = mutable.copy() as! NSSet
+    }
+
+    open func removePriceObject(_ value: Price) {
+        let mutable = self.price.mutableCopy() as! NSMutableSet
+        mutable.remove(value)
+        self.price = mutable.copy() as! NSSet
     }
 
 }

@@ -58,6 +58,12 @@
 		340D78C7233385CD0084971A /* SearchCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340D78C5233385CD0084971A /* SearchCollCell.xib */; };
 		3410E3AD233B3798000BA7FB /* AddNewAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3410E3AB233B3798000BA7FB /* AddNewAddressVC.swift */; };
 		3410E3AE233B3798000BA7FB /* AddNewAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3410E3AC233B3798000BA7FB /* AddNewAddressVC.xib */; };
+		3410E3B2233B81AE000BA7FB /* _CustomizationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3410E3AF233B81AE000BA7FB /* _CustomizationGroup.swift */; };
+		3410E3B3233B81AE000BA7FB /* _GroupValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3410E3B0233B81AE000BA7FB /* _GroupValues.swift */; };
+		3410E3B4233B81AE000BA7FB /* _Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3410E3B1233B81AE000BA7FB /* _Price.swift */; };
+		3410E3B8233B81D1000BA7FB /* CustomizationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3410E3B5233B81D1000BA7FB /* CustomizationGroup.swift */; };
+		3410E3B9233B81D1000BA7FB /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3410E3B6233B81D1000BA7FB /* Price.swift */; };
+		3410E3BA233B81D1000BA7FB /* GroupValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3410E3B7233B81D1000BA7FB /* GroupValues.swift */; };
 		341B0CD32330CECF00D12504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0CD22330CECF00D12504 /* AppDelegate.swift */; };
 		341B0CDD2330CED000D12504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341B0CDC2330CED000D12504 /* Assets.xcassets */; };
 		341B0CE02330CED000D12504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341B0CDE2330CED000D12504 /* LaunchScreen.storyboard */; };
@@ -137,7 +143,6 @@
 		34899B20233A2E0900A5FBA2 /* _Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B12233A2E0700A5FBA2 /* _Location.swift */; };
 		34899B23233A2E0900A5FBA2 /* _Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B15233A2E0800A5FBA2 /* _Menu.swift */; };
 		34899B24233A2E0900A5FBA2 /* _Offerings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B16233A2E0800A5FBA2 /* _Offerings.swift */; };
-		34899B26233A2E0900A5FBA2 /* _Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B18233A2E0800A5FBA2 /* _Options.swift */; };
 		34899B27233A2E0900A5FBA2 /* _Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B19233A2E0800A5FBA2 /* _Images.swift */; };
 		34899B28233A2E0900A5FBA2 /* _Cusines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B1A233A2E0800A5FBA2 /* _Cusines.swift */; };
 		34899B29233A2E0900A5FBA2 /* _Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B1B233A2E0800A5FBA2 /* _Items.swift */; };
@@ -151,7 +156,6 @@
 		34899B3C233A2E2500A5FBA2 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B33233A2E2500A5FBA2 /* Items.swift */; };
 		34899B3D233A2E2500A5FBA2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B34233A2E2500A5FBA2 /* Images.swift */; };
 		34899B3E233A2E2500A5FBA2 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B35233A2E2500A5FBA2 /* Menu.swift */; };
-		34899B3F233A2E2500A5FBA2 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B36233A2E2500A5FBA2 /* Options.swift */; };
 		34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01B53233492E90057DEF4 /* CreateAccountVC.swift */; };
 		34C01B56233492E90057DEF4 /* CreateAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C01B54233492E90057DEF4 /* CreateAccountVC.xib */; };
 		34C01C392334A9230057DEF4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */; };
@@ -267,6 +271,12 @@
 		340D78C5233385CD0084971A /* SearchCollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollCell.xib; sourceTree = "<group>"; };
 		3410E3AB233B3798000BA7FB /* AddNewAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressVC.swift; sourceTree = "<group>"; };
 		3410E3AC233B3798000BA7FB /* AddNewAddressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewAddressVC.xib; sourceTree = "<group>"; };
+		3410E3AF233B81AE000BA7FB /* _CustomizationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _CustomizationGroup.swift; sourceTree = "<group>"; };
+		3410E3B0233B81AE000BA7FB /* _GroupValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _GroupValues.swift; sourceTree = "<group>"; };
+		3410E3B1233B81AE000BA7FB /* _Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Price.swift; sourceTree = "<group>"; };
+		3410E3B5233B81D1000BA7FB /* CustomizationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizationGroup.swift; sourceTree = "<group>"; };
+		3410E3B6233B81D1000BA7FB /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		3410E3B7233B81D1000BA7FB /* GroupValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupValues.swift; sourceTree = "<group>"; };
 		341B0CCF2330CECF00D12504 /* FoodieAppNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieAppNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		341B0CD22330CECF00D12504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341B0CDC2330CED000D12504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -352,7 +362,6 @@
 		34899B12233A2E0700A5FBA2 /* _Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Location.swift; sourceTree = "<group>"; };
 		34899B15233A2E0800A5FBA2 /* _Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Menu.swift; sourceTree = "<group>"; };
 		34899B16233A2E0800A5FBA2 /* _Offerings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Offerings.swift; sourceTree = "<group>"; };
-		34899B18233A2E0800A5FBA2 /* _Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Options.swift; sourceTree = "<group>"; };
 		34899B19233A2E0800A5FBA2 /* _Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Images.swift; sourceTree = "<group>"; };
 		34899B1A233A2E0800A5FBA2 /* _Cusines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Cusines.swift; sourceTree = "<group>"; };
 		34899B1B233A2E0800A5FBA2 /* _Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Items.swift; sourceTree = "<group>"; };
@@ -366,7 +375,6 @@
 		34899B33233A2E2500A5FBA2 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		34899B34233A2E2500A5FBA2 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		34899B35233A2E2500A5FBA2 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		34899B36233A2E2500A5FBA2 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		34C01B53233492E90057DEF4 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		34C01B54233492E90057DEF4 /* CreateAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountVC.xib; sourceTree = "<group>"; };
 		34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -753,6 +761,9 @@
 		34C01C432334AA770057DEF4 /* UserClasses */ = {
 			isa = PBXGroup;
 			children = (
+				3410E3B5233B81D1000BA7FB /* CustomizationGroup.swift */,
+				3410E3B7233B81D1000BA7FB /* GroupValues.swift */,
+				3410E3B6233B81D1000BA7FB /* Price.swift */,
 				34899B32233A2E2500A5FBA2 /* Cusines.swift */,
 				34899B34233A2E2500A5FBA2 /* Images.swift */,
 				34899B33233A2E2500A5FBA2 /* Items.swift */,
@@ -760,7 +771,6 @@
 				34899B35233A2E2500A5FBA2 /* Menu.swift */,
 				34899B2E233A2E2400A5FBA2 /* Offerings.swift */,
 				34899B31233A2E2500A5FBA2 /* OpeningTimes.swift */,
-				34899B36233A2E2500A5FBA2 /* Options.swift */,
 				34899B2F233A2E2400A5FBA2 /* Restaurant.swift */,
 				34C01D152334D35E0057DEF4 /* AppExpires.swift */,
 				34C01D122334D35E0057DEF4 /* DeliveryOption.swift */,
@@ -774,6 +784,9 @@
 		34C01C552334AA770057DEF4 /* StaticClasses */ = {
 			isa = PBXGroup;
 			children = (
+				3410E3AF233B81AE000BA7FB /* _CustomizationGroup.swift */,
+				3410E3B0233B81AE000BA7FB /* _GroupValues.swift */,
+				3410E3B1233B81AE000BA7FB /* _Price.swift */,
 				34899B1A233A2E0800A5FBA2 /* _Cusines.swift */,
 				34899B19233A2E0800A5FBA2 /* _Images.swift */,
 				34899B1B233A2E0800A5FBA2 /* _Items.swift */,
@@ -781,7 +794,6 @@
 				34899B15233A2E0800A5FBA2 /* _Menu.swift */,
 				34899B16233A2E0800A5FBA2 /* _Offerings.swift */,
 				34899B1D233A2E0900A5FBA2 /* _OpeningTimes.swift */,
-				34899B18233A2E0800A5FBA2 /* _Options.swift */,
 				34899B1E233A2E0900A5FBA2 /* _Restaurant.swift */,
 				34C01D0B2334D3570057DEF4 /* _AppExpires.swift */,
 				34C01D0A2334D3570057DEF4 /* _DeliveryOption.swift */,
@@ -1258,6 +1270,7 @@
 				34899B3D233A2E2500A5FBA2 /* Images.swift in Sources */,
 				341B0D192330D5AE00D12504 /* SearchVC.swift in Sources */,
 				34C01CFF2334AB2C0057DEF4 /* NSDate+TimeAgo.m in Sources */,
+				3410E3B9233B81D1000BA7FB /* Price.swift in Sources */,
 				34C01CF92334AB2C0057DEF4 /* NSDate+Year.m in Sources */,
 				34C01D0F2334D3570057DEF4 /* _DeliveryOption.swift in Sources */,
 				341B0D942330E12500D12504 /* CityCell.swift in Sources */,
@@ -1276,7 +1289,9 @@
 				34C01CB72334AA780057DEF4 /* Account.swift in Sources */,
 				340D78BE233383C10084971A /* RecentSearchCell.swift in Sources */,
 				341B0D9E2330E12500D12504 /* WelcomeCell.swift in Sources */,
+				3410E3B2233B81AE000BA7FB /* _CustomizationGroup.swift in Sources */,
 				34899B3B233A2E2500A5FBA2 /* Cusines.swift in Sources */,
+				3410E3B4233B81AE000BA7FB /* _Price.swift in Sources */,
 				34C01CF32334AB2C0057DEF4 /* NSObject+Properties.m in Sources */,
 				34C01CEE2334AB2C0057DEF4 /* NSManagedObject+Mapping.m in Sources */,
 				34C01CEC2334AB2C0057DEF4 /* SwiftyJSON.swift in Sources */,
@@ -1306,7 +1321,6 @@
 				341B0D7A2330E12500D12504 /* PastOrderButtonCell.swift in Sources */,
 				34899B37233A2E2500A5FBA2 /* Offerings.swift in Sources */,
 				34899B38233A2E2500A5FBA2 /* Restaurant.swift in Sources */,
-				34899B3F233A2E2500A5FBA2 /* Options.swift in Sources */,
 				34C01CFA2334AB2C0057DEF4 /* NSDate+Day.m in Sources */,
 				3400F31623325CB100346C9A /* CategoryCell.swift in Sources */,
 				3400F2F62331F38D00346C9A /* SortingCell.swift in Sources */,
@@ -1334,6 +1348,7 @@
 				341B0DA82330E12500D12504 /* CustomizeCell.swift in Sources */,
 				34C01D192334D35E0057DEF4 /* UserData.swift in Sources */,
 				34C01C3E2334A9230057DEF4 /* Utils.swift in Sources */,
+				3410E3B8233B81D1000BA7FB /* CustomizationGroup.swift in Sources */,
 				3400F2F22331EFC100346C9A /* FilterVC.swift in Sources */,
 				340D78C22333855B0084971A /* SearchCategoryCell.swift in Sources */,
 				341B0D152330D57E00D12504 /* HomeVC.swift in Sources */,
@@ -1352,6 +1367,7 @@
 				340D78BA233361440084971A /* ViewOrderMoreCell.swift in Sources */,
 				34899B23233A2E0900A5FBA2 /* _Menu.swift in Sources */,
 				34C01D102334D3570057DEF4 /* _AppExpires.swift in Sources */,
+				3410E3BA233B81D1000BA7FB /* GroupValues.swift in Sources */,
 				341B0DA22330E12500D12504 /* CartRequestCell.swift in Sources */,
 				341B0D8C2330E12500D12504 /* CustomizeItemCell.swift in Sources */,
 				34899B3E233A2E2500A5FBA2 /* Menu.swift in Sources */,
@@ -1362,8 +1378,8 @@
 				34899B2B233A2E0900A5FBA2 /* _OpeningTimes.swift in Sources */,
 				34C01C402334A9230057DEF4 /* CommonTextfield.swift in Sources */,
 				34899B082339D6C900A5FBA2 /* MyFavouritesVC.swift in Sources */,
-				34899B26233A2E0900A5FBA2 /* _Options.swift in Sources */,
 				341B0DA02330E12500D12504 /* ManageAddressCell.swift in Sources */,
+				3410E3B3233B81AE000BA7FB /* _GroupValues.swift in Sources */,
 				341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */,
 				34C01CF02334AB2C0057DEF4 /* NSMutableArray+Join.m in Sources */,
 				34CAC0EA2333AF6A00BFBAB4 /* VerifyOTPVC.swift in Sources */,

@@ -28,7 +28,7 @@ class SortingCell: UITableViewCell {
             lblTitle.text = "Rating"
             imgView.image = UIImage.init(named: "star_gray")
         } else {
-            lblTitle.text = "Delivery Time"
+            lblTitle.text = "Delivery time"
             imgView.image = UIImage.init(named: "time_gray")
         }
     }

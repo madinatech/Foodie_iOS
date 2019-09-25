@@ -1,24 +1,21 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to Options.swift instead.
+// Make changes to Price.swift instead.
 
 import Foundation
 import CoreData
 
-public enum OptionsAttributes: String {
-    case added_price = "added_price"
-    case entity_id = "entity_id"
-    case option_key = "option_key"
-    case option_type = "option_type"
-    case option_type_code = "option_type_code"
-    case option_value = "option_value"
+public enum PriceAttributes: String {
+    case price = "price"
+    case valid_from = "valid_from"
+    case valid_to = "valid_to"
 }
 
-open class _Options: NSManagedObject {
+open class _Price: NSManagedObject {
 
     // MARK: - Class methods
 
     open class func entityName () -> String {
-        return "Options"
+        return "Price"
     }
 
     open class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
@@ -26,7 +23,7 @@ open class _Options: NSManagedObject {
     }
 
     @nonobjc
-    open class func fetchRequest() -> NSFetchRequest<Options> {
+    open class func fetchRequest() -> NSFetchRequest<Price> {
         return NSFetchRequest(entityName: self.entityName())
     }
 
@@ -37,29 +34,20 @@ open class _Options: NSManagedObject {
     }
 
     public convenience init?(managedObjectContext: NSManagedObjectContext) {
-        guard let entity = _Options.entity(managedObjectContext: managedObjectContext) else { return nil }
+        guard let entity = _Price.entity(managedObjectContext: managedObjectContext) else { return nil }
         self.init(entity: entity, insertInto: managedObjectContext)
     }
 
     // MARK: - Properties
 
     @NSManaged open
-    var added_price: Int32 // Optional scalars not supported
+    var price: Int32 // Optional scalars not supported
 
     @NSManaged open
-    var entity_id: Int32 // Optional scalars not supported
+    var valid_from: Date?
 
     @NSManaged open
-    var option_key: String?
-
-    @NSManaged open
-    var option_type: String?
-
-    @NSManaged open
-    var option_type_code: String?
-
-    @NSManaged open
-    var option_value: String?
+    var valid_to: Date?
 
     // MARK: - Relationships
 

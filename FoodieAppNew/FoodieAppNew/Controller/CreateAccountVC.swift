@@ -99,7 +99,8 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
             case txt3:
                 txt4.becomeFirstResponder()
             case txt4:
-                txt4.becomeFirstResponder()
+//                txt4.becomeFirstResponder()
+                 view.endEditing(true)
             default:
                 break
             }

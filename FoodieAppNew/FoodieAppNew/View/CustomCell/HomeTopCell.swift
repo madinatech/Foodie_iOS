@@ -17,16 +17,16 @@ class HomeTopCell: UICollectionViewCell {
     func setData (index : Int)  {
         if(index == 0){
             innerView.backgroundColor = appThemeColor
-            lblTitle.text = "Delivers under 30 mins"
+            lblTitle.text = "Under 30 mins"
             imgView.image = UIImage.init(named: "Delivery")
         } else if(index == 1){
             innerView.backgroundColor = appPurpleColor
-              lblTitle.text = "Restaurants offering pick up"
+              lblTitle.text = "Pick up"
             imgView.image = UIImage.init(named: "pickup")
             
         } else {
             innerView.backgroundColor = appYellowColor
-              lblTitle.text = "Restaurants offering dine in"
+              lblTitle.text = "Dine in"
             lblTitle.textColor = .black
             lblOptions.textColor = .black
             imgView.image = UIImage.init(named: "DineIn")

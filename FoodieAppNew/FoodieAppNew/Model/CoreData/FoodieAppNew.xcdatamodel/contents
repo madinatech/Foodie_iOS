@@ -10,6 +10,14 @@
         <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="CustomizationGroup" representedClassName="CustomizationGroup" syncable="YES">
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="group_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group_type_code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="select_max" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="group_values" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GroupValues" syncable="YES"/>
+    </entity>
     <entity name="DeliveryOption" representedClassName="DeliveryOption" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -18,6 +26,10 @@
         <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="method" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rate" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="GroupValues" representedClassName="GroupValues" syncable="YES">
+        <attribute name="item_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Images" representedClassName="Images" syncable="YES">
         <attribute name="banner" optional="YES" attributeType="String" syncable="YES"/>
@@ -30,7 +42,8 @@
         <attribute name="item_type_code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="max_quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="options" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Options" syncable="YES"/>
+        <relationship name="customization_groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CustomizationGroup" syncable="YES"/>
+        <relationship name="price" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Price" syncable="YES"/>
     </entity>
     <entity name="Location" representedClassName="Location" syncable="YES">
         <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
@@ -58,18 +71,15 @@
         <attribute name="open_status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="opening_time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Options" representedClassName="Options" syncable="YES">
-        <attribute name="added_price" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="option_key" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="option_type" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="option_type_code" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="option_value" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <entity name="PaymentOption" representedClassName="PaymentOption" syncable="YES">
         <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="method" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Price" representedClassName="Price" syncable="YES">
+        <attribute name="price" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="valid_from" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valid_to" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <entity name="Restaurant" representedClassName="Restaurant" syncable="YES">
         <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
@@ -104,18 +114,20 @@
     </entity>
     <elements>
         <element name="AppExpires" positionX="-54" positionY="18" width="128" height="105"/>
+        <element name="Cusines" positionX="18" positionY="162" width="128" height="75"/>
         <element name="DeliveryOption" positionX="0" positionY="81" width="128" height="150"/>
+        <element name="Images" positionX="-18" positionY="126" width="128" height="75"/>
+        <element name="Items" positionX="-9" positionY="117" width="128" height="165"/>
+        <element name="Location" positionX="0" positionY="144" width="128" height="135"/>
+        <element name="Menu" positionX="36" positionY="171" width="128" height="120"/>
+        <element name="Offerings" positionX="9" positionY="153" width="128" height="90"/>
+        <element name="OpeningTimes" positionX="-9" positionY="135" width="128" height="105"/>
         <element name="PaymentOption" positionX="-18" positionY="63" width="128" height="90"/>
+        <element name="Restaurant" positionX="-27" positionY="81" width="128" height="300"/>
         <element name="UserData" positionX="-27" positionY="72" width="128" height="75"/>
         <element name="VerifyUser" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="Restaurant" positionX="-27" positionY="81" width="128" height="300"/>
-        <element name="Images" positionX="-18" positionY="126" width="128" height="75"/>
-        <element name="OpeningTimes" positionX="-9" positionY="135" width="128" height="105"/>
-        <element name="Location" positionX="0" positionY="144" width="128" height="135"/>
-        <element name="Offerings" positionX="9" positionY="153" width="128" height="90"/>
-        <element name="Cusines" positionX="18" positionY="162" width="128" height="75"/>
-        <element name="Menu" positionX="36" positionY="171" width="128" height="120"/>
-        <element name="Items" positionX="-9" positionY="117" width="128" height="150"/>
-        <element name="Options" positionX="0" positionY="126" width="128" height="135"/>
+        <element name="CustomizationGroup" positionX="-9" positionY="135" width="128" height="135"/>
+        <element name="Price" positionX="0" positionY="144" width="128" height="90"/>
+        <element name="GroupValues" positionX="9" positionY="153" width="128" height="75"/>
     </elements>
 </model>

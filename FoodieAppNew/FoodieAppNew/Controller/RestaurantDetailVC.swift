@@ -5,6 +5,7 @@ import AMShimmer
 
 class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataSource, ResDetailTabSectionDelegate , ResDetailHeaderDelegate {
     
+    @IBOutlet weak var cartHeight: NSLayoutConstraint!
     @IBOutlet weak var tblViewTop: NSLayoutConstraint!
     @IBOutlet weak var cartView: UIView!
     @IBOutlet weak var tblView: UITableView!
@@ -15,6 +16,9 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     var menuArray = [Menu]()
     var itemsArray = [Items]()
     var selectedMenu = Menu()
+    var addItemssArray = NSMutableArray()
+    var plusItemssArray = NSMutableArray()
+    var minusItemssArray = NSMutableArray()
     
     class func initViewController(restaurant: Restaurant) -> RestaurantDetailVC {
         let vc = RestaurantDetailVC.init(nibName: "RestaurantDetailVC", bundle: nil)
@@ -38,7 +42,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         selectedMenu = menuArray[0]
         itemsArray = selectedMenu.items.allObjects as! [Items]
         tblView.reloadData()
-        
+        showCartView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -141,9 +145,68 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
             cell?.selectionStyle = .none
             let item = itemsArray [indexPath.row]
             cell?.showData(item: item)
+            cell?.btnAdd.tag = indexPath.row
+            cell?.btnPlus.tag = indexPath.row
+            cell?.btnDelete.tag = indexPath.row
+            cell?.btnAdd.addTarget(self, action: #selector(addClicked(_:)), for: .touchUpInside)
+            cell?.btnPlus.addTarget(self, action: #selector(plusClicked(_:)), for: .touchUpInside)
+            cell?.btnDelete.addTarget(self, action: #selector(deleteClicked(_:)), for: .touchUpInside)
+            
+            if(addItemssArray.contains(indexPath.row)){
+                cell?.btnAdd.isHidden = true
+                cell?.addView.isHidden = false
+                cell?.lblQuantity.text = "0"
+                
+            }
+            
+            for index in plusItemssArray{
+                let i : Int = index as! Int
+                if(indexPath.row == i){
+                    var a : Int = Int((cell?.lblQuantity.text)!)!
+                    a = a + 1
+                    cell?.lblQuantity.text = "\(a)"
+                    if(a > 1){
+                        cell?.btnDelete.setTitle("-", for: .normal)
+                         cell?.btnDelete.setImage(nil, for: .normal)
+                    } else {
+                        cell?.btnDelete.setTitle("", for: .normal)
+                        cell?.btnDelete.setImage(UIImage.init(named: "delete"), for: .normal)
+                    }
+                }
+            }
+            for index in minusItemssArray{
+                let i : Int = index as! Int
+                if(indexPath.row == i){
+                    var a : Int = Int((cell?.lblQuantity.text)!)!
+                    a = a - 1
+                    if(a == 0){
+                        cell?.addView.isHidden = true
+                        cell?.btnAdd.isHidden = false
+                        addItemssArray.remove(indexPath.row)
+                        minusItemssArray.remove(indexPath.row)
+                        plusItemssArray.remove(indexPath.row)
+                        showCartView()
+                    }
+                    cell?.lblQuantity.text = "\(a)"
+                    if(a == 1){
+                        cell?.btnDelete.setTitle("", for: .normal)
+                        cell?.btnDelete.setImage(UIImage.init(named: "delete"), for: .normal)
+                    }
+                }
+            }
             return cell!
         }
-        
+    }
+    
+    func showCartView ()  {
+        if(addItemssArray.count > 0){
+            cartView.isHidden = false
+            cartHeight.constant = 100
+        } else {
+            cartView.isHidden = true
+            cartHeight.constant = 0
+        }
+        self.view.layoutIfNeeded()
     }
   
     //    ResDetailTabSectionDelegate
@@ -152,10 +215,6 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         selectedMenu = menuArray[selectedTab]
         itemsArray = selectedMenu.items.allObjects as! [Items]
         tblView.reloadData()
-        AMShimmer.start(for: tblView)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            AMShimmer.stop(for: self.tblView)
-        }
     }
     //    ResDetailHeaderDelegate
     func backClicked() {
@@ -164,5 +223,35 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     func infoClicked() {
         let vc = InfoVC.initViewController(restaurant: restaurant)
         self.navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func addClicked(_ sender: UIButton) {
+        addItemssArray.add(sender.tag)
+        plusItemssArray.add(sender.tag)
+        UIView.setAnimationsEnabled(false)
+        tblView.beginUpdates()
+        let indexPath = IndexPath(item: sender.tag, section: 1)
+        tblView.reloadRows(at: [indexPath], with: .automatic)
+        tblView.endUpdates()
+        showCartView()
+        
+    }
+    
+    @IBAction func plusClicked(_ sender: UIButton) {
+        plusItemssArray.add(sender.tag)
+        UIView.setAnimationsEnabled(false)
+        tblView.beginUpdates()
+        let indexPath = IndexPath(item: sender.tag, section: 1)
+        tblView.reloadRows(at: [indexPath], with: .none)
+        tblView.endUpdates()
+    }
+    
+    @IBAction func deleteClicked(_ sender: UIButton) {
+        minusItemssArray.add(sender.tag)
+        UIView.setAnimationsEnabled(false)
+        tblView.beginUpdates()
+        let indexPath = IndexPath(item: sender.tag, section: 1)
+        tblView.reloadRows(at: [indexPath], with: .none)
+        tblView.endUpdates()
     }
 }

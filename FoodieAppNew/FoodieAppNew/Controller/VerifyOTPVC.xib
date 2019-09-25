@@ -25,7 +25,7 @@
                 <outlet property="txt1" destination="XDn-BX-YJ0" id="0ND-w7-NeC"/>
                 <outlet property="txt2" destination="O3S-lG-QAm" id="NlB-mC-NW2"/>
                 <outlet property="txt3" destination="W7I-TA-3Ae" id="xHn-sd-wDg"/>
-                <outlet property="txt4" destination="b8t-jA-AlW" id="uuL-Hv-pTu"/>
+                <outlet property="txt4" destination="b8t-jA-AlW" id="qPb-07-AD8"/>
                 <outlet property="view" destination="EQU-pG-vI9" id="dmc-B2-BVl"/>
             </connections>
         </placeholder>
@@ -160,8 +160,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="9FV-PY-du1"/>
-                                                        <outlet property="delegate" destination="-1" id="1Rt-DL-oXc"/>
+                                                        <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="1ba-8b-i3e"/>
+                                                        <outlet property="delegate" destination="-1" id="jpS-Cm-HVQ"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>

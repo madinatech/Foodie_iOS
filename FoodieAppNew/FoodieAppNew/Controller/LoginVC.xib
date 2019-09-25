@@ -59,10 +59,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLy-XY-2X6">
-                                            <rect key="frame" x="20" y="188" width="35" height="40"/>
+                                            <rect key="frame" x="20" y="188" width="40" height="50"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call" translatesAutoresizingMaskIntoConstraints="NO" id="PPq-T9-ayT">
-                                                    <rect key="frame" x="7.5" y="10" width="20" height="20"/>
+                                                    <rect key="frame" x="10" y="15" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="jqy-6p-gqE"/>
@@ -74,23 +74,23 @@
                                             <constraints>
                                                 <constraint firstItem="PPq-T9-ayT" firstAttribute="centerY" secondItem="fLy-XY-2X6" secondAttribute="centerY" id="97s-Df-eI3"/>
                                                 <constraint firstItem="PPq-T9-ayT" firstAttribute="centerX" secondItem="fLy-XY-2X6" secondAttribute="centerX" id="YCv-Id-nzg"/>
-                                                <constraint firstAttribute="width" constant="35" id="kZp-LA-fWS"/>
-                                                <constraint firstAttribute="height" constant="40" id="shb-MG-DFS"/>
+                                                <constraint firstAttribute="width" constant="40" id="kZp-LA-fWS"/>
+                                                <constraint firstAttribute="height" constant="50" id="shb-MG-DFS"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
-                                                    <integer key="value" value="3"/>
+                                                    <integer key="value" value="10"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Mobile number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfo-yO-fIJ">
-                                            <rect key="frame" x="65" y="188" width="116.5" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="MOBILE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfo-yO-fIJ">
+                                            <rect key="frame" x="70" y="188" width="132" height="18"/>
                                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="+255" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB3-qj-f8n">
-                                            <rect key="frame" x="99" y="208" width="36.5" height="30"/>
+                                            <rect key="frame" x="104" y="208" width="36.5" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="sgl-RZ-vl4"/>
                                             </constraints>
@@ -99,11 +99,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RPb-B4-WvK">
-                                            <rect key="frame" x="164" y="208" width="250" height="30"/>
+                                            <rect key="frame" x="169" y="208" width="245" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="YZc-m1-p8g"/>
                                             </constraints>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="18"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <userDefinedRuntimeAttributes>
@@ -116,7 +116,7 @@
                                             </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfY-YF-d4a">
-                                            <rect key="frame" x="35" y="298" width="344" height="50"/>
+                                            <rect key="frame" x="35" y="308" width="344" height="50"/>
                                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Ty8-jE-ste">
@@ -139,7 +139,7 @@
                                             </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tanzania_iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="SWF-RU-SSc">
-                                            <rect key="frame" x="65" y="208" width="28" height="30"/>
+                                            <rect key="frame" x="70" y="208" width="28" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="dTu-ax-Stj"/>
                                             </constraints>
@@ -156,7 +156,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="(0)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-kf-Vpd">
-                                            <rect key="frame" x="140.5" y="214" width="20.5" height="18"/>
+                                            <rect key="frame" x="145.5" y="214" width="20.5" height="18"/>
                                             <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="18"/>
                                             <color key="textColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>

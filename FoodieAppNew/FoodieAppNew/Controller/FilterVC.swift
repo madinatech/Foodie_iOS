@@ -51,7 +51,7 @@ class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         let lblTitle = UILabel.init(frame: CGRect.init(x: 15, y: 0, width: tblView.frame.width - 10, height: 50))
         lblTitle.font = UIFont.init(name: "Calibri-Bold", size: 20)
         if(section == 0){
-            lblTitle.text = "Sort By"
+            lblTitle.text = "Sort by"
         } else {
             lblTitle.text = "Filter by cuisines"
         }

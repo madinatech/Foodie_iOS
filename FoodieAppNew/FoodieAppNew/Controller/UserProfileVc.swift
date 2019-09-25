@@ -43,7 +43,7 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
         if(section == 0){
             return 2
         } else {
-            return 3
+            return 4
         }
     }
     
@@ -85,10 +85,22 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
         tblView.deselectRow(at: indexPath, animated: true)
         if(indexPath.section == 0 && indexPath.row == 0){
             let vc = DeliveryAddressVC.initViewController()
-            self.navigationController?.present(vc, animated: true, completion: nil)
+            let nav = UINavigationController.init(rootViewController: vc)
+            self.present(nav, animated: true, completion: nil)
         } else if(indexPath.section == 0 && indexPath.row == 1){
             let vc = MyFavouritesVC.initViewController()
             self.navigationController?.pushViewController(vc, animated: true)
+        } else if(indexPath.section == 1 && indexPath.row == 3){
+            let alert = UIAlertController(title: "Logout", message: "Are you sure want to logout?",         preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { _ in
+            }))
+            alert.addAction(UIAlertAction(title: "Yes",
+                                          style: .default,
+                                          handler: {(_: UIAlertAction!) in
+                                            appDelegateShared!.userLogout()
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }

@@ -29,6 +29,7 @@ class CategoryCell: UITableViewCell  , UICollectionViewDelegate, UICollectionVie
         cell.lblTag.textColor = UIColor.lightGray
         if(selectedCusines.contains(indexPath.row)){
             cell.lblTag.textColor = appThemeColor
+            cell.contentView.backgroundColor = UIColor.init(red: 244.0/255.0, green: 200.0/255.0, blue: 203.0/255.0, alpha: 1.0)
         }
         return cell
     }

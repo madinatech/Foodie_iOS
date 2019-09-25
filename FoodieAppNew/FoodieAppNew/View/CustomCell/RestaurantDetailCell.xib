@@ -31,42 +31,25 @@
                         <rect key="frame" x="10" y="5" width="368" height="104.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rodeo Burger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt6-ta-MaR">
-                                <rect key="frame" x="15" y="9" width="343" height="17"/>
+                                <rect key="frame" x="30" y="9" width="328" height="17"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sandwich features two savory flame-grilled beef pattise" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD5-rC-DBC">
-                                <rect key="frame" x="15" y="36" width="238" height="30"/>
+                                <rect key="frame" x="30" y="36" width="223" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TZS 5.90" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z68-ly-NUz">
-                                <rect key="frame" x="15" y="76" width="343" height="15"/>
+                                <rect key="frame" x="30" y="76" width="217.5" height="15"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
                                 <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4G-Wh-4G3">
-                                <rect key="frame" x="258" y="32.5" width="90" height="40"/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="FFa-UB-ttP"/>
-                                    <constraint firstAttribute="width" constant="90" id="g7E-aR-HnQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="18"/>
-                                <state key="normal" title="ADD">
-                                    <color key="titleColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T6-SW-WI4">
                                 <rect key="frame" x="258" y="32.5" width="90" height="40"/>
                                 <subviews>
@@ -75,8 +58,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="dwH-pD-xJP"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <state key="normal" image="delete">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-i5-ofJ">
@@ -116,23 +100,58 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4G-Wh-4G3">
+                                <rect key="frame" x="258" y="32.5" width="90" height="40"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FFa-UB-ttP"/>
+                                    <constraint firstAttribute="width" constant="90" id="g7E-aR-HnQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="18"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nonveg" translatesAutoresizingMaskIntoConstraints="NO" id="E7W-jU-VAz">
+                                <rect key="frame" x="5" y="42.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="qbx-vM-v6A"/>
+                                    <constraint firstAttribute="width" constant="20" id="sAO-sx-XQu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customizable" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wo8-B0-Qc7">
+                                <rect key="frame" x="267.5" y="80" width="71" height="13"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="z68-ly-NUz" firstAttribute="leading" secondItem="yht-Ny-hDe" secondAttribute="leading" constant="15" id="2QR-LD-xNP"/>
+                            <constraint firstItem="z68-ly-NUz" firstAttribute="leading" secondItem="yht-Ny-hDe" secondAttribute="leading" constant="30" id="2QR-LD-xNP"/>
                             <constraint firstAttribute="trailing" secondItem="7T6-SW-WI4" secondAttribute="trailing" constant="20" id="4T3-tN-xxO"/>
                             <constraint firstItem="B4G-Wh-4G3" firstAttribute="leading" secondItem="xD5-rC-DBC" secondAttribute="trailing" constant="5" id="5E6-ob-bEv"/>
-                            <constraint firstItem="kt6-ta-MaR" firstAttribute="leading" secondItem="yht-Ny-hDe" secondAttribute="leading" constant="15" id="CdB-uv-5mq"/>
+                            <constraint firstItem="Wo8-B0-Qc7" firstAttribute="top" secondItem="7T6-SW-WI4" secondAttribute="bottom" constant="7.5" id="ASR-NW-v6j"/>
+                            <constraint firstItem="kt6-ta-MaR" firstAttribute="leading" secondItem="yht-Ny-hDe" secondAttribute="leading" constant="30" id="CdB-uv-5mq"/>
+                            <constraint firstItem="E7W-jU-VAz" firstAttribute="centerY" secondItem="yht-Ny-hDe" secondAttribute="centerY" id="N3O-9Q-rlF"/>
                             <constraint firstItem="xD5-rC-DBC" firstAttribute="top" secondItem="kt6-ta-MaR" secondAttribute="bottom" constant="10" id="NmD-qF-G8z"/>
+                            <constraint firstItem="Wo8-B0-Qc7" firstAttribute="centerX" secondItem="B4G-Wh-4G3" secondAttribute="centerX" id="PkP-a9-SJ4"/>
                             <constraint firstItem="7T6-SW-WI4" firstAttribute="centerY" secondItem="yht-Ny-hDe" secondAttribute="centerY" id="QBA-vd-6NU"/>
                             <constraint firstAttribute="bottom" secondItem="z68-ly-NUz" secondAttribute="bottom" constant="13.5" id="Roa-3V-Q3a"/>
-                            <constraint firstAttribute="trailing" secondItem="z68-ly-NUz" secondAttribute="trailing" constant="10" id="d8Y-cT-R6s"/>
+                            <constraint firstItem="xD5-rC-DBC" firstAttribute="leading" secondItem="E7W-jU-VAz" secondAttribute="trailing" constant="5" id="TTK-EL-Pxn"/>
                             <constraint firstItem="z68-ly-NUz" firstAttribute="top" secondItem="xD5-rC-DBC" secondAttribute="bottom" constant="10" id="dCs-eH-QNV"/>
                             <constraint firstItem="kt6-ta-MaR" firstAttribute="top" secondItem="yht-Ny-hDe" secondAttribute="top" constant="9" id="dQb-aX-CfQ"/>
-                            <constraint firstItem="xD5-rC-DBC" firstAttribute="leading" secondItem="yht-Ny-hDe" secondAttribute="leading" constant="15" id="l0Z-Y6-WyF"/>
                             <constraint firstAttribute="trailing" secondItem="B4G-Wh-4G3" secondAttribute="trailing" constant="20" id="nH7-cL-Pax"/>
+                            <constraint firstItem="E7W-jU-VAz" firstAttribute="leading" secondItem="yht-Ny-hDe" secondAttribute="leading" constant="5" id="qg0-bT-39w"/>
                             <constraint firstItem="B4G-Wh-4G3" firstAttribute="centerY" secondItem="yht-Ny-hDe" secondAttribute="centerY" id="vg1-Zs-meV"/>
                             <constraint firstAttribute="trailing" secondItem="kt6-ta-MaR" secondAttribute="trailing" constant="10" id="yEn-xb-9Xc"/>
+                            <constraint firstItem="Wo8-B0-Qc7" firstAttribute="leading" secondItem="z68-ly-NUz" secondAttribute="trailing" constant="20" id="ysm-Ee-Apx"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
@@ -152,15 +171,23 @@
             <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addView" destination="7T6-SW-WI4" id="tIl-C5-K7B"/>
+                <outlet property="btnAdd" destination="B4G-Wh-4G3" id="DdY-ug-39P"/>
+                <outlet property="btnDelete" destination="hcX-h8-co1" id="TsJ-0X-i9D"/>
+                <outlet property="btnPlus" destination="eJ1-i5-ofJ" id="PEG-pH-FPX"/>
+                <outlet property="imgType" destination="E7W-jU-VAz" id="tLp-FF-i0N"/>
                 <outlet property="innerView" destination="yht-Ny-hDe" id="2hH-gF-mwI"/>
                 <outlet property="lbItem" destination="kt6-ta-MaR" id="fkI-9m-Isx"/>
                 <outlet property="lblAmount" destination="z68-ly-NUz" id="laQ-gO-7Em"/>
+                <outlet property="lblCustomizable" destination="Wo8-B0-Qc7" id="vzS-NT-ggQ"/>
                 <outlet property="lblDesc" destination="xD5-rC-DBC" id="SIW-KT-Vhm"/>
+                <outlet property="lblQuantity" destination="Ten-5a-wcd" id="Kdq-Ce-IUV"/>
             </connections>
             <point key="canvasLocation" x="5.7971014492753632" y="64.620535714285708"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Nonveg" width="32" height="32"/>
         <image name="delete" width="16" height="16"/>
     </resources>
 </document>

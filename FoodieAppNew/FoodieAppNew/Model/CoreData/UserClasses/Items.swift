@@ -8,7 +8,8 @@ open class Items: _Items {
         let dict: [String: String] = CDHelper.mapping(cls: Items.self) as! [String : String]
         
         mapping.addAttributes(from: dict)
-         mapping.addToManyRelationshipMapping(Options.defaultMapping(), forProperty: "options", keyPath: "options")
+         mapping.addToManyRelationshipMapping(CustomizationGroup.defaultMapping(), forProperty: "customization_groups", keyPath: "customization_groups")
+          mapping.addToManyRelationshipMapping(Price.defaultMapping(), forProperty: "price", keyPath: "price")
         mapping.primaryKey = "entity_id"
         return mapping
     }

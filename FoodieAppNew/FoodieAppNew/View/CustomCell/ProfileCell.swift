@@ -29,9 +29,12 @@ class ProfileCell: UITableViewCell {
         }else if(section == 1 && index == 1){
             lblTitle.text = "Invite a Friend"
              imgView.image = UIImage.init(named: "Invite")
-        }else if(section == 1 && index == 2){
+        } else if(section == 1 && index == 2){
             lblTitle.text = "Help"
              imgView.image = UIImage.init(named: "Help")
+        } else if(section == 1 && index == 3){
+            lblTitle.text = "Logout"
+            imgView.image = UIImage.init(named: "logout")
         }
     }
     

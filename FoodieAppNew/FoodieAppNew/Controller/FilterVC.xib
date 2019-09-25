@@ -44,7 +44,7 @@
                                 </constraint>
                             </constraints>
                             <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
-                            <state key="normal" title="Apply Filters"/>
+                            <state key="normal" title="Apply selection"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
                                     <integer key="value" value="10"/>

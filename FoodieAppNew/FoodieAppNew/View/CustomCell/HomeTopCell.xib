@@ -31,20 +31,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nEA-4i-cey">
-                                <rect key="frame" x="30" y="15" width="60" height="60"/>
+                                <rect key="frame" x="30" y="20" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Avy-gO-Any"/>
                                     <constraint firstAttribute="height" constant="60" id="YgR-ab-BKU"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivers under 30 mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFq-LQ-Vkb">
-                                <rect key="frame" x="5" y="87" width="110" height="34"/>
-                                <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under 30 mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFq-LQ-Vkb">
+                                <rect key="frame" x="5" y="92" width="110" height="16"/>
+                                <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+100 Options" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmn-FR-hx6">
-                                <rect key="frame" x="5" y="126" width="110" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="+100 Options" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmn-FR-hx6">
+                                <rect key="frame" x="5" y="113" width="110" height="14"/>
                                 <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -59,8 +59,7 @@
                             <constraint firstAttribute="trailing" secondItem="VFq-LQ-Vkb" secondAttribute="trailing" constant="5" id="bXb-rG-NlY"/>
                             <constraint firstItem="VFq-LQ-Vkb" firstAttribute="leading" secondItem="pPu-VG-dAO" secondAttribute="leading" constant="5" id="dVH-cY-11t"/>
                             <constraint firstItem="Pmn-FR-hx6" firstAttribute="top" secondItem="VFq-LQ-Vkb" secondAttribute="bottom" constant="5" id="lcu-hv-hXp"/>
-                            <constraint firstAttribute="bottom" secondItem="Pmn-FR-hx6" secondAttribute="bottom" constant="10" id="okf-dS-zAI"/>
-                            <constraint firstItem="nEA-4i-cey" firstAttribute="top" secondItem="pPu-VG-dAO" secondAttribute="top" constant="15" id="p6g-kr-ftu"/>
+                            <constraint firstItem="nEA-4i-cey" firstAttribute="top" secondItem="pPu-VG-dAO" secondAttribute="top" constant="20" id="p6g-kr-ftu"/>
                             <constraint firstItem="nEA-4i-cey" firstAttribute="centerX" secondItem="pPu-VG-dAO" secondAttribute="centerX" id="qqs-6N-v8s"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

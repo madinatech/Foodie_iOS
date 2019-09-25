@@ -11,6 +11,7 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
     @IBOutlet weak var txt3: CommonTextfield!
     @IBOutlet weak var txt4: CommonTextfield!
     @IBOutlet weak var scrollView: UIScrollView!
+    
     var account = Account()
     class func initViewController(account: Account) -> VerifyOTPVC {
         let vc = VerifyOTPVC.init(nibName: "VerifyOTPVC", bundle: nil)
@@ -99,12 +100,15 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
             case txt3:
                 txt4.becomeFirstResponder()
             case txt4:
-                txt4.becomeFirstResponder()
+//                txt4.resignFirstResponder()
+                view.endEditing(true)
             default:
                 break
             }
         }
     }
+    
+
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""

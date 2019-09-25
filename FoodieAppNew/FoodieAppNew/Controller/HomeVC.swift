@@ -30,6 +30,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        self.restaurantArray = Restaurant.getAll()
         tblView.reloadData()
 //        AMShimmer.start(for: tblView)
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -91,7 +92,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
             lblTitle.text = ""//"Delivers in under 30 minutes"
             btnFiler.isHidden = true
         } else {
-            lblTitle.text = "All Restaurants"
+            lblTitle.text = ""//"All Restaurants"
             btnFiler.isHidden = false
         }
         if(section == 1){

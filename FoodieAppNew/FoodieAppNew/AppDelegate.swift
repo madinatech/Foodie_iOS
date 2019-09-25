@@ -46,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func userLogout () {
+        clearDatabase()
        AccountManager.instance().activeAccount = nil
         showTabbar()
     }
@@ -59,6 +60,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var options = UIWindow.TransitionOptions()
         options.direction = .toRight
         window?.setRootViewController(navigationController, options: options)
+    }
+    
+    func clearDatabase (){
+        MagicalRecord.save(blockAndWait: { (localContext:NSManagedObjectContext) in
+            VerifyUser.mr_truncateAll(in: localContext)
+            AppExpires.mr_truncateAll(in: localContext)
+            UserData.mr_truncateAll(in: localContext)
+            DeliveryOption.mr_truncateAll(in: localContext)
+            PaymentOption.mr_truncateAll(in: localContext)
+        })
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
