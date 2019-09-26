@@ -8,6 +8,7 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var topView: UIView!
     var selectdButton = Int()
+    var addressArray = [Address]()
     
     class func initViewController() -> DeliveryAddressVC {
         let vc = DeliveryAddressVC.init(nibName: "DeliveryAddressVC", bundle: nil)
@@ -30,6 +31,36 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        loadArreass()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadArreass()
+    }
+    
+    func loadArreass ()  {
+        if(AccountManager.instance().activeAccount != nil){
+            let account = AccountManager.instance().activeAccount
+            addressArray = Address.getUserAddressName(userID: Int(account?.user_id ?? "") ?? 0)
+            if(addressArray.count <= 0){
+//                loadAddressApi()
+            }
+            tblView.reloadData()
+        }
+        
+    }
+    
+    func loadAddressApi ()  {
+        Manager.sharedManager().loadAddress { (response, errorMessge) -> (Void) in
+            if(errorMessge.count > 0){
+                Utils.showAlert(withMessage: errorMessge)
+            } else {
+                let account = AccountManager.instance().activeAccount
+                self.addressArray = Address.getUserAddressName(userID: Int(account?.user_id ?? "") ?? 0)
+                self.tblView.reloadData()
+            }
+        }
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
@@ -43,7 +74,7 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return addressArray.count
     }
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -63,6 +94,9 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
         if(indexPath.row == selectdButton){
             cell?.btnRadio.isSelected = true
         }
+        
+        let address = addressArray[indexPath.row]
+        cell?.setData(address: address)
         return cell!
     }
     
@@ -92,7 +126,8 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
         let whitespace = Utils.whitespaceString(width: 100)
         let delete = UITableViewRowAction.init(style: .default, title: whitespace) { (action, indexPath) in
             print("delete item")
-            
+            let address = self.addressArray[indexPath.row]
+            self.deleteAddress(address: address)
         }
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 140, height: 110))
@@ -107,6 +142,18 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
         let image = view.image()
         delete.backgroundColor = UIColor.init(patternImage: image)
         return [delete]
+    }
+    
+    func deleteAddress (address: Address)  {
+        address.deleteAddress { (reponse, errorMessage) -> (Void) in
+            if(errorMessage.count > 0){
+                Utils.showAlert(withMessage: errorMessage)
+            } else {
+                let account = AccountManager.instance().activeAccount
+                self.addressArray = Address.getUserAddressName(userID: Int(account?.user_id ?? "") ?? 0)
+                self.tblView.reloadData()
+            }
+        }
     }
     
     @IBAction func optionClicked(_ sender: UIButton) {

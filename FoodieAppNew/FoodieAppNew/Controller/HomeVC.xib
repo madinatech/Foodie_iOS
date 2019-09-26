@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
+                <outlet property="lblHungry" destination="r7T-Mr-wI3" id="6vF-8b-ESN"/>
                 <outlet property="tblView" destination="TDe-B0-yRK" id="AOS-o5-qJS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -45,7 +46,7 @@
                     </connections>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7T-Mr-wI3">
-                    <rect key="frame" x="15" y="40" width="169.33333333333334" height="58.333333333333343"/>
+                    <rect key="frame" x="15" y="40" width="219" height="58.333333333333343"/>
                     <string key="text">Are you hungry
 Paul?</string>
                     <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="25"/>
@@ -79,6 +80,7 @@ Paul?</string>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="urY-mB-gHA" firstAttribute="leading" secondItem="ouo-qn-1F8" secondAttribute="trailing" constant="5" id="5tV-m1-pnQ"/>
+                <constraint firstItem="K8M-ZS-SCU" firstAttribute="leading" secondItem="r7T-Mr-wI3" secondAttribute="trailing" constant="20" id="76O-NJ-lGV"/>
                 <constraint firstItem="r7T-Mr-wI3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="7M0-r9-LaH"/>
                 <constraint firstItem="ouo-qn-1F8" firstAttribute="top" secondItem="r7T-Mr-wI3" secondAttribute="bottom" constant="5" id="8wL-vR-MSQ"/>
                 <constraint firstItem="TDe-B0-yRK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Cvj-xk-rhb"/>

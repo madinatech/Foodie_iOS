@@ -7,6 +7,8 @@ class CustomizeCell: UITableViewCell {
     @IBOutlet weak var btnCheck: UIButton!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
+   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
      
@@ -18,4 +20,9 @@ class CustomizeCell: UITableViewCell {
     
     }
     
+    func setData(value : GroupValues)  {
+        
+        lblTitle.text = value.item_name
+        lblPrice.text = "\(value.item_price)"
+    }
 }

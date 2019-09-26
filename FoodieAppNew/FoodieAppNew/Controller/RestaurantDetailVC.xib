@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestaurantDetailVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
+                <outlet property="blurView" destination="3c7-Pd-wqv" id="iI4-jk-URv"/>
                 <outlet property="cartHeight" destination="LAl-PJ-0wA" id="PWZ-Ij-gVR"/>
                 <outlet property="cartView" destination="Uu5-JD-Hhn" id="axH-lK-Tnm"/>
                 <outlet property="tblView" destination="Xvq-cr-zqU" id="FGO-Gb-Sbg"/>
@@ -106,15 +107,23 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3c7-Pd-wqv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Uu5-JD-Hhn" firstAttribute="leading" secondItem="LjZ-OH-M2F" secondAttribute="leading" id="1d8-KW-LDl"/>
+                <constraint firstItem="3c7-Pd-wqv" firstAttribute="leading" secondItem="LjZ-OH-M2F" secondAttribute="leading" id="2rv-ke-0PX"/>
                 <constraint firstItem="Uu5-JD-Hhn" firstAttribute="top" secondItem="Xvq-cr-zqU" secondAttribute="bottom" id="3Bg-kc-DJ8"/>
                 <constraint firstAttribute="bottom" secondItem="Uu5-JD-Hhn" secondAttribute="bottom" id="7vU-Hw-lBW"/>
+                <constraint firstItem="3c7-Pd-wqv" firstAttribute="bottom" secondItem="LjZ-OH-M2F" secondAttribute="bottom" id="HhX-KM-pfI"/>
                 <constraint firstAttribute="top" secondItem="Xvq-cr-zqU" secondAttribute="top" constant="25" id="Ldg-6X-mju"/>
                 <constraint firstItem="Xvq-cr-zqU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qbd-WR-V2B"/>
                 <constraint firstItem="Uu5-JD-Hhn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rml-sk-70b"/>
+                <constraint firstItem="3c7-Pd-wqv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cFm-Y7-m24"/>
+                <constraint firstItem="3c7-Pd-wqv" firstAttribute="trailing" secondItem="LjZ-OH-M2F" secondAttribute="trailing" id="fbE-cM-gSh"/>
                 <constraint firstAttribute="trailing" secondItem="Uu5-JD-Hhn" secondAttribute="trailing" id="rzK-Of-qDm"/>
                 <constraint firstItem="Xvq-cr-zqU" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="tJD-C4-MLZ"/>
             </constraints>

@@ -2,11 +2,76 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Favourite</key>
+	<dict>
+		<key>favourite_id</key>
+		<string>favourite_id</string>
+		<key>created_at</key>
+		<string>created_at</string>
+	</dict>
+	<key>Address</key>
+	<dict>
+		<key>address</key>
+		<string>address</string>
+		<key>address_type</key>
+		<string>address_type</string>
+		<key>city</key>
+		<string>city</string>
+		<key>country</key>
+		<string>country</string>
+		<key>created_at</key>
+		<string>created_at</string>
+		<key>floor</key>
+		<string>floor</string>
+		<key>house_number</key>
+		<string>house_number</string>
+		<key>entity_id</key>
+		<string>id</string>
+		<key>is_default</key>
+		<string>is_default</string>
+		<key>landmark</key>
+		<string>landmark</string>
+		<key>latitude</key>
+		<string>latitude</string>
+		<key>longitude</key>
+		<string>longitude</string>
+		<key>status</key>
+		<string>status</string>
+		<key>street</key>
+		<string>street</string>
+		<key>town</key>
+		<string>town</string>
+		<key>updated_at</key>
+		<string>updated_at</string>
+		<key>user_id</key>
+		<string>user_id</string>
+	</dict>
+	<key>Area</key>
+	<dict>
+		<key>entity_id</key>
+		<string>id</string>
+		<key>name</key>
+		<string>name</string>
+	</dict>
+	<key>City</key>
+	<dict>
+		<key>city_id</key>
+		<string>city_id</string>
+		<key>city_name</key>
+		<string>city_name</string>
+	</dict>
+	<key>Country</key>
+	<dict>
+		<key>country_id</key>
+		<string>country_id</string>
+		<key>country_name</key>
+		<string>country_name</string>
+	</dict>
 	<key>GroupValues</key>
 	<dict>
 		<key>item_name</key>
 		<string>item_name</string>
-		<key>price</key>
+		<key>item_price</key>
 		<string>price</string>
 	</dict>
 	<key>Price</key>

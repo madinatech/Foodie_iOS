@@ -5,7 +5,7 @@ import Kingfisher
 @objc protocol ResDetailHeaderDelegate {
     func backClicked()
     func infoClicked()
-    
+    func showLoginView()
 }
 class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
@@ -87,6 +87,9 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
         lbl.sizeToFit()
         return CGSize(width: lbl.frame.width + 5, height: 25)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -97,8 +100,46 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
             self.delegate?.infoClicked()
         }
     }
-    @IBAction func favouriteClicked(_ sender: Any) {
+    
+    @IBAction func favouriteClicked(_ sender: UIButton) {
+        if(sender.isSelected == true){
+            sender.isSelected = false
+//            removeFavourite()
+        } else {
+            sender.isSelected = true
+            addFavourite()
+        }
+        
     }
+    
+    func addFavourite () {
+        if(AccountManager.instance().activeAccount != nil){
+            rest.addFavouriteResTaurant { (response, errorMessage) -> (Void) in
+                if(errorMessage.count > 0){
+                    Utils.showAlert(withMessage: errorMessage)
+                }
+            }
+        } else {
+            if(delegate != nil){
+                self.delegate?.showLoginView()
+            }
+        }
+    }
+    
+    func removeFavourite () {
+        if(AccountManager.instance().activeAccount != nil){
+            rest.removeFavouriteResTaurant { (response, errorMessage) -> (Void) in
+                if(errorMessage.count > 0){
+                    Utils.showAlert(withMessage: errorMessage)
+                }
+            }
+        } else {
+            if(delegate != nil){
+                self.delegate?.showLoginView()
+            }
+        }
+    }
+    
     @IBAction func bckClicked(_ sender: Any) {
         if(delegate != nil){
             self.delegate?.backClicked()

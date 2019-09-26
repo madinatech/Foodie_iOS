@@ -3,12 +3,13 @@
 import UIKit
 import AMShimmer
 
-class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataSource, ResDetailTabSectionDelegate , ResDetailHeaderDelegate {
+class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataSource, ResDetailTabSectionDelegate , ResDetailHeaderDelegate, CustomizeDelegate {
     
     @IBOutlet weak var cartHeight: NSLayoutConstraint!
     @IBOutlet weak var tblViewTop: NSLayoutConstraint!
     @IBOutlet weak var cartView: UIView!
     @IBOutlet weak var tblView: UITableView!
+     @IBOutlet weak var blurView: UIView!
     var categoryArray = [String]()
     var categoryCount = Int()
     var restaurant = Restaurant()
@@ -39,20 +40,23 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
             ($0.name!.localizedLowercase) <
                 ($1.name!.localizedLowercase)
         } )
-        selectedMenu = menuArray[0]
-        itemsArray = selectedMenu.items.allObjects as! [Items]
-        tblView.reloadData()
+        if(menuArray.count > 0){
+            selectedMenu = menuArray[0]
+            itemsArray = selectedMenu.items.allObjects as! [Items]
+            tblView.reloadData()
+        }
+       
         showCartView()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         blurView.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         selectedTab = 0
         tblView.reloadData()
-        AMShimmer.start(for: tblView)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            AMShimmer.stop(for: self.tblView)
-        }
     }
     
     
@@ -113,6 +117,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if(section == 0){
             return 440
@@ -224,20 +229,33 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         let vc = InfoVC.initViewController(restaurant: restaurant)
         self.navigationController?.present(vc, animated: true, completion: nil)
     }
-    
-    @IBAction func addClicked(_ sender: UIButton) {
-        addItemssArray.add(sender.tag)
-        plusItemssArray.add(sender.tag)
-        UIView.setAnimationsEnabled(false)
-        tblView.beginUpdates()
-        let indexPath = IndexPath(item: sender.tag, section: 1)
-        tblView.reloadRows(at: [indexPath], with: .automatic)
-        tblView.endUpdates()
-        showCartView()
-        
+    func showLoginView() {
+        appDelegateShared?.showLogin()
     }
     
-    @IBAction func plusClicked(_ sender: UIButton) {
+    @objc func addClicked(_ sender: UIButton) {
+           let item = itemsArray [sender.tag]
+        if(item.customization_groups.allObjects.count > 0){
+            blurView.isHidden = false
+            blurView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+            let vc = CustomizationVC.initViewController(item: item)
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .custom
+            vc.delegate = self
+            present(vc, animated: true, completion: nil)
+        } else {
+            addItemssArray.add(sender.tag)
+            plusItemssArray.add(sender.tag)
+            UIView.setAnimationsEnabled(false)
+            tblView.beginUpdates()
+            let indexPath = IndexPath(item: sender.tag, section: 1)
+            tblView.reloadRows(at: [indexPath], with: .automatic)
+            tblView.endUpdates()
+            showCartView()
+        }
+    }
+    
+    @objc func plusClicked(_ sender: UIButton) {
         plusItemssArray.add(sender.tag)
         UIView.setAnimationsEnabled(false)
         tblView.beginUpdates()
@@ -246,12 +264,21 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         tblView.endUpdates()
     }
     
-    @IBAction func deleteClicked(_ sender: UIButton) {
+    @objc func deleteClicked(_ sender: UIButton) {
         minusItemssArray.add(sender.tag)
         UIView.setAnimationsEnabled(false)
         tblView.beginUpdates()
         let indexPath = IndexPath(item: sender.tag, section: 1)
         tblView.reloadRows(at: [indexPath], with: .none)
         tblView.endUpdates()
+    }
+    
+//    CustomizeDelegate
+    func closeCustomizeView() {
+        blurView.isHidden = true
+    }
+    
+    func updateClicked() {
+        blurView.isHidden = true
     }
 }

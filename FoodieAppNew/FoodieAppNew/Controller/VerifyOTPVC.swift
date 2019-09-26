@@ -82,7 +82,14 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
                 Utils.showAlert(withMessage: errorMessage)
                 return
             }
+            let user : VerifyUser = VerifyUser.getUserByNumber(number: self.account.mobileNumber )
+            self.account.user_id = "\(user.entity_id)"
+            self.account.email = user.email ?? ""
+            self.account.user_Name = user.name ?? ""
+            
             AccountManager.instance().activeAccount = self.account
+           
+            
             appDelegateShared?.showTabbar()
         }
     }

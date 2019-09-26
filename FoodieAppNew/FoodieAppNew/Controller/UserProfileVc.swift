@@ -14,8 +14,8 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  tblView.tableFooterView = UIView()
-       
+        tblView.tableFooterView = UIView()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -27,7 +27,11 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
     
     func sowData ()  {
         let user : VerifyUser = VerifyUser.getUserByNumber(number: AccountManager.instance().activeAccount?.mobileNumber ?? "")
-        lblUserName.text = user.name
+        if(user.name == nil){
+            lblUserName.text = AccountManager.instance().activeAccount?.user_Name
+        } else {
+            lblUserName.text = user.name
+        }
     }
     
     @IBAction func editClicked(_ sender: Any) {
@@ -51,13 +55,13 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tblView.frame.width, height: 50))
         headerView.backgroundColor = UIColor.clear
         let lblTitle = UILabel.init(frame: CGRect.init(x: 15, y: 25, width: tblView.frame.width - 30, height: 1))
-      lblTitle.backgroundColor = .lightGray
+        lblTitle.backgroundColor = .lightGray
         headerView.addSubview(lblTitle)
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return  44
+        return  44
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -68,17 +72,17 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
-            var cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as? ProfileCell
-            if cell == nil {
-                var nib = Bundle.main.loadNibNamed("ProfileCell", owner: self, options: nil)
-                cell = nib?[0] as? ProfileCell
-            }
-            cell?.selectionStyle = .none
-            cell?.setData(index: indexPath.row, section: indexPath.section)
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as? ProfileCell
+        if cell == nil {
+            var nib = Bundle.main.loadNibNamed("ProfileCell", owner: self, options: nil)
+            cell = nib?[0] as? ProfileCell
+        }
+        cell?.selectionStyle = .none
+        cell?.setData(index: indexPath.row, section: indexPath.section)
         cell?.accessoryType = .disclosureIndicator
-            return cell!
-       
+        return cell!
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

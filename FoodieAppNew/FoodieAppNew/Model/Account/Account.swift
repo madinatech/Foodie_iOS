@@ -9,6 +9,9 @@ class Account: NSObject ,NSCoding {
     var access_token : String = ""
     var mobileNumber : String = ""
     var existing : String = ""
+     var user_id : String = ""
+    var user_Name : String = ""
+    var email : String = ""
     let ENCODING_VERSION:Int = 1
     
     override init() {}
@@ -20,6 +23,10 @@ class Account: NSObject ,NSCoding {
         aCoder.encode(access_token, forKey: "access_token")
         aCoder.encode(mobileNumber, forKey: "mobileNumber")
         aCoder.encode(existing, forKey: "existing")
+          aCoder.encode(user_id, forKey: "user_id")
+          aCoder.encode(email, forKey: "email")
+         aCoder.encode(user_Name, forKey: "user_Name")
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,6 +35,9 @@ class Account: NSObject ,NSCoding {
             access_token = aDecoder.decodeObject(forKey: "access_token") as! String
             mobileNumber = aDecoder.decodeObject(forKey: "mobileNumber") as! String
             existing = aDecoder.decodeObject(forKey: "existing") as! String
+             user_id = aDecoder.decodeObject(forKey: "user_id") as! String
+             email = aDecoder.decodeObject(forKey: "email") as! String
+             user_Name = aDecoder.decodeObject(forKey: "user_Name") as! String
         }
     }
     

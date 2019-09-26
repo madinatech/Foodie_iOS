@@ -32,10 +32,20 @@ class EditProfileVC: UIViewController {
     
     func sowData ()  {
         let user : VerifyUser = VerifyUser.getUserByNumber(number: AccountManager.instance().activeAccount?.mobileNumber ?? "")
-        lblName.text = user.name
-        txtName.text = user.name
-        txtEmail.text = user.email
-        txtPhone.text = user.phone
+        if(user.name == nil){
+            let account = AccountManager.instance().activeAccount
+            lblName.text = account?.user_Name
+            txtName.text = account?.user_Name
+            txtEmail.text = account?.email
+            txtPhone.text = account?.mobileNumber
+        } else {
+            lblName.text = user.name
+            txtName.text = user.name
+            txtEmail.text = user.email
+            txtPhone.text = user.phone
+        }
+        
+       
     }
     
     @IBAction func saveClicked(_ sender: Any) {

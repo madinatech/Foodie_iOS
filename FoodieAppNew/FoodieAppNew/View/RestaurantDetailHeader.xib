@@ -61,6 +61,8 @@
                         <constraint firstAttribute="height" constant="38" id="c3K-vJ-L6W"/>
                         <constraint firstAttribute="width" constant="38" id="tYh-Nv-YcT"/>
                     </constraints>
+                    <state key="normal" image="unLike"/>
+                    <state key="selected" image="Like"/>
                     <connections>
                         <action selector="favouriteClicked:" destination="mOu-Ur-7uE" eventType="touchUpInside" id="0C0-An-gHr"/>
                     </connections>
@@ -88,10 +90,10 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKa-4P-Izr">
-                            <rect key="frame" x="20" y="134" width="188" height="22"/>
+                            <rect key="frame" x="20" y="134" width="195" height="22"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="22" id="DLV-eg-REV"/>
-                                <constraint firstAttribute="width" constant="188" id="mkI-HL-vr3"/>
+                                <constraint firstAttribute="width" constant="195" id="mkI-HL-vr3"/>
                             </constraints>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -104,8 +106,8 @@
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Open until 9:00 pm " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFm-Ki-Ira">
-                            <rect key="frame" x="20" y="135" width="162" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Open until 09:00 pm " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFm-Ki-Ira">
+                            <rect key="frame" x="20" y="135" width="171.5" height="20"/>
                             <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="20"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -125,7 +127,7 @@
                                 <constraint firstAttribute="width" constant="20" id="z5Y-l4-301"/>
                             </constraints>
                         </imageView>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="F3B-wm-VfI">
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="F3B-wm-VfI">
                             <rect key="frame" x="20" y="70" width="374" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -232,6 +234,11 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="mZC-yj-g8R"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="76F-eQ-9pM"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="collectionView" destination="F3B-wm-VfI" id="rI7-ON-6Mw"/>
                 <outlet property="contaainerView" destination="ehP-UW-apq" id="5V6-U6-x4R"/>
@@ -253,5 +260,6 @@
         <image name="bag" width="50" height="50"/>
         <image name="scooter" width="30" height="30"/>
         <image name="table" width="50" height="50"/>
+        <image name="unLike" width="38" height="38"/>
     </resources>
 </document>

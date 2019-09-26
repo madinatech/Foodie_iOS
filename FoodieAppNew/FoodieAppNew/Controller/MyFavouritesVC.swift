@@ -1,11 +1,14 @@
 
 
 import UIKit
+import AMShimmer
 
 class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var innerView: UIView!
+    var favouriteArray = [Favourite]()
+    
     class func initViewController() -> MyFavouritesVC {
         let vc = MyFavouritesVC.init(nibName: "MyFavouritesVC", bundle: nil)
         return vc
@@ -16,6 +19,19 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        loadFavuoriteRestaurant()
+    }
+    
+    func loadFavuoriteRestaurant() {
+          AMShimmer.start(for: tblView)
+        Manager.sharedManager().loadFavRestaurentList { (response, errorMessage) -> (Void) in
+             AMShimmer.stop(for: self.tblView)
+            if(errorMessage.count > 0){
+                Utils.showAlert(withMessage: errorMessage)
+            }
+            self.favouriteArray = Favourite.getAll()
+            self.tblView.reloadData()
+        }
     }
     
     @IBAction func backClicked(_ sender: Any) {
@@ -23,15 +39,12 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return favouriteArray.count
     }
-    
-    
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return  120
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -41,6 +54,12 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell = nib?[0] as? FavouriteCell
         }
         cell?.selectionStyle = .none
+        let fav = favouriteArray[indexPath.row]
+        let restaurantArray : [Restaurant] = fav.restaurant.allObjects as! [Restaurant]
+        if(restaurantArray.count > 0){
+            let restaurant : Restaurant = restaurantArray[0]
+            cell?.showData(restaurant: restaurant)
+        }
         return cell!
         
     }

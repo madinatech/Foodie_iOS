@@ -178,6 +178,12 @@
                                 <integer key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="4Gt-AX-hWb"/>
+                                <exclude reference="fMv-Wb-hed"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -197,6 +203,7 @@
                 <outlet property="lblCusines" destination="lRl-mu-ZtI" id="Fsc-qc-3rL"/>
                 <outlet property="lblName" destination="xQT-h1-6cF" id="bU2-iD-9EH"/>
                 <outlet property="lblRating" destination="lXv-9A-0rH" id="mDE-uf-Odd"/>
+                <outlet property="lblTime" destination="qjQ-yk-Cg5" id="Peb-db-zoi"/>
             </connections>
             <point key="canvasLocation" x="-97.101449275362327" y="79.017857142857139"/>
         </tableViewCell>

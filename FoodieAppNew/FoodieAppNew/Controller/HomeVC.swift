@@ -4,6 +4,7 @@ import AMShimmer
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, RecommendedDelegate {
     
+    @IBOutlet weak var lblHungry: UILabel!
     @IBOutlet weak var tblView: UITableView!
     var isLoaded = Bool()
     var restaurantArray = [Restaurant]()
@@ -23,6 +24,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isLoaded = false
+        if(AccountManager.instance().activeAccount != nil){
+            lblHungry.text = "Are you hungry \(AccountManager.instance().activeAccount?.user_Name ?? "")?"
+        } else {
+              lblHungry.text = "Are you hungry?"
+        }
         getClientToken()
 //        getRestaurantListapi()
     }
@@ -32,10 +38,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.restaurantArray = Restaurant.getAll()
         tblView.reloadData()
-//        AMShimmer.start(for: tblView)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-//            AMShimmer.stop(for: self.tblView)
-//        }
     }
     
     func getClientToken ()  {

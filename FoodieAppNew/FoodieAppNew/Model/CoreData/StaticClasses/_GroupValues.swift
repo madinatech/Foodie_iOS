@@ -6,7 +6,7 @@ import CoreData
 
 public enum GroupValuesAttributes: String {
     case item_name = "item_name"
-    case price = "price"
+    case item_price = "item_price"
 }
 
 open class _GroupValues: NSManagedObject {
@@ -43,7 +43,7 @@ open class _GroupValues: NSManagedObject {
     var item_name: String?
 
     @NSManaged open
-    var price: Int32 // Optional scalars not supported
+    var item_price: Int32 // Optional scalars not supported
 
     // MARK: - Relationships
 

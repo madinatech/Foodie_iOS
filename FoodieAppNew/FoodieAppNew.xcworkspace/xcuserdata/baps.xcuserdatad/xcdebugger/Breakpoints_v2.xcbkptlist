@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodieAppNew/Model/CoreData/UserClasses/VerifyUser.swift"
-            timestampString = "591108850.29493"
+            filePath = "FoodieAppNew/Controller/DeliveryAddressVC.swift"
+            timestampString = "591195358.5261869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "getUserByNumber(number:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "loadArreass()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodieAppNew/View/CustomCell/CategoryCell.swift"
-            timestampString = "591108850.295019"
+            filePath = "FoodieAppNew/Controller/DeliveryAddressVC.swift"
+            timestampString = "591195358.526529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "loadArreass()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,14 +41,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodieAppNew/Controller/VerifyOTPVC.swift"
-            timestampString = "591108850.2950931"
+            filePath = "FoodieAppNew/Controller/DeliveryAddressVC.swift"
+            timestampString = "591195358.526599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "textFieldDidBeginEditing(_:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "loadAddressApi()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodieAppNew.DeliveryAddressVC.loadAddressApi() -&gt; ()"
+                  moduleName = "FoodieAppNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/DeliveryAddressVC.swift"
+                  timestampString = "591189746.1029"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any, Swift.String) -&gt; () in FoodieAppNew.DeliveryAddressVC.loadAddressApi() -&gt; ()"
+                  moduleName = "FoodieAppNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/DeliveryAddressVC.swift"
+                  timestampString = "591189746.104459"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,13 +89,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodieAppNew/Controller/VerifyOTPVC.swift"
-            timestampString = "591108850.295536"
+            filePath = "FoodieAppNew/Controller/AddNewAddressVC.swift"
+            timestampString = "591195358.5266711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "textfieldChanged(_:)"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "addNewAddressApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodieAppNew.AddNewAddressVC.addNewAddressApi() -&gt; ()"
+                  moduleName = "FoodieAppNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/AddNewAddressVC.swift"
+                  timestampString = "591189746.108116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "3043">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any, Swift.String) -&gt; () in FoodieAppNew.AddNewAddressVC.addNewAddressApi() -&gt; ()"
+                  moduleName = "FoodieAppNew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baps/Documents/Niki/FoodieApp/App/Foodie_iOS/FoodieAppNew/FoodieAppNew/Controller/AddNewAddressVC.swift"
+                  timestampString = "591189746.1095279"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "157">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodieAppNew/Controller/DeliveryAddressVC.swift"
+            timestampString = "591195358.526994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "loadAddressApi()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

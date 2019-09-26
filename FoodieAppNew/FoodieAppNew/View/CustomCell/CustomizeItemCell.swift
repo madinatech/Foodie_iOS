@@ -18,4 +18,13 @@ class CustomizeItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setData(item : Items)  {
+       lblItemName.text = item.name
+        let priceArray : [Price] = item.price.allObjects as! [Price]
+        if(priceArray.count > 0){
+            let price : Price = priceArray[0]
+            lblPrice.text = "TZS \(price.price)"
+        }
+    }
+    
 }

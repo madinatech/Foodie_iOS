@@ -68,17 +68,112 @@ class Manager: NSObject {
         let request = Request.init(url: "\(kBaseUrl)\(kGetRestaurantList)", method: RequestMethod(rawValue: "GET")!) { (success:Bool, request:Request, errorMessage:NSString) -> (Void) in
             if(request.isSuccess){
                 let arry : [[String: Any]] = request.serverData["data"] as! [[String: Any]]
+                if(arry.count <= 0){
+                    self.itemLoadedBlock("","No restaurant found")
+                } else {
+                    MagicalRecord.save({ (localContext: NSManagedObjectContext) in
+                        let dict = FEMDeserializer.collection(fromRepresentation: arry, mapping: Restaurant.defaultMapping(), context: localContext)
+                        
+                    }, completion: { (isSuccess, error) in
+                        self.itemLoadedBlock(arry,"")
+                    })
+                }
+               
+            } else {
+                self.itemLoadedBlock("",errorMessage as String)
+            }
+        }
+        request.setParameter("Kinondoni", forKey: "area")
+        request.startRequest()
+    }
+    
+    func loadFavRestaurentList(block : @escaping ItemLoadedBlock) {
+        itemLoadedBlock = block
+        let request = Request.init(url: "\(kBaseUrl)\(kGetFavouriteList)", method: RequestMethod(rawValue: "GET")!) { (success:Bool, request:Request, errorMessage:NSString) -> (Void) in
+            if(request.isSuccess){
+                let array : [[String: Any]] = request.serverData["favourites"] as! [[String: Any]]
+                    MagicalRecord.save({ (localContext: NSManagedObjectContext) in
+                        let dict = FEMDeserializer.collection(fromRepresentation: array, mapping: Favourite.defaultMapping(), context: localContext)
+                        
+                    }, completion: { (isSuccess, error) in
+                        self.itemLoadedBlock(array,"")
+                    })
+            } else {
+                self.itemLoadedBlock("",errorMessage as String)
+            }
+        }
+        let account = AccountManager.instance().activeAccount
+        request.setParameter(account?.user_id ?? "", forKey: "user_id")
+        request.startRequest()
+    }
+    
+    func loadCountry(block : @escaping ItemLoadedBlock) {
+        itemLoadedBlock = block
+        let request = Request.init(url: "\(kBaseUrl)\(kGetCountry)", method: RequestMethod(rawValue: "GET")!) { (success:Bool, request:Request, errorMessage:NSString) -> (Void) in
+            if(request.isSuccess){
+                let dict : [String: Any] = request.serverData["data"] as! [String: Any]
+              
+                    MagicalRecord.save({ (localContext: NSManagedObjectContext) in
+                        let dict = FEMDeserializer.object(fromRepresentation: dict, mapping: Country.defaultMapping(), context: localContext)
+                        
+                    }, completion: { (isSuccess, error) in
+                        self.itemLoadedBlock(dict,"")
+                    })
+              
+                
+            } else {
+                self.itemLoadedBlock("",errorMessage as String)
+            }
+        }
+        request.startRequest()
+    }
+    
+    func addNewAddress(address: String, addressType: String, city: String, town: String, street: String, landmark : String, isDefault: Int, block : @escaping ItemLoadedBlock) {
+        itemLoadedBlock = block
+        let request = Request.init(url: "\(kBaseUrl)\(kAddAddress)", method: RequestMethod(rawValue: "POST")!) { (success:Bool, request:Request, errorMessage:NSString) -> (Void) in
+            if(request.isSuccess){
+                let array : [[String: Any]] = request.serverData["address"] as! [[String: Any]]
+                
                 MagicalRecord.save({ (localContext: NSManagedObjectContext) in
-                    let dict = FEMDeserializer.collection(fromRepresentation: arry, mapping: Restaurant.defaultMapping(), context: localContext)
+                    let dict = FEMDeserializer.collection(fromRepresentation: array, mapping: Address.defaultMapping(), context: localContext)
                     
                 }, completion: { (isSuccess, error) in
-                    self.itemLoadedBlock(arry,"")
+                    self.itemLoadedBlock(array,"")
                 })
             } else {
                 self.itemLoadedBlock("",errorMessage as String)
             }
         }
-        request.setParameter("kisutu", forKey: "area")
+          let account = AccountManager.instance().activeAccount
+          request.setParameter(account?.user_id ?? "", forKey: "user_id")
+         request.setParameter(address, forKey: "address")
+         request.setParameter(addressType, forKey: "address_type")
+         request.setParameter(city, forKey: "city")
+         request.setParameter(town, forKey: "town")
+         request.setParameter(street, forKey: "street")
+         request.setParameter(landmark, forKey: "landmark")
+         request.setParameter(isDefault, forKey: "is_default")
+        request.startRequest()
+    }
+    
+    func loadAddress(block : @escaping ItemLoadedBlock) {
+        itemLoadedBlock = block
+        let request = Request.init(url: "\(kBaseUrl)\(kAddAddress)", method: RequestMethod(rawValue: "POST")!) { (success:Bool, request:Request, errorMessage:NSString) -> (Void) in
+            if(request.isSuccess){
+                let array : [[String: Any]] = request.serverData["address"] as! [[String: Any]]
+                
+                MagicalRecord.save({ (localContext: NSManagedObjectContext) in
+                    let dict = FEMDeserializer.collection(fromRepresentation: array, mapping: Address.defaultMapping(), context: localContext)
+                    
+                }, completion: { (isSuccess, error) in
+                    self.itemLoadedBlock(array,"")
+                })
+            } else {
+                self.itemLoadedBlock("",errorMessage as String)
+            }
+        }
+        let account = AccountManager.instance().activeAccount
+        request.setParameter(account?.user_id ?? "", forKey: "user_id")
         request.startRequest()
     }
 }
