@@ -44,7 +44,6 @@ class ResDetailTabSection: UIView, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
         //        if(swipeType == "Right"){
         //            if (selectedIndex  < 10){
         //                var indexPath1 = IndexPath.init(row: selectedIndex , section: 0)

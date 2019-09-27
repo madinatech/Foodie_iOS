@@ -1,7 +1,6 @@
 
 
 import UIKit
-import AMShimmer
 
 class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataSource, ResDetailTabSectionDelegate , ResDetailHeaderDelegate, CustomizeDelegate {
     
@@ -20,7 +19,6 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     var addItemssArray = NSMutableArray()
     var plusItemssArray = NSMutableArray()
     var minusItemssArray = NSMutableArray()
-    var savedIndex = [Int]()
     var isTabClicked = Bool()
     
     class func initViewController(restaurant: Restaurant) -> RestaurantDetailVC {
@@ -31,10 +29,12 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tblView.tableFooterView = UIView()
+        tblView.rowHeight = UITableView.automaticDimension
+        tblView.estimatedRowHeight = 115
         cartView.layer.cornerRadius = 20
         cartView.clipsToBounds = true
         cartView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        tblView.tableFooterView = UIView()
         categoryArray = ["Promo","Burgers", "Meals","Pizza"]
         categoryCount = 0
         menuArray = restaurant.menus.allObjects as! [Menu]
@@ -44,30 +44,23 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         } )
         if(menuArray.count > 0){
             selectedMenu = menuArray[0]
-            
-            var index = Int()
             for menu in menuArray{
-                //                savedIndex.append(index)
                 let local_Item = Items.mr_createEntity()
                 local_Item?.name = menu.name
                 itemsArray.append(local_Item!)
                 for item in menu.items.allObjects{
-                    index = index + 1
                     itemsArray.append(item as! Items)
                 }
-                //                index = index + 1
             }
-            
-            //            itemsArray = selectedMenu.items.allObjects as! [Items]
             tblView.reloadData()
         }
-        
         showCartView()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         blurView.isHidden = true
-        isTabClicked = true
+        isTabClicked = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,8 +70,6 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        isTabClicked = false
-        print(tblView.contentOffset.y)
         var offset = scrollView.contentOffset.y / 150
         if(offset > 1){
             offset = 1
@@ -100,6 +91,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         }
         self.view.layoutIfNeeded()
     }
+    
     @IBAction func viewOrderClicked(_ sender: Any) {
         let vc = ViewOrderVC.initViewController()
         self.navigationController?.present(vc, animated: true, completion: nil)
@@ -172,9 +164,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
                 cell?.btnAdd.isHidden = true
                 cell?.addView.isHidden = false
                 cell?.lblQuantity.text = "0"
-                
             }
-            
             for index in plusItemssArray{
                 let i : Int = index as! Int
                 if(indexPath.row == i){
@@ -223,12 +213,13 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
                 if(menu.name == itemsArray[indexPath.row].name ?? ""){
                      print("Item::: \(itemsArray[indexPath.row].name ?? "")")
                     self.selectedTab = count
-                    break
+                    tableView.reloadSections([1], with: .none)
                 }
                 count = count + 1
             }
         }
     }
+    
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         isTabClicked = false
     }
@@ -270,6 +261,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         let vc = InfoVC.initViewController(restaurant: restaurant)
         self.navigationController?.present(vc, animated: true, completion: nil)
     }
+    
     func showLoginView() {
         appDelegateShared?.showLogin()
     }

@@ -43,7 +43,7 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
                 ($1.name!.localizedLowercase)
         } )
         openingTimes = rest.opening_times.allObjects as! [OpeningTimes]
-        collectionView.reloadData()
+//        collectionView.reloadData()
         lblResName.text = rest.name
         lblRating.text = "\(rest.average_rating)"
         lblCost.text = "\(rest.cost_for_two ) for 2"
