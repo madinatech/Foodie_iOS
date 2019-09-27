@@ -22,10 +22,26 @@ open class Address: _Address {
     }
     
     
-    class func getUserAddressName(userID: Int) -> [Address] {
+    class func getUserAddress(userID: Int) -> [Address] {
         let pre = NSPredicate(format: "user_id == %d", userID)
         return Address.mr_findAll(with: pre) as! [Address]
-       
+    }
+    
+    class func getUserDefaultAddress(userID: Int) -> Address {
+        let pre = NSPredicate(format: "user_id == %d && is_default == 1", userID)
+        if let user = Address.mr_findFirst(with: pre) {
+            return user
+        }
+        return Address.mr_createEntity()!
+    }
+    
+    class func getSelectedAddress() -> Address {
+        let pre = NSPredicate(format: "is_selected == true")
+        if let user = Address.mr_findFirst(with: pre) {
+            return user
+        }
+        return Address.mr_createEntity()!
+        
     }
     
     func deleteAddress(block : @escaping ItemLoadedBlock) {
@@ -35,7 +51,7 @@ open class Address: _Address {
                 let array : [[String: Any]] = request.serverData["address"] as! [[String: Any]]
                 
                 MagicalRecord.save({ (localContext: NSManagedObjectContext) in
-                    Address.mr_truncateAll(in: localContext)
+//                    Address.mr_truncateAll(in: localContext)
                     let dict = FEMDeserializer.collection(fromRepresentation: array, mapping: Address.defaultMapping(), context: localContext)
                     
                 }, completion: { (isSuccess, error) in

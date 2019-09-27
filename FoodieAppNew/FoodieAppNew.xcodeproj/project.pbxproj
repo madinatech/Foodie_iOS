@@ -134,6 +134,10 @@
 		341B0DAB2330E12500D12504 /* CartRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D772330E12500D12504 /* CartRequestCell.xib */; };
 		341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */; };
 		341B0DAF2331099800D12504 /* DeliveryAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */; };
+		344D7D1B233DD54200809108 /* DeliveryLoactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */; };
+		344D7D1C233DD54200809108 /* DeliveryLoactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D7D1A233DD54200809108 /* DeliveryLoactionVC.swift */; };
+		344D7D21233DD56E00809108 /* BaseTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D7D1E233DD56D00809108 /* BaseTabViewController.swift */; };
+		344D7D2A233DD58600809108 /* BaseTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D7D27233DD58600809108 /* BaseTabViewController.swift */; };
 		344F79CF233C799B00A35A43 /* CustomizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344F79CD233C799B00A35A43 /* CustomizationVC.swift */; };
 		344F79D0233C799B00A35A43 /* CustomizationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344F79CE233C799B00A35A43 /* CustomizationVC.xib */; };
 		344F79D3233C8BBD00A35A43 /* CustomizeSingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344F79D1233C8BBD00A35A43 /* CustomizeSingleCell.swift */; };
@@ -367,6 +371,10 @@
 		341B0D772330E12500D12504 /* CartRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartRequestCell.xib; sourceTree = "<group>"; };
 		341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressVC.swift; sourceTree = "<group>"; };
 		341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressVC.xib; sourceTree = "<group>"; };
+		344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryLoactionVC.xib; sourceTree = "<group>"; };
+		344D7D1A233DD54200809108 /* DeliveryLoactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryLoactionVC.swift; sourceTree = "<group>"; };
+		344D7D1E233DD56D00809108 /* BaseTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabViewController.swift; sourceTree = "<group>"; };
+		344D7D27233DD58600809108 /* BaseTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabViewController.swift; sourceTree = "<group>"; };
 		344F79CD233C799B00A35A43 /* CustomizationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationVC.swift; sourceTree = "<group>"; };
 		344F79CE233C799B00A35A43 /* CustomizationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizationVC.xib; sourceTree = "<group>"; };
 		344F79D1233C8BBD00A35A43 /* CustomizeSingleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeSingleCell.swift; sourceTree = "<group>"; };
@@ -583,6 +591,10 @@
 		341B0D072330D38900D12504 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				344D7D26233DD58600809108 /* Shared */,
+				344D7D1D233DD56D00809108 /* Shared */,
+				344D7D1A233DD54200809108 /* DeliveryLoactionVC.swift */,
+				344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */,
 				3400F2FC2332115100346C9A /* RestaurantDetailVC.swift */,
 				3400F2FD2332115100346C9A /* RestaurantDetailVC.xib */,
 				341B0D0E2330D3C200D12504 /* Shared */,
@@ -727,6 +739,22 @@
 				344F79D2233C8BBD00A35A43 /* CustomizeSingleCell.xib */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		344D7D1D233DD56D00809108 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				344D7D1E233DD56D00809108 /* BaseTabViewController.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		344D7D26233DD58600809108 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				344D7D27233DD58600809108 /* BaseTabViewController.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		34C01C2C2334A9230057DEF4 /* Model */ = {
@@ -1137,6 +1165,7 @@
 				341B0D262330D67600D12504 /* UserProfileVc.xib in Resources */,
 				341B0D872330E12500D12504 /* CustomizeCell.xib in Resources */,
 				341B0DA12330E12500D12504 /* PastOrderButtonCell.xib in Resources */,
+				344D7D1B233DD54200809108 /* DeliveryLoactionVC.xib in Resources */,
 				3400F31723325CB100346C9A /* CategoryCell.xib in Resources */,
 				341B0CDD2330CED000D12504 /* Assets.xcassets in Resources */,
 				341B0DA32330E12500D12504 /* RestaurantDetailCell.xib in Resources */,
@@ -1345,12 +1374,14 @@
 				3400F2FA2331FC1C00346C9A /* HomeTopCell.swift in Sources */,
 				341B0DAA2330E12500D12504 /* CountryCell.swift in Sources */,
 				344F79E2233CCCB600A35A43 /* _Address.swift in Sources */,
+				344D7D21233DD56E00809108 /* BaseTabViewController.swift in Sources */,
 				34C01D162334D35E0057DEF4 /* PaymentOption.swift in Sources */,
 				34899B2C233A2E0900A5FBA2 /* _Restaurant.swift in Sources */,
 				344F79E0233CC35600A35A43 /* Country.swift in Sources */,
 				34C01D0E2334D3570057DEF4 /* _VerifyUser.swift in Sources */,
 				340D78AE2333464D0084971A /* ViewOrderTopCell.swift in Sources */,
 				340D78C6233385CD0084971A /* SearchCollCell.swift in Sources */,
+				344D7D2A233DD58600809108 /* BaseTabViewController.swift in Sources */,
 				34C01D172334D35E0057DEF4 /* DeliveryOption.swift in Sources */,
 				341B0D852330E12500D12504 /* RecommendedRestaurantCell.swift in Sources */,
 				34C01D002334AB2C0057DEF4 /* MD5Digest.swift in Sources */,
@@ -1405,6 +1436,7 @@
 				3410E3B8233B81D1000BA7FB /* CustomizationGroup.swift in Sources */,
 				3400F2F22331EFC100346C9A /* FilterVC.swift in Sources */,
 				340D78C22333855B0084971A /* SearchCategoryCell.swift in Sources */,
+				344D7D1C233DD54200809108 /* DeliveryLoactionVC.swift in Sources */,
 				341B0D152330D57E00D12504 /* HomeVC.swift in Sources */,
 				341B0D292330D6A800D12504 /* OrderListVC.swift in Sources */,
 				34899B39233A2E2500A5FBA2 /* Location.swift in Sources */,

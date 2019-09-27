@@ -12,4 +12,12 @@ open class Area: _Area {
         mapping.primaryKey = "entity_id"
         return mapping
     }
+    
+    class func getAreaByName(name: String) -> Area {
+        let pre = NSPredicate(format: "name == %@", name)
+        if let area = Area.mr_findFirst(with: pre) {
+            return area
+        }
+        return Area.mr_createEntity()!
+    }
 }

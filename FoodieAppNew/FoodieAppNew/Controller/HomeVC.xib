@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
+                <outlet property="lblAddressTitle" destination="urY-mB-gHA" id="QSV-1m-ODc"/>
                 <outlet property="lblHungry" destination="r7T-Mr-wI3" id="6vF-8b-ESN"/>
                 <outlet property="tblView" destination="TDe-B0-yRK" id="AOS-o5-qJS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -66,16 +67,17 @@ Paul?</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ne2-N6-3zY">
-                    <rect key="frame" x="15" y="100.33333333333333" width="130" height="21"/>
+                    <rect key="frame" x="15" y="100.33333333333333" width="155.66666666666666" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="W22-Ht-FdA"/>
-                        <constraint firstAttribute="width" constant="130" id="xja-Ia-qte"/>
                     </constraints>
-                    <state key="normal" image="down-arrow"/>
                     <connections>
                         <action selector="deliveryAddressClicked:" destination="-1" eventType="touchUpInside" id="gck-Wv-uOr"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="wia-tt-uxc">
+                    <rect key="frame" x="154.66666666666666" y="104.33333333333333" width="16" height="16"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -85,8 +87,11 @@ Paul?</string>
                 <constraint firstItem="ouo-qn-1F8" firstAttribute="top" secondItem="r7T-Mr-wI3" secondAttribute="bottom" constant="5" id="8wL-vR-MSQ"/>
                 <constraint firstItem="TDe-B0-yRK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Cvj-xk-rhb"/>
                 <constraint firstItem="TDe-B0-yRK" firstAttribute="top" secondItem="ouo-qn-1F8" secondAttribute="bottom" constant="10" id="LPX-Bn-4S9"/>
+                <constraint firstItem="wia-tt-uxc" firstAttribute="centerY" secondItem="urY-mB-gHA" secondAttribute="centerY" id="LgQ-et-vxP"/>
+                <constraint firstItem="ne2-N6-3zY" firstAttribute="trailing" secondItem="wia-tt-uxc" secondAttribute="trailing" id="N9z-hP-Vh6"/>
                 <constraint firstItem="K8M-ZS-SCU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RR8-0T-GdE"/>
                 <constraint firstItem="urY-mB-gHA" firstAttribute="top" secondItem="r7T-Mr-wI3" secondAttribute="bottom" constant="5" id="VIR-qg-p1s"/>
+                <constraint firstItem="wia-tt-uxc" firstAttribute="leading" secondItem="urY-mB-gHA" secondAttribute="trailing" constant="5" id="dCi-b6-d8R"/>
                 <constraint firstItem="ne2-N6-3zY" firstAttribute="top" secondItem="r7T-Mr-wI3" secondAttribute="bottom" constant="2" id="eUF-Sf-Tim"/>
                 <constraint firstItem="r7T-Mr-wI3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="gf6-Qj-ao5"/>
                 <constraint firstItem="ouo-qn-1F8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="gg8-TX-GNv"/>

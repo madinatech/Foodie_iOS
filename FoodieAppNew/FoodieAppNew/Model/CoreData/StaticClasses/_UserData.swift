@@ -5,6 +5,7 @@ import Foundation
 import CoreData
 
 public enum UserDataRelationships: String {
+    case address = "address"
     case delivery_options = "delivery_options"
     case payment_options = "payment_options"
 }
@@ -42,6 +43,13 @@ open class _UserData: NSManagedObject {
     // MARK: - Relationships
 
     @NSManaged open
+    var address: NSSet
+
+    open func addressSet() -> NSMutableSet {
+        return self.address.mutableCopy() as! NSMutableSet
+    }
+
+    @NSManaged open
     var delivery_options: NSSet
 
     open func delivery_optionsSet() -> NSMutableSet {
@@ -53,6 +61,34 @@ open class _UserData: NSManagedObject {
 
     open func payment_optionsSet() -> NSMutableSet {
         return self.payment_options.mutableCopy() as! NSMutableSet
+    }
+
+}
+
+extension _UserData {
+
+    open func addAddress(_ objects: NSSet) {
+        let mutable = self.address.mutableCopy() as! NSMutableSet
+        mutable.union(objects as Set<NSObject>)
+        self.address = mutable.copy() as! NSSet
+    }
+
+    open func removeAddress(_ objects: NSSet) {
+        let mutable = self.address.mutableCopy() as! NSMutableSet
+        mutable.minus(objects as Set<NSObject>)
+        self.address = mutable.copy() as! NSSet
+    }
+
+    open func addAddressObject(_ value: Address) {
+        let mutable = self.address.mutableCopy() as! NSMutableSet
+        mutable.add(value)
+        self.address = mutable.copy() as! NSSet
+    }
+
+    open func removeAddressObject(_ value: Address) {
+        let mutable = self.address.mutableCopy() as! NSMutableSet
+        mutable.remove(value)
+        self.address = mutable.copy() as! NSSet
     }
 
 }

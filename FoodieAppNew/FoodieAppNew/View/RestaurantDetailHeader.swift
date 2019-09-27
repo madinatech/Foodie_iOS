@@ -126,19 +126,7 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
         }
     }
     
-    func removeFavourite () {
-        if(AccountManager.instance().activeAccount != nil){
-            rest.removeFavouriteResTaurant { (response, errorMessage) -> (Void) in
-                if(errorMessage.count > 0){
-                    Utils.showAlert(withMessage: errorMessage)
-                }
-            }
-        } else {
-            if(delegate != nil){
-                self.delegate?.showLoginView()
-            }
-        }
-    }
+  
     
     @IBAction func bckClicked(_ sender: Any) {
         if(delegate != nil){

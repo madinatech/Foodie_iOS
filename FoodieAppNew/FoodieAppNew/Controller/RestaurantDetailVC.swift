@@ -9,7 +9,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tblViewTop: NSLayoutConstraint!
     @IBOutlet weak var cartView: UIView!
     @IBOutlet weak var tblView: UITableView!
-     @IBOutlet weak var blurView: UIView!
+    @IBOutlet weak var blurView: UIView!
     var categoryArray = [String]()
     var categoryCount = Int()
     var restaurant = Restaurant()
@@ -20,6 +20,8 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     var addItemssArray = NSMutableArray()
     var plusItemssArray = NSMutableArray()
     var minusItemssArray = NSMutableArray()
+    var savedIndex = [Int]()
+    var isTabClicked = Bool()
     
     class func initViewController(restaurant: Restaurant) -> RestaurantDetailVC {
         let vc = RestaurantDetailVC.init(nibName: "RestaurantDetailVC", bundle: nil)
@@ -33,7 +35,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         cartView.clipsToBounds = true
         cartView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         tblView.tableFooterView = UIView()
-         categoryArray = ["Promo","Burgers", "Meals","Pizza"]
+        categoryArray = ["Promo","Burgers", "Meals","Pizza"]
         categoryCount = 0
         menuArray = restaurant.menus.allObjects as! [Menu]
         menuArray = menuArray.sorted(by: {
@@ -42,15 +44,30 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         } )
         if(menuArray.count > 0){
             selectedMenu = menuArray[0]
-            itemsArray = selectedMenu.items.allObjects as! [Items]
+            
+            var index = Int()
+            for menu in menuArray{
+                //                savedIndex.append(index)
+                let local_Item = Items.mr_createEntity()
+                local_Item?.name = menu.name
+                itemsArray.append(local_Item!)
+                for item in menu.items.allObjects{
+                    index = index + 1
+                    itemsArray.append(item as! Items)
+                }
+                //                index = index + 1
+            }
+            
+            //            itemsArray = selectedMenu.items.allObjects as! [Items]
             tblView.reloadData()
         }
-       
+        
         showCartView()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         blurView.isHidden = true
+        blurView.isHidden = true
+        isTabClicked = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,9 +76,8 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         tblView.reloadData()
     }
     
-    
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        isTabClicked = false
         print(tblView.contentOffset.y)
         var offset = scrollView.contentOffset.y / 150
         if(offset > 1){
@@ -126,20 +142,15 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.row == 5){
+        let item : Items = itemsArray [indexPath.row]
+        if(item.entity_id == 0){
             var cell = tableView.dequeueReusableCell(withIdentifier: "RestDetailHeaderCell") as? RestDetailHeaderCell
             if cell == nil {
                 var nib = Bundle.main.loadNibNamed("RestDetailHeaderCell", owner: self, options: nil)
                 cell = nib?[0] as? RestDetailHeaderCell
             }
             cell?.selectionStyle = .none
-           
-            if(categoryCount >= categoryArray.count - 1){
-                categoryCount = 0
-            } else{
-              categoryCount = categoryCount + 1
-            }
-             cell?.lblHeader.text = categoryArray[categoryCount]
+            cell?.lblHeader.text = item.name
             return cell!
         } else {
             var cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantDetailCell") as? RestaurantDetailCell
@@ -148,7 +159,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
                 cell = nib?[0] as? RestaurantDetailCell
             }
             cell?.selectionStyle = .none
-            let item = itemsArray [indexPath.row]
+            
             cell?.showData(item: item)
             cell?.btnAdd.tag = indexPath.row
             cell?.btnPlus.tag = indexPath.row
@@ -172,7 +183,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
                     cell?.lblQuantity.text = "\(a)"
                     if(a > 1){
                         cell?.btnDelete.setTitle("-", for: .normal)
-                         cell?.btnDelete.setImage(nil, for: .normal)
+                        cell?.btnDelete.setImage(nil, for: .normal)
                     } else {
                         cell?.btnDelete.setTitle("", for: .normal)
                         cell?.btnDelete.setImage(UIImage.init(named: "delete"), for: .normal)
@@ -203,6 +214,25 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         }
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if(isTabClicked == true){
+            //              isTabClicked = false
+        } else {
+            var count = Int()
+            for menu in menuArray{
+                if(menu.name == itemsArray[indexPath.row].name ?? ""){
+                     print("Item::: \(itemsArray[indexPath.row].name ?? "")")
+                    self.selectedTab = count
+                    break
+                }
+                count = count + 1
+            }
+        }
+    }
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        isTabClicked = false
+    }
+    
     func showCartView ()  {
         if(addItemssArray.count > 0){
             cartView.isHidden = false
@@ -213,14 +243,25 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         }
         self.view.layoutIfNeeded()
     }
-  
+    
     //    ResDetailTabSectionDelegate
     func tabClicked(selectedTab: Int) {
-                self.selectedTab = selectedTab
+        isTabClicked = true
+        self.selectedTab = selectedTab
         selectedMenu = menuArray[selectedTab]
-        itemsArray = selectedMenu.items.allObjects as! [Items]
-        tblView.reloadData()
+        var count = Int()
+        for item in itemsArray{
+            if(item.name == selectedMenu.name){
+                let indexPath = IndexPath.init(row: count, section: 1)
+                tblView.scrollToRow(at: indexPath, at: .top, animated: true)
+                break
+            }
+            count = count + 1
+        }
     }
+    
+  
+    
     //    ResDetailHeaderDelegate
     func backClicked() {
         self.navigationController?.popViewController(animated: true)
@@ -234,7 +275,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     @objc func addClicked(_ sender: UIButton) {
-           let item = itemsArray [sender.tag]
+        let item = itemsArray [sender.tag]
         if(item.customization_groups.allObjects.count > 0){
             blurView.isHidden = false
             blurView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
@@ -273,7 +314,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         tblView.endUpdates()
     }
     
-//    CustomizeDelegate
+    //    CustomizeDelegate
     func closeCustomizeView() {
         blurView.isHidden = true
     }

@@ -63,9 +63,9 @@ class ResDetailTabSection: UIView, UICollectionViewDelegate, UICollectionViewDat
         //            }
         //        }
         //
-        let selectedIndexPath = IndexPath(item: selectedIndex, section: 0)
-        collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .centeredHorizontally)
-        collectionView.scrollToItem(at: selectedIndexPath, at: .left, animated: true)
+//        let selectedIndexPath = IndexPath(item: selectedIndex, section: 0)
+//        collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .centeredHorizontally)
+//        collectionView.scrollToItem(at: selectedIndexPath, at: .left, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -96,6 +96,13 @@ class ResDetailTabSection: UIView, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        if(indexPath.row == 0){
+            collectionView.scrollToItem(at: IndexPath.init(row: indexPath.row + 1, section: indexPath.section), at: .right, animated: true)
+        } else if(indexPath.row == menuArray.count - 1){
+            collectionView.scrollToItem(at: IndexPath.init(row: indexPath.row , section: indexPath.section), at: .right, animated: true)
+        } else {
+            collectionView.scrollToItem(at: IndexPath.init(row: indexPath.row - 1, section: indexPath.section), at: .centeredHorizontally, animated: true)
+        }
         selectedIndex = indexPath.row
         collectionView.reloadData()
         if(delegate != nil){

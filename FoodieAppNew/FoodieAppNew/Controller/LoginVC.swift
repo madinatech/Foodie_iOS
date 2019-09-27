@@ -21,7 +21,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-//        txtMobile.text = "0752911101"
+        txtMobile.text = "753443398"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

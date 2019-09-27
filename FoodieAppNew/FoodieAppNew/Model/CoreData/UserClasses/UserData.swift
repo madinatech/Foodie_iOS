@@ -12,6 +12,8 @@ open class UserData: _UserData {
         
         mapping.addToManyRelationshipMapping(PaymentOption.defaultMapping(), forProperty: "payment_options", keyPath: "payment_options")
            mapping.addToManyRelationshipMapping(DeliveryOption.defaultMapping(), forProperty: "delivery_options", keyPath: "delivery_options")
+        mapping.addToManyRelationshipMapping(Address.defaultMapping(), forProperty: "address", keyPath: "address")
+        
         return mapping
     }
     

@@ -88,7 +88,7 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tblView.deselectRow(at: indexPath, animated: true)
         if(indexPath.section == 0 && indexPath.row == 0){
-            let vc = DeliveryAddressVC.initViewController()
+            let vc = DeliveryAddressVC.initViewController(selectedAddress: Address.mr_createEntity()!)
             let nav = UINavigationController.init(rootViewController: vc)
             self.present(nav, animated: true, completion: nil)
         } else if(indexPath.section == 0 && indexPath.row == 1){

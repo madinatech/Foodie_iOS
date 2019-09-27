@@ -18,6 +18,8 @@ let appGreenColor = UIColor.init(red: 43.0/255.0, green: 183.0/255.0, blue: 124.
 
 
 let AuthorizationToken = "AuthorizationToken"
+let Selected_Area = "SelectedArea"
+let SelectedArea_id = "SelectedAreaId"
 
 @IBDesignable public class RoundButtonHome: UIButton {
     

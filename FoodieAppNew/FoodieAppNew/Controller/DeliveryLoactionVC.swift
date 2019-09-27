@@ -1,33 +1,62 @@
 
 import UIKit
 import ActionSheetPicker_3_0
-import NVActivityIndicatorView
 
-class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable {
+@objc protocol DeliveryLocationDelegate {
+    func selectedArea(area: Area)
+}
+class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate{
     
+    @IBOutlet weak var txtCity: CommonTextfield!
+    @IBOutlet weak var txtArea: CommonTextfield!
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var innerView: UIView!
-    @IBOutlet weak var txtTitle: CommonTextfield!
-    @IBOutlet weak var txtLine1: CommonTextfield!
-    @IBOutlet weak var txtCity: UITextField!
-    @IBOutlet weak var txtLine2: UITextField!
-    @IBOutlet weak var txtArea: UITextField!
     var cityArray = [City]()
     var areaArray = [Area]()
     var selectdCity = City()
     var isCitySelectd = Bool()
-    var isDefault = Int()
+    var selectedArea = Area()
+    var delegate :  DeliveryLocationDelegate? = nil
     
-    class func initViewController() -> AddNewAddressVC {
-        let vc = AddNewAddressVC.init(nibName: "AddNewAddressVC", bundle: nil)
+    class func initViewController() -> DeliveryLoactionVC {
+        let vc = DeliveryLoactionVC.init(nibName: "DeliveryLoactionVC", bundle: nil)
         return vc
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tap.delegate = self
+        topView.addGestureRecognizer(tap)
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-       getCountryApi()
+    }
+    
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+        if(UserDefaults.standard.object(forKey: Selected_Area) == nil){
+          getClientToken()
+        } else {
+             getCountryApi()
+        }
+       
+    }
+    
+    func getClientToken ()  {
+        let account = Account()
+        account.getClientToken { (isSuccess, account, errorMessage) -> (Void) in
+            if(errorMessage.count > 0){
+                Utils.showAlert(withMessage: errorMessage)
+            }
+            self.getCountryApi()
+        }
     }
     
     func getCountryApi()  {
@@ -43,21 +72,12 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     
-
-    @IBAction func saveClicked(_ sender: Any) {
+    
+    @IBAction func confirmClicked(_ sender: Any) {
         var strMessage = String()
-        let strTitle = txtTitle.text!.trimmingCharacters(in: .whitespaces)
-        let strLine1 = txtLine1.text!.trimmingCharacters(in: .whitespaces)
-        let strLine2 = txtLine2.text!.trimmingCharacters(in: .whitespaces)
         let strCity = txtCity.text!.trimmingCharacters(in: .whitespaces)
-         let strArea = txtArea.text!.trimmingCharacters(in: .whitespaces)
-        if(strTitle.count <= 0){
-            strMessage = "Please enter Title"
-        } else if(strLine1.count <= 0){
-            strMessage = "Please enter Line1"
-        } else if(strLine2.count <= 0){
-            strMessage = "Please enter Line2"
-        } else if(strCity.count <= 0){
+        let strArea = txtArea.text!.trimmingCharacters(in: .whitespaces)
+        if(strCity.count <= 0){
             strMessage = "Please select city"
         } else if(strArea.count <= 0){
             strMessage = "Please select area"
@@ -67,27 +87,19 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable {
             Utils.showAlert(withMessage: strMessage)
             return
         }
-        addNewAddressApi()
-    }
-    
-    func addNewAddressApi() {
-        let strLine1 = txtLine1.text!.trimmingCharacters(in: .whitespaces)
-        let strLine2 = txtLine2.text!.trimmingCharacters(in: .whitespaces)
-         let strArea = txtArea.text!.trimmingCharacters(in: .whitespaces)
-        let address : String = strLine1 + strLine2
-        self.startAnimating()
-        Manager.sharedManager().addNewAddress(address: address + strArea, addressType:txtTitle.text ?? "", city: txtCity.text ?? "", town: txtArea.text ?? "", street: txtLine1.text ?? "", landmark: txtLine2.text ?? "", isDefault: isDefault) { (response, errorMessage) -> (Void) in
-            self.stopAnimating()
-            if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
+        
+        Utils.setStringForKey(selectedArea.name ?? "", key: Selected_Area)
+        Utils.setStringForKey("\(selectedArea.entity_id)", key: SelectedArea_id)
+        
+        if(delegate != nil){
+            self.dismiss(animated: true) {
+                self.delegate?.selectedArea(area: self.selectedArea)
             }
-             self.navigationController?.popViewController(animated: true)
+        } else{
+            appDelegateShared?.showTabbar()
         }
     }
     
-    @IBAction func backClicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
     
     @IBAction func areaClicked(_ sender: Any) {
         if(isCitySelectd == true){
@@ -102,14 +114,15 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable {
             ActionSheetStringPicker.show(withTitle: "Select Area", rows: areaNameArray, initialSelection: 0
                 , doneBlock: { (picker, index, value) in
                     self.txtArea.text = areaNameArray[index]
+                    self.selectedArea = Area.getAreaByName(name: self.txtArea.text ?? "")
             }, cancel: { (picker) in
                 
             }, origin: sender)
         } else {
             Utils.showAlert(withMessage: "Please first select city")
         }
-      
     }
+    
     
     @IBAction func cityClicked(_ sender: Any) {
         var cityNameArray = [String]()
@@ -120,21 +133,11 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable {
         ActionSheetStringPicker.show(withTitle: "Select City", rows: cityNameArray, initialSelection: 0
             , doneBlock: { (picker, index, value) in
                 self.isCitySelectd = true
-               self.txtCity.text = cityNameArray[index]
+                self.txtCity.text = cityNameArray[index]
                 self.selectdCity = City.getCityByName(name: self.txtCity.text ?? "")
                 self.areaArray = self.selectdCity.areas.allObjects as! [Area]
         }, cancel: { (picker) in
             
         }, origin: sender)
-    }
-    
-    @IBAction func defaultClicked(_ sender: UIButton) {
-        if(sender.isSelected == true){
-            sender.isSelected = false
-            isDefault = 0
-        } else {
-            sender.isSelected = true
-            isDefault = 1
-        }
     }
 }

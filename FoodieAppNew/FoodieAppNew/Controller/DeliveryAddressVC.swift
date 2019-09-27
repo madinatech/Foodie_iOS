@@ -1,17 +1,24 @@
 
 
 import UIKit
+import MagicalRecord
+
+@objc protocol DeliveryAddressDelegate {
+    func selectedAddress(address: Address)
+}
 
 class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataSource , UIGestureRecognizerDelegate{
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var topView: UIView!
-    var selectdButton = Int()
+    var selectedAddress = Address()
     var addressArray = [Address]()
+    var delegate :  DeliveryAddressDelegate? = nil
     
-    class func initViewController() -> DeliveryAddressVC {
+    class func initViewController(selectedAddress: Address) -> DeliveryAddressVC {
         let vc = DeliveryAddressVC.init(nibName: "DeliveryAddressVC", bundle: nil)
+        vc.selectedAddress = selectedAddress
         return vc
     }
     
@@ -26,7 +33,7 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tap.delegate = self
         topView.addGestureRecognizer(tap)
-//        tblView.isHidden = true
+        //        tblView.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,43 +47,31 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func loadArreass ()  {
-        if(AccountManager.instance().activeAccount != nil){
+  
             let account = AccountManager.instance().activeAccount
-            addressArray = Address.getUserAddressName(userID: Int(account?.user_id ?? "") ?? 0)
-            if(addressArray.count <= 0){
-//                loadAddressApi()
-            }
-            tblView.reloadData()
-        }
-        
-    }
-    
-    func loadAddressApi ()  {
-        Manager.sharedManager().loadAddress { (response, errorMessge) -> (Void) in
-            if(errorMessge.count > 0){
-                Utils.showAlert(withMessage: errorMessge)
+            addressArray = Address.getUserAddress(userID: Int(account?.user_id ?? "") ?? 0)
+            if(addressArray.count > 0){
+                tblView.reloadData()
             } else {
-                let account = AccountManager.instance().activeAccount
-                self.addressArray = Address.getUserAddressName(userID: Int(account?.user_id ?? "") ?? 0)
-                self.tblView.reloadData()
+                tblView.isHidden = true
             }
-        }
+        
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func addNewAddressClicked(_ sender: Any) {
-       let vc = AddNewAddressVC.initViewController()
+        let vc = AddNewAddressVC.initViewController()
         self.navigationController?.pushViewController(vc, animated: true)
-       
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addressArray.count
     }
-   
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -90,36 +85,41 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
         cell?.selectionStyle = .none
         cell?.btnRadio.tag = indexPath.row
         cell?.btnRadio.addTarget(self, action: #selector(optionClicked(_:)), for: .touchUpInside)
-        cell?.btnRadio.isSelected = false
-        if(indexPath.row == selectdButton){
-            cell?.btnRadio.isSelected = true
-        }
-        
         let address = addressArray[indexPath.row]
         cell?.setData(address: address)
+        cell?.btnRadio.isSelected = false
+        if(address == selectedAddress){
+            cell?.btnRadio.isSelected = true
+        }
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tblView.deselectRow(at: indexPath, animated: true)
+        let address = addressArray[indexPath.row]
         let cell : ManageAddressCell = tblView.cellForRow(at: indexPath) as! ManageAddressCell
         if(cell.btnRadio.isSelected == true){
             cell.btnRadio.isSelected = false
         } else {
-        cell.btnRadio.isSelected = true
+            cell.btnRadio.isSelected = true
         }
-        self.dismiss(animated: true, completion: nil)
+        for add in addressArray{
+            if (add.entity_id == address.entity_id){
+                address.is_selected = true
+            } else {
+                address.is_selected = false
+            }
+        }
+        
+        if(delegate != nil){
+            self.dismiss(animated: true) {
+                self.delegate?.selectedAddress(address: address)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if(editingStyle == .delete){
-            
-        }
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -149,23 +149,43 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
             if(errorMessage.count > 0){
                 Utils.showAlert(withMessage: errorMessage)
             } else {
+                MagicalRecord.save(blockAndWait: { (localContext:NSManagedObjectContext) in
+                    address.mr_deleteEntity(in: localContext)
+                })
+               
                 let account = AccountManager.instance().activeAccount
-                self.addressArray = Address.getUserAddressName(userID: Int(account?.user_id ?? "") ?? 0)
+                self.addressArray = Address.getUserAddress(userID: Int(account?.user_id ?? "") ?? 0)
                 self.tblView.reloadData()
             }
         }
     }
     
     @IBAction func optionClicked(_ sender: UIButton) {
-        selectdButton = sender.tag
+        selectedAddress = self.addressArray[sender.tag]
         if(sender.isSelected == true){
             sender.isSelected = false
         } else {
             sender.isSelected = true
         }
         tblView.reloadData()
+        
+        for add in addressArray{
+            if (add.entity_id == selectedAddress.entity_id){
+                selectedAddress.is_selected = true
+            } else {
+                selectedAddress.is_selected = false
+            }
+        }
+        
+        if(delegate != nil){
+            self.dismiss(animated: true) {
+                self.delegate?.selectedAddress(address: self.selectedAddress)
+            }
+        }
+        
+        
         self.dismiss(animated: true, completion: nil)
     }
-  
-
+    
+    
 }

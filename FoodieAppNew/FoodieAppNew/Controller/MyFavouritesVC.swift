@@ -23,9 +23,9 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func loadFavuoriteRestaurant() {
-          AMShimmer.start(for: tblView)
+        AMShimmer.start(for: tblView)
         Manager.sharedManager().loadFavRestaurentList { (response, errorMessage) -> (Void) in
-             AMShimmer.stop(for: self.tblView)
+            AMShimmer.stop(for: self.tblView)
             if(errorMessage.count > 0){
                 Utils.showAlert(withMessage: errorMessage)
             }
@@ -41,7 +41,7 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favouriteArray.count
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return  120
     }
@@ -68,18 +68,12 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if(editingStyle == .delete){
-            
-        }
-    }
-    
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let whitespace = Utils.whitespaceString(width: 100)
         let delete = UITableViewRowAction.init(style: .default, title: whitespace) { (action, indexPath) in
             print("delete item")
-            
+            let fav = self.favouriteArray[indexPath.row]
+            self.removeFavourite(favRes: fav)
         }
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 140, height: 130))
@@ -99,10 +93,24 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tblView.deselectRow(at: indexPath, animated: true)
-        
+        let fav = favouriteArray[indexPath.row]
+        let restaurantArray : [Restaurant] = fav.restaurant.allObjects as! [Restaurant]
+        if(restaurantArray.count > 0){
+            let restaurant : Restaurant = restaurantArray[0]
+            let vc = RestaurantDetailVC.initViewController(restaurant: restaurant)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
-   
     
-    
+    func removeFavourite (favRes : Favourite) {
+        favRes.removeFavouriteResTaurant { (response, errorMessage) -> (Void) in
+            if(errorMessage.count > 0){
+                Utils.showAlert(withMessage: errorMessage)
+            }
+            favRes.mr_deleteEntity()
+            self.favouriteArray = Favourite.getAll()
+            self.tblView.reloadData()
+        }
+    }
 }
 

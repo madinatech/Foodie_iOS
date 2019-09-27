@@ -14,6 +14,7 @@ public enum AddressAttributes: String {
     case floor = "floor"
     case house_number = "house_number"
     case is_default = "is_default"
+    case is_selected = "is_selected"
     case landmark = "landmark"
     case latitude = "latitude"
     case longitude = "longitude"
@@ -80,6 +81,9 @@ open class _Address: NSManagedObject {
 
     @NSManaged open
     var is_default: Int32 // Optional scalars not supported
+
+    @NSManaged open
+    var is_selected: Bool // Optional scalars not supported
 
     @NSManaged open
     var landmark: String?
