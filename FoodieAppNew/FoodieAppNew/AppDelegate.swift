@@ -80,6 +80,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             DeliveryOption.mr_truncateAll(in: localContext)
             PaymentOption.mr_truncateAll(in: localContext)
             Address.mr_truncateAll(in: localContext)
+            Restaurant.mr_truncateAll(in: localContext)
+            Cusines.mr_truncateAll(in: localContext)
+            Images.mr_truncateAll(in: localContext)
+            Location.mr_truncateAll(in: localContext)
+            Menu.mr_truncateAll(in: localContext)
+            OpeningTimes.mr_truncateAll(in: localContext)
+            Items.mr_truncateAll(in: localContext)
+            CustomizationGroup.mr_truncateAll(in: localContext)
+            Price.mr_truncateAll(in: localContext)
+            GroupValues.mr_truncateAll(in: localContext)
         })
     }
     

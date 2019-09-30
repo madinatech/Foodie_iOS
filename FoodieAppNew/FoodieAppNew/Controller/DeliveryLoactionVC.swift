@@ -5,7 +5,7 @@ import ActionSheetPicker_3_0
 @objc protocol DeliveryLocationDelegate {
     func selectedArea(area: Area)
 }
-class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate{
+class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate, InternetDelegate{
     
     @IBOutlet weak var txtCity: CommonTextfield!
     @IBOutlet weak var txtArea: CommonTextfield!
@@ -53,7 +53,12 @@ class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate{
         let account = Account()
         account.getClientToken { (isSuccess, account, errorMessage) -> (Void) in
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
+                if(errorMessage.contains("Internet")){
+                    self.openNoInternetView()
+                } else {
+                    Utils.showAlert(withMessage: errorMessage)
+                    return
+                }
             }
             self.getCountryApi()
         }
@@ -62,7 +67,12 @@ class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate{
     func getCountryApi()  {
         Manager.sharedManager().loadCountry { (response, errorMessage) -> (Void) in
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
+                if(errorMessage.contains("Internet")){
+                    self.openNoInternetView()
+                } else {
+                    Utils.showAlert(withMessage: errorMessage)
+                    return
+                }
             }
             let country = Country.getCountryByName(name: "Tanzania")
             if(country.country_id != 0){
@@ -71,7 +81,15 @@ class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate{
         }
     }
     
+    func openNoInternetView()  {
+        let vc = InternetVc.initViewController()
+        vc.delegate = self
+        self.navigationController?.present(vc, animated: false, completion: nil)
+    }
     
+    func retryClicked() {
+        getClientToken()
+    }
     
     @IBAction func confirmClicked(_ sender: Any) {
         var strMessage = String()

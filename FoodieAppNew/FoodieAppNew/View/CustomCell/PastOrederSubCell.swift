@@ -1,16 +1,15 @@
 //
-//  PastOrderButtonCell.swift
-//  Foodie
+//  PastOrederSubCell.swift
+//  FoodieAppNew
 //
-//  Created by CrossGrids on 06/09/19.
+//  Created by CrossGrids on 30/09/19.
 //  Copyright © 2019 CrossGrids. All rights reserved.
 //
 
 import UIKit
 
-class PastOrderButtonCell: UITableViewCell {
+class PastOrederSubCell: UITableViewCell {
 
-    @IBOutlet weak var btnViewMore: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

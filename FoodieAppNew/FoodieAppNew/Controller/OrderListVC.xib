@@ -1,13 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderListVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderListVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
+                <outlet property="innerView" destination="aO4-gh-GB8" id="6kt-Ju-gg1"/>
+                <outlet property="tblView" destination="NRU-08-Zcu" id="hXi-D5-Lkf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +29,229 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-TL-BvD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73K-xb-Ls7">
+                            <rect key="frame" x="20" y="40" width="106" height="25"/>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7UC-YB-6ZK">
+                            <rect key="frame" x="20" y="85" width="335" height="160"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BurgerKing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUB-fc-72e">
+                                    <rect key="frame" x="20" y="20" width="213.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="#1DF90F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxK-lw-4Gh">
+                                    <rect key="frame" x="243.5" y="20" width="71.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="20"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-D0-gAn">
+                                    <rect key="frame" x="20" y="70" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="402-rP-Ks0"/>
+                                        <constraint firstAttribute="height" constant="30" id="9ig-gn-aaO"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Estimated Arrival" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrO-3n-ADQ">
+                                    <rect key="frame" x="60" y="58" width="138.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="20"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOn-Xu-7Wk" customClass="LinearProgressBar" customModule="LinearProgressBar">
+                                    <rect key="frame" x="20" y="133" width="30" height="6"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="fOW-Ah-gXK"/>
+                                        <constraint firstAttribute="height" constant="6" id="mhh-H1-5BE"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                            <color key="value" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                            <color key="value" red="0.90980392160000001" green="0.90588235289999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="barThickness">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="barPadding">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="progressValue">
+                                            <real key="value" value="100"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cyn-0f-eme" customClass="LinearProgressBar" customModule="LinearProgressBar">
+                                    <rect key="frame" x="55" y="133" width="60" height="6"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="6" id="S3w-hi-NfT"/>
+                                        <constraint firstAttribute="width" constant="60" id="yWn-4h-Zik"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                            <color key="value" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                            <color key="value" red="0.90980392160000001" green="0.90588235289999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="barThickness">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="barPadding">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="progressValue">
+                                            <real key="value" value="100"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aqz-dT-z8p" customClass="LinearProgressBar" customModule="LinearProgressBar">
+                                    <rect key="frame" x="120" y="133" width="195" height="6"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="6" id="8Ca-QC-FF8"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                            <color key="value" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                            <color key="value" red="0.90980392160000001" green="0.90588235289999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="barThickness">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="barPadding">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="progressValue">
+                                            <real key="value" value="50"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCg-xm-stt">
+                                    <rect key="frame" x="60" y="88" width="71" height="25"/>
+                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="25"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRj-JH-8fU">
+                                    <rect key="frame" x="215" y="60" width="100" height="40"/>
+                                    <color key="backgroundColor" red="0.90980392156862744" green="0.90588235294117647" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="gSE-5a-fDV"/>
+                                        <constraint firstAttribute="width" constant="100" id="r0B-19-vk7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
+                                    <state key="normal" title="Track Order">
+                                        <color key="titleColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="RRj-JH-8fU" secondAttribute="trailing" constant="20" id="367-PK-sEf"/>
+                                <constraint firstAttribute="trailing" secondItem="Aqz-dT-z8p" secondAttribute="trailing" constant="20" id="7da-As-C8z"/>
+                                <constraint firstAttribute="trailing" secondItem="SxK-lw-4Gh" secondAttribute="trailing" constant="20" id="CJf-Pd-eBv"/>
+                                <constraint firstItem="cOn-Xu-7Wk" firstAttribute="top" secondItem="DCg-xm-stt" secondAttribute="bottom" constant="20" id="Cfj-HU-swe"/>
+                                <constraint firstItem="DrO-3n-ADQ" firstAttribute="leading" secondItem="ROe-D0-gAn" secondAttribute="trailing" constant="10" id="F16-il-Hmh"/>
+                                <constraint firstItem="wUB-fc-72e" firstAttribute="top" secondItem="7UC-YB-6ZK" secondAttribute="top" constant="20" id="FVx-R0-jV4"/>
+                                <constraint firstItem="RRj-JH-8fU" firstAttribute="top" secondItem="SxK-lw-4Gh" secondAttribute="bottom" constant="20" id="FYM-8T-Fjb"/>
+                                <constraint firstItem="DCg-xm-stt" firstAttribute="leading" secondItem="ROe-D0-gAn" secondAttribute="trailing" constant="10" id="GkI-Pp-nLn"/>
+                                <constraint firstAttribute="height" constant="160" id="GoM-pb-Bpt"/>
+                                <constraint firstItem="Cyn-0f-eme" firstAttribute="leading" secondItem="cOn-Xu-7Wk" secondAttribute="trailing" constant="5" id="GxH-FV-tbY"/>
+                                <constraint firstItem="cOn-Xu-7Wk" firstAttribute="leading" secondItem="7UC-YB-6ZK" secondAttribute="leading" constant="20" id="JCD-6x-ZMz"/>
+                                <constraint firstItem="ROe-D0-gAn" firstAttribute="leading" secondItem="7UC-YB-6ZK" secondAttribute="leading" constant="20" id="KyV-ci-AHQ"/>
+                                <constraint firstItem="Aqz-dT-z8p" firstAttribute="leading" secondItem="Cyn-0f-eme" secondAttribute="trailing" constant="5" id="Mkx-MX-g7x"/>
+                                <constraint firstItem="Aqz-dT-z8p" firstAttribute="top" secondItem="Cyn-0f-eme" secondAttribute="top" id="ZqM-be-aJd"/>
+                                <constraint firstItem="SxK-lw-4Gh" firstAttribute="leading" secondItem="wUB-fc-72e" secondAttribute="trailing" constant="10" id="a4C-OV-DCV"/>
+                                <constraint firstItem="Cyn-0f-eme" firstAttribute="top" secondItem="cOn-Xu-7Wk" secondAttribute="top" id="gPw-ng-HSY"/>
+                                <constraint firstItem="SxK-lw-4Gh" firstAttribute="top" secondItem="7UC-YB-6ZK" secondAttribute="top" constant="20" id="m5H-9s-DBs"/>
+                                <constraint firstItem="ROe-D0-gAn" firstAttribute="top" secondItem="wUB-fc-72e" secondAttribute="bottom" constant="30" id="mxX-hq-9Os"/>
+                                <constraint firstItem="DCg-xm-stt" firstAttribute="top" secondItem="DrO-3n-ADQ" secondAttribute="bottom" constant="10" id="nNE-79-vij"/>
+                                <constraint firstItem="DrO-3n-ADQ" firstAttribute="top" secondItem="wUB-fc-72e" secondAttribute="bottom" constant="18" id="tld-BD-M1r"/>
+                                <constraint firstItem="wUB-fc-72e" firstAttribute="leading" secondItem="7UC-YB-6ZK" secondAttribute="leading" constant="20" id="urf-oT-fL4"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7UC-YB-6ZK" secondAttribute="trailing" constant="20" id="Ptx-ww-lC0"/>
+                        <constraint firstAttribute="height" constant="250" id="ZaH-hg-26c"/>
+                        <constraint firstItem="7UC-YB-6ZK" firstAttribute="leading" secondItem="OBn-TL-BvD" secondAttribute="leading" constant="20" id="kcE-Ab-yc0"/>
+                        <constraint firstItem="73K-xb-Ls7" firstAttribute="top" secondItem="OBn-TL-BvD" secondAttribute="top" constant="40" id="miT-KX-qnQ"/>
+                        <constraint firstItem="7UC-YB-6ZK" firstAttribute="top" secondItem="73K-xb-Ls7" secondAttribute="bottom" constant="20" id="op9-t2-1Qq"/>
+                        <constraint firstItem="73K-xb-Ls7" firstAttribute="leading" secondItem="OBn-TL-BvD" secondAttribute="leading" constant="20" id="xgU-kl-g4W"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO4-gh-GB8">
+                    <rect key="frame" x="0.0" y="270" width="375" height="397"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX6-0A-b86">
+                            <rect key="frame" x="20" y="20" width="120" height="25"/>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="25"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NRU-08-Zcu">
+                            <rect key="frame" x="0.0" y="65" width="375" height="332"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="dAB-HH-fdY"/>
+                                <outlet property="delegate" destination="-1" id="Nam-SO-zep"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NRU-08-Zcu" secondAttribute="trailing" id="4Lk-zq-hUV"/>
+                        <constraint firstItem="lX6-0A-b86" firstAttribute="leading" secondItem="aO4-gh-GB8" secondAttribute="leading" constant="20" id="CJf-QV-zrR"/>
+                        <constraint firstItem="NRU-08-Zcu" firstAttribute="top" secondItem="lX6-0A-b86" secondAttribute="bottom" constant="20" id="SzP-3F-jHy"/>
+                        <constraint firstItem="lX6-0A-b86" firstAttribute="top" secondItem="aO4-gh-GB8" secondAttribute="top" constant="20" id="cXG-lF-zSB"/>
+                        <constraint firstAttribute="bottom" secondItem="NRU-08-Zcu" secondAttribute="bottom" id="eo6-w0-LIy"/>
+                        <constraint firstItem="NRU-08-Zcu" firstAttribute="leading" secondItem="aO4-gh-GB8" secondAttribute="leading" id="s9b-jc-edf"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="OBn-TL-BvD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4W0-QN-dYw"/>
+                <constraint firstItem="aO4-gh-GB8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ogl-sZ-FFt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aO4-gh-GB8" secondAttribute="trailing" id="Uzo-gD-IRz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aO4-gh-GB8" secondAttribute="bottom" id="aoR-gE-CGY"/>
+                <constraint firstItem="OBn-TL-BvD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cRN-M9-afD"/>
+                <constraint firstItem="aO4-gh-GB8" firstAttribute="top" secondItem="OBn-TL-BvD" secondAttribute="bottom" constant="20" id="fGf-wF-GCe"/>
+                <constraint firstItem="OBn-TL-BvD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="q9O-hy-FuB"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="126.38680659670166"/>
         </view>
     </objects>
+    <resources>
+        <image name="Clock" width="16" height="16"/>
+    </resources>
 </document>

@@ -3,7 +3,7 @@
 import UIKit
 import AMShimmer
 
-class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, InternetDelegate {
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var innerView: UIView!
@@ -27,11 +27,25 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         Manager.sharedManager().loadFavRestaurentList { (response, errorMessage) -> (Void) in
             AMShimmer.stop(for: self.tblView)
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
+                if(errorMessage.contains("Internet")){
+                    self.openNoInternetView()
+                } else {
+                    Utils.showAlert(withMessage: errorMessage)
+                    return
+                }
             }
             self.favouriteArray = Favourite.getAll()
             self.tblView.reloadData()
         }
+    }
+    
+    func openNoInternetView()  {
+        let vc = InternetVc.initViewController()
+        vc.delegate = self
+        self.navigationController?.present(vc, animated: false, completion: nil)
+    }
+    func retryClicked() {
+        loadFavuoriteRestaurant()
     }
     
     @IBAction func backClicked(_ sender: Any) {

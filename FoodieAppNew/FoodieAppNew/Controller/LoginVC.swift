@@ -2,7 +2,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVActivityIndicatorViewable {
+class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVActivityIndicatorViewable, InternetDelegate {
     
     @IBOutlet weak var txtMobile: CommonTextfield!
     @IBOutlet weak var innerView: UIView!
@@ -66,8 +66,12 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
         account.loginApicall { (isSuccess, account, errorMessage) -> (Void) in
             self.stopAnimating()
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
-                return
+                if(errorMessage.contains("Internet")){
+                    self.openNoInternetView()
+                } else {
+                    Utils.showAlert(withMessage: errorMessage)
+                    return
+                }
             }
            
             if(account.existing == "true"){
@@ -78,6 +82,14 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, NVAc
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
+    }
+    func openNoInternetView()  {
+        let vc = InternetVc.initViewController()
+        vc.delegate = self
+        self.navigationController?.present(vc, animated: false, completion: nil)
+    }
+    func retryClicked() {
+        loginApicall()
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
          scrollView.setContentOffset(CGPoint.init(x: 0, y: 180), animated: true)

@@ -5,13 +5,21 @@ import MagicalRecord
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, RecommendedDelegate , DeliveryAddressDelegate, DeliveryLocationDelegate{
     
+    @IBOutlet weak var deliveryView: UIView!
+    @IBOutlet weak var imgInternet: UIImageView!
+    @IBOutlet weak var internetView: UIView!
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var btnEditLocation: UIButton!
+    @IBOutlet weak var btnRetry: UIButton!
+    @IBOutlet weak var tblViewHeight: NSLayoutConstraint!
     @IBOutlet weak var lblAddressTitle: UILabel!
     @IBOutlet weak var lblHungry: UILabel!
     @IBOutlet weak var tblView: UITableView!
     var isLoaded = Bool()
     var restaurantArray = [Restaurant]()
     var selectedAddress : Address = Address.mr_createEntity()!
-    var selectedArea : Area = Area.mr_createEntity()!
+    var areaId = Int()
+    
     class func initViewController() -> HomeVC {
         let vc = HomeVC.init(nibName: "HomeVC", bundle: nil)
         return vc
@@ -41,13 +49,19 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
                 lblAddressTitle.text = Utils.fetchString(forKey: Selected_Area)
             }
         }
-         getClientToken()
+        getClientToken()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-     
-       
+        self.deliveryView.isHidden = true
+        self.internetView.isHidden = true
+        btnEditLocation.layer.borderColor = appThemeColor.cgColor
+        btnEditLocation.layer.borderWidth = 1
+        btnRetry.layer.borderColor = appThemeColor.cgColor
+        btnRetry.layer.borderWidth = 1
+        let noDelivery = UIImage.gifImageWithName("nodelivery_1-2")
+        imgView.image = noDelivery
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,38 +72,62 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     }
     
     func getClientToken ()  {
+         isLoaded = false
         let account = Account()
         account.getClientToken { (isSuccess, account, errorMessage) -> (Void) in
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
+                if(errorMessage.contains("Internet")){
+                    self.tblViewHeight.constant = 170
+                    self.deliveryView.isHidden = true
+                    self.internetView.isHidden = false
+                } else {
+                    Utils.showAlert(withMessage: errorMessage)
+                }
+            } else {
+                 self.getRestaurantListapi()
             }
-            self.getRestaurantListapi()
         }
     }
     
     func getRestaurantListapi () {
+         isLoaded = false
         self.restaurantArray = Restaurant.getAll()
         if(restaurantArray.count > 0){
             self.isLoaded = true
         }
         self.tblView.reloadData()
-        var areaId = Int()
-        if(selectedArea.entity_id != 0){
-            areaId = Int(selectedArea.entity_id)
-        } else {
+        self.tblViewHeight.constant = self.view.frame.height - 120
+         self.view.layoutIfNeeded()
+        if(areaId == 0){
             areaId = Int(Utils.fetchString(forKey: SelectedArea_id))!
         }
+        
         Manager.sharedManager().loadRestaurentList(area: areaId) { (response, errorMessage) -> (Void) in
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
+//                Utils.showAlert(withMessage: errorMessage)
+                if(errorMessage.contains("Internet")){
+                    self.tblViewHeight.constant = 170
+                    self.deliveryView.isHidden = true
+                    self.internetView.isHidden = false
+                }
+              
+            } else{
+                self.isLoaded = true
+                self.restaurantArray = Restaurant.getAll()
+                self.tblView.reloadData()
+                if(self.restaurantArray.count <= 0){
+                    self.tblViewHeight.constant = 170
+                    self.deliveryView.isHidden = false
+                    self.internetView.isHidden = true
+                } else {
+                    self.tblViewHeight.constant = self.view.frame.height - 120
+                }
+                  self.view.layoutIfNeeded()
             }
-            self.isLoaded = true
-            self.restaurantArray = Restaurant.getAll()
-            self.tblView.reloadData()
         }
     }
     
-    @IBAction func deliveryAddressClicked(_ sender: Any) {
+    func chooseAddress ()  {
         if(AccountManager.instance().activeAccount != nil){
             let vc = DeliveryAddressVC.initViewController(selectedAddress: selectedAddress)
             vc.delegate = self
@@ -103,6 +141,17 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         }
     }
     
+    @IBAction func retryClicked(_ sender: Any) {
+        getClientToken()
+    }
+    @IBAction func editLocationClicked(_ sender: Any) {
+      chooseAddress()
+    }
+    
+    @IBAction func deliveryAddressClicked(_ sender: Any) {
+       chooseAddress()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -111,23 +160,24 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         if(section == 0){
             return 1
         }
-        return restaurantArray.count
+        if(restaurantArray.count > 0){
+             return restaurantArray.count
+        } else {
+            return 5
+        }
+       
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tblView.frame.width, height: 50))
         headerView.backgroundColor = UIColor.white
-//        let lblTitle = UILabel.init(frame: CGRect.init(x: 15, y: 0, width: tblView.frame.width - 10, height: 50))
-//        lblTitle.font = UIFont.init(name: "Calibri-Bold", size: 20)
         let btnFiler = UIButton.init(frame: CGRect.init(x: tblView.frame.width - 40, y: 15, width: 20, height: 20))
         btnFiler.setImage(UIImage.init(named: "settings"), for: .normal)
         btnFiler.setTitleColor(.black, for: .normal)
         btnFiler.titleLabel?.font = UIFont.init(name: "Calibri", size: 16)
         if(section == 0){
-//            lblTitle.text = ""//"Delivers in under 30 minutes"
             btnFiler.isHidden = true
         } else {
-//            lblTitle.text = ""//"All Restaurants"
             btnFiler.isHidden = false
         }
         if(section == 1){
@@ -138,7 +188,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         }
         btnFiler.addTarget(self, action: #selector(filterClicked(_:)), for: .touchUpInside)
         headerView.addSubview(btnFiler)
-//        headerView.addSubview(lblTitle)
         return headerView
     }
     
@@ -154,7 +203,12 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         if(section == 0){
             return 0
         }
-        return 50
+        if(restaurantArray.count > 0){
+            return 50
+        } else {
+            return 0
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -175,14 +229,19 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
             cell = nib?[0] as? RestaurantCell
         }
         cell?.selectionStyle = .none
-        let restaurant : Restaurant = restaurantArray[indexPath.row]
-        if isLoaded == true{
-            cell?.hideLoader()
-        } else {
+        if(restaurantArray.count > 0){
+            let restaurant : Restaurant = restaurantArray[indexPath.row]
+            if isLoaded == true{
+                cell?.hideLoader()
+            } else {
+                cell?.showLoader()
+            }
+            
+            cell?.showData(restaurant: restaurant)
+        } else{
             cell?.showLoader()
         }
-        
-        cell?.showData(restaurant: restaurant)
+       
         return cell!
     }
     
@@ -193,7 +252,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func filterClicked(_ sender: UIButton) {
+    @objc func filterClicked(_ sender: UIButton) {
         let vc = FilterVC.initViewController()
         self.navigationController?.present(vc, animated: true, completion: nil)
     }
@@ -207,17 +266,20 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     //DeliveryAddressDelegate
     func selectedAddress(address: Address) {
         selectedAddress = address
+        areaId = Int(selectedAddress.area_id)
         lblAddressTitle.text = selectedAddress.address_type
         clearRestaurantData()
+         isLoaded = false
         getRestaurantListapi()
         //        getRestaurantListapi()
     }
     
     //    DeliveryLocationDelegate
     func selectedArea(area: Area) {
-        selectedArea = area
         lblAddressTitle.text = area.name
+        areaId = Int(area.entity_id)
         clearRestaurantData()
+        isLoaded = false
         getRestaurantListapi()
         //        getRestaurantListapi()
     }
@@ -225,6 +287,15 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     func clearRestaurantData()  {
         MagicalRecord.save(blockAndWait: { (localContext:NSManagedObjectContext) in
             Restaurant.mr_truncateAll(in: localContext)
+            Cusines.mr_truncateAll(in: localContext)
+            Images.mr_truncateAll(in: localContext)
+            Location.mr_truncateAll(in: localContext)
+            Menu.mr_truncateAll(in: localContext)
+            OpeningTimes.mr_truncateAll(in: localContext)
+            Items.mr_truncateAll(in: localContext)
+            CustomizationGroup.mr_truncateAll(in: localContext)
+            Price.mr_truncateAll(in: localContext)
+            GroupValues.mr_truncateAll(in: localContext)
         })
     }
 }

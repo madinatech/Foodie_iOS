@@ -3,6 +3,7 @@
     <entity name="Address" representedClassName="Address" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="address_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="area_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="country" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -153,7 +154,7 @@
         <relationship name="userData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserData" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Address" positionX="18" positionY="162" width="128" height="315"/>
+        <element name="Address" positionX="18" positionY="162" width="128" height="330"/>
         <element name="AppExpires" positionX="-54" positionY="18" width="128" height="105"/>
         <element name="Area" positionX="9" positionY="153" width="128" height="75"/>
         <element name="City" positionX="0" positionY="144" width="128" height="90"/>

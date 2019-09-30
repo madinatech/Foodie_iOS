@@ -68,16 +68,12 @@ class Manager: NSObject {
         let request = Request.init(url: "\(kBaseUrl)\(kGetRestaurantList)", method: RequestMethod(rawValue: "GET")!) { (success:Bool, request:Request, errorMessage:NSString) -> (Void) in
             if(request.isSuccess){
                 let arry : [[String: Any]] = request.serverData["data"] as! [[String: Any]]
-                if(arry.count <= 0){
-                    self.itemLoadedBlock("","No restaurant found")
-                } else {
                     MagicalRecord.save({ (localContext: NSManagedObjectContext) in
                         _ = FEMDeserializer.collection(fromRepresentation: arry, mapping: Restaurant.defaultMapping(), context: localContext)
                         
                     }, completion: { (isSuccess, error) in
                         self.itemLoadedBlock(arry,"")
                     })
-                }
                 
             } else {
                 self.itemLoadedBlock("",errorMessage as String)

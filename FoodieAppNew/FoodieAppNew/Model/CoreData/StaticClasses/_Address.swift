@@ -7,6 +7,7 @@ import CoreData
 public enum AddressAttributes: String {
     case address = "address"
     case address_type = "address_type"
+    case area_id = "area_id"
     case city = "city"
     case country = "country"
     case created_at = "created_at"
@@ -60,6 +61,9 @@ open class _Address: NSManagedObject {
 
     @NSManaged open
     var address_type: String?
+
+    @NSManaged open
+    var area_id: Int32 // Optional scalars not supported
 
     @NSManaged open
     var city: String?

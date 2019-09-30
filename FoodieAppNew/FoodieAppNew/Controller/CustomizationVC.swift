@@ -1,10 +1,4 @@
-//
-//  CustomizationVC.swift
-//  FoodieAppNew
-//
-//  Created by CrossGrids on 26/09/19.
-//  Copyright © 2019 CrossGrids. All rights reserved.
-//
+
 
 import UIKit
 
@@ -15,10 +9,13 @@ import UIKit
 
 class CustomizationVC: UIViewController , UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate{
     
+    @IBOutlet weak var lblItemName: UILabel!
+    @IBOutlet weak var imgType: UIImageView!
+    @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var tapView: UIView!
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var tblView: UITableView!
-    @IBOutlet weak var viewHeight: NSLayoutConstraint!
+    
     
     var delegate :  CustomizeDelegate? = nil
     var checkedArray = NSMutableArray()
@@ -56,142 +53,89 @@ class CustomizationVC: UIViewController , UITableViewDelegate, UITableViewDataSo
         super.viewWillAppear(animated)
         customizationGroupArray = item.customization_groups.allObjects as! [CustomizationGroup]
         tblView.reloadData()
-        viewHeight.constant = tblView.contentSize.height
-        self.view.layoutIfNeeded()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            if(self.tblView.contentSize.height < self.view.frame.height - 100){
-                 self.viewHeight.constant = self.tblView.contentSize.height
-            } else {
-                 self.viewHeight.constant = self.view.frame.height - 100
-            }
-           
-            self.view.layoutIfNeeded()
+        showData()
+    }
+    
+    func showData()  {
+        lblItemName.text = item.name
+        let priceArray : [Price] = item.price.allObjects as! [Price]
+        if(priceArray.count > 0){
+            let price : Price = priceArray[0]
+            lblPrice.text = "TZS \(price.price)"
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tblView.reloadData()
-        viewHeight.constant = tblView.contentSize.height
-        self.view.layoutIfNeeded()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return customizationGroupArray.count + 2
+        return customizationGroupArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(section == 0){
-            return 1
-        } else if(section == customizationGroupArray.count + 1){
-           return 1
-        } else {
-            groupValueArray = customizationGroupArray[section - 1].group_values.allObjects as! [GroupValues]
-            return groupValueArray.count
-        }
+        groupValueArray = customizationGroupArray[section].group_values.allObjects as! [GroupValues]
+        return groupValueArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(indexPath.section == 0){
-            return UITableView.automaticDimension
-        } else if(indexPath.section == customizationGroupArray.count + 1){
-            return 100
-        } else {
-            return 40
-        }
+        return 40
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if(section == 0){
-          return 0
-        } else if(section == customizationGroupArray.count + 1){
-            return 0
-        } else {
-            return 50
-        }
+        return 50
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if(section == 0){
-            return ""
-        } else if(section == customizationGroupArray.count + 1){
-             return ""
-        } else {
-            return customizationGroupArray[section - 1].group_name
-        }
-        
+        return customizationGroupArray[section].group_name
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.section == 0){
-            var cell = tableView.dequeueReusableCell(withIdentifier: "CustomizeItemCell") as? CustomizeItemCell
+        let customize : CustomizationGroup = customizationGroupArray[indexPath.section]
+        if(customize.group_type_code == "2") {
+            var cell = tableView.dequeueReusableCell(withIdentifier: "CustomizeSingleCell") as? CustomizeSingleCell
             if cell == nil {
-                var nib = Bundle.main.loadNibNamed("CustomizeItemCell", owner: self, options: nil)
-                cell = nib?[0] as? CustomizeItemCell
+                var nib = Bundle.main.loadNibNamed("CustomizeSingleCell", owner: self, options: nil)
+                cell = nib?[0] as? CustomizeSingleCell
             }
             cell?.selectionStyle = .none
-            cell?.setData(item: item)
-            cell?.btnCose.addTarget(self, action: #selector(closeClicked(_:)), for: .touchUpInside)
-            return cell!
+            cell?.btnRedio.tag = indexPath.row
+            cell?.btnRedio.addTarget(self, action: #selector(radioClicked(_:)), for: .touchUpInside)
+            cell?.btnRedio.isSelected = false
             
-        } else if(indexPath.section == customizationGroupArray.count + 1){
-            var cell = tableView.dequeueReusableCell(withIdentifier: "CustomizeTotalCell") as? CustomizeTotalCell
-            if cell == nil {
-                var nib = Bundle.main.loadNibNamed("CustomizeTotalCell", owner: self, options: nil)
-                cell = nib?[0] as? CustomizeTotalCell
+            groupValueArray = customizationGroupArray[indexPath.section].group_values.allObjects as! [GroupValues]
+            let groupValue = groupValueArray[indexPath.row]
+            cell?.setData(value: groupValue)
+            if(groupValue == selectedGroupValue){
+                cell?.btnRedio.isSelected = true
             }
-            cell?.selectionStyle = .none
-            cell?.lblItems.text = ""
-            cell?.setData(item: item)
-            cell?.btnUpdateItem.addTarget(self, action: #selector(updateClicked(_:)), for: .touchUpInside)
             return cell!
-        } else{
-            let customize : CustomizationGroup = customizationGroupArray[indexPath.section - 1]
-            if(customize.group_type_code == "2") {
-                var cell = tableView.dequeueReusableCell(withIdentifier: "CustomizeSingleCell") as? CustomizeSingleCell
-                if cell == nil {
-                    var nib = Bundle.main.loadNibNamed("CustomizeSingleCell", owner: self, options: nil)
-                    cell = nib?[0] as? CustomizeSingleCell
-                }
-                cell?.selectionStyle = .none
-                cell?.btnRedio.tag = indexPath.row
-                cell?.btnRedio.addTarget(self, action: #selector(radioClicked(_:)), for: .touchUpInside)
-                cell?.btnRedio.isSelected = false
-                
-                groupValueArray = customizationGroupArray[indexPath.section - 1].group_values.allObjects as! [GroupValues]
-                let groupValue = groupValueArray[indexPath.row]
-                cell?.setData(value: groupValue)
-                if(groupValue == selectedGroupValue){
-                    cell?.btnRedio.isSelected = true
-                }
-                 return cell!
-            } else {
-                var cell = tableView.dequeueReusableCell(withIdentifier: "CustomizeCell") as? CustomizeCell
-                if cell == nil {
+        } else {
+            var cell = tableView.dequeueReusableCell(withIdentifier: "CustomizeCell") as? CustomizeCell
+            if cell == nil {
                 var nib = Bundle.main.loadNibNamed("CustomizeCell", owner: self, options: nil)
                 cell = nib?[0] as? CustomizeCell
-                }
-                cell?.selectionStyle = .none
-                cell?.btnCheck.tag = indexPath.row
-                cell?.btnCheck.addTarget(self, action: #selector(optionClicked(_:)), for: .touchUpInside)
-               
-                
-                groupValueArray = customizationGroupArray[indexPath.section - 1].group_values.allObjects as! [GroupValues]
-                let groupValue = groupValueArray[indexPath.row]
-                cell?.setData(value: groupValue)
-                
-                 cell?.btnCheck.isSelected = false
-                if(checkedArray.contains(groupValue)){
-                cell?.btnCheck.isSelected = true
-                }
-                 return cell!
             }
+            cell?.selectionStyle = .none
+            cell?.btnCheck.tag = indexPath.row
+            cell?.btnCheck.addTarget(self, action: #selector(optionClicked(_:)), for: .touchUpInside)
+            
+            
+            groupValueArray = customizationGroupArray[indexPath.section].group_values.allObjects as! [GroupValues]
+            let groupValue = groupValueArray[indexPath.row]
+            cell?.setData(value: groupValue)
+            
+            cell?.btnCheck.isSelected = false
+            if(checkedArray.contains(groupValue)){
+                cell?.btnCheck.isSelected = true
+            }
+            return cell!
         }
     }
     
     @objc func optionClicked(_ sender: UIButton) {
-       let groupValue =  groupValueArray[sender.tag]
+        let groupValue =  groupValueArray[sender.tag]
         if(checkedArray.contains(groupValue)){
             checkedArray.remove(groupValue)
         } else {
@@ -200,7 +144,7 @@ class CustomizationVC: UIViewController , UITableViewDelegate, UITableViewDataSo
         tblView.reloadData()
     }
     
-      @objc func radioClicked(_ sender: UIButton) {
+    @objc func radioClicked(_ sender: UIButton) {
         selectedGroupValue = groupValueArray[sender.tag]
         tblView.reloadData()
     }

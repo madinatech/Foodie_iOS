@@ -32,7 +32,7 @@ class BaseTabViewController: CBFlashyTabBarController, UITabBarControllerDelegat
         v2.tabBarItem.image = UIImage(named: "Search")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         v2.tabBarItem.title = "Search"
         let v3 = OrderListVC.initViewController()
-        v3.tabBarItem.image = UIImage(named: "Cart")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        v3.tabBarItem.image = UIImage(named: "Orders")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         v3.tabBarItem.title = "Orders"
         
         if(AccountManager.instance().activeAccount != nil){

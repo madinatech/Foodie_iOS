@@ -3,7 +3,7 @@ import UIKit
 import ActionSheetPicker_3_0
 import NVActivityIndicatorView
 
-class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable {
+class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable, InternetDelegate {
     
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var txtTitle: CommonTextfield!
@@ -33,7 +33,12 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable {
     func getCountryApi()  {
         Manager.sharedManager().loadCountry { (response, errorMessage) -> (Void) in
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
+                if(errorMessage.contains("Internet")){
+                    self.openNoInternetView()
+                } else {
+                    Utils.showAlert(withMessage: errorMessage)
+                    return
+                }
             }
             let country = Country.getCountryByName(name: "Tanzania")
             if(country.country_id != 0){
@@ -41,8 +46,14 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable {
             }
         }
     }
-    
-    
+    func openNoInternetView()  {
+        let vc = InternetVc.initViewController()
+        vc.delegate = self
+        self.navigationController?.present(vc, animated: false, completion: nil)
+    }
+    func retryClicked() {
+        getCountryApi()
+    }
 
     @IBAction func saveClicked(_ sender: Any) {
         var strMessage = String()
@@ -79,7 +90,12 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable {
         Manager.sharedManager().addNewAddress(address: address + strArea, addressType:txtTitle.text ?? "", city: txtCity.text ?? "", town: txtArea.text ?? "", street: txtLine1.text ?? "", landmark: txtLine2.text ?? "", isDefault: isDefault) { (response, errorMessage) -> (Void) in
             self.stopAnimating()
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
+                if(errorMessage.contains("Internet")){
+                    self.openNoInternetView()
+                } else {
+                    Utils.showAlert(withMessage: errorMessage)
+                    return
+                }
             }
              self.navigationController?.popViewController(animated: true)
         }

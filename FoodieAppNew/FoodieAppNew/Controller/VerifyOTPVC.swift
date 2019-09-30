@@ -3,7 +3,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable, UITextFieldDelegate {
+class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable, UITextFieldDelegate, InternetDelegate {
     
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var txt1: CommonTextfield!
@@ -79,8 +79,12 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
         Manager.sharedManager().verifyExistingUser(mobileNumber: "0\(account.mobileNumber.dropFirst(3))", code: code + str4) { (response, errorMessage) -> (Void) in
               self.stopAnimating()
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
-                return
+                if(errorMessage.contains("Internet")){
+                    self.openNoInternetView()
+                } else {
+                    Utils.showAlert(withMessage: errorMessage)
+                    return
+                }
             }
             let user : VerifyUser = VerifyUser.getUserByNumber(number: self.account.mobileNumber )
             self.account.user_id = "\(user.entity_id)"
@@ -94,6 +98,11 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
         }
     }
     
+    func openNoInternetView()  {
+        let vc = InternetVc.initViewController()
+        vc.delegate = self
+        self.navigationController?.present(vc, animated: false, completion: nil)
+    }
     
     @IBAction func textfieldChanged(_ sender: UITextField) {
         let text = sender.text
@@ -121,4 +130,8 @@ class VerifyOTPVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorVi
         textField.text = ""
     }
     
+    
+    func retryClicked() {
+        verifyOtpApiCall()
+    }
 }

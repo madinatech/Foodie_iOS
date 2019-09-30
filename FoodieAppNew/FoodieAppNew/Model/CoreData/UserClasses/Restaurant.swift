@@ -42,5 +42,56 @@ open class Restaurant: _Restaurant {
         request.startRequest()
     }
     
+    class func getAllByName(name : String) -> [Restaurant] {
+        let restAray = getAll()
+        var newRest = [Restaurant]()
+        for rest in restAray{
+            let menuArray : [Menu] = rest.menus.allObjects as! [Menu]
+            for menu in menuArray{
+                let itemArray : [Items] = menu.items.allObjects as! [Items]
+                for item in itemArray{
+                    let nameArry = name.split(separator: " ")
+                        for name in nameArry{
+                            if((rest.name?.containsIgnoringCase(String(name)))!){
+                                if(!newRest.contains(rest)){
+                                    newRest.append(rest)
+                                }
+                            }
+                            if((item.name?.containsIgnoringCase(String(name)))!){
+                                if(!newRest.contains(rest)){
+                                    newRest.append(rest)
+                                }
+                            }
+                        }
+                }
+            }
+        }
+        return newRest
+        //        let pre = NSPredicate(format: "self.menus.items CONTAINS[cd] %@", name)
+        //        let arr : [Restaurant] = Restaurant.mr_findAllSorted(by: "name", ascending: true, with: pre) as! [Restaurant]
+        //        return arr
+    }
+    
+    class func getAllByItems(name : String) -> [Restaurant] {
+        let restAray = getAll()
+        var newRest = [Restaurant]()
+        for rest in restAray{
+            let menuArray : [Menu] = rest.menus.allObjects as! [Menu]
+            for menu in menuArray{
+                let itemArray : [Items] = menu.items.allObjects as! [Items]
+                for item in itemArray{
+                    let nameArry = name.split(separator: " ")
+                    for name in nameArry{
+                        if(item.name?.containsIgnoringCase(String(name)) ?? false){
+                            if(!newRest.contains(rest)){
+                                newRest.append(rest)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return newRest
+    }
    
 }

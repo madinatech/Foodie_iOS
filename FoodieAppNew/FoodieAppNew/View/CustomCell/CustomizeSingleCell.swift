@@ -28,7 +28,7 @@ class CustomizeSingleCell: UITableViewCell {
     func setData(value : GroupValues)  {
         
         lblTitle.text = value.item_name
-        lblPrice.text = "\(value.item_price)"
+        lblPrice.text = "TZS \(value.item_price)"
     }
     
 }

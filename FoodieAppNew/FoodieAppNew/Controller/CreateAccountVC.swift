@@ -2,7 +2,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable, UITextFieldDelegate {
+class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicatorViewable, UITextFieldDelegate, InternetDelegate {
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var txt1: CommonTextfield!
     @IBOutlet weak var txt2: CommonTextfield!
@@ -79,13 +79,25 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
         Manager.sharedManager().verifyNewUser(mobileNumber: "0\(account.mobileNumber.dropFirst(3))", code: code + txt4.text!, name: txtName.text ?? "", email: txtEmail.text ?? "") { (response, errorMessage) -> (Void) in
             self.stopAnimating()
             if(errorMessage.count > 0){
-                Utils.showAlert(withMessage: errorMessage)
-                return
+                if(errorMessage.contains("Internet")){
+                    self.openNoInternetView()
+                } else {
+                    Utils.showAlert(withMessage: errorMessage)
+                    return
+                }
             }
             AccountManager.instance().activeAccount = self.account
             appDelegateShared?.showTabbar()
         }
     }
+    
+    func openNoInternetView()  {
+        let vc = InternetVc.initViewController()
+        vc.delegate = self
+        self.navigationController?.present(vc, animated: false, completion: nil)
+    }
+    
+    
     
     @IBAction func textfieldChanged(_ sender: UITextField) {
         let text = sender.text
@@ -109,5 +121,9 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
   
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""
+    }
+    
+    func retryClicked() {
+        verifyOtpApiCall()
     }
 }

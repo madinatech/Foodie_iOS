@@ -16,6 +16,8 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
     var cellHeight = CGFloat()
     var isLoded = Bool()
     var isSearch = Bool()
+    var restaurantArray = [Restaurant]()
+    var searchString = String()
     
     class func initViewController() -> SearchVC {
         let vc = SearchVC.init(nibName: "SearchVC", bundle: nil)
@@ -56,6 +58,8 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
         btnDishes.isSelected = true
         btnRestaurnat.backgroundColor = appLightThemeColor
         btnDishes.backgroundColor = appThemeColor
+         restaurantArray = Restaurant.getAllByItems(name: searchString)
+        tblView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -66,7 +70,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(isSearch == true){
-            return 10
+            return restaurantArray.count
         } else {
             if(section == 0){
                 return 3
@@ -118,6 +122,8 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
                 cell = nib?[0] as? RestaurantCell
             }
             cell?.selectionStyle = .none
+            let res : Restaurant = restaurantArray[indexPath.row]
+            cell?.showData(restaurant: res)
             return cell!
         } else {
             if(indexPath.section == 0){
@@ -159,13 +165,16 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
             imgSearch.image = UIImage.init(named: "Search_red")
             searchView.backgroundColor = appLigtGrayColor
             txtSearch.attributedPlaceholder = NSAttributedString(string: "Search for a dish or restaurant",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+            
             innerView.backgroundColor = appLigtGrayColor
             self.view.backgroundColor = .white
             filterViewHeight.constant = 40
             filterView.isHidden = false
             isSearch = true
             self.view.layoutIfNeeded()
+            searchString = replacedText
+            restaurantArray = Restaurant.getAllByName(name: replacedText)
         } else {
             imgSearch.image = UIImage.init(named: "Search_white")
             searchView.backgroundColor = UIColor.init(red: 181.0/255.0, green: 12.0/255.0, blue: 32.0/255.0, alpha: 1.0)
@@ -177,6 +186,9 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
             filterView.isHidden = true
             isSearch = false
             self.view.layoutIfNeeded()
+             restaurantArray = [Restaurant]()
+            restaurantClicked(btnRestaurnat)
+            searchString = ""
         }
         tblView.reloadData()
         

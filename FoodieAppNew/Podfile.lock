@@ -8,6 +8,7 @@ PODS:
   - FastEasyMapping (1.2.2)
   - IQKeyboardManagerSwift (6.2.0)
   - Kingfisher (5.3.0)
+  - LinearProgressBar (1.0.1)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - FastEasyMapping (~> 1.2)
   - IQKeyboardManagerSwift
   - Kingfisher
+  - LinearProgressBar
   - MagicalRecord
   - NVActivityIndicatorView
   - ReachabilitySwift
@@ -39,6 +41,7 @@ SPEC REPOS:
     - FastEasyMapping
     - IQKeyboardManagerSwift
     - Kingfisher
+    - LinearProgressBar
     - MagicalRecord
     - NVActivityIndicatorView
     - ReachabilitySwift
@@ -52,10 +55,11 @@ SPEC CHECKSUMS:
   FastEasyMapping: cc13aa6608aeb171bc0ea895876434a7328a153a
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   Kingfisher: 4692c783ffb99e9e2e40a6eb3e518c3b96c6fa8c
+  LinearProgressBar: f6a74dbabed229dbb1a7978089e2e4317a3a0ee0
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
 
-PODFILE CHECKSUM: 8af2b145ccd6469e863ea195937173c963e59ceb
+PODFILE CHECKSUM: 87a8773dc4ff2d8d1144141307cd0086f3fad503
 
 COCOAPODS: 1.6.1

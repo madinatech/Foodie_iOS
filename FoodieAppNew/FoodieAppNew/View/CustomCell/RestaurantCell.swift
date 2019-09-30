@@ -22,8 +22,6 @@ class RestaurantCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         innerView.dropShadow()
-        
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -88,11 +86,13 @@ class RestaurantCell: UITableViewCell {
     
         lblCusines.text = joined
         let url = URL(string: restaurant.images?.display ?? "")
-        imgView.kf.indicatorType = .activity
+//        imgView.kf.indicatorType = .none
+         AMShimmer.start(for: imgView)
         imgView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: { (size1, size2) in
             
         }, completionHandler: { (image, error, cache, url) in
             if image != nil{
+                  AMShimmer.stop(for:  self.imgView)
                 self.imgView.image = image
             }
         })

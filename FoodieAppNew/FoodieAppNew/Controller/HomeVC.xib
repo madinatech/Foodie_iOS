@@ -20,9 +20,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
+                <outlet property="btnEditLocation" destination="r9N-uT-xLu" id="Ps1-hT-Dte"/>
+                <outlet property="btnRetry" destination="lro-Ae-Fhf" id="en5-dC-lgo"/>
+                <outlet property="deliveryView" destination="Dz8-2f-iDt" id="dTh-P9-ebf"/>
+                <outlet property="imgInternet" destination="ELJ-Eh-Ehm" id="Oit-qB-Ns9"/>
+                <outlet property="imgView" destination="SwX-XX-Yqg" id="18c-ZS-ouo"/>
+                <outlet property="internetView" destination="gzN-wX-RLs" id="HYj-ws-vMt"/>
                 <outlet property="lblAddressTitle" destination="urY-mB-gHA" id="QSV-1m-ODc"/>
                 <outlet property="lblHungry" destination="r7T-Mr-wI3" id="6vF-8b-ESN"/>
                 <outlet property="tblView" destination="TDe-B0-yRK" id="AOS-o5-qJS"/>
+                <outlet property="tblViewHeight" destination="Ctt-u2-TIa" id="gZi-Ky-q0N"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,14 +45,6 @@
                         <constraint firstAttribute="height" constant="70" id="nvK-ft-eXU"/>
                     </constraints>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TDe-B0-yRK">
-                    <rect key="frame" x="0.0" y="131" width="414" height="605"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="d7d-Q1-717"/>
-                        <outlet property="delegate" destination="-1" id="KNK-uA-jgp"/>
-                    </connections>
-                </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7T-Mr-wI3">
                     <rect key="frame" x="15" y="40" width="219" height="58.333333333333343"/>
                     <string key="text">Are you hungry
@@ -78,27 +77,150 @@ Paul?</string>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="wia-tt-uxc">
                     <rect key="frame" x="154.66666666666666" y="104.33333333333333" width="16" height="16"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dz8-2f-iDt">
+                    <rect key="frame" x="0.0" y="311.33333333333331" width="414" height="290.99999999999994"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WISH WE WERE HERE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smu-4l-fp6">
+                            <rect key="frame" x="100.66666666666669" y="160" width="213" height="23.333333333333343"/>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9N-uT-xLu">
+                            <rect key="frame" x="132" y="258.33333333333331" width="150" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="1mS-WA-spb"/>
+                                <constraint firstAttribute="width" constant="150" id="HCz-7Q-Ayx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
+                            <state key="normal" title="EDIT LOCATION">
+                                <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="editLocationClicked:" destination="-1" eventType="touchUpInside" id="4HJ-ay-IX2"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We don't deliver here yet but sometimes loosing calories is also not bad." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmf-Yg-X1B">
+                            <rect key="frame" x="70" y="193.33333333333337" width="274" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="274" id="Ss4-tw-vdZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SwX-XX-Yqg">
+                            <rect key="frame" x="77" y="0.0" width="260" height="140"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="140" id="3qb-X7-Ghr"/>
+                                <constraint firstAttribute="width" constant="260" id="n66-su-FCa"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="smu-4l-fp6" firstAttribute="centerX" secondItem="Dz8-2f-iDt" secondAttribute="centerX" id="EC1-Mc-K92"/>
+                        <constraint firstItem="SwX-XX-Yqg" firstAttribute="centerX" secondItem="Dz8-2f-iDt" secondAttribute="centerX" id="M3B-q5-NYW"/>
+                        <constraint firstAttribute="height" constant="291" id="Mqx-r1-jfd"/>
+                        <constraint firstItem="r9N-uT-xLu" firstAttribute="centerX" secondItem="Dz8-2f-iDt" secondAttribute="centerX" id="Nuv-i4-gOv"/>
+                        <constraint firstItem="fmf-Yg-X1B" firstAttribute="top" secondItem="smu-4l-fp6" secondAttribute="bottom" constant="10" id="OEn-wd-FPY"/>
+                        <constraint firstItem="fmf-Yg-X1B" firstAttribute="centerX" secondItem="Dz8-2f-iDt" secondAttribute="centerX" id="OdB-2y-0J4"/>
+                        <constraint firstItem="r9N-uT-xLu" firstAttribute="top" secondItem="fmf-Yg-X1B" secondAttribute="bottom" constant="30" id="WgL-vK-O08"/>
+                        <constraint firstItem="smu-4l-fp6" firstAttribute="top" secondItem="SwX-XX-Yqg" secondAttribute="bottom" constant="20" id="kEV-SS-04P"/>
+                        <constraint firstItem="SwX-XX-Yqg" firstAttribute="top" secondItem="Dz8-2f-iDt" secondAttribute="top" id="q1b-Sc-Zak"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-wX-RLs">
+                    <rect key="frame" x="0.0" y="311.33333333333331" width="414" height="290.99999999999994"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONNECTION ERROR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEa-Pd-VyK">
+                            <rect key="frame" x="104.33333333333333" y="148" width="205.66666666666669" height="23.333333333333343"/>
+                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lro-Ae-Fhf">
+                            <rect key="frame" x="157" y="264.00000000000006" width="100" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="7QQ-C9-sCm"/>
+                                <constraint firstAttribute="height" constant="40" id="aKe-8y-bO2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
+                            <state key="normal" title="RETRY">
+                                <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="editLocationClicked:" destination="-1" eventType="touchUpInside" id="jPl-qS-VJI"/>
+                                <action selector="retryClicked:" destination="-1" eventType="touchUpInside" id="KA2-jB-z8o"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seems like your internet connection has lost its way. Check your connection or try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jb-sM-uSP">
+                            <rect key="frame" x="70" y="181.33333333333337" width="274" height="52.666666666666657"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="274" id="USA-lc-976"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="internetHome" translatesAutoresizingMaskIntoConstraints="NO" id="ELJ-Eh-Ehm">
+                            <rect key="frame" x="87" y="0.0" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="Nld-3B-0Gq"/>
+                                <constraint firstAttribute="width" constant="240" id="w5z-PC-NMh"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ELJ-Eh-Ehm" firstAttribute="centerX" secondItem="gzN-wX-RLs" secondAttribute="centerX" id="00k-Pp-gPx"/>
+                        <constraint firstAttribute="height" constant="291" id="8r6-Y7-Y1f"/>
+                        <constraint firstItem="lro-Ae-Fhf" firstAttribute="centerX" secondItem="gzN-wX-RLs" secondAttribute="centerX" id="9Qr-eL-osv"/>
+                        <constraint firstItem="wEa-Pd-VyK" firstAttribute="centerX" secondItem="gzN-wX-RLs" secondAttribute="centerX" id="Acb-K7-BKG"/>
+                        <constraint firstItem="0Jb-sM-uSP" firstAttribute="top" secondItem="wEa-Pd-VyK" secondAttribute="bottom" constant="10" id="Inl-qn-UWY"/>
+                        <constraint firstItem="wEa-Pd-VyK" firstAttribute="top" secondItem="ELJ-Eh-Ehm" secondAttribute="bottom" constant="20" id="cy4-Ir-0rW"/>
+                        <constraint firstItem="lro-Ae-Fhf" firstAttribute="top" secondItem="0Jb-sM-uSP" secondAttribute="bottom" constant="30" id="do2-Tb-WjX"/>
+                        <constraint firstItem="ELJ-Eh-Ehm" firstAttribute="top" secondItem="gzN-wX-RLs" secondAttribute="top" id="fya-BK-8Tl"/>
+                        <constraint firstItem="0Jb-sM-uSP" firstAttribute="centerX" secondItem="gzN-wX-RLs" secondAttribute="centerX" id="nuQ-02-gGH"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TDe-B0-yRK">
+                    <rect key="frame" x="0.0" y="131" width="414" height="616"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="616" id="Ctt-u2-TIa"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="d7d-Q1-717"/>
+                        <outlet property="delegate" destination="-1" id="KNK-uA-jgp"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="urY-mB-gHA" firstAttribute="leading" secondItem="ouo-qn-1F8" secondAttribute="trailing" constant="5" id="5tV-m1-pnQ"/>
                 <constraint firstItem="K8M-ZS-SCU" firstAttribute="leading" secondItem="r7T-Mr-wI3" secondAttribute="trailing" constant="20" id="76O-NJ-lGV"/>
                 <constraint firstItem="r7T-Mr-wI3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="7M0-r9-LaH"/>
+                <constraint firstItem="gzN-wX-RLs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7ge-D7-5HL"/>
                 <constraint firstItem="ouo-qn-1F8" firstAttribute="top" secondItem="r7T-Mr-wI3" secondAttribute="bottom" constant="5" id="8wL-vR-MSQ"/>
                 <constraint firstItem="TDe-B0-yRK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Cvj-xk-rhb"/>
+                <constraint firstItem="gzN-wX-RLs" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Hmp-Bz-mUz"/>
+                <constraint firstItem="gzN-wX-RLs" firstAttribute="top" secondItem="ne2-N6-3zY" secondAttribute="bottom" constant="190" id="JpS-XH-mEp"/>
                 <constraint firstItem="TDe-B0-yRK" firstAttribute="top" secondItem="ouo-qn-1F8" secondAttribute="bottom" constant="10" id="LPX-Bn-4S9"/>
                 <constraint firstItem="wia-tt-uxc" firstAttribute="centerY" secondItem="urY-mB-gHA" secondAttribute="centerY" id="LgQ-et-vxP"/>
                 <constraint firstItem="ne2-N6-3zY" firstAttribute="trailing" secondItem="wia-tt-uxc" secondAttribute="trailing" id="N9z-hP-Vh6"/>
                 <constraint firstItem="K8M-ZS-SCU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RR8-0T-GdE"/>
                 <constraint firstItem="urY-mB-gHA" firstAttribute="top" secondItem="r7T-Mr-wI3" secondAttribute="bottom" constant="5" id="VIR-qg-p1s"/>
+                <constraint firstItem="Dz8-2f-iDt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YyT-6f-QKH"/>
                 <constraint firstItem="wia-tt-uxc" firstAttribute="leading" secondItem="urY-mB-gHA" secondAttribute="trailing" constant="5" id="dCi-b6-d8R"/>
                 <constraint firstItem="ne2-N6-3zY" firstAttribute="top" secondItem="r7T-Mr-wI3" secondAttribute="bottom" constant="2" id="eUF-Sf-Tim"/>
                 <constraint firstItem="r7T-Mr-wI3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="gf6-Qj-ao5"/>
                 <constraint firstItem="ouo-qn-1F8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="gg8-TX-GNv"/>
                 <constraint firstItem="ne2-N6-3zY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="ik6-B7-Ybt"/>
-                <constraint firstItem="TDe-B0-yRK" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ksb-o8-Y86"/>
                 <constraint firstItem="TDe-B0-yRK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mcP-1n-v2b"/>
+                <constraint firstItem="Dz8-2f-iDt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nkO-14-3pO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K8M-ZS-SCU" secondAttribute="trailing" constant="10" id="oL3-px-Lut"/>
+                <constraint firstItem="Dz8-2f-iDt" firstAttribute="top" secondItem="ne2-N6-3zY" secondAttribute="bottom" constant="190" id="oWH-ws-31H"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="126.35869565217392"/>
@@ -106,6 +228,7 @@ Paul?</string>
     </objects>
     <resources>
         <image name="down-arrow" width="10" height="10"/>
+        <image name="internetHome" width="300" height="300"/>
         <image name="redlogo" width="596" height="249"/>
     </resources>
 </document>

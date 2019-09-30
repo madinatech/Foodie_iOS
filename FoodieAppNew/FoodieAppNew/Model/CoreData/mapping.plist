@@ -11,6 +11,8 @@
 	</dict>
 	<key>Address</key>
 	<dict>
+		<key>area_id</key>
+		<string>area_id</string>
 		<key>address</key>
 		<string>address</string>
 		<key>address_type</key>

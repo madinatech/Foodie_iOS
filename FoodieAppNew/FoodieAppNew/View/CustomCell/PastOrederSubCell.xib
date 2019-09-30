@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="calibrib.ttf">
+            <string>Calibri-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PastOrederSubCell" customModule="FoodieAppNew" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qML-oK-fFD">
+                        <rect key="frame" x="0.0" y="9" width="24" height="26"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNG-ez-mLX">
+                                <rect key="frame" x="0.0" y="0.0" width="24" height="26"/>
+                                <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UNG-ez-mLX" secondAttribute="trailing" id="Qgn-Y8-EmT"/>
+                            <constraint firstAttribute="height" constant="26" id="UQ6-cx-rIP"/>
+                            <constraint firstAttribute="width" constant="24" id="YhC-rM-lRr"/>
+                            <constraint firstItem="UNG-ez-mLX" firstAttribute="top" secondItem="qML-oK-fFD" secondAttribute="top" id="cLp-On-luK"/>
+                            <constraint firstAttribute="bottom" secondItem="UNG-ez-mLX" secondAttribute="bottom" id="iw0-GY-kyz"/>
+                            <constraint firstItem="UNG-ez-mLX" firstAttribute="leading" secondItem="qML-oK-fFD" secondAttribute="leading" id="lYk-Xp-QYL"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Cheese Pie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2L-bv-jUF">
+                        <rect key="frame" x="34" y="14.5" width="276" height="15"/>
+                        <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qML-oK-fFD" secondAttribute="bottom" constant="8.5" id="4OV-Mr-kq3"/>
+                    <constraint firstItem="g2L-bv-jUF" firstAttribute="leading" secondItem="qML-oK-fFD" secondAttribute="trailing" constant="10" id="G6W-ut-mBS"/>
+                    <constraint firstItem="g2L-bv-jUF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bq1-Yc-dXJ"/>
+                    <constraint firstAttribute="trailing" secondItem="g2L-bv-jUF" secondAttribute="trailing" constant="10" id="bzj-Ea-VH0"/>
+                    <constraint firstItem="qML-oK-fFD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dTx-Va-dGz"/>
+                    <constraint firstItem="qML-oK-fFD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="hce-Iw-cre"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+        </tableViewCell>
+    </objects>
+</document>

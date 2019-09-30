@@ -17,7 +17,7 @@ target 'FoodieAppNew' do
   pod 'FastEasyMapping', '~> 1.2'
   pod 'ActionSheetPicker-3.0'
   pod 'Kingfisher'
-
+pod 'LinearProgressBar'
   
  
   target 'FoodieAppNewTests' do
