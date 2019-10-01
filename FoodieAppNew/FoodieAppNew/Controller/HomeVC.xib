@@ -10,11 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Calibri.ttf">
-            <string>Calibri</string>
-        </array>
-        <array key="calibrib.ttf">
-            <string>Calibri-Bold</string>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -49,19 +46,19 @@
                     <rect key="frame" x="15" y="40" width="219" height="58.333333333333343"/>
                     <string key="text">Are you hungry
 Paul?</string>
-                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="25"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DELIVER TO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouo-qn-1F8">
-                    <rect key="frame" x="15" y="103.33333333333333" width="85" height="17.666666666666671"/>
-                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
+                    <rect key="frame" x="15" y="103.33333333333333" width="85" height="18"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urY-mB-gHA">
-                    <rect key="frame" x="105" y="103.33333333333333" width="44.666666666666657" height="17.666666666666671"/>
-                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
+                    <rect key="frame" x="105" y="103.33333333333333" width="44.666666666666657" height="18"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                     <color key="textColor" red="0.85260897869999996" green="0.14443901179999999" blue="0.1749425828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -78,21 +75,21 @@ Paul?</string>
                     <rect key="frame" x="154.66666666666666" y="104.33333333333333" width="16" height="16"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dz8-2f-iDt">
-                    <rect key="frame" x="0.0" y="311.33333333333331" width="414" height="290.99999999999994"/>
+                    <rect key="frame" x="0.0" y="291.33333333333331" width="414" height="290.99999999999994"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WISH WE WERE HERE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smu-4l-fp6">
-                            <rect key="frame" x="100.66666666666669" y="160" width="213" height="23.333333333333343"/>
-                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                            <rect key="frame" x="111.33333333333333" y="160" width="191.66666666666669" height="21"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9N-uT-xLu">
-                            <rect key="frame" x="132" y="258.33333333333331" width="150" height="40"/>
+                            <rect key="frame" x="132" y="251.33333333333331" width="150" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="1mS-WA-spb"/>
                                 <constraint firstAttribute="width" constant="150" id="HCz-7Q-Ayx"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                             <state key="normal" title="EDIT LOCATION">
                                 <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
@@ -101,11 +98,11 @@ Paul?</string>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We don't deliver here yet but sometimes loosing calories is also not bad." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmf-Yg-X1B">
-                            <rect key="frame" x="70" y="193.33333333333337" width="274" height="35"/>
+                            <rect key="frame" x="70" y="191" width="274" height="30.333333333333343"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="274" id="Ss4-tw-vdZ"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -131,21 +128,21 @@ Paul?</string>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-wX-RLs">
-                    <rect key="frame" x="0.0" y="311.33333333333331" width="414" height="290.99999999999994"/>
+                    <rect key="frame" x="0.0" y="291.33333333333331" width="414" height="290.99999999999994"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONNECTION ERROR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEa-Pd-VyK">
-                            <rect key="frame" x="104.33333333333333" y="148" width="205.66666666666669" height="23.333333333333343"/>
-                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                            <rect key="frame" x="114.33333333333333" y="148" width="185.33333333333337" height="21"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lro-Ae-Fhf">
-                            <rect key="frame" x="157" y="264.00000000000006" width="100" height="40"/>
+                            <rect key="frame" x="157" y="239.33333333333331" width="100" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="7QQ-C9-sCm"/>
                                 <constraint firstAttribute="height" constant="40" id="aKe-8y-bO2"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                             <state key="normal" title="RETRY">
                                 <color key="titleColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
@@ -155,11 +152,11 @@ Paul?</string>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seems like your internet connection has lost its way. Check your connection or try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jb-sM-uSP">
-                            <rect key="frame" x="70" y="181.33333333333337" width="274" height="52.666666666666657"/>
+                            <rect key="frame" x="70" y="179" width="274" height="30.333333333333343"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="274" id="USA-lc-976"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -185,7 +182,7 @@ Paul?</string>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TDe-B0-yRK">
-                    <rect key="frame" x="0.0" y="131" width="414" height="616"/>
+                    <rect key="frame" x="0.0" y="131.33333333333337" width="414" height="616"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="616" id="Ctt-u2-TIa"/>
@@ -205,7 +202,7 @@ Paul?</string>
                 <constraint firstItem="ouo-qn-1F8" firstAttribute="top" secondItem="r7T-Mr-wI3" secondAttribute="bottom" constant="5" id="8wL-vR-MSQ"/>
                 <constraint firstItem="TDe-B0-yRK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Cvj-xk-rhb"/>
                 <constraint firstItem="gzN-wX-RLs" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Hmp-Bz-mUz"/>
-                <constraint firstItem="gzN-wX-RLs" firstAttribute="top" secondItem="ne2-N6-3zY" secondAttribute="bottom" constant="190" id="JpS-XH-mEp"/>
+                <constraint firstItem="gzN-wX-RLs" firstAttribute="top" secondItem="ne2-N6-3zY" secondAttribute="bottom" constant="170" id="JpS-XH-mEp"/>
                 <constraint firstItem="TDe-B0-yRK" firstAttribute="top" secondItem="ouo-qn-1F8" secondAttribute="bottom" constant="10" id="LPX-Bn-4S9"/>
                 <constraint firstItem="wia-tt-uxc" firstAttribute="centerY" secondItem="urY-mB-gHA" secondAttribute="centerY" id="LgQ-et-vxP"/>
                 <constraint firstItem="ne2-N6-3zY" firstAttribute="trailing" secondItem="wia-tt-uxc" secondAttribute="trailing" id="N9z-hP-Vh6"/>
@@ -220,7 +217,7 @@ Paul?</string>
                 <constraint firstItem="TDe-B0-yRK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mcP-1n-v2b"/>
                 <constraint firstItem="Dz8-2f-iDt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nkO-14-3pO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K8M-ZS-SCU" secondAttribute="trailing" constant="10" id="oL3-px-Lut"/>
-                <constraint firstItem="Dz8-2f-iDt" firstAttribute="top" secondItem="ne2-N6-3zY" secondAttribute="bottom" constant="190" id="oWH-ws-31H"/>
+                <constraint firstItem="Dz8-2f-iDt" firstAttribute="top" secondItem="ne2-N6-3zY" secondAttribute="bottom" constant="170" id="oWH-ws-31H"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="126.35869565217392"/>

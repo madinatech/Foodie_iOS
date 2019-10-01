@@ -77,6 +77,7 @@ class Request: NSObject {
                     } else {
                         self.isSuccess = false
                         self.requestSuccess(msg: self.serverData["msg"] as! String)
+                        
                     }
                 }
                
@@ -253,6 +254,9 @@ class Request: NSObject {
             }
             
             if responseObject.result.isFailure {
+                let jsonData = try! JSONSerialization.data(withJSONObject: self.postParameters, options: .prettyPrinted)
+                let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)! as String
+                Utils.sendSMTPMail(strUrl:strURL, request: jsonString, response: responseObject.result.description)
                 let error : Error = responseObject.result.error!
                 failure(error)
             }
@@ -277,6 +281,9 @@ class Request: NSObject {
                 }
                 
                 if responseObject.result.isFailure {
+                    let jsonData = try! JSONSerialization.data(withJSONObject: self.postParameters, options: .prettyPrinted)
+                    let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)! as String
+                    Utils.sendSMTPMail(strUrl:strURL, request: jsonString, response: responseObject.result.description)
                     let error : Error = responseObject.result.error!
                     failure(error)
                 }

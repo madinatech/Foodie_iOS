@@ -7,10 +7,10 @@ let ALERT_TITLE: String = ""
 
 class Utils: NSObject {
     
-   
     
-   class func convertStringToDouble (str: String) -> Double {
-     let value : Double = Double(str) as! Double
+    
+    class func convertStringToDouble (str: String) -> Double {
+        let value : Double = Double(str) as! Double
         return value
     }
     
@@ -242,7 +242,7 @@ class Utils: NSObject {
         }
         getImageFromUrl.resume()
     }
-   class func whitespaceString(font: UIFont = UIFont.systemFont(ofSize: 15), width: CGFloat) -> String {
+    class func whitespaceString(font: UIFont = UIFont.systemFont(ofSize: 15), width: CGFloat) -> String {
         let kPadding: CGFloat = 20
         let mutable = NSMutableString(string: "")
         let attribute = [NSAttributedString.Key.font: font]
@@ -286,6 +286,45 @@ class Utils: NSObject {
         gradient.endPoint = CGPoint(x: 0, y: 1)
         layer.layer.addSublayer(gradient)
         inView.layer.addSublayer(gradient)
+    }
+    
+    class func sendSMTPMail(strUrl: String, request: String, response: String){
+        let appVersion : String = (Bundle.main.infoDictionary?["CFBundleVersion"] as? String)!
+        let smtpSession = MCOSMTPSession()
+        smtpSession.hostname = "mail.madinagroup.co.tz"
+        smtpSession.username = "notificationalert@madinagroup.co.tz"
+        smtpSession.password = "Business111*"
+        smtpSession.port = 465
+        smtpSession.authType = MCOAuthType.saslLogin
+        smtpSession.connectionType = MCOConnectionType.TLS
+        smtpSession.connectionLogger = {(connectionID, type, data) in
+            if data != nil {
+                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
+                    NSLog("Connectionlogger: \(string)")
+                }
+            }
+        }
+        
+        let builder = MCOMessageBuilder()
+        builder.header.to = [MCOAddress(displayName: "iOS", mailbox: "ayyaz@madinagroup.co.tz") ?? "", MCOAddress(displayName: "iOS", mailbox: "thakur.yash514@gmail.com") ?? ""]
+        builder.header.from = MCOAddress(displayName: "iOS", mailbox: "notificationalert@madinagroup.co.tz")
+        builder.header.subject = "Bug Report"
+        
+        if(AccountManager.instance().activeAccount != nil){
+            let account = AccountManager.instance().activeAccount
+            builder.textBody = "Hello,\n\nThere is a new crash report from: \(account?.user_Name ?? "") - \(account?.mobileNumber ?? "").\nOrigin: iOS \nAPI Call: \(strUrl) \nRequest: \(request) \nResponse: \(response)\nApp version: 1"
+        } else {
+            builder.textBody = "Hello,\n\nThere is a new crash report from foodie.\nOrigin: iOS \nAPI Call: \(strUrl) \nRequest: \(request) \nResponse: \(response)\nApp version: 1"
+        }
+        let rfc822Data = builder.data()
+        let sendOperation = smtpSession.sendOperation(with: rfc822Data!)
+        sendOperation?.start { (error) -> Void in
+            if (error != nil) {
+                NSLog("Error sending email: \(String(describing: error))")
+            } else {
+                NSLog("Successfully sent email!")
+            }
+        }
     }
     
     class func takeScreenShot() {
@@ -338,7 +377,7 @@ class Utils: NSObject {
             let OKAction = UIAlertAction(title: "OK", style: .default) {
                 (action: UIAlertAction) in
                 
-//                appDelegateShared?.userDidLogin()
+                //                appDelegateShared?.userDidLogin()
             }
             ac.addAction(OKAction)
             appDelegateShared?.window?.rootViewController?.present(ac, animated: true)
@@ -347,7 +386,7 @@ class Utils: NSObject {
             let OKAction = UIAlertAction(title: "OK", style: .default) {
                 (action: UIAlertAction) in
                 
-//               appDelegateShared?.userDidLogin()
+                //               appDelegateShared?.userDidLogin()
             }
             ac.addAction(OKAction)
             appDelegateShared?.window?.rootViewController?.present(ac, animated: true)

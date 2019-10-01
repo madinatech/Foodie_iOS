@@ -211,7 +211,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
             var count = Int()
             for menu in menuArray{
                 if(menu.name == itemsArray[indexPath.row].name ?? ""){
-                     print("Item::: \(itemsArray[indexPath.row].name ?? "")")
+                    print("Item::: \(itemsArray[indexPath.row].name ?? "")")
                     self.selectedTab = count
                     tableView.reloadSections([1], with: .none)
                 }
@@ -251,7 +251,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         }
     }
     
-  
+    
     
     //    ResDetailHeaderDelegate
     func backClicked() {
@@ -280,10 +280,11 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
             addItemssArray.add(sender.tag)
             plusItemssArray.add(sender.tag)
             UIView.setAnimationsEnabled(false)
-            tblView.beginUpdates()
             let indexPath = IndexPath(item: sender.tag, section: 1)
-            tblView.reloadRows(at: [indexPath], with: .automatic)
+            tblView.beginUpdates()
+            tblView.moveRow(at: indexPath, to: indexPath)
             tblView.endUpdates()
+            tblView.reloadRows(at: [indexPath], with: .automatic)
             showCartView()
         }
     }

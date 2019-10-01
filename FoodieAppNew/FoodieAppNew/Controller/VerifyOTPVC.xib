@@ -10,11 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Calibri.ttf">
-            <string>Calibri</string>
-        </array>
-        <array key="calibrib.ttf">
-            <string>Calibri-Bold</string>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -61,13 +58,13 @@
                                     <rect key="frame" x="0.0" y="269" width="414" height="627"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Verify your login " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWe-sO-Lxq">
-                                            <rect key="frame" x="20" y="40" width="211.5" height="30"/>
-                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="30"/>
+                                            <rect key="frame" x="20" y="40" width="248.5" height="36"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-3g-sd9">
-                                            <rect key="frame" x="35" y="298" width="344" height="50"/>
+                                            <rect key="frame" x="35" y="344" width="344" height="50"/>
                                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="tdw-Te-Y4d">
@@ -78,7 +75,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </constraint>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                             <state key="normal" title="Proceed"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
@@ -90,7 +87,7 @@
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qJs-ao-0Ur">
-                                            <rect key="frame" x="20" y="206" width="374" height="43"/>
+                                            <rect key="frame" x="20" y="252" width="374" height="43"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDn-BX-YJ0" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="82.5" height="43"/>
@@ -98,7 +95,7 @@
                                                         <constraint firstAttribute="height" constant="43" id="zNt-zx-dQS"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.70980392160000005" green="0.047058823530000002" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -116,7 +113,7 @@
                                                         <constraint firstAttribute="height" constant="43" id="N1x-fi-VzH"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.70980392160000005" green="0.047058823530000002" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -134,7 +131,7 @@
                                                         <constraint firstAttribute="height" constant="43" id="fKb-P6-2Vs"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.70980392160000005" green="0.047058823530000002" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -152,7 +149,7 @@
                                                         <constraint firstAttribute="height" constant="43" id="df1-rO-1ww"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.70980392160000005" green="0.047058823530000002" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -173,8 +170,8 @@
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="We have sent a verification code on your mobile number/ email address. Enter the OTP to authenticate login." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dva-ZX-ry6">
-                                            <rect key="frame" x="20" y="90" width="374" height="66"/>
-                                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
+                                            <rect key="frame" x="20" y="96" width="374" height="106"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>

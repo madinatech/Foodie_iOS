@@ -10,11 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Calibri.ttf">
-            <string>Calibri</string>
-        </array>
-        <array key="calibrib.ttf">
-            <string>Calibri-Bold</string>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -36,8 +33,8 @@
                     <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-ZS-dL4">
-                            <rect key="frame" x="15" y="20" width="174.5" height="25"/>
-                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="25"/>
+                            <rect key="frame" x="15" y="20" width="206.5" height="30"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -53,7 +50,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </constraint>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                             <state key="normal" title="Confirm Location"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
@@ -65,7 +62,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWH-BU-2Vz">
-                            <rect key="frame" x="15" y="70" width="345" height="43"/>
+                            <rect key="frame" x="15" y="75" width="345" height="43"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="aF8-2e-kNF"/>
                             </constraints>
@@ -74,7 +71,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFL-oz-g18">
-                            <rect key="frame" x="15" y="143" width="345" height="43"/>
+                            <rect key="frame" x="15" y="148" width="345" height="43"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="pWN-fN-dDP"/>
                             </constraints>
@@ -83,11 +80,11 @@
                             </connections>
                         </button>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select your area" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXp-6O-rZj" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                            <rect key="frame" x="15" y="143" width="345" height="43"/>
+                            <rect key="frame" x="15" y="148" width="345" height="43"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="9Zz-AN-kCv"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -96,11 +93,11 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select your city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UjG-4w-SoX" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                            <rect key="frame" x="15" y="70" width="345" height="43"/>
+                            <rect key="frame" x="15" y="75" width="345" height="43"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="xzp-XC-wg2"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">

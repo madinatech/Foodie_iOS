@@ -13,8 +13,8 @@
         <array key="Calibri.ttf">
             <string>Calibri</string>
         </array>
-        <array key="calibrib.ttf">
-            <string>Calibri-Bold</string>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -70,18 +70,18 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lu-uA-LVD">
-                                            <rect key="frame" x="75" y="43" width="39.5" height="15"/>
-                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
+                                            <rect key="frame" x="75" y="43" width="47" height="18"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vK-ng-1Zd" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="70" y="62" width="295" height="30"/>
+                                            <rect key="frame" x="70" y="65" width="295" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Re7-vZ-vd5"/>
                                             </constraints>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -93,7 +93,7 @@
                                             </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IN3-BW-CBZ">
-                                            <rect key="frame" x="20" y="302" width="335" height="50"/>
+                                            <rect key="frame" x="20" y="311" width="335" height="50"/>
                                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="wfh-jN-GeK">
@@ -104,7 +104,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </constraint>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                             <state key="normal" title="Save"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
@@ -116,7 +116,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyG-c7-B0N">
-                                            <rect key="frame" x="20" y="362" width="335" height="50"/>
+                                            <rect key="frame" x="20" y="371" width="335" height="50"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="24g-3c-gY5">
@@ -127,7 +127,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </constraint>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                             <state key="normal" title="Logout">
                                                 <color key="titleColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -141,18 +141,18 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="EMAIL ID" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpE-SU-L5h">
-                                            <rect key="frame" x="75" y="123" width="57" height="15"/>
-                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
+                                            <rect key="frame" x="75" y="126" width="67.5" height="18"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZy-8t-ZPI" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="70" y="142" width="295" height="30"/>
+                                            <rect key="frame" x="70" y="148" width="295" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="xH7-zJ-1MA"/>
                                             </constraints>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -164,18 +164,18 @@
                                             </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="PHONE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcY-hR-L4m">
-                                            <rect key="frame" x="75" y="203" width="105.5" height="15"/>
-                                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="15"/>
+                                            <rect key="frame" x="75" y="209" width="128.5" height="18"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="465765876" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N6B-CF-i7m">
-                                            <rect key="frame" x="70" y="222" width="295" height="30"/>
+                                            <rect key="frame" x="70" y="231" width="295" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Mcc-Ki-W2k"/>
                                             </constraints>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="bottomLine">
@@ -249,13 +249,13 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Austin Mate" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chz-LZ-cbR">
-                    <rect key="frame" x="90" y="126" width="265" height="20"/>
-                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                    <rect key="frame" x="90" y="126" width="265" height="24"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhb-jN-azV">
-                    <rect key="frame" x="90" y="151" width="66.5" height="15"/>
+                    <rect key="frame" x="90" y="155" width="72.5" height="17.5"/>
                     <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>

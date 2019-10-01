@@ -2,6 +2,7 @@
 
 import UIKit
 import Kingfisher
+import AMShimmer
 @objc protocol ResDetailHeaderDelegate {
     func backClicked()
     func infoClicked()
@@ -49,11 +50,13 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
         lblCost.text = "\(rest.cost_for_two ) for 2"
         lblTime.text = "\(rest.delivery_time) min"
         let url = URL(string: rest.images?.banner ?? "")
-        imgView.kf.indicatorType = .activity
+//        imgView.kf.indicatorType = .activity
+//        AMShimmer.start(for: imgView)
         imgView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: { (size1, size2) in
             
         }, completionHandler: { (image, error, cache, url) in
             if image != nil{
+                AMShimmer.stop(for: self.imgView)
                 self.imgView.image = image
             }
         })
@@ -85,7 +88,7 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
         let lbl = UILabel()
         lbl.text = cusines.name
         lbl.sizeToFit()
-        return CGSize(width: lbl.frame.width + 5, height: 25)
+        return CGSize(width: lbl.frame.width + 20, height: 25)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)

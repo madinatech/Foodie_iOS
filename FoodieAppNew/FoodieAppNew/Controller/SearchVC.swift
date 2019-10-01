@@ -4,6 +4,7 @@ import UIKit
 
 class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , SearchCategoryCellDelegate, UITextFieldDelegate{
     
+    @IBOutlet weak var btnClose: UIButton!
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var btnRestaurnat: UIButton!
     @IBOutlet weak var btnDishes: UIButton!
@@ -26,6 +27,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -42,15 +44,37 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
         super.viewWillAppear(animated)
         filterViewHeight.constant = 0
         filterView.isHidden = true
+        btnClose.isHidden = true
         self.view.layoutIfNeeded()
     }
     
+    
+    @IBAction func closeClicked(_ sender: Any) {
+        btnClose.isHidden = true
+        txtSearch.text = ""
+        imgSearch.image = UIImage.init(named: "Search_white")
+        searchView.backgroundColor = UIColor.init(red: 181.0/255.0, green: 12.0/255.0, blue: 32.0/255.0, alpha: 1.0)
+        txtSearch.attributedPlaceholder = NSAttributedString(string: "Search for a dish or restaurant",
+                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        innerView.backgroundColor = .white
+        self.view.backgroundColor = appThemeColor
+        filterViewHeight.constant = 0
+        filterView.isHidden = true
+        isSearch = false
+        self.view.layoutIfNeeded()
+        restaurantArray = [Restaurant]()
+        restaurantClicked(btnRestaurnat)
+        searchString = ""
+        tblView.reloadData()
+    }
     
     @IBAction func restaurantClicked(_ sender: UIButton) {
         btnRestaurnat.isSelected = true
         btnDishes.isSelected = false
         btnRestaurnat.backgroundColor = appThemeColor
         btnDishes.backgroundColor = appLightThemeColor
+        restaurantArray = Restaurant.getAllByName(name: searchString)
+        tblView.reloadData()
     }
     
     @IBAction func dishesClicked(_ sender: Any) {
@@ -162,6 +186,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
         let replacedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
         
         if(replacedText.count > 0){
+            btnClose.isHidden = false
             imgSearch.image = UIImage.init(named: "Search_red")
             searchView.backgroundColor = appLigtGrayColor
             txtSearch.attributedPlaceholder = NSAttributedString(string: "Search for a dish or restaurant",
@@ -176,6 +201,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
             searchString = replacedText
             restaurantArray = Restaurant.getAllByName(name: replacedText)
         } else {
+             btnClose.isHidden = true
             imgSearch.image = UIImage.init(named: "Search_white")
             searchView.backgroundColor = UIColor.init(red: 181.0/255.0, green: 12.0/255.0, blue: 32.0/255.0, alpha: 1.0)
             txtSearch.attributedPlaceholder = NSAttributedString(string: "Search for a dish or restaurant",

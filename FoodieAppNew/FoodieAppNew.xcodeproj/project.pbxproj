@@ -69,8 +69,6 @@
 		341B0CE02330CED000D12504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341B0CDE2330CED000D12504 /* LaunchScreen.storyboard */; };
 		341B0CEB2330CED100D12504 /* FoodieAppNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0CEA2330CED100D12504 /* FoodieAppNewTests.swift */; };
 		341B0CF62330CED100D12504 /* FoodieAppNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0CF52330CED100D12504 /* FoodieAppNewUITests.swift */; };
-		341B0D0C2330D39F00D12504 /* RestaurantListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D0A2330D39F00D12504 /* RestaurantListVC.xib */; };
-		341B0D0D2330D39F00D12504 /* RestaurantListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D0B2330D39F00D12504 /* RestaurantListVC.swift */; };
 		341B0D112330D3E500D12504 /* BaseTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D0F2330D3E500D12504 /* BaseTabViewController.swift */; };
 		341B0D152330D57E00D12504 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D132330D57E00D12504 /* HomeVC.swift */; };
 		341B0D162330D57E00D12504 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D142330D57E00D12504 /* HomeVC.xib */; };
@@ -82,52 +80,22 @@
 		341B0D262330D67600D12504 /* UserProfileVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D242330D67600D12504 /* UserProfileVc.xib */; };
 		341B0D292330D6A800D12504 /* OrderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D272330D6A800D12504 /* OrderListVC.swift */; };
 		341B0D2A2330D6A800D12504 /* OrderListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D282330D6A800D12504 /* OrderListVC.xib */; };
-		341B0D782330E12500D12504 /* RecommendedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D442330E12500D12504 /* RecommendedCell.xib */; };
 		341B0D792330E12500D12504 /* PastOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D452330E12500D12504 /* PastOrderCell.xib */; };
-		341B0D7C2330E12500D12504 /* RecentOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D482330E12500D12504 /* RecentOrderCell.xib */; };
-		341B0D7D2330E12500D12504 /* RecomandedDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D492330E12500D12504 /* RecomandedDetailCell.xib */; };
-		341B0D7E2330E12500D12504 /* CustomizeTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D4A2330E12500D12504 /* CustomizeTotalCell.xib */; };
-		341B0D7F2330E12500D12504 /* BillDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D4B2330E12500D12504 /* BillDetailCell.xib */; };
-		341B0D802330E12500D12504 /* RestaurnatRecommendedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D4C2330E12500D12504 /* RestaurnatRecommendedCell.xib */; };
-		341B0D822330E12500D12504 /* CoupanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D4E2330E12500D12504 /* CoupanCell.swift */; };
 		341B0D832330E12500D12504 /* ManageAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D4F2330E12500D12504 /* ManageAddressCell.xib */; };
 		341B0D842330E12500D12504 /* TabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D502330E12500D12504 /* TabCell.xib */; };
 		341B0D852330E12500D12504 /* RecommendedRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D512330E12500D12504 /* RecommendedRestaurantCell.swift */; };
 		341B0D862330E12500D12504 /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D522330E12500D12504 /* TabCell.swift */; };
 		341B0D872330E12500D12504 /* CustomizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D532330E12500D12504 /* CustomizeCell.xib */; };
-		341B0D882330E12500D12504 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D542330E12500D12504 /* CityCell.xib */; };
-		341B0D892330E12500D12504 /* CustomizeTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D552330E12500D12504 /* CustomizeTotalCell.swift */; };
 		341B0D8A2330E12500D12504 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D562330E12500D12504 /* InfoCell.xib */; };
-		341B0D8B2330E12500D12504 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D572330E12500D12504 /* PaymentCell.swift */; };
-		341B0D8D2330E12500D12504 /* RecomandedDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D592330E12500D12504 /* RecomandedDetailCell.swift */; };
-		341B0D8E2330E12500D12504 /* RecentOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D5A2330E12500D12504 /* RecentOrderCell.swift */; };
-		341B0D8F2330E12500D12504 /* RecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D5B2330E12500D12504 /* RecommendedCell.swift */; };
 		341B0D902330E12500D12504 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D5C2330E12500D12504 /* InfoCell.swift */; };
-		341B0D912330E12500D12504 /* RestaurnatRecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D5D2330E12500D12504 /* RestaurnatRecommendedCell.swift */; };
-		341B0D932330E12500D12504 /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D5F2330E12500D12504 /* WelcomeCell.xib */; };
-		341B0D942330E12500D12504 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D602330E12500D12504 /* CityCell.swift */; };
-		341B0D952330E12500D12504 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D612330E12500D12504 /* AccountCell.xib */; };
-		341B0D962330E12500D12504 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D622330E12500D12504 /* AccountCell.swift */; };
 		341B0D972330E12500D12504 /* RestaurantDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D632330E12500D12504 /* RestaurantDetailCell.swift */; };
-		341B0D982330E12500D12504 /* BillDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D642330E12500D12504 /* BillDetailCell.swift */; };
-		341B0D992330E12500D12504 /* HelpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D652330E12500D12504 /* HelpCell.swift */; };
-		341B0D9A2330E12500D12504 /* HelpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D662330E12500D12504 /* HelpCell.xib */; };
 		341B0D9B2330E12500D12504 /* PastOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D672330E12500D12504 /* PastOrderCell.swift */; };
-		341B0D9C2330E12500D12504 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D682330E12500D12504 /* CountryCell.xib */; };
 		341B0D9D2330E12500D12504 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D692330E12500D12504 /* RestaurantCell.xib */; };
-		341B0D9E2330E12500D12504 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D6A2330E12500D12504 /* WelcomeCell.swift */; };
-		341B0D9F2330E12500D12504 /* CoupanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D6B2330E12500D12504 /* CoupanCell.xib */; };
 		341B0DA02330E12500D12504 /* ManageAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D6C2330E12500D12504 /* ManageAddressCell.swift */; };
-		341B0DA22330E12500D12504 /* CartRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D6E2330E12500D12504 /* CartRequestCell.swift */; };
 		341B0DA32330E12500D12504 /* RestaurantDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D6F2330E12500D12504 /* RestaurantDetailCell.xib */; };
 		341B0DA42330E12500D12504 /* RecommendedRestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D702330E12500D12504 /* RecommendedRestaurantCell.xib */; };
 		341B0DA52330E12500D12504 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D712330E12500D12504 /* RestaurantCell.swift */; };
-		341B0DA62330E12500D12504 /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D722330E12500D12504 /* PaymentCell.xib */; };
-		341B0DA72330E12500D12504 /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D732330E12500D12504 /* CartItemCell.swift */; };
 		341B0DA82330E12500D12504 /* CustomizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D742330E12500D12504 /* CustomizeCell.swift */; };
-		341B0DA92330E12500D12504 /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D752330E12500D12504 /* CartItemCell.xib */; };
-		341B0DAA2330E12500D12504 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D762330E12500D12504 /* CountryCell.swift */; };
-		341B0DAB2330E12500D12504 /* CartRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0D772330E12500D12504 /* CartRequestCell.xib */; };
 		341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */; };
 		341B0DAF2331099800D12504 /* DeliveryAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */; };
 		344D7D1B233DD54200809108 /* DeliveryLoactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */; };
@@ -179,9 +147,6 @@
 		34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01B53233492E90057DEF4 /* CreateAccountVC.swift */; };
 		34C01B56233492E90057DEF4 /* CreateAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C01B54233492E90057DEF4 /* CreateAccountVC.xib */; };
 		34C01C392334A9230057DEF4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */; };
-		34C01C3A2334A9230057DEF4 /* calibril.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34C01C302334A9230057DEF4 /* calibril.ttf */; };
-		34C01C3B2334A9230057DEF4 /* calibrib.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34C01C312334A9230057DEF4 /* calibrib.ttf */; };
-		34C01C3C2334A9230057DEF4 /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34C01C322334A9230057DEF4 /* Calibri.ttf */; };
 		34C01C3D2334A9230057DEF4 /* UIWindowTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C332334A9230057DEF4 /* UIWindowTransitions.swift */; };
 		34C01C3E2334A9230057DEF4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C342334A9230057DEF4 /* Utils.swift */; };
 		34C01C3F2334A9230057DEF4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C362334A9230057DEF4 /* Constant.swift */; };
@@ -232,6 +197,16 @@
 		34CAC0E72333A44400BFBAB4 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34CAC0E52333A44400BFBAB4 /* LoginVC.xib */; };
 		34CAC0EA2333AF6A00BFBAB4 /* VerifyOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */; };
 		34CAC0EB2333AF6A00BFBAB4 /* VerifyOTPVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34CAC0E92333AF6A00BFBAB4 /* VerifyOTPVC.xib */; };
+		34FB4F112343224300E2E055 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F072343224300E2E055 /* Montserrat-Bold.otf */; };
+		34FB4F122343224300E2E055 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F082343224300E2E055 /* Montserrat-Light.otf */; };
+		34FB4F132343224300E2E055 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F092343224300E2E055 /* Montserrat-Thin.ttf */; };
+		34FB4F142343224300E2E055 /* Montserrat-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F0A2343224300E2E055 /* Montserrat-UltraLight.otf */; };
+		34FB4F152343224300E2E055 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F0B2343224300E2E055 /* Montserrat-Regular.otf */; };
+		34FB4F162343224300E2E055 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F0C2343224300E2E055 /* Montserrat-ExtraBold.otf */; };
+		34FB4F172343224300E2E055 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F0D2343224300E2E055 /* Montserrat-Black.otf */; };
+		34FB4F182343224300E2E055 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F0E2343224300E2E055 /* sharefonts.net.txt */; };
+		34FB4F192343224300E2E055 /* Montserrat-Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F0F2343224300E2E055 /* Montserrat-Hairline.otf */; };
+		34FB4F1A2343224300E2E055 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F102343224300E2E055 /* Montserrat-SemiBold.otf */; };
 		F3DCC508BC56053EECE247D4 /* Pods_FoodieAppNewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C33DDA7C3AF342BE77C4E1B /* Pods_FoodieAppNewTests.framework */; };
 		F71A07F3453DEBEF9312D5D6 /* Pods_FoodieAppNewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA212932CDD2CBDC9FD66CF /* Pods_FoodieAppNewUITests.framework */; };
 /* End PBXBuildFile section */
@@ -308,8 +283,6 @@
 		341B0CF12330CED100D12504 /* FoodieAppNewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieAppNewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		341B0CF52330CED100D12504 /* FoodieAppNewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieAppNewUITests.swift; sourceTree = "<group>"; };
 		341B0CF72330CED100D12504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		341B0D0A2330D39F00D12504 /* RestaurantListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantListVC.xib; sourceTree = "<group>"; };
-		341B0D0B2330D39F00D12504 /* RestaurantListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListVC.swift; sourceTree = "<group>"; };
 		341B0D0F2330D3E500D12504 /* BaseTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabViewController.swift; sourceTree = "<group>"; };
 		341B0D132330D57E00D12504 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		341B0D142330D57E00D12504 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
@@ -321,52 +294,22 @@
 		341B0D242330D67600D12504 /* UserProfileVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileVc.xib; sourceTree = "<group>"; };
 		341B0D272330D6A800D12504 /* OrderListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListVC.swift; sourceTree = "<group>"; };
 		341B0D282330D6A800D12504 /* OrderListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListVC.xib; sourceTree = "<group>"; };
-		341B0D442330E12500D12504 /* RecommendedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendedCell.xib; sourceTree = "<group>"; };
 		341B0D452330E12500D12504 /* PastOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PastOrderCell.xib; sourceTree = "<group>"; };
-		341B0D482330E12500D12504 /* RecentOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentOrderCell.xib; sourceTree = "<group>"; };
-		341B0D492330E12500D12504 /* RecomandedDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecomandedDetailCell.xib; sourceTree = "<group>"; };
-		341B0D4A2330E12500D12504 /* CustomizeTotalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomizeTotalCell.xib; sourceTree = "<group>"; };
-		341B0D4B2330E12500D12504 /* BillDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillDetailCell.xib; sourceTree = "<group>"; };
-		341B0D4C2330E12500D12504 /* RestaurnatRecommendedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurnatRecommendedCell.xib; sourceTree = "<group>"; };
-		341B0D4E2330E12500D12504 /* CoupanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoupanCell.swift; sourceTree = "<group>"; };
 		341B0D4F2330E12500D12504 /* ManageAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageAddressCell.xib; sourceTree = "<group>"; };
 		341B0D502330E12500D12504 /* TabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabCell.xib; sourceTree = "<group>"; };
 		341B0D512330E12500D12504 /* RecommendedRestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedRestaurantCell.swift; sourceTree = "<group>"; };
 		341B0D522330E12500D12504 /* TabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
 		341B0D532330E12500D12504 /* CustomizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomizeCell.xib; sourceTree = "<group>"; };
-		341B0D542330E12500D12504 /* CityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
-		341B0D552330E12500D12504 /* CustomizeTotalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeTotalCell.swift; sourceTree = "<group>"; };
 		341B0D562330E12500D12504 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
-		341B0D572330E12500D12504 /* PaymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
-		341B0D592330E12500D12504 /* RecomandedDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecomandedDetailCell.swift; sourceTree = "<group>"; };
-		341B0D5A2330E12500D12504 /* RecentOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentOrderCell.swift; sourceTree = "<group>"; };
-		341B0D5B2330E12500D12504 /* RecommendedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedCell.swift; sourceTree = "<group>"; };
 		341B0D5C2330E12500D12504 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
-		341B0D5D2330E12500D12504 /* RestaurnatRecommendedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurnatRecommendedCell.swift; sourceTree = "<group>"; };
-		341B0D5F2330E12500D12504 /* WelcomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
-		341B0D602330E12500D12504 /* CityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
-		341B0D612330E12500D12504 /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
-		341B0D622330E12500D12504 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		341B0D632330E12500D12504 /* RestaurantDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailCell.swift; sourceTree = "<group>"; };
-		341B0D642330E12500D12504 /* BillDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillDetailCell.swift; sourceTree = "<group>"; };
-		341B0D652330E12500D12504 /* HelpCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCell.swift; sourceTree = "<group>"; };
-		341B0D662330E12500D12504 /* HelpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpCell.xib; sourceTree = "<group>"; };
 		341B0D672330E12500D12504 /* PastOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastOrderCell.swift; sourceTree = "<group>"; };
-		341B0D682330E12500D12504 /* CountryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 		341B0D692330E12500D12504 /* RestaurantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
-		341B0D6A2330E12500D12504 /* WelcomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
-		341B0D6B2330E12500D12504 /* CoupanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoupanCell.xib; sourceTree = "<group>"; };
 		341B0D6C2330E12500D12504 /* ManageAddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageAddressCell.swift; sourceTree = "<group>"; };
-		341B0D6E2330E12500D12504 /* CartRequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartRequestCell.swift; sourceTree = "<group>"; };
 		341B0D6F2330E12500D12504 /* RestaurantDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantDetailCell.xib; sourceTree = "<group>"; };
 		341B0D702330E12500D12504 /* RecommendedRestaurantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendedRestaurantCell.xib; sourceTree = "<group>"; };
 		341B0D712330E12500D12504 /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
-		341B0D722330E12500D12504 /* PaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
-		341B0D732330E12500D12504 /* CartItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
 		341B0D742330E12500D12504 /* CustomizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeCell.swift; sourceTree = "<group>"; };
-		341B0D752330E12500D12504 /* CartItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartItemCell.xib; sourceTree = "<group>"; };
-		341B0D762330E12500D12504 /* CountryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
-		341B0D772330E12500D12504 /* CartRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartRequestCell.xib; sourceTree = "<group>"; };
 		341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressVC.swift; sourceTree = "<group>"; };
 		341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressVC.xib; sourceTree = "<group>"; };
 		344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryLoactionVC.xib; sourceTree = "<group>"; };
@@ -418,9 +361,6 @@
 		34C01B53233492E90057DEF4 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		34C01B54233492E90057DEF4 /* CreateAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountVC.xib; sourceTree = "<group>"; };
 		34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		34C01C302334A9230057DEF4 /* calibril.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = calibril.ttf; sourceTree = "<group>"; };
-		34C01C312334A9230057DEF4 /* calibrib.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = calibrib.ttf; sourceTree = "<group>"; };
-		34C01C322334A9230057DEF4 /* Calibri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calibri.ttf; sourceTree = "<group>"; };
 		34C01C332334A9230057DEF4 /* UIWindowTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowTransitions.swift; sourceTree = "<group>"; };
 		34C01C342334A9230057DEF4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		34C01C362334A9230057DEF4 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -490,6 +430,16 @@
 		34CAC0E52333A44400BFBAB4 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPVC.swift; sourceTree = "<group>"; };
 		34CAC0E92333AF6A00BFBAB4 /* VerifyOTPVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyOTPVC.xib; sourceTree = "<group>"; };
+		34FB4F072343224300E2E055 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		34FB4F082343224300E2E055 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		34FB4F092343224300E2E055 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		34FB4F0A2343224300E2E055 /* Montserrat-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-UltraLight.otf"; sourceTree = "<group>"; };
+		34FB4F0B2343224300E2E055 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		34FB4F0C2343224300E2E055 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		34FB4F0D2343224300E2E055 /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		34FB4F0E2343224300E2E055 /* sharefonts.net.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sharefonts.net.txt; sourceTree = "<group>"; };
+		34FB4F0F2343224300E2E055 /* Montserrat-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Hairline.otf"; sourceTree = "<group>"; };
+		34FB4F102343224300E2E055 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		3C33DDA7C3AF342BE77C4E1B /* Pods_FoodieAppNewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodieAppNewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51462E26FED11E44222D6439 /* Pods-FoodieAppNewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieAppNewTests.release.xcconfig"; path = "Target Support Files/Pods-FoodieAppNewTests/Pods-FoodieAppNewTests.release.xcconfig"; sourceTree = "<group>"; };
 		5CA212932CDD2CBDC9FD66CF /* Pods_FoodieAppNewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodieAppNewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -603,8 +553,6 @@
 				3400F2FC2332115100346C9A /* RestaurantDetailVC.swift */,
 				3400F2FD2332115100346C9A /* RestaurantDetailVC.xib */,
 				341B0D0E2330D3C200D12504 /* Shared */,
-				341B0D0B2330D39F00D12504 /* RestaurantListVC.swift */,
-				341B0D0A2330D39F00D12504 /* RestaurantListVC.xib */,
 				341B0D132330D57E00D12504 /* HomeVC.swift */,
 				341B0D142330D57E00D12504 /* HomeVC.xib */,
 				341B0D172330D5AE00D12504 /* SearchVC.swift */,
@@ -666,52 +614,22 @@
 		341B0D432330E12500D12504 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				341B0D442330E12500D12504 /* RecommendedCell.xib */,
 				341B0D452330E12500D12504 /* PastOrderCell.xib */,
-				341B0D482330E12500D12504 /* RecentOrderCell.xib */,
-				341B0D492330E12500D12504 /* RecomandedDetailCell.xib */,
-				341B0D4A2330E12500D12504 /* CustomizeTotalCell.xib */,
-				341B0D4B2330E12500D12504 /* BillDetailCell.xib */,
-				341B0D4C2330E12500D12504 /* RestaurnatRecommendedCell.xib */,
-				341B0D4E2330E12500D12504 /* CoupanCell.swift */,
 				341B0D4F2330E12500D12504 /* ManageAddressCell.xib */,
 				341B0D502330E12500D12504 /* TabCell.xib */,
 				341B0D512330E12500D12504 /* RecommendedRestaurantCell.swift */,
 				341B0D522330E12500D12504 /* TabCell.swift */,
 				341B0D532330E12500D12504 /* CustomizeCell.xib */,
-				341B0D542330E12500D12504 /* CityCell.xib */,
-				341B0D552330E12500D12504 /* CustomizeTotalCell.swift */,
 				341B0D562330E12500D12504 /* InfoCell.xib */,
-				341B0D572330E12500D12504 /* PaymentCell.swift */,
-				341B0D592330E12500D12504 /* RecomandedDetailCell.swift */,
-				341B0D5A2330E12500D12504 /* RecentOrderCell.swift */,
-				341B0D5B2330E12500D12504 /* RecommendedCell.swift */,
 				341B0D5C2330E12500D12504 /* InfoCell.swift */,
-				341B0D5D2330E12500D12504 /* RestaurnatRecommendedCell.swift */,
-				341B0D5F2330E12500D12504 /* WelcomeCell.xib */,
-				341B0D602330E12500D12504 /* CityCell.swift */,
-				341B0D612330E12500D12504 /* AccountCell.xib */,
-				341B0D622330E12500D12504 /* AccountCell.swift */,
 				341B0D632330E12500D12504 /* RestaurantDetailCell.swift */,
-				341B0D642330E12500D12504 /* BillDetailCell.swift */,
-				341B0D652330E12500D12504 /* HelpCell.swift */,
-				341B0D662330E12500D12504 /* HelpCell.xib */,
 				341B0D672330E12500D12504 /* PastOrderCell.swift */,
-				341B0D682330E12500D12504 /* CountryCell.xib */,
 				341B0D692330E12500D12504 /* RestaurantCell.xib */,
-				341B0D6A2330E12500D12504 /* WelcomeCell.swift */,
-				341B0D6B2330E12500D12504 /* CoupanCell.xib */,
 				341B0D6C2330E12500D12504 /* ManageAddressCell.swift */,
-				341B0D6E2330E12500D12504 /* CartRequestCell.swift */,
 				341B0D6F2330E12500D12504 /* RestaurantDetailCell.xib */,
 				341B0D702330E12500D12504 /* RecommendedRestaurantCell.xib */,
 				341B0D712330E12500D12504 /* RestaurantCell.swift */,
-				341B0D722330E12500D12504 /* PaymentCell.xib */,
-				341B0D732330E12500D12504 /* CartItemCell.swift */,
 				341B0D742330E12500D12504 /* CustomizeCell.swift */,
-				341B0D752330E12500D12504 /* CartItemCell.xib */,
-				341B0D762330E12500D12504 /* CountryCell.swift */,
-				341B0D772330E12500D12504 /* CartRequestCell.xib */,
 				3400F2F42331F38D00346C9A /* SortingCell.swift */,
 				3400F2F52331F38D00346C9A /* SortingCell.xib */,
 				3400F2F82331FC1C00346C9A /* HomeTopCell.swift */,
@@ -787,6 +705,7 @@
 		34C01C2D2334A9230057DEF4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				34FB4F062343224300E2E055 /* Montserrat Font */,
 				344DE1B42341E344003D5D67 /* iOSDevCenters+GIF.swift */,
 				34C01CBF2334AB2B0057DEF4 /* Categories */,
 				34C01CEB2334AB2B0057DEF4 /* DateUtils.swift */,
@@ -794,21 +713,10 @@
 				34C01CBD2334AB2B0057DEF4 /* SwiftyJSON.swift */,
 				34C01CBE2334AB2B0057DEF4 /* URLSchema.swift */,
 				34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */,
-				34C01C2F2334A9230057DEF4 /* Calibri */,
 				34C01C332334A9230057DEF4 /* UIWindowTransitions.swift */,
 				34C01C342334A9230057DEF4 /* Utils.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		34C01C2F2334A9230057DEF4 /* Calibri */ = {
-			isa = PBXGroup;
-			children = (
-				34C01C302334A9230057DEF4 /* calibril.ttf */,
-				34C01C312334A9230057DEF4 /* calibrib.ttf */,
-				34C01C322334A9230057DEF4 /* Calibri.ttf */,
-			);
-			path = Calibri;
 			sourceTree = "<group>";
 		};
 		34C01C352334A9230057DEF4 /* CommanClasses */ = {
@@ -1005,6 +913,23 @@
 			path = DateCompare;
 			sourceTree = "<group>";
 		};
+		34FB4F062343224300E2E055 /* Montserrat Font */ = {
+			isa = PBXGroup;
+			children = (
+				34FB4F072343224300E2E055 /* Montserrat-Bold.otf */,
+				34FB4F082343224300E2E055 /* Montserrat-Light.otf */,
+				34FB4F092343224300E2E055 /* Montserrat-Thin.ttf */,
+				34FB4F0A2343224300E2E055 /* Montserrat-UltraLight.otf */,
+				34FB4F0B2343224300E2E055 /* Montserrat-Regular.otf */,
+				34FB4F0C2343224300E2E055 /* Montserrat-ExtraBold.otf */,
+				34FB4F0D2343224300E2E055 /* Montserrat-Black.otf */,
+				34FB4F0E2343224300E2E055 /* sharefonts.net.txt */,
+				34FB4F0F2343224300E2E055 /* Montserrat-Hairline.otf */,
+				34FB4F102343224300E2E055 /* Montserrat-SemiBold.otf */,
+			);
+			path = "Montserrat Font";
+			sourceTree = "<group>";
+		};
 		BCB45D21C08F73B4906E66B0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1132,51 +1057,46 @@
 			files = (
 				341B0D8A2330E12500D12504 /* InfoCell.xib in Resources */,
 				34C01CB52334AA780057DEF4 /* mapping.plist in Resources */,
-				341B0D952330E12500D12504 /* AccountCell.xib in Resources */,
 				34C01CF42334AB2C0057DEF4 /* NSDateTimeAgo.bundle in Resources */,
+				34FB4F142343224300E2E055 /* Montserrat-UltraLight.otf in Resources */,
 				340D78B723335D210084971A /* RestDetailHeaderCell.xib in Resources */,
+				34FB4F122343224300E2E055 /* Montserrat-Light.otf in Resources */,
 				34899B092339D6C900A5FBA2 /* MyFavouritesVC.xib in Resources */,
 				3400F30F2332562100346C9A /* InfoVC.xib in Resources */,
 				3400F31323325C4000346C9A /* ViewOrderVC.xib in Resources */,
-				341B0D7D2330E12500D12504 /* RecomandedDetailCell.xib in Resources */,
 				3400F2FB2331FC1C00346C9A /* HomeTopCell.xib in Resources */,
 				34C01D1F2334FE0D0057DEF4 /* ProfileCell.xib in Resources */,
 				341B0D1A2330D5AE00D12504 /* SearchVC.xib in Resources */,
 				34899B0D2339D9E300A5FBA2 /* FavouriteCell.xib in Resources */,
 				341B0D2A2330D6A800D12504 /* OrderListVC.xib in Resources */,
 				341B0D842330E12500D12504 /* TabCell.xib in Resources */,
-				341B0DA62330E12500D12504 /* PaymentCell.xib in Resources */,
 				3400F2F32331EFC100346C9A /* FilterVC.xib in Resources */,
 				341B0D9D2330E12500D12504 /* RestaurantCell.xib in Resources */,
 				3400F2FF2332115100346C9A /* RestaurantDetailVC.xib in Resources */,
-				341B0D782330E12500D12504 /* RecommendedCell.xib in Resources */,
 				34C01B56233492E90057DEF4 /* CreateAccountVC.xib in Resources */,
+				34FB4F192343224300E2E055 /* Montserrat-Hairline.otf in Resources */,
 				3410E3AE233B3798000BA7FB /* AddNewAddressVC.xib in Resources */,
 				344F79D0233C799B00A35A43 /* CustomizationVC.xib in Resources */,
-				341B0D802330E12500D12504 /* RestaurnatRecommendedCell.xib in Resources */,
+				34FB4F182343224300E2E055 /* sharefonts.net.txt in Resources */,
 				34899B112339EDB600A5FBA2 /* EditProfileVC.xib in Resources */,
 				3400F2F72331F38D00346C9A /* SortingCell.xib in Resources */,
 				341B0CE02330CED000D12504 /* LaunchScreen.storyboard in Resources */,
-				341B0D9F2330E12500D12504 /* CoupanCell.xib in Resources */,
 				340D78B32333475F0084971A /* ItemsCell.xib in Resources */,
 				341B0D832330E12500D12504 /* ManageAddressCell.xib in Resources */,
-				341B0D9C2330E12500D12504 /* CountryCell.xib in Resources */,
-				341B0D9A2330E12500D12504 /* HelpCell.xib in Resources */,
-				34C01C3A2334A9230057DEF4 /* calibril.ttf in Resources */,
+				34FB4F112343224300E2E055 /* Montserrat-Bold.otf in Resources */,
 				344DE1BC2341FEF4003D5D67 /* InternetVc.xib in Resources */,
-				341B0D7C2330E12500D12504 /* RecentOrderCell.xib in Resources */,
+				34FB4F162343224300E2E055 /* Montserrat-ExtraBold.otf in Resources */,
 				341B0D162330D57E00D12504 /* HomeVC.xib in Resources */,
 				340D78C32333855B0084971A /* SearchCategoryCell.xib in Resources */,
+				34FB4F152343224300E2E055 /* Montserrat-Regular.otf in Resources */,
 				344DE1B32341D7CB003D5D67 /* PastOrederSubCell.xib in Resources */,
+				34FB4F1A2343224300E2E055 /* Montserrat-SemiBold.otf in Resources */,
 				341B0DA42330E12500D12504 /* RecommendedRestaurantCell.xib in Resources */,
 				3400F30B2332450900346C9A /* CusinesCell.xib in Resources */,
 				340D78BB233361440084971A /* ViewOrderMoreCell.xib in Resources */,
-				34C01C3B2334A9230057DEF4 /* calibrib.ttf in Resources */,
+				34FB4F172343224300E2E055 /* Montserrat-Black.otf in Resources */,
 				340D78C7233385CD0084971A /* SearchCollCell.xib in Resources */,
 				3400F3032332118D00346C9A /* RestaurantDetailHeader.xib in Resources */,
-				341B0DA92330E12500D12504 /* CartItemCell.xib in Resources */,
-				341B0D882330E12500D12504 /* CityCell.xib in Resources */,
-				341B0D932330E12500D12504 /* WelcomeCell.xib in Resources */,
 				341B0D262330D67600D12504 /* UserProfileVc.xib in Resources */,
 				341B0D872330E12500D12504 /* CustomizeCell.xib in Resources */,
 				344D7D1B233DD54200809108 /* DeliveryLoactionVC.xib in Resources */,
@@ -1188,15 +1108,11 @@
 				34CAC0E72333A44400BFBAB4 /* LoginVC.xib in Resources */,
 				341B0DAF2331099800D12504 /* DeliveryAddressVC.xib in Resources */,
 				3400F3062332292400346C9A /* ResDetailTabSection.xib in Resources */,
-				341B0D0C2330D39F00D12504 /* RestaurantListVC.xib in Resources */,
 				344F79D4233C8BBD00A35A43 /* CustomizeSingleCell.xib in Resources */,
 				34CAC0EB2333AF6A00BFBAB4 /* VerifyOTPVC.xib in Resources */,
-				341B0D7E2330E12500D12504 /* CustomizeTotalCell.xib in Resources */,
-				341B0DAB2330E12500D12504 /* CartRequestCell.xib in Resources */,
-				34C01C3C2334A9230057DEF4 /* Calibri.ttf in Resources */,
+				34FB4F132343224300E2E055 /* Montserrat-Thin.ttf in Resources */,
 				340D78BF233383C10084971A /* RecentSearchCell.xib in Resources */,
 				341B0D792330E12500D12504 /* PastOrderCell.xib in Resources */,
-				341B0D7F2330E12500D12504 /* BillDetailCell.xib in Resources */,
 				340D78AF2333464D0084971A /* ViewOrderTopCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1363,12 +1279,10 @@
 				3410E3B9233B81D1000BA7FB /* Price.swift in Sources */,
 				34C01CF92334AB2C0057DEF4 /* NSDate+Year.m in Sources */,
 				34C01D0F2334D3570057DEF4 /* _DeliveryOption.swift in Sources */,
-				341B0D942330E12500D12504 /* CityCell.swift in Sources */,
 				34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */,
 				34C01CF72334AB2C0057DEF4 /* NSDate+Week.m in Sources */,
 				34899B27233A2E0900A5FBA2 /* _Images.swift in Sources */,
 				34C01CFE2334AB2C0057DEF4 /* NSDate+Extentsion.m in Sources */,
-				341B0D982330E12500D12504 /* BillDetailCell.swift in Sources */,
 				3400F3072332292400346C9A /* ResDetailTabSection.swift in Sources */,
 				340D78B623335D210084971A /* RestDetailHeaderCell.swift in Sources */,
 				34899B0C2339D9E300A5FBA2 /* FavouriteCell.swift in Sources */,
@@ -1378,7 +1292,6 @@
 				34C01D012334AB2C0057DEF4 /* DateUtils.swift in Sources */,
 				34C01CB72334AA780057DEF4 /* Account.swift in Sources */,
 				340D78BE233383C10084971A /* RecentSearchCell.swift in Sources */,
-				341B0D9E2330E12500D12504 /* WelcomeCell.swift in Sources */,
 				3410E3B2233B81AE000BA7FB /* _CustomizationGroup.swift in Sources */,
 				34899B3B233A2E2500A5FBA2 /* Cusines.swift in Sources */,
 				3410E3B4233B81AE000BA7FB /* _Price.swift in Sources */,
@@ -1389,7 +1302,6 @@
 				340D78B22333475F0084971A /* ItemsCell.swift in Sources */,
 				34C01CF12334AB2C0057DEF4 /* NSDictionary+Extension.m in Sources */,
 				3400F2FA2331FC1C00346C9A /* HomeTopCell.swift in Sources */,
-				341B0DAA2330E12500D12504 /* CountryCell.swift in Sources */,
 				344F79E2233CCCB600A35A43 /* _Address.swift in Sources */,
 				344D7D21233DD56E00809108 /* BaseTabViewController.swift in Sources */,
 				34C01D162334D35E0057DEF4 /* PaymentOption.swift in Sources */,
@@ -1406,8 +1318,6 @@
 				34C01CFB2334AB2C0057DEF4 /* NSDate+Hour.m in Sources */,
 				34C01CEF2334AB2C0057DEF4 /* NSManagedObject+Duplicate.m in Sources */,
 				3400F30E2332562100346C9A /* InfoVC.swift in Sources */,
-				341B0D8B2330E12500D12504 /* PaymentCell.swift in Sources */,
-				341B0D822330E12500D12504 /* CoupanCell.swift in Sources */,
 				341B0D862330E12500D12504 /* TabCell.swift in Sources */,
 				34899B20233A2E0900A5FBA2 /* _Location.swift in Sources */,
 				344F79DA233CC35000A35A43 /* _City.swift in Sources */,
@@ -1422,25 +1332,19 @@
 				344F79CF233C799B00A35A43 /* CustomizationVC.swift in Sources */,
 				344F79D9233CC35000A35A43 /* _Area.swift in Sources */,
 				3400F2F62331F38D00346C9A /* SortingCell.swift in Sources */,
-				341B0D962330E12500D12504 /* AccountCell.swift in Sources */,
 				34C01C3D2334A9230057DEF4 /* UIWindowTransitions.swift in Sources */,
-				341B0D912330E12500D12504 /* RestaurnatRecommendedCell.swift in Sources */,
 				344F79D8233CC35000A35A43 /* _Country.swift in Sources */,
 				34899B3C233A2E2500A5FBA2 /* Items.swift in Sources */,
 				34899B102339EDB600A5FBA2 /* EditProfileVC.swift in Sources */,
 				34C01CB82334AA780057DEF4 /* CDHelper.swift in Sources */,
-				341B0D992330E12500D12504 /* HelpCell.swift in Sources */,
-				341B0D8D2330E12500D12504 /* RecomandedDetailCell.swift in Sources */,
 				344F79E6233CE8D000A35A43 /* _Favourite.swift in Sources */,
 				34C01D1E2334FE0D0057DEF4 /* ProfileCell.swift in Sources */,
-				341B0DA72330E12500D12504 /* CartItemCell.swift in Sources */,
 				341B0D1D2330D5D200D12504 /* CartVC.swift in Sources */,
 				341B0D252330D67600D12504 /* UserProfileVc.swift in Sources */,
 				341B0D902330E12500D12504 /* InfoCell.swift in Sources */,
 				341B0D9B2330E12500D12504 /* PastOrderCell.swift in Sources */,
 				34899B28233A2E0900A5FBA2 /* _Cusines.swift in Sources */,
 				341B0D972330E12500D12504 /* RestaurantDetailCell.swift in Sources */,
-				341B0D8E2330E12500D12504 /* RecentOrderCell.swift in Sources */,
 				344DE1B22341D7CB003D5D67 /* PastOrederSubCell.swift in Sources */,
 				34C01CBA2334AA780057DEF4 /* Request.swift in Sources */,
 				34C01CFD2334AB2C0057DEF4 /* NSDate+Time.m in Sources */,
@@ -1464,7 +1368,6 @@
 				341B0CD32330CECF00D12504 /* AppDelegate.swift in Sources */,
 				3400F2FE2332115100346C9A /* RestaurantDetailVC.swift in Sources */,
 				341B0DA52330E12500D12504 /* RestaurantCell.swift in Sources */,
-				341B0D8F2330E12500D12504 /* RecommendedCell.swift in Sources */,
 				34C01CF22334AB2C0057DEF4 /* NSString+PropertyKVC.m in Sources */,
 				3400F30A2332450900346C9A /* CusinesCell.swift in Sources */,
 				344DE1BB2341FEF4003D5D67 /* InternetVc.swift in Sources */,
@@ -1474,12 +1377,10 @@
 				34899B23233A2E0900A5FBA2 /* _Menu.swift in Sources */,
 				34C01D102334D3570057DEF4 /* _AppExpires.swift in Sources */,
 				3410E3BA233B81D1000BA7FB /* GroupValues.swift in Sources */,
-				341B0DA22330E12500D12504 /* CartRequestCell.swift in Sources */,
 				34899B3E233A2E2500A5FBA2 /* Menu.swift in Sources */,
 				34C01D182334D35E0057DEF4 /* VerifyUser.swift in Sources */,
 				34C01D1A2334D35E0057DEF4 /* AppExpires.swift in Sources */,
 				34899B24233A2E0900A5FBA2 /* _Offerings.swift in Sources */,
-				341B0D0D2330D39F00D12504 /* RestaurantListVC.swift in Sources */,
 				34899B2B233A2E0900A5FBA2 /* _OpeningTimes.swift in Sources */,
 				34C01C402334A9230057DEF4 /* CommonTextfield.swift in Sources */,
 				34899B082339D6C900A5FBA2 /* MyFavouritesVC.swift in Sources */,
@@ -1489,7 +1390,6 @@
 				341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */,
 				34C01CF02334AB2C0057DEF4 /* NSMutableArray+Join.m in Sources */,
 				34CAC0EA2333AF6A00BFBAB4 /* VerifyOTPVC.swift in Sources */,
-				341B0D892330E12500D12504 /* CustomizeTotalCell.swift in Sources */,
 				341B0D112330D3E500D12504 /* BaseTabViewController.swift in Sources */,
 				34C01C412334A9230057DEF4 /* KGRadioButton.swift in Sources */,
 			);

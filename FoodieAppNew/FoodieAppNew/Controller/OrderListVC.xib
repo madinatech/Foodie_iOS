@@ -10,11 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Calibri.ttf">
-            <string>Calibri</string>
-        </array>
-        <array key="calibrib.ttf">
-            <string>Calibri-Bold</string>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -34,40 +31,40 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73K-xb-Ls7">
-                            <rect key="frame" x="20" y="40" width="106" height="25"/>
-                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="25"/>
+                            <rect key="frame" x="20" y="40" width="131.5" height="30"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7UC-YB-6ZK">
-                            <rect key="frame" x="20" y="85" width="335" height="160"/>
+                            <rect key="frame" x="20" y="90" width="335" height="160"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BurgerKing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUB-fc-72e">
-                                    <rect key="frame" x="20" y="20" width="213.5" height="20"/>
-                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="20"/>
+                                    <rect key="frame" x="20" y="20" width="198" height="24"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="#1DF90F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxK-lw-4Gh">
-                                    <rect key="frame" x="243.5" y="20" width="71.5" height="20"/>
-                                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="20"/>
+                                    <rect key="frame" x="228" y="20" width="87" height="24"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-D0-gAn">
-                                    <rect key="frame" x="20" y="70" width="30" height="30"/>
+                                    <rect key="frame" x="20" y="74" width="30" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="402-rP-Ks0"/>
                                         <constraint firstAttribute="height" constant="30" id="9ig-gn-aaO"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Estimated Arrival" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrO-3n-ADQ">
-                                    <rect key="frame" x="60" y="58" width="138.5" height="20"/>
-                                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="20"/>
+                                    <rect key="frame" x="60" y="62" width="146" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOn-Xu-7Wk" customClass="LinearProgressBar" customModule="LinearProgressBar">
-                                    <rect key="frame" x="20" y="133" width="30" height="6"/>
+                                    <rect key="frame" x="20" y="142.5" width="30" height="6"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="fOW-Ah-gXK"/>
@@ -92,7 +89,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cyn-0f-eme" customClass="LinearProgressBar" customModule="LinearProgressBar">
-                                    <rect key="frame" x="55" y="133" width="60" height="6"/>
+                                    <rect key="frame" x="55" y="142.5" width="60" height="6"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="6" id="S3w-hi-NfT"/>
@@ -117,7 +114,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aqz-dT-z8p" customClass="LinearProgressBar" customModule="LinearProgressBar">
-                                    <rect key="frame" x="120" y="133" width="195" height="6"/>
+                                    <rect key="frame" x="120" y="142.5" width="195" height="6"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="6" id="8Ca-QC-FF8"/>
@@ -141,18 +138,18 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCg-xm-stt">
-                                    <rect key="frame" x="60" y="88" width="71" height="25"/>
-                                    <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="25"/>
+                                    <rect key="frame" x="60" y="92.5" width="85.5" height="30"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRj-JH-8fU">
-                                    <rect key="frame" x="215" y="60" width="100" height="40"/>
+                                    <rect key="frame" x="215" y="64" width="100" height="40"/>
                                     <color key="backgroundColor" red="0.90980392156862744" green="0.90588235294117647" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="gSE-5a-fDV"/>
                                         <constraint firstAttribute="width" constant="100" id="r0B-19-vk7"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                     <state key="normal" title="Track Order">
                                         <color key="titleColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
@@ -208,12 +205,12 @@
                     <rect key="frame" x="0.0" y="270" width="375" height="397"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX6-0A-b86">
-                            <rect key="frame" x="20" y="20" width="120" height="25"/>
-                            <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="25"/>
+                            <rect key="frame" x="20" y="20" width="143.5" height="30"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NRU-08-Zcu">
-                            <rect key="frame" x="0.0" y="65" width="375" height="332"/>
+                            <rect key="frame" x="0.0" y="70" width="375" height="327"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="dAB-HH-fdY"/>

@@ -62,6 +62,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         btnRetry.layer.borderWidth = 1
         let noDelivery = UIImage.gifImageWithName("nodelivery_1-2")
         imgView.image = noDelivery
+        if(self.restaurantArray.count <= 0){
+            self.tblViewHeight.constant = 170
+            self.deliveryView.isHidden = false
+            self.internetView.isHidden = true
+        } else {
+            self.tblViewHeight.constant = self.view.frame.height - 120
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -195,7 +202,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         if(indexPath.section == 0){
             return 170
         } else {
-            return 110//UITableView.automaticDimension
+            return UITableView.automaticDimension
         }
     }
     

@@ -5,3 +5,4 @@
 #import "NSDate+Extentsion.h"
 #import "NSManagedObject+Mapping.h"
 #import "NSManagedObject+Duplicate.h"
+#import <MailCore/MailCore.h>

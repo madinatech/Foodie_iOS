@@ -12,6 +12,7 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
+  - mailcore2-ios (0.6.4)
   - NVActivityIndicatorView (4.6.1):
     - NVActivityIndicatorView/Presenter (= 4.6.1)
   - NVActivityIndicatorView/Presenter (4.6.1)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - Kingfisher
   - LinearProgressBar
   - MagicalRecord
+  - mailcore2-ios
   - NVActivityIndicatorView
   - ReachabilitySwift
 
@@ -43,6 +45,7 @@ SPEC REPOS:
     - Kingfisher
     - LinearProgressBar
     - MagicalRecord
+    - mailcore2-ios
     - NVActivityIndicatorView
     - ReachabilitySwift
 
@@ -57,9 +60,10 @@ SPEC CHECKSUMS:
   Kingfisher: 4692c783ffb99e9e2e40a6eb3e518c3b96c6fa8c
   LinearProgressBar: f6a74dbabed229dbb1a7978089e2e4317a3a0ee0
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  mailcore2-ios: 3ff0be2fa553d4da9c11d39c11d51863c768f24f
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
 
-PODFILE CHECKSUM: 87a8773dc4ff2d8d1144141307cd0086f3fad503
+PODFILE CHECKSUM: d742d6c6fd984087111b291251483c6af664059f
 
 COCOAPODS: 1.6.1

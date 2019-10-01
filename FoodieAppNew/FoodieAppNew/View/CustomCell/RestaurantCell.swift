@@ -30,6 +30,7 @@ class RestaurantCell: UITableViewCell {
         
     }
     func hideLoader ()  {
+         timeView.backgroundColor = appBlackColor
             AMShimmer.stop(for:  self.imgView)
             AMShimmer.stop(for:  self.lblName)
             AMShimmer.stop(for: self.lblCusines)
@@ -45,6 +46,7 @@ class RestaurantCell: UITableViewCell {
     }
     
     func showLoader ()  {
+        timeView.backgroundColor = .clear
         AMShimmer.start(for: imgView)
         AMShimmer.start(for: lblName)
         AMShimmer.start(for: lblCusines)
