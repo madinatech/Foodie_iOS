@@ -10,10 +10,14 @@ class SearchCategoryCell: UITableViewCell,UICollectionViewDelegate, UICollection
 
     @IBOutlet weak var collectionView: UICollectionView!
     var delegate :  SearchCategoryCellDelegate? = nil
+     var cusinesArray = [Cusines]()
+    
      @IBOutlet weak var collectionHeight: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
          collectionView.register(UINib(nibName: "SearchCollCell", bundle: nil), forCellWithReuseIdentifier: "SearchCollCell")
+        cusinesArray = Cusines.getAll()
+        collectionView.reloadData()
         setHeight()
     }
     func setHeight ()  {
@@ -32,13 +36,15 @@ class SearchCategoryCell: UITableViewCell,UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return cusinesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell : SearchCollCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollCell", for: indexPath) as! SearchCollCell
         cell.contentView.layer.cornerRadius = 20
+        let cusine = cusinesArray[indexPath.row]
+        cell.lblItem.text = cusine.name
         return cell
     }
     

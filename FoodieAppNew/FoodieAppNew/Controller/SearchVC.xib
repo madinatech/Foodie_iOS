@@ -50,7 +50,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="Ptb-SZ-sTk"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="E2E-qo-cb3"/>

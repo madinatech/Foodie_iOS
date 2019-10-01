@@ -306,15 +306,15 @@ class Utils: NSObject {
         }
         
         let builder = MCOMessageBuilder()
-        builder.header.to = [MCOAddress(displayName: "iOS", mailbox: "ayyaz@madinagroup.co.tz") ?? "", MCOAddress(displayName: "iOS", mailbox: "thakur.yash514@gmail.com") ?? ""]
+        builder.header.to = [MCOAddress(displayName: "iOS", mailbox: "ayyaz@madinagroup.co.tz") ?? ""]
         builder.header.from = MCOAddress(displayName: "iOS", mailbox: "notificationalert@madinagroup.co.tz")
-        builder.header.subject = "Bug Report"
+        builder.header.subject = "Crash/Bug report - Foodie"
         
         if(AccountManager.instance().activeAccount != nil){
             let account = AccountManager.instance().activeAccount
             builder.textBody = "Hello,\n\nThere is a new crash report from: \(account?.user_Name ?? "") - \(account?.mobileNumber ?? "").\nOrigin: iOS \nAPI Call: \(strUrl) \nRequest: \(request) \nResponse: \(response)\nApp version: 1"
         } else {
-            builder.textBody = "Hello,\n\nThere is a new crash report from foodie.\nOrigin: iOS \nAPI Call: \(strUrl) \nRequest: \(request) \nResponse: \(response)\nApp version: 1"
+            builder.textBody = "Hello,\n\nThere is a new crash report from Guest user.\nOrigin: iOS \nAPI Call: \(strUrl) \nRequest: \(request) \nResponse: \(response)\nApp version: 1"
         }
         let rfc822Data = builder.data()
         let sendOperation = smtpSession.sendOperation(with: rfc822Data!)

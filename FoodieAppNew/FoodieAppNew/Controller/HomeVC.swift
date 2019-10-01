@@ -3,7 +3,7 @@ import UIKit
 import AMShimmer
 import MagicalRecord
 
-class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, RecommendedDelegate , DeliveryAddressDelegate, DeliveryLocationDelegate{
+class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, RecommendedDelegate , DeliveryAddressDelegate, DeliveryLocationDelegate, filterDelegate{
     
     @IBOutlet weak var deliveryView: UIView!
     @IBOutlet weak var imgInternet: UIImageView!
@@ -19,7 +19,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     var restaurantArray = [Restaurant]()
     var selectedAddress : Address = Address.mr_createEntity()!
     var areaId = Int()
-    
+    var selectedCusines = [String]()
     class func initViewController() -> HomeVC {
         let vc = HomeVC.init(nibName: "HomeVC", bundle: nil)
         return vc
@@ -33,7 +33,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         tblView.estimatedRowHeight = UITableView.automaticDimension
         isLoaded = false
         if(AccountManager.instance().activeAccount != nil){
-            lblHungry.text = "Are you hungry \(AccountManager.instance().activeAccount?.user_Name ?? "")?"
+            let name : String = AccountManager.instance().activeAccount?.user_Name ?? ""
+            let nameArray = name.split(separator: " ")
+            lblHungry.text = "Are you hungry \(nameArray[0])?"
         } else {
             lblHungry.text = "Are you hungry?"
             lblAddressTitle.text = Utils.fetchString(forKey: Selected_Area)
@@ -74,7 +76,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        self.restaurantArray = Restaurant.getAll()
+        if(selectedCusines.count <= 0){
+            restaurantArray = Restaurant.getAll()
+        } else {
+            restaurantArray = Restaurant.getAllByCusines(cusinesName: selectedCusines)
+        }
         tblView.reloadData()
     }
     
@@ -260,8 +266,26 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     }
     
     @objc func filterClicked(_ sender: UIButton) {
-        let vc = FilterVC.initViewController()
+        let vc = FilterVC.initViewController(selectdCusines: selectedCusines)
+        vc.delegate = self
         self.navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
+//    filterDelegate
+    
+    func applyFilter(cusinesName: [String]) {
+         selectedCusines = cusinesName
+        if(cusinesName.count <= 0){
+            restaurantArray = Restaurant.getAll()
+        } else {
+            restaurantArray = Restaurant.getAllByCusines(cusinesName: cusinesName)
+        }
+        tblView.reloadData()
+    }
+    func resetFilter(cusinesName: [String]) {
+         selectedCusines = cusinesName
+        restaurantArray = Restaurant.getAll()
+         tblView.reloadData()
     }
     
     //    RecommendedDelegate
@@ -305,4 +329,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
             GroupValues.mr_truncateAll(in: localContext)
         })
     }
+    
+
+    
+   
 }

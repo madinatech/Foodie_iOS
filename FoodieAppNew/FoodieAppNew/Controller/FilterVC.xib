@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
+                <outlet property="btnReset" destination="kJ7-rv-cvv" id="EMZ-va-LnH"/>
                 <outlet property="innerView" destination="dFF-tJ-uyY" id="b7x-fg-OZ8"/>
                 <outlet property="tblView" destination="e40-vR-8Ad" id="lLS-SN-gKf"/>
                 <outlet property="topView" destination="kNv-4r-u4i" id="Av1-F0-lBJ"/>
@@ -32,10 +33,10 @@
                     <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWM-sq-Kvu">
-                            <rect key="frame" x="35" y="487" width="305" height="50"/>
+                            <rect key="frame" x="35" y="477" width="305" height="40"/>
                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="fwz-AJ-0Fr">
+                                <constraint firstAttribute="height" constant="40" id="fwz-AJ-0Fr">
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
                                             <integer key="value" value="25"/>
@@ -55,23 +56,51 @@
                             </connections>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e40-vR-8Ad">
-                            <rect key="frame" x="0.0" y="10" width="375" height="467"/>
+                            <rect key="frame" x="0.0" y="10" width="375" height="457"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="wke-Eu-KEH"/>
                                 <outlet property="delegate" destination="-1" id="aqW-hO-xly"/>
                             </connections>
                         </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ7-rv-cvv">
+                            <rect key="frame" x="35" y="527" width="305" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="yq3-8J-ngC">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                            <integer key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </constraint>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                            <state key="normal" title="Reset">
+                                <color key="titleColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="resetClicked:" destination="-1" eventType="touchUpInside" id="q4F-zx-35b"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="mWM-sq-Kvu" secondAttribute="bottom" constant="40" id="9R5-vI-RKB"/>
                         <constraint firstItem="e40-vR-8Ad" firstAttribute="top" secondItem="dFF-tJ-uyY" secondAttribute="top" constant="10" id="FgI-ZA-v4J"/>
                         <constraint firstItem="e40-vR-8Ad" firstAttribute="leading" secondItem="dFF-tJ-uyY" secondAttribute="leading" id="KCe-Cq-4xW"/>
                         <constraint firstItem="mWM-sq-Kvu" firstAttribute="leading" secondItem="dFF-tJ-uyY" secondAttribute="leading" constant="35" id="Krp-Mj-rgv"/>
                         <constraint firstItem="mWM-sq-Kvu" firstAttribute="top" secondItem="e40-vR-8Ad" secondAttribute="bottom" constant="10" id="N6s-e1-Ppr"/>
                         <constraint firstAttribute="trailing" secondItem="e40-vR-8Ad" secondAttribute="trailing" id="NDv-3A-id2"/>
+                        <constraint firstAttribute="bottom" secondItem="kJ7-rv-cvv" secondAttribute="bottom" constant="10" id="SIv-tV-Lcr"/>
+                        <constraint firstAttribute="trailing" secondItem="kJ7-rv-cvv" secondAttribute="trailing" constant="35" id="VVH-ZD-jlq"/>
                         <constraint firstAttribute="trailing" secondItem="mWM-sq-Kvu" secondAttribute="trailing" constant="35" id="oGP-1Q-QRR"/>
+                        <constraint firstItem="kJ7-rv-cvv" firstAttribute="leading" secondItem="dFF-tJ-uyY" secondAttribute="leading" constant="35" id="sBg-yB-lfJ"/>
+                        <constraint firstItem="kJ7-rv-cvv" firstAttribute="top" secondItem="mWM-sq-Kvu" secondAttribute="bottom" constant="10" id="voX-Rq-a4e"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V76-Uh-OCR">

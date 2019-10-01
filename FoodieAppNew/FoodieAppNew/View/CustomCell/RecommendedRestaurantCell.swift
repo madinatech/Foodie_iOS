@@ -9,7 +9,7 @@ class RecommendedRestaurantCell: UITableViewCell,UICollectionViewDelegate, UICol
     
     @IBOutlet weak var collectionView: UICollectionView!
     var delegate :  RecommendedDelegate? = nil
-    
+    var selectedIndex = IndexPath()
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -30,7 +30,13 @@ class RecommendedRestaurantCell: UITableViewCell,UICollectionViewDelegate, UICol
         
         let cell : HomeTopCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeTopCell", for: indexPath) as! HomeTopCell
         cell.setData(index: indexPath.row)
-//        cell.contentView.dropShadow()
+        if(indexPath == selectedIndex){
+//            cell.selectedIndex(index: indexPath.row)
+        } else{
+            cell.backView.isHidden = true
+            cell.innerView.isHidden = false
+//             cell.setData(index: indexPath.row)
+        }
         return cell
     }
     
@@ -43,10 +49,16 @@ class RecommendedRestaurantCell: UITableViewCell,UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        if(delegate != nil){
-            self.delegate?.navigatetoDetail()
-            
-        }
+        selectedIndex = indexPath
+        collectionView.reloadItems(at: [indexPath])
+        
+      
+        
+//        collectionView.reloadData()
+//        if(delegate != nil){
+//            self.delegate?.navigatetoDetail()
+//
+//        }
         
     }
     

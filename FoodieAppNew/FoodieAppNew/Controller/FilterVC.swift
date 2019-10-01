@@ -1,17 +1,26 @@
 
 
 import UIKit
-
-class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
+@objc protocol filterDelegate {
+   
+    func applyFilter(cusinesName : [String])
+    func resetFilter(cusinesName : [String])
+}
+class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, categoryCellDelegate {
 
     @IBOutlet weak var tblView: UITableView!
-      @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var btnReset: UIButton!
     var selectedSection = Int()
     var selectedIndex = Int()
+    var cusinesHeight = Int()
+    var delegate :  filterDelegate? = nil
+    var selectdCusinesArray = [String]()
     
-    class func initViewController() -> FilterVC {
+    class func initViewController(selectdCusines : [String]) -> FilterVC {
         let vc = FilterVC.init(nibName: "FilterVC", bundle: nil)
+        vc.selectdCusinesArray = selectdCusines
         return vc
     }
     
@@ -20,6 +29,8 @@ class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        btnReset.layer.borderColor = appPurpleColor.cgColor
+        btnReset.layer.borderWidth = 1
         tblView.tableFooterView = UIView()
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tap.delegate = self
@@ -30,7 +41,21 @@ class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func resetClicked(_ sender: Any) {
+        if(delegate != nil){
+            self.dismiss(animated: true) {
+                self.selectdCusinesArray = [String]()
+                self.delegate?.resetFilter(cusinesName: self.selectdCusinesArray)
+            }
+        }
+    }
+    
     @IBAction func applyFilterClicked(_ sender: Any) {
+        if(delegate != nil){
+             self.dismiss(animated: true) {
+                self.delegate?.applyFilter(cusinesName: self.selectdCusinesArray)
+            }
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,7 +88,7 @@ class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         if(indexPath.section == 0){
             return  50
         }
-        return UITableView.automaticDimension
+        return CGFloat(cusinesHeight)
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
@@ -87,7 +112,8 @@ class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
                 cell = nib?[0] as? CategoryCell
             }
             cell?.selectionStyle = .none
-            cell?.setData()
+            cell?.delegate = self
+            cell?.setData(selectedCusines: selectdCusinesArray)
             return cell!
             
         }
@@ -98,5 +124,18 @@ class FilterVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         selectedIndex = indexPath.row
         selectedSection = indexPath.section
         tblView.reloadData()
+    }
+    
+    func updateHeight(height: CGFloat) {
+        cusinesHeight = Int(height * 25)
+        tblView.beginUpdates()
+        let indexPath = IndexPath(item: 1, section: 1)
+        tblView.reloadRows(at: [indexPath], with: .automatic)
+        tblView.endUpdates()
+//        tblView.reloadData()
+    }
+    
+    func selectedCusines(cusinesArray: [String]) {
+        selectdCusinesArray = cusinesArray
     }
 }

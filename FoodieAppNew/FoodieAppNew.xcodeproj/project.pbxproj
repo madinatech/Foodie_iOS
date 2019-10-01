@@ -207,6 +207,8 @@
 		34FB4F182343224300E2E055 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F0E2343224300E2E055 /* sharefonts.net.txt */; };
 		34FB4F192343224300E2E055 /* Montserrat-Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F0F2343224300E2E055 /* Montserrat-Hairline.otf */; };
 		34FB4F1A2343224300E2E055 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F102343224300E2E055 /* Montserrat-SemiBold.otf */; };
+		34FB4F1C234366A500E2E055 /* RecentSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB4F1B234366A500E2E055 /* RecentSearch.swift */; };
+		34FB4F1E234366AD00E2E055 /* _RecentSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB4F1D234366AD00E2E055 /* _RecentSearch.swift */; };
 		F3DCC508BC56053EECE247D4 /* Pods_FoodieAppNewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C33DDA7C3AF342BE77C4E1B /* Pods_FoodieAppNewTests.framework */; };
 		F71A07F3453DEBEF9312D5D6 /* Pods_FoodieAppNewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA212932CDD2CBDC9FD66CF /* Pods_FoodieAppNewUITests.framework */; };
 /* End PBXBuildFile section */
@@ -440,6 +442,8 @@
 		34FB4F0E2343224300E2E055 /* sharefonts.net.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sharefonts.net.txt; sourceTree = "<group>"; };
 		34FB4F0F2343224300E2E055 /* Montserrat-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Hairline.otf"; sourceTree = "<group>"; };
 		34FB4F102343224300E2E055 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		34FB4F1B234366A500E2E055 /* RecentSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentSearch.swift; sourceTree = "<group>"; };
+		34FB4F1D234366AD00E2E055 /* _RecentSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _RecentSearch.swift; sourceTree = "<group>"; };
 		3C33DDA7C3AF342BE77C4E1B /* Pods_FoodieAppNewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodieAppNewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51462E26FED11E44222D6439 /* Pods-FoodieAppNewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieAppNewTests.release.xcconfig"; path = "Target Support Files/Pods-FoodieAppNewTests/Pods-FoodieAppNewTests.release.xcconfig"; sourceTree = "<group>"; };
 		5CA212932CDD2CBDC9FD66CF /* Pods_FoodieAppNewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodieAppNewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -743,6 +747,7 @@
 		34C01C432334AA770057DEF4 /* UserClasses */ = {
 			isa = PBXGroup;
 			children = (
+				34FB4F1B234366A500E2E055 /* RecentSearch.swift */,
 				344F79E7233CE8D600A35A43 /* Favourite.swift */,
 				344F79E3233CCCBB00A35A43 /* Address.swift */,
 				344F79DB233CC35600A35A43 /* Area.swift */,
@@ -771,6 +776,7 @@
 		34C01C552334AA770057DEF4 /* StaticClasses */ = {
 			isa = PBXGroup;
 			children = (
+				34FB4F1D234366AD00E2E055 /* _RecentSearch.swift */,
 				344F79E5233CE8D000A35A43 /* _Favourite.swift */,
 				344F79E1233CCCB600A35A43 /* _Address.swift */,
 				344F79D6233CC35000A35A43 /* _Area.swift */,
@@ -1360,6 +1366,7 @@
 				344DE1B52341E344003D5D67 /* iOSDevCenters+GIF.swift in Sources */,
 				344D7D1C233DD54200809108 /* DeliveryLoactionVC.swift in Sources */,
 				341B0D152330D57E00D12504 /* HomeVC.swift in Sources */,
+				34FB4F1C234366A500E2E055 /* RecentSearch.swift in Sources */,
 				341B0D292330D6A800D12504 /* OrderListVC.swift in Sources */,
 				34899B39233A2E2500A5FBA2 /* Location.swift in Sources */,
 				3400F3012332117800346C9A /* RestaurantDetailHeader.swift in Sources */,
@@ -1371,6 +1378,7 @@
 				34C01CF22334AB2C0057DEF4 /* NSString+PropertyKVC.m in Sources */,
 				3400F30A2332450900346C9A /* CusinesCell.swift in Sources */,
 				344DE1BB2341FEF4003D5D67 /* InternetVc.swift in Sources */,
+				34FB4F1E234366AD00E2E055 /* _RecentSearch.swift in Sources */,
 				34C01CFC2334AB2C0057DEF4 /* NSDate+DateTime.m in Sources */,
 				34C01C392334A9230057DEF4 /* UIViewExtension.swift in Sources */,
 				340D78BA233361440084971A /* ViewOrderMoreCell.swift in Sources */,

@@ -58,19 +58,6 @@ class RestaurantCell: UITableViewCell {
         AMShimmer.start(for: timeView)
         AMShimmer.start(for: imgScooter)
         AMShimmer.start(for: imgStar)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-//            AMShimmer.stop(for:  self.imgView)
-//            AMShimmer.stop(for:  self.lblName)
-//            AMShimmer.stop(for: self.lblCusines)
-//            AMShimmer.stop(for:  self.lblRating)
-//            AMShimmer.stop(for:  self.lblTime)
-//            AMShimmer.stop(for:  self.lblAmount)
-//            AMShimmer.stop(for:  self.imgBag)
-//            AMShimmer.stop(for:  self.imgTable)
-//            AMShimmer.stop(for:  self.timeView)
-//            AMShimmer.stop(for:  self.imgScooter)
-//            AMShimmer.stop(for:  self.imgStar)
-//        }
     }
     
     func showData(restaurant: Restaurant)  {
@@ -81,7 +68,9 @@ class RestaurantCell: UITableViewCell {
         let cusines : [Cusines] = restaurant.cuisines.allObjects as! [Cusines]
         var cusinesNameArray = [String]()
         for cusine in cusines{
+            if(!cusinesNameArray.contains(cusine.name ?? "")){
             cusinesNameArray.append(cusine.name ?? "")
+            }
         }
         cusinesNameArray.sort()
         let joined = cusinesNameArray.joined(separator: " • ")

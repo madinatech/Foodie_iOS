@@ -2,7 +2,7 @@ import Foundation
 
 @objc(Restaurant)
 open class Restaurant: _Restaurant {
-      var itemLoadedBlock : ItemLoadedBlock = {_,_ in }
+    var itemLoadedBlock : ItemLoadedBlock = {_,_ in }
     
     class func defaultMapping() -> FEMMapping {
         
@@ -13,12 +13,12 @@ open class Restaurant: _Restaurant {
         
         mapping.addRelationshipMapping(Images.defaultMapping(), forProperty: "images", keyPath: "images")
         mapping.addRelationshipMapping(Location.defaultMapping(), forProperty: "location", keyPath: "location")
-         mapping.addRelationshipMapping(Offerings.defaultMapping(), forProperty: "offerings", keyPath: "offerings")
-        
+        mapping.addRelationshipMapping(Offerings.defaultMapping(), forProperty: "offerings", keyPath: "offerings")
         mapping.addToManyRelationshipMapping(Cusines.defaultMapping(), forProperty: "cuisines", keyPath: "cuisines")
-         mapping.addToManyRelationshipMapping(Menu.defaultMapping(), forProperty: "menus", keyPath: "menus")
-         mapping.addToManyRelationshipMapping(OpeningTimes.defaultMapping(), forProperty: "opening_times", keyPath: "opening_times")
+        mapping.addToManyRelationshipMapping(Menu.defaultMapping(), forProperty: "menus", keyPath: "menus")
+        mapping.addToManyRelationshipMapping(OpeningTimes.defaultMapping(), forProperty: "opening_times", keyPath: "opening_times")
         mapping.primaryKey = "entity_id"
+        
         return mapping
     }
     
@@ -42,6 +42,24 @@ open class Restaurant: _Restaurant {
         request.startRequest()
     }
     
+    class func getAllByCusines(cusinesName : [String]) -> [Restaurant] {
+        let restAray = getAll()
+        var newRest = [Restaurant]()
+        for name in cusinesName{
+            for rest in restAray{
+                let cusinesArray : [Cusines] = rest.cuisines.allObjects as! [Cusines]
+                for cusine in cusinesArray{
+                    if(name == cusine.name){
+                        if(!newRest.contains(rest)){
+                            newRest.append(rest)
+                        }
+                    }
+                }
+            }
+        }
+        return newRest
+    }
+    
     class func getAllByName(name : String) -> [Restaurant] {
         let restAray = getAll()
         var newRest = [Restaurant]()
@@ -51,18 +69,18 @@ open class Restaurant: _Restaurant {
                 let itemArray : [Items] = menu.items.allObjects as! [Items]
                 for item in itemArray{
                     let nameArry = name.split(separator: " ")
-                        for name in nameArry{
-                            if((rest.name?.containsIgnoringCase(String(name)))!){
-                                if(!newRest.contains(rest)){
-                                    newRest.append(rest)
-                                }
-                            }
-                            if((item.name?.containsIgnoringCase(String(name)))!){
-                                if(!newRest.contains(rest)){
-                                    newRest.append(rest)
-                                }
+                    for name in nameArry{
+                        if((rest.name?.containsIgnoringCase(String(name)))!){
+                            if(!newRest.contains(rest)){
+                                newRest.append(rest)
                             }
                         }
+                        if((item.name?.containsIgnoringCase(String(name)))!){
+                            if(!newRest.contains(rest)){
+                                newRest.append(rest)
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -93,5 +111,4 @@ open class Restaurant: _Restaurant {
         }
         return newRest
     }
-   
 }

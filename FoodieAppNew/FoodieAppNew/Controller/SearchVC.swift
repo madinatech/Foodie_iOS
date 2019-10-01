@@ -19,6 +19,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
     var isSearch = Bool()
     var restaurantArray = [Restaurant]()
     var searchString = String()
+   var recentSearchArray = [RecentSearch]()
     
     class func initViewController() -> SearchVC {
         let vc = SearchVC.init(nibName: "SearchVC", bundle: nil)
@@ -46,6 +47,8 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
         filterView.isHidden = true
         btnClose.isHidden = true
         self.view.layoutIfNeeded()
+        recentSearchArray = RecentSearch.getAll()
+        tblView.reloadData()
     }
     
     
@@ -65,6 +68,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
         restaurantArray = [Restaurant]()
         restaurantClicked(btnRestaurnat)
         searchString = ""
+        recentSearchArray = RecentSearch.getAll()
         tblView.reloadData()
     }
     
@@ -82,7 +86,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
         btnDishes.isSelected = true
         btnRestaurnat.backgroundColor = appLightThemeColor
         btnDishes.backgroundColor = appThemeColor
-         restaurantArray = Restaurant.getAllByItems(name: searchString)
+        restaurantArray = Restaurant.getAllByItems(name: searchString)
         tblView.reloadData()
     }
     
@@ -97,7 +101,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
             return restaurantArray.count
         } else {
             if(section == 0){
-                return 3
+                return recentSearchArray.count
             }
             return 1
         }
@@ -120,7 +124,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if(isSearch == true){
-            return 110
+            return UITableView.automaticDimension
         } else {
             if(indexPath.section == 0){
                 return 44
@@ -157,6 +161,8 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
                     cell = nib?[0] as? RecentSearchCell
                 }
                 cell?.selectionStyle = .none
+                let resentSearch : RecentSearch = recentSearchArray[indexPath.row]
+                cell?.lblTitle.text = resentSearch.name
                 return cell!
             }
             var cell = tableView.dequeueReusableCell(withIdentifier: "SearchCategoryCell") as? SearchCategoryCell
@@ -176,11 +182,20 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
     func updateHeight(height: CGFloat) {
         print("UUUUU \(height)")
         isLoded = true
-        cellHeight = 700//height
+        cellHeight = height//height
         tblView.reloadData()
     }
     
-    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+//        if(recentSearchArray.count == 3){
+//            RecentSearch.removeEntity()
+//        }
+            let recentSearch : RecentSearch = RecentSearch.createRecentEntity()
+            recentSearch.name = textField.text
+            recentSearch.added_date = Date()
+            recentSearch.saveEntity()
+       
+    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let replacedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""

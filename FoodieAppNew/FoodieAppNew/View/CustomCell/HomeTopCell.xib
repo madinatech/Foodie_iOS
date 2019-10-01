@@ -24,6 +24,38 @@
                 <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaq-uw-W0i">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-delivery-of-goods" translatesAutoresizingMaskIntoConstraints="NO" id="0MZ-fW-KPp">
+                                <rect key="frame" x="30" y="20" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="MSl-Vx-mai"/>
+                                    <constraint firstAttribute="height" constant="60" id="x1B-C3-DFW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivering" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdp-73-jaC">
+                                <rect key="frame" x="5" y="92" width="110" height="17"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2470588235" green="0.58431372550000005" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Rdp-73-jaC" secondAttribute="trailing" constant="5" id="7ee-5l-jfj"/>
+                            <constraint firstItem="Rdp-73-jaC" firstAttribute="leading" secondItem="gaq-uw-W0i" secondAttribute="leading" constant="5" id="PQ3-F2-9pc"/>
+                            <constraint firstItem="0MZ-fW-KPp" firstAttribute="centerX" secondItem="gaq-uw-W0i" secondAttribute="centerX" id="cCz-hn-eeS"/>
+                            <constraint firstItem="Rdp-73-jaC" firstAttribute="top" secondItem="0MZ-fW-KPp" secondAttribute="bottom" constant="12" id="cRg-GD-UNo"/>
+                            <constraint firstItem="0MZ-fW-KPp" firstAttribute="top" secondItem="gaq-uw-W0i" secondAttribute="top" constant="20" id="d6i-yC-z35"/>
+                            <constraint firstItem="Rdp-73-jaC" firstAttribute="centerX" secondItem="gaq-uw-W0i" secondAttribute="centerX" id="gF9-L0-xuI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPu-VG-dAO">
                         <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
                         <subviews>
@@ -69,13 +101,18 @@
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="pPu-VG-dAO" secondAttribute="bottom" id="G1Q-zo-R98"/>
+                <constraint firstItem="gaq-uw-W0i" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RUe-af-5ai"/>
+                <constraint firstAttribute="bottom" secondItem="gaq-uw-W0i" secondAttribute="bottom" id="cE3-Yh-lBW"/>
                 <constraint firstItem="pPu-VG-dAO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lu2-R3-t4f"/>
+                <constraint firstAttribute="trailing" secondItem="gaq-uw-W0i" secondAttribute="trailing" id="mMU-xa-5je"/>
                 <constraint firstItem="pPu-VG-dAO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="q3Q-Yy-VGI"/>
+                <constraint firstItem="gaq-uw-W0i" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qRO-4A-Tf2"/>
                 <constraint firstAttribute="trailing" secondItem="pPu-VG-dAO" secondAttribute="trailing" id="wHK-QF-BeV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="109" height="154"/>
             <connections>
+                <outlet property="backView" destination="gaq-uw-W0i" id="EOt-1f-Rid"/>
                 <outlet property="imgView" destination="nEA-4i-cey" id="N2w-Xl-PLu"/>
                 <outlet property="innerView" destination="pPu-VG-dAO" id="gFa-65-4OU"/>
                 <outlet property="lblOptions" destination="Pmn-FR-hx6" id="cQH-H1-FLJ"/>
@@ -84,4 +121,7 @@
             <point key="canvasLocation" x="173.91304347826087" y="127.90178571428571"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="home-delivery-of-goods" width="170.5" height="170.5"/>
+    </resources>
 </document>
