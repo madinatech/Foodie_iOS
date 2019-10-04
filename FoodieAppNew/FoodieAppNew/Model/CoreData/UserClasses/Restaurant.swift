@@ -26,6 +26,26 @@ open class Restaurant: _Restaurant {
         return  Restaurant.mr_findAllSorted(by: "entity_id", ascending: true) as! [Restaurant]
     }
     
+    class func getDeliveryUnder() -> [Restaurant] {
+        let pre = NSPredicate(format: "delivery_time <= 30")
+        let arr : [Restaurant] = Restaurant.mr_findAllSorted(by: "entity_id", ascending: true, with: pre) as! [Restaurant]
+        return arr
+        
+    }
+    class func getPickupRestaurants() -> [Restaurant] {
+        let pre = NSPredicate(format: "self.offerings.collection == true")
+        let arr : [Restaurant] = Restaurant.mr_findAllSorted(by: "entity_id", ascending: true, with: pre) as! [Restaurant]
+        return arr
+        
+    }
+    
+    class func getDineInRestaurants() -> [Restaurant] {
+        let pre = NSPredicate(format: "self.offerings.dine_in == true")
+        let arr : [Restaurant] = Restaurant.mr_findAllSorted(by: "entity_id", ascending: true, with: pre) as! [Restaurant]
+        return arr
+        
+    }
+    
     func addFavouriteResTaurant(block : @escaping ItemLoadedBlock) {
         itemLoadedBlock = block
         let request = Request.init(url: "\(kBaseUrl)\(kAddFavourite)", method: RequestMethod(rawValue: "POST")!) { (success:Bool, request:Request, errorMessage:NSString) -> (Void) in

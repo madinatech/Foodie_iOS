@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AreaVC" customModule="FoodieAppNew" customModuleProvider="target">
+            <connections>
+                <outlet property="tblView" destination="Dlq-fe-i6X" id="QlN-Pw-WgL"/>
+                <outlet property="view" destination="e7R-Gd-Pbd" id="Jip-ek-NlI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="e7R-Gd-Pbd">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vl-IF-tnU">
+                    <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search_bg" translatesAutoresizingMaskIntoConstraints="NO" id="r9z-ZE-GSu">
+                            <rect key="frame" x="8" y="0.0" width="398" height="70"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search" translatesAutoresizingMaskIntoConstraints="NO" id="JPQ-CL-NEX">
+                            <rect key="frame" x="15" y="15.5" width="23" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="TBK-aV-06i"/>
+                                <constraint firstAttribute="width" constant="23" id="dCJ-C6-W6T"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Which city are you in?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jH-dx-h8s">
+                            <rect key="frame" x="46" y="10" width="319" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="XAN-ji-Vca"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="3jH-dx-h8s" firstAttribute="leading" secondItem="JPQ-CL-NEX" secondAttribute="trailing" constant="8" id="63s-Wv-zge"/>
+                        <constraint firstItem="3jH-dx-h8s" firstAttribute="centerY" secondItem="8Vl-IF-tnU" secondAttribute="centerY" id="Cjg-G2-Bgx"/>
+                        <constraint firstItem="r9z-ZE-GSu" firstAttribute="leading" secondItem="8Vl-IF-tnU" secondAttribute="leading" constant="8" id="FPO-Zb-6z2"/>
+                        <constraint firstAttribute="height" constant="50" id="J1Y-0E-w8v"/>
+                        <constraint firstItem="JPQ-CL-NEX" firstAttribute="centerY" secondItem="8Vl-IF-tnU" secondAttribute="centerY" id="Lvn-aq-2UR"/>
+                        <constraint firstAttribute="bottom" secondItem="r9z-ZE-GSu" secondAttribute="bottom" id="M8E-lj-Mm9"/>
+                        <constraint firstItem="JPQ-CL-NEX" firstAttribute="leading" secondItem="8Vl-IF-tnU" secondAttribute="leading" constant="15" id="TMC-y6-z8d"/>
+                        <constraint firstAttribute="trailing" secondItem="3jH-dx-h8s" secondAttribute="trailing" constant="10" id="Z0B-5r-w9M"/>
+                        <constraint firstItem="r9z-ZE-GSu" firstAttribute="top" secondItem="8Vl-IF-tnU" secondAttribute="top" id="cI5-ew-7QD"/>
+                        <constraint firstAttribute="trailing" secondItem="r9z-ZE-GSu" secondAttribute="trailing" constant="8" id="crc-7N-4ue"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="r9z-ZE-GSu"/>
+                        </mask>
+                    </variation>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dlq-fe-i6X">
+                    <rect key="frame" x="0.0" y="98" width="375" height="569"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Df6-0R-a5h"/>
+                        <outlet property="delegate" destination="-1" id="aou-xz-jP8"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpd-4C-NVg">
+                    <rect key="frame" x="20" y="40" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="UGK-Sz-HNc"/>
+                        <constraint firstAttribute="height" constant="38" id="wSO-c4-oCO"/>
+                    </constraints>
+                    <state key="normal" image="Back"/>
+                    <connections>
+                        <action selector="backClicked:" destination="-1" eventType="touchUpInside" id="tHL-qA-I7f"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Area" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6e-ht-lxf">
+                    <rect key="frame" x="78" y="43.5" width="141" height="31"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
+                    <color key="textColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cO9-8b-XN4" firstAttribute="trailing" secondItem="Dlq-fe-i6X" secondAttribute="trailing" id="1fo-se-tbw"/>
+                <constraint firstItem="Dlq-fe-i6X" firstAttribute="leading" secondItem="cO9-8b-XN4" secondAttribute="leading" id="4eT-an-H10"/>
+                <constraint firstItem="Jpd-4C-NVg" firstAttribute="top" secondItem="cO9-8b-XN4" secondAttribute="top" constant="20" id="Gbz-Nu-ClL"/>
+                <constraint firstItem="Dlq-fe-i6X" firstAttribute="top" secondItem="8Vl-IF-tnU" secondAttribute="bottom" constant="5" id="Xaz-gr-uMU"/>
+                <constraint firstItem="l6e-ht-lxf" firstAttribute="leading" secondItem="Jpd-4C-NVg" secondAttribute="trailing" constant="20" id="bbJ-Vd-CRk"/>
+                <constraint firstItem="l6e-ht-lxf" firstAttribute="centerY" secondItem="Jpd-4C-NVg" secondAttribute="centerY" id="cwe-la-yWs"/>
+                <constraint firstItem="cO9-8b-XN4" firstAttribute="bottom" secondItem="Dlq-fe-i6X" secondAttribute="bottom" id="eEZ-Xk-3Hy"/>
+                <constraint firstItem="8Vl-IF-tnU" firstAttribute="top" secondItem="cO9-8b-XN4" secondAttribute="top" id="ia7-EG-XFf"/>
+                <constraint firstItem="cO9-8b-XN4" firstAttribute="trailing" secondItem="8Vl-IF-tnU" secondAttribute="trailing" id="n9d-GS-9iW"/>
+                <constraint firstItem="Jpd-4C-NVg" firstAttribute="leading" secondItem="cO9-8b-XN4" secondAttribute="leading" constant="20" id="ocC-Qt-Feo"/>
+                <constraint firstItem="8Vl-IF-tnU" firstAttribute="leading" secondItem="e7R-Gd-Pbd" secondAttribute="leading" id="t7I-ex-dAz"/>
+                <constraint firstItem="Dlq-fe-i6X" firstAttribute="top" secondItem="Jpd-4C-NVg" secondAttribute="bottom" constant="20" id="vw0-62-t14"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="cO9-8b-XN4"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="8Vl-IF-tnU"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="38" height="38"/>
+        <image name="Search" width="20" height="20"/>
+        <image name="Search_bg" width="16" height="16"/>
+    </resources>
+</document>

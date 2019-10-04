@@ -4,10 +4,10 @@
 target 'FoodieAppNew' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for FoodieAppNew
- pod 'CBFlashyTabBarController'
- pod 'IQKeyboardManagerSwift'
+  pod 'CBFlashyTabBarController'
+  pod 'IQKeyboardManagerSwift'
   pod 'AMShimmer'
   pod 'NVActivityIndicatorView'
   pod 'Alamofire'
@@ -17,17 +17,17 @@ target 'FoodieAppNew' do
   pod 'FastEasyMapping', '~> 1.2'
   pod 'ActionSheetPicker-3.0'
   pod 'Kingfisher'
-pod 'LinearProgressBar'
-    pod 'mailcore2-ios'
- 
+  pod 'LinearProgressBar'
+  pod 'mailcore2-ios'
+#  pod 'JHSpinner'
   target 'FoodieAppNewTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
   target 'FoodieAppNewUITests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
 end

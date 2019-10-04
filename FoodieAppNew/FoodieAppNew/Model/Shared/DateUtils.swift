@@ -52,12 +52,16 @@ class DateUtils: NSObject {
     
     
     class func getStringFormat(str:String) -> String {
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "HH:mm"
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "h:mm a"
-        let date: Date = dateFormatterGet.date(from: str)!
-        return dateFormatterPrint.string(from: date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "HH:mm"
+        let date = dateFormatter.date(from: str)
+        dateFormatter.dateFormat = "hh:mm a"
+        if(date == nil) {
+            return ""
+        }
+        let Date24 = dateFormatter.string(from: date!)
+        return Date24
     }
     
     class func getDateString(date:Date) -> String {

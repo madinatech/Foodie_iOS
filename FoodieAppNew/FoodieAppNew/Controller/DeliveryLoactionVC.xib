@@ -17,7 +17,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeliveryLoactionVC" customModule="FoodieAppNew" customModuleProvider="target">
             <connections>
+                <outlet property="imgLocation" destination="kl3-oY-40k" id="8bY-8O-ZwT"/>
                 <outlet property="innerView" destination="nhx-hr-M6s" id="3Zv-hO-bAn"/>
+                <outlet property="lblDesc" destination="znC-MF-RZF" id="l70-Tw-Vx3"/>
+                <outlet property="lblTitle" destination="Ljp-UW-yUa" id="I0F-3g-cLp"/>
                 <outlet property="topView" destination="u4g-ym-akH" id="Koa-be-Cs8"/>
                 <outlet property="txtArea" destination="yXp-6O-rZj" id="MQ0-d3-XLb"/>
                 <outlet property="txtCity" destination="UjG-4w-SoX" id="XWA-si-Ov4"/>
@@ -33,7 +36,10 @@
                     <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-ZS-dL4">
-                            <rect key="frame" x="15" y="20" width="206.5" height="30"/>
+                            <rect key="frame" x="15" y="20" width="206.5" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="ive-tf-jc2"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -62,7 +68,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWH-BU-2Vz">
-                            <rect key="frame" x="15" y="75" width="345" height="43"/>
+                            <rect key="frame" x="15" y="80" width="345" height="43"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="aF8-2e-kNF"/>
                             </constraints>
@@ -71,7 +77,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFL-oz-g18">
-                            <rect key="frame" x="15" y="148" width="345" height="43"/>
+                            <rect key="frame" x="15" y="153" width="345" height="43"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="pWN-fN-dDP"/>
                             </constraints>
@@ -80,7 +86,7 @@
                             </connections>
                         </button>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select your area" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yXp-6O-rZj" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                            <rect key="frame" x="15" y="148" width="345" height="43"/>
+                            <rect key="frame" x="15" y="153" width="345" height="43"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="9Zz-AN-kCv"/>
                             </constraints>
@@ -93,7 +99,7 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select your city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UjG-4w-SoX" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                            <rect key="frame" x="15" y="75" width="345" height="43"/>
+                            <rect key="frame" x="15" y="80" width="345" height="43"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="xzp-XC-wg2"/>
                             </constraints>
@@ -105,6 +111,21 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </textField>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FindAdress" translatesAutoresizingMaskIntoConstraints="NO" id="kl3-oY-40k">
+                            <rect key="frame" x="10" y="216" width="355" height="145"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We can't find you " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljp-UW-yUa">
+                            <rect key="frame" x="10" y="381" width="355" height="25.5"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To show restaurants serving in your area, your location is required" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znC-MF-RZF">
+                            <rect key="frame" x="20" y="416.5" width="335" height="36"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -113,18 +134,29 @@
                         <constraint firstItem="ogl-ZS-dL4" firstAttribute="leading" secondItem="nhx-hr-M6s" secondAttribute="leading" constant="15" id="5HO-cr-dFN"/>
                         <constraint firstAttribute="trailing" secondItem="pKl-sL-Df5" secondAttribute="trailing" constant="35" id="8HA-ME-V3J"/>
                         <constraint firstItem="UFL-oz-g18" firstAttribute="top" secondItem="UjG-4w-SoX" secondAttribute="bottom" constant="30" id="8tn-Id-kcP"/>
+                        <constraint firstItem="znC-MF-RZF" firstAttribute="top" secondItem="Ljp-UW-yUa" secondAttribute="bottom" constant="10" id="Cyl-2M-Gbi"/>
                         <constraint firstItem="yXp-6O-rZj" firstAttribute="top" secondItem="UjG-4w-SoX" secondAttribute="bottom" constant="30" id="DQL-WK-4r7"/>
                         <constraint firstAttribute="trailing" secondItem="UjG-4w-SoX" secondAttribute="trailing" constant="15" id="Eak-nW-CDb"/>
+                        <constraint firstItem="znC-MF-RZF" firstAttribute="leading" secondItem="nhx-hr-M6s" secondAttribute="leading" constant="20" id="Gch-Yg-IWY"/>
+                        <constraint firstItem="Ljp-UW-yUa" firstAttribute="leading" secondItem="nhx-hr-M6s" secondAttribute="leading" constant="10" id="Ipn-8e-re4"/>
+                        <constraint firstItem="kl3-oY-40k" firstAttribute="top" secondItem="UFL-oz-g18" secondAttribute="bottom" constant="20" id="IzY-WG-4Bj"/>
+                        <constraint firstAttribute="trailing" secondItem="Ljp-UW-yUa" secondAttribute="trailing" constant="10" id="J4T-aA-14Z"/>
                         <constraint firstItem="DWH-BU-2Vz" firstAttribute="leading" secondItem="nhx-hr-M6s" secondAttribute="leading" constant="15" id="L2F-We-cmD"/>
+                        <constraint firstItem="kl3-oY-40k" firstAttribute="leading" secondItem="nhx-hr-M6s" secondAttribute="leading" constant="10" id="Qhi-fw-cDd"/>
                         <constraint firstItem="pKl-sL-Df5" firstAttribute="leading" secondItem="nhx-hr-M6s" secondAttribute="leading" constant="35" id="TTN-X7-8Qb"/>
                         <constraint firstItem="DWH-BU-2Vz" firstAttribute="top" secondItem="ogl-ZS-dL4" secondAttribute="bottom" constant="25" id="VAK-jE-AZy"/>
+                        <constraint firstItem="kl3-oY-40k" firstAttribute="centerX" secondItem="nhx-hr-M6s" secondAttribute="centerX" id="a4W-H7-n4K"/>
+                        <constraint firstAttribute="trailing" secondItem="znC-MF-RZF" secondAttribute="trailing" constant="20" id="aZH-iN-zLi"/>
                         <constraint firstItem="UFL-oz-g18" firstAttribute="leading" secondItem="nhx-hr-M6s" secondAttribute="leading" constant="15" id="hAh-8r-CVa"/>
                         <constraint firstItem="ogl-ZS-dL4" firstAttribute="top" secondItem="nhx-hr-M6s" secondAttribute="top" constant="20" id="hFb-ws-jjK"/>
                         <constraint firstAttribute="trailing" secondItem="DWH-BU-2Vz" secondAttribute="trailing" constant="15" id="jIZ-XZ-zvx"/>
                         <constraint firstItem="UjG-4w-SoX" firstAttribute="top" secondItem="ogl-ZS-dL4" secondAttribute="bottom" constant="25" id="kjG-qk-Eu5"/>
+                        <constraint firstItem="Ljp-UW-yUa" firstAttribute="top" secondItem="kl3-oY-40k" secondAttribute="bottom" constant="20" id="lGr-jt-iDV"/>
                         <constraint firstAttribute="trailing" secondItem="UFL-oz-g18" secondAttribute="trailing" constant="15" id="nPp-BD-N6l"/>
+                        <constraint firstAttribute="trailing" secondItem="kl3-oY-40k" secondAttribute="trailing" constant="10" id="sFd-3d-ptj"/>
                         <constraint firstItem="UjG-4w-SoX" firstAttribute="leading" secondItem="nhx-hr-M6s" secondAttribute="leading" constant="15" id="tzr-0U-cjn"/>
                         <constraint firstItem="yXp-6O-rZj" firstAttribute="leading" secondItem="nhx-hr-M6s" secondAttribute="leading" constant="15" id="vUb-Uj-eeN"/>
+                        <constraint firstItem="kl3-oY-40k" firstAttribute="centerY" secondItem="nhx-hr-M6s" secondAttribute="centerY" id="xbA-tP-5s8"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMT-51-lE2">
@@ -159,7 +191,10 @@
                 <constraint firstItem="nhx-hr-M6s" firstAttribute="top" secondItem="u4g-ym-akH" secondAttribute="bottom" id="xNj-hb-qRs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="XJg-7n-w9r"/>
-            <point key="canvasLocation" x="854" y="46"/>
+            <point key="canvasLocation" x="853.60000000000002" y="45.42728635682159"/>
         </view>
     </objects>
+    <resources>
+        <image name="FindAdress" width="608" height="787"/>
+    </resources>
 </document>

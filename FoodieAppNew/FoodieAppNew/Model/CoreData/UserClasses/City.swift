@@ -21,4 +21,12 @@ open class City: _City {
         }
         return City.mr_createEntity()!
     }
+    
+    class func getSelectedCity() -> City {
+        let pre = NSPredicate(format: "is_selected == true")
+        if let city = City.mr_findFirst(with: pre) {
+            return city
+        }
+        return City.mr_createEntity()!
+    }
 }

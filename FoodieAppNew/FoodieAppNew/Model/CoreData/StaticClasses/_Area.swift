@@ -6,6 +6,7 @@ import CoreData
 
 public enum AreaAttributes: String {
     case entity_id = "entity_id"
+    case is_selected = "is_selected"
     case name = "name"
 }
 
@@ -41,6 +42,9 @@ open class _Area: NSManagedObject {
 
     @NSManaged open
     var entity_id: Int32 // Optional scalars not supported
+
+    @NSManaged open
+    var is_selected: Bool // Optional scalars not supported
 
     @NSManaged open
     var name: String?

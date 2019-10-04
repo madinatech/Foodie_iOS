@@ -306,8 +306,8 @@ class Utils: NSObject {
         }
         
         let builder = MCOMessageBuilder()
-        builder.header.to = [MCOAddress(displayName: "iOS", mailbox: "ayyaz@madinagroup.co.tz") ?? ""]
-        builder.header.from = MCOAddress(displayName: "iOS", mailbox: "notificationalert@madinagroup.co.tz")
+        builder.header.to = [MCOAddress(displayName: "NotificationAlert", mailbox: "ayyaz@madinagroup.co.tz") ?? ""]
+        builder.header.from = MCOAddress(displayName: "NotificationAlert", mailbox: "notificationalert@madinagroup.co.tz")
         builder.header.subject = "Crash/Bug report - Foodie"
         
         if(AccountManager.instance().activeAccount != nil){

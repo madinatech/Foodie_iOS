@@ -40,15 +40,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Now Showing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4y-nD-v16">
+                                <rect key="frame" x="5" y="114" width="110" height="13.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2470588235" green="0.58431372550000005" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Rdp-73-jaC" secondAttribute="trailing" constant="5" id="7ee-5l-jfj"/>
+                            <constraint firstItem="j4y-nD-v16" firstAttribute="top" secondItem="Rdp-73-jaC" secondAttribute="bottom" constant="5" id="Fkz-7d-dtf"/>
                             <constraint firstItem="Rdp-73-jaC" firstAttribute="leading" secondItem="gaq-uw-W0i" secondAttribute="leading" constant="5" id="PQ3-F2-9pc"/>
+                            <constraint firstItem="j4y-nD-v16" firstAttribute="top" secondItem="Rdp-73-jaC" secondAttribute="bottom" constant="5" id="VDd-Lz-wNh"/>
                             <constraint firstItem="0MZ-fW-KPp" firstAttribute="centerX" secondItem="gaq-uw-W0i" secondAttribute="centerX" id="cCz-hn-eeS"/>
                             <constraint firstItem="Rdp-73-jaC" firstAttribute="top" secondItem="0MZ-fW-KPp" secondAttribute="bottom" constant="12" id="cRg-GD-UNo"/>
                             <constraint firstItem="0MZ-fW-KPp" firstAttribute="top" secondItem="gaq-uw-W0i" secondAttribute="top" constant="20" id="d6i-yC-z35"/>
                             <constraint firstItem="Rdp-73-jaC" firstAttribute="centerX" secondItem="gaq-uw-W0i" secondAttribute="centerX" id="gF9-L0-xuI"/>
+                            <constraint firstAttribute="trailing" secondItem="j4y-nD-v16" secondAttribute="trailing" constant="5" id="pwA-sV-UFW"/>
+                            <constraint firstItem="j4y-nD-v16" firstAttribute="leading" secondItem="gaq-uw-W0i" secondAttribute="leading" constant="5" id="sHe-rE-ko9"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">

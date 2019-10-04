@@ -76,10 +76,11 @@ class CategoryCell: UITableViewCell  , UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+         let cusine : Cusines = cusinesArray[indexPath.row]
         let lbl = UILabel()
-        lbl.text = "Fast Food"
+        lbl.text = cusine.name
         lbl.sizeToFit()
-        return CGSize(width: lbl.frame.width + 5, height: 25)
+        return CGSize(width: lbl.frame.width + 20, height: 30)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

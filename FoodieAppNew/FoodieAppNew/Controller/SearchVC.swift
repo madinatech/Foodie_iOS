@@ -151,7 +151,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
             }
             cell?.selectionStyle = .none
             let res : Restaurant = restaurantArray[indexPath.row]
-            cell?.showData(restaurant: res)
+            cell?.showData(restaurant: res, offerIndex: 0)
             return cell!
         } else {
             if(indexPath.section == 0){

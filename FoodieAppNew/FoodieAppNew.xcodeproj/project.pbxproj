@@ -100,8 +100,6 @@
 		341B0DAF2331099800D12504 /* DeliveryAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */; };
 		344D7D1B233DD54200809108 /* DeliveryLoactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */; };
 		344D7D1C233DD54200809108 /* DeliveryLoactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D7D1A233DD54200809108 /* DeliveryLoactionVC.swift */; };
-		344D7D21233DD56E00809108 /* BaseTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D7D1E233DD56D00809108 /* BaseTabViewController.swift */; };
-		344D7D2A233DD58600809108 /* BaseTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D7D27233DD58600809108 /* BaseTabViewController.swift */; };
 		344DE1B22341D7CB003D5D67 /* PastOrederSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344DE1B02341D7CB003D5D67 /* PastOrederSubCell.swift */; };
 		344DE1B32341D7CB003D5D67 /* PastOrederSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344DE1B12341D7CB003D5D67 /* PastOrederSubCell.xib */; };
 		344DE1B52341E344003D5D67 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344DE1B42341E344003D5D67 /* iOSDevCenters+GIF.swift */; };
@@ -193,6 +191,16 @@
 		34C01D1A2334D35E0057DEF4 /* AppExpires.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D152334D35E0057DEF4 /* AppExpires.swift */; };
 		34C01D1E2334FE0D0057DEF4 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D1C2334FE0D0057DEF4 /* ProfileCell.swift */; };
 		34C01D1F2334FE0D0057DEF4 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C01D1D2334FE0D0057DEF4 /* ProfileCell.xib */; };
+		34C5B7D42345DA9C00D05C7C /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C5B7D22345DA9C00D05C7C /* CityCell.xib */; };
+		34C5B7D52345DA9C00D05C7C /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5B7D32345DA9C00D05C7C /* CityCell.swift */; };
+		34C5B7DA2345DAA600D05C7C /* CityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C5B7D62345DAA500D05C7C /* CityVC.xib */; };
+		34C5B7DC2345DAA600D05C7C /* CityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5B7D92345DAA500D05C7C /* CityVC.swift */; };
+		34C5B7E12345DABD00D05C7C /* AreaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5B7DD2345DABD00D05C7C /* AreaVC.swift */; };
+		34C5B7E22345DABD00D05C7C /* AreaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C5B7DE2345DABD00D05C7C /* AreaVC.xib */; };
+		34C5B7E82346035C00D05C7C /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5B7E72346035C00D05C7C /* LoaderView.swift */; };
+		34C5B7EA2346038100D05C7C /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C5B7E92346038100D05C7C /* LoaderView.xib */; };
+		34C5B7EC2346048600D05C7C /* preview.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34C5B7EB2346048600D05C7C /* preview.gif */; };
+		34C5B7EE234611C900D05C7C /* ANimated_preview.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34C5B7ED234611C900D05C7C /* ANimated_preview.gif */; };
 		34CAC0E62333A44400BFBAB4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E42333A44400BFBAB4 /* LoginVC.swift */; };
 		34CAC0E72333A44400BFBAB4 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34CAC0E52333A44400BFBAB4 /* LoginVC.xib */; };
 		34CAC0EA2333AF6A00BFBAB4 /* VerifyOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */; };
@@ -316,8 +324,6 @@
 		341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressVC.xib; sourceTree = "<group>"; };
 		344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryLoactionVC.xib; sourceTree = "<group>"; };
 		344D7D1A233DD54200809108 /* DeliveryLoactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryLoactionVC.swift; sourceTree = "<group>"; };
-		344D7D1E233DD56D00809108 /* BaseTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabViewController.swift; sourceTree = "<group>"; };
-		344D7D27233DD58600809108 /* BaseTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabViewController.swift; sourceTree = "<group>"; };
 		344DE1B02341D7CB003D5D67 /* PastOrederSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrederSubCell.swift; sourceTree = "<group>"; };
 		344DE1B12341D7CB003D5D67 /* PastOrederSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastOrederSubCell.xib; sourceTree = "<group>"; };
 		344DE1B42341E344003D5D67 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
@@ -428,6 +434,16 @@
 		34C01D1B2334D4860057DEF4 /* FoodieAppNew-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodieAppNew-Bridging-Header.h"; sourceTree = "<group>"; };
 		34C01D1C2334FE0D0057DEF4 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		34C01D1D2334FE0D0057DEF4 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		34C5B7D22345DA9C00D05C7C /* CityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
+		34C5B7D32345DA9C00D05C7C /* CityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		34C5B7D62345DAA500D05C7C /* CityVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityVC.xib; sourceTree = "<group>"; };
+		34C5B7D92345DAA500D05C7C /* CityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityVC.swift; sourceTree = "<group>"; };
+		34C5B7DD2345DABD00D05C7C /* AreaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaVC.swift; sourceTree = "<group>"; };
+		34C5B7DE2345DABD00D05C7C /* AreaVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaVC.xib; sourceTree = "<group>"; };
+		34C5B7E72346035C00D05C7C /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		34C5B7E92346038100D05C7C /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
+		34C5B7EB2346048600D05C7C /* preview.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = preview.gif; sourceTree = "<group>"; };
+		34C5B7ED234611C900D05C7C /* ANimated_preview.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ANimated_preview.gif; sourceTree = "<group>"; };
 		34CAC0E42333A44400BFBAB4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		34CAC0E52333A44400BFBAB4 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPVC.swift; sourceTree = "<group>"; };
@@ -550,8 +566,10 @@
 		341B0D072330D38900D12504 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				344D7D26233DD58600809108 /* Shared */,
-				344D7D1D233DD56D00809108 /* Shared */,
+				34C5B7DD2345DABD00D05C7C /* AreaVC.swift */,
+				34C5B7DE2345DABD00D05C7C /* AreaVC.xib */,
+				34C5B7D92345DAA500D05C7C /* CityVC.swift */,
+				34C5B7D62345DAA500D05C7C /* CityVC.xib */,
 				344D7D1A233DD54200809108 /* DeliveryLoactionVC.swift */,
 				344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */,
 				3400F2FC2332115100346C9A /* RestaurantDetailVC.swift */,
@@ -598,6 +616,7 @@
 		341B0D092330D38900D12504 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				34C5B7E4234601C300D05C7C /* Shared */,
 				3400F3052332292400346C9A /* ResDetailTabSection.swift */,
 				3400F3042332292400346C9A /* ResDetailTabSection.xib */,
 				341B0D432330E12500D12504 /* CustomCell */,
@@ -618,6 +637,8 @@
 		341B0D432330E12500D12504 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				34C5B7D32345DA9C00D05C7C /* CityCell.swift */,
+				34C5B7D22345DA9C00D05C7C /* CityCell.xib */,
 				341B0D452330E12500D12504 /* PastOrderCell.xib */,
 				341B0D4F2330E12500D12504 /* ManageAddressCell.xib */,
 				341B0D502330E12500D12504 /* TabCell.xib */,
@@ -668,25 +689,11 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
-		344D7D1D233DD56D00809108 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				344D7D1E233DD56D00809108 /* BaseTabViewController.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		344D7D26233DD58600809108 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				344D7D27233DD58600809108 /* BaseTabViewController.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		344DE1B62341E37A003D5D67 /* GIF */ = {
 			isa = PBXGroup;
 			children = (
+				34C5B7ED234611C900D05C7C /* ANimated_preview.gif */,
+				34C5B7EB2346048600D05C7C /* preview.gif */,
 				344DE1B72341E37A003D5D67 /* nodelivery_1-2.gif */,
 			);
 			path = GIF;
@@ -919,6 +926,15 @@
 			path = DateCompare;
 			sourceTree = "<group>";
 		};
+		34C5B7E4234601C300D05C7C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				34C5B7E72346035C00D05C7C /* LoaderView.swift */,
+				34C5B7E92346038100D05C7C /* LoaderView.xib */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		34FB4F062343224300E2E055 /* Montserrat Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -1067,7 +1083,9 @@
 				34FB4F142343224300E2E055 /* Montserrat-UltraLight.otf in Resources */,
 				340D78B723335D210084971A /* RestDetailHeaderCell.xib in Resources */,
 				34FB4F122343224300E2E055 /* Montserrat-Light.otf in Resources */,
+				34C5B7D42345DA9C00D05C7C /* CityCell.xib in Resources */,
 				34899B092339D6C900A5FBA2 /* MyFavouritesVC.xib in Resources */,
+				34C5B7EE234611C900D05C7C /* ANimated_preview.gif in Resources */,
 				3400F30F2332562100346C9A /* InfoVC.xib in Resources */,
 				3400F31323325C4000346C9A /* ViewOrderVC.xib in Resources */,
 				3400F2FB2331FC1C00346C9A /* HomeTopCell.xib in Resources */,
@@ -1088,7 +1106,9 @@
 				3400F2F72331F38D00346C9A /* SortingCell.xib in Resources */,
 				341B0CE02330CED000D12504 /* LaunchScreen.storyboard in Resources */,
 				340D78B32333475F0084971A /* ItemsCell.xib in Resources */,
+				34C5B7EA2346038100D05C7C /* LoaderView.xib in Resources */,
 				341B0D832330E12500D12504 /* ManageAddressCell.xib in Resources */,
+				34C5B7E22345DABD00D05C7C /* AreaVC.xib in Resources */,
 				34FB4F112343224300E2E055 /* Montserrat-Bold.otf in Resources */,
 				344DE1BC2341FEF4003D5D67 /* InternetVc.xib in Resources */,
 				34FB4F162343224300E2E055 /* Montserrat-ExtraBold.otf in Resources */,
@@ -1107,6 +1127,7 @@
 				341B0D872330E12500D12504 /* CustomizeCell.xib in Resources */,
 				344D7D1B233DD54200809108 /* DeliveryLoactionVC.xib in Resources */,
 				3400F31723325CB100346C9A /* CategoryCell.xib in Resources */,
+				34C5B7EC2346048600D05C7C /* preview.gif in Resources */,
 				341B0CDD2330CED000D12504 /* Assets.xcassets in Resources */,
 				341B0DA32330E12500D12504 /* RestaurantDetailCell.xib in Resources */,
 				341B0D1E2330D5D200D12504 /* CartVC.xib in Resources */,
@@ -1120,6 +1141,7 @@
 				340D78BF233383C10084971A /* RecentSearchCell.xib in Resources */,
 				341B0D792330E12500D12504 /* PastOrderCell.xib in Resources */,
 				340D78AF2333464D0084971A /* ViewOrderTopCell.xib in Resources */,
+				34C5B7DA2345DAA600D05C7C /* CityVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1297,6 +1319,7 @@
 				34C01CF62334AB2C0057DEF4 /* NSDate+Compare.m in Sources */,
 				34C01D012334AB2C0057DEF4 /* DateUtils.swift in Sources */,
 				34C01CB72334AA780057DEF4 /* Account.swift in Sources */,
+				34C5B7DC2345DAA600D05C7C /* CityVC.swift in Sources */,
 				340D78BE233383C10084971A /* RecentSearchCell.swift in Sources */,
 				3410E3B2233B81AE000BA7FB /* _CustomizationGroup.swift in Sources */,
 				34899B3B233A2E2500A5FBA2 /* Cusines.swift in Sources */,
@@ -1309,15 +1332,14 @@
 				34C01CF12334AB2C0057DEF4 /* NSDictionary+Extension.m in Sources */,
 				3400F2FA2331FC1C00346C9A /* HomeTopCell.swift in Sources */,
 				344F79E2233CCCB600A35A43 /* _Address.swift in Sources */,
-				344D7D21233DD56E00809108 /* BaseTabViewController.swift in Sources */,
 				34C01D162334D35E0057DEF4 /* PaymentOption.swift in Sources */,
 				34899B2C233A2E0900A5FBA2 /* _Restaurant.swift in Sources */,
 				344F79E0233CC35600A35A43 /* Country.swift in Sources */,
 				34C01D0E2334D3570057DEF4 /* _VerifyUser.swift in Sources */,
 				340D78AE2333464D0084971A /* ViewOrderTopCell.swift in Sources */,
 				340D78C6233385CD0084971A /* SearchCollCell.swift in Sources */,
-				344D7D2A233DD58600809108 /* BaseTabViewController.swift in Sources */,
 				34C01D172334D35E0057DEF4 /* DeliveryOption.swift in Sources */,
+				34C5B7D52345DA9C00D05C7C /* CityCell.swift in Sources */,
 				341B0D852330E12500D12504 /* RecommendedRestaurantCell.swift in Sources */,
 				34C01D002334AB2C0057DEF4 /* MD5Digest.swift in Sources */,
 				34899B29233A2E0900A5FBA2 /* _Items.swift in Sources */,
@@ -1367,6 +1389,7 @@
 				344D7D1C233DD54200809108 /* DeliveryLoactionVC.swift in Sources */,
 				341B0D152330D57E00D12504 /* HomeVC.swift in Sources */,
 				34FB4F1C234366A500E2E055 /* RecentSearch.swift in Sources */,
+				34C5B7E82346035C00D05C7C /* LoaderView.swift in Sources */,
 				341B0D292330D6A800D12504 /* OrderListVC.swift in Sources */,
 				34899B39233A2E2500A5FBA2 /* Location.swift in Sources */,
 				3400F3012332117800346C9A /* RestaurantDetailHeader.swift in Sources */,
@@ -1394,6 +1417,7 @@
 				34899B082339D6C900A5FBA2 /* MyFavouritesVC.swift in Sources */,
 				341B0DA02330E12500D12504 /* ManageAddressCell.swift in Sources */,
 				3410E3B3233B81AE000BA7FB /* _GroupValues.swift in Sources */,
+				34C5B7E12345DABD00D05C7C /* AreaVC.swift in Sources */,
 				344F79D3233C8BBD00A35A43 /* CustomizeSingleCell.swift in Sources */,
 				341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */,
 				34C01CF02334AB2C0057DEF4 /* NSMutableArray+Join.m in Sources */,

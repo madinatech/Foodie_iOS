@@ -2,20 +2,23 @@
 import UIKit
 import ActionSheetPicker_3_0
 
+
 @objc protocol DeliveryLocationDelegate {
     func selectedArea(area: Area)
 }
-class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate, InternetDelegate{
+class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate{
     
+    @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var imgLocation: UIImageView!
     @IBOutlet weak var txtCity: CommonTextfield!
     @IBOutlet weak var txtArea: CommonTextfield!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var innerView: UIView!
     var cityArray = [City]()
     var areaArray = [Area]()
-    var selectdCity = City()
-    var isCitySelectd = Bool()
-    var selectedArea = Area()
+    var selectdCity : City = City.mr_createEntity()!
+    var selectedArea = Area.mr_createEntity()!
     var delegate :  DeliveryLocationDelegate? = nil
     
     class func initViewController() -> DeliveryLoactionVC {
@@ -31,8 +34,18 @@ class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate, Intern
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        if(UserDefaults.standard.object(forKey: Selected_Area) == nil){
+            imgLocation.isHidden = false
+            lblTitle.isHidden = false
+            lblDesc.isHidden = false
+//            getClientToken()
+        } else {
+            imgLocation.isHidden = true
+            lblTitle.isHidden = true
+            lblDesc.isHidden = true
+//            getCountryApi()
+        }
     }
-    
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         self.dismiss(animated: true, completion: nil)
@@ -41,54 +54,18 @@ class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate, Intern
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        if(UserDefaults.standard.object(forKey: Selected_Area) == nil){
-          getClientToken()
-        } else {
-             getCountryApi()
-        }
-       
-    }
-    
-    func getClientToken ()  {
-        let account = Account()
-        account.getClientToken { (isSuccess, account, errorMessage) -> (Void) in
-            if(errorMessage.count > 0){
-                if(errorMessage.contains("Internet")){
-                    self.openNoInternetView()
-                } else {
-                    Utils.showAlert(withMessage: errorMessage)
-                    return
+        
+        selectdCity = City.getSelectedCity()
+        if(selectdCity.city_name != nil){
+            txtCity.text = selectdCity.city_name
+            areaArray = selectdCity.areas.allObjects as! [Area]
+            for area in areaArray{
+                if(area.is_selected == true){
+                    selectedArea = area
+                    txtArea.text = selectedArea.name
                 }
             }
-            self.getCountryApi()
         }
-    }
-    
-    func getCountryApi()  {
-        Manager.sharedManager().loadCountry { (response, errorMessage) -> (Void) in
-            if(errorMessage.count > 0){
-                if(errorMessage.contains("Internet")){
-                    self.openNoInternetView()
-                } else {
-                    Utils.showAlert(withMessage: errorMessage)
-                    return
-                }
-            }
-            let country = Country.getCountryByName(name: "Tanzania")
-            if(country.country_id != 0){
-                self.cityArray = country.cities.allObjects as! [City]
-            }
-        }
-    }
-    
-    func openNoInternetView()  {
-        let vc = InternetVc.initViewController()
-        vc.delegate = self
-        self.navigationController?.present(vc, animated: false, completion: nil)
-    }
-    
-    func retryClicked() {
-        getClientToken()
     }
     
     @IBAction func confirmClicked(_ sender: Any) {
@@ -120,42 +97,25 @@ class DeliveryLoactionVC: UIViewController , UIGestureRecognizerDelegate, Intern
     
     
     @IBAction func areaClicked(_ sender: Any) {
-        if(isCitySelectd == true){
-            var areaNameArray = [String]()
-            for area in areaArray{
-                areaNameArray.append(area.name ?? "")
-            }
-            areaNameArray.sort()
-            if(areaNameArray.count <= 0){
-                return
-            }
-            ActionSheetStringPicker.show(withTitle: "Select Area", rows: areaNameArray, initialSelection: 0
-                , doneBlock: { (picker, index, value) in
-                    self.txtArea.text = areaNameArray[index]
-                    self.selectedArea = Area.getAreaByName(name: self.txtArea.text ?? "")
-            }, cancel: { (picker) in
-                
-            }, origin: sender)
-        } else {
-            Utils.showAlert(withMessage: "Please first select city")
+        var strMessage = String()
+        let strCity = txtCity.text!.trimmingCharacters(in: .whitespaces)
+        
+        if(strCity.count <= 0){
+            strMessage = "Please select city"
         }
+        
+        if(strMessage.count > 0){
+            Utils.showAlert(withMessage: strMessage)
+            return
+        }
+        
+        let vc = AreaVC.initViewController(city: selectdCity)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
     @IBAction func cityClicked(_ sender: Any) {
-        var cityNameArray = [String]()
-        for city in cityArray{
-            cityNameArray.append(city.city_name ?? "")
-        }
-        cityNameArray.sort()
-        ActionSheetStringPicker.show(withTitle: "Select City", rows: cityNameArray, initialSelection: 0
-            , doneBlock: { (picker, index, value) in
-                self.isCitySelectd = true
-                self.txtCity.text = cityNameArray[index]
-                self.selectdCity = City.getCityByName(name: self.txtCity.text ?? "")
-                self.areaArray = self.selectdCity.areas.allObjects as! [Area]
-        }, cancel: { (picker) in
-            
-        }, origin: sender)
+        let vc = CityVC.initViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

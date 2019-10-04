@@ -7,6 +7,7 @@ import CoreData
 public enum CityAttributes: String {
     case city_id = "city_id"
     case city_name = "city_name"
+    case is_selected = "is_selected"
 }
 
 public enum CityRelationships: String {
@@ -48,6 +49,9 @@ open class _City: NSManagedObject {
 
     @NSManaged open
     var city_name: String?
+
+    @NSManaged open
+    var is_selected: Bool // Optional scalars not supported
 
     // MARK: - Relationships
 

@@ -60,7 +60,7 @@ class RestaurantCell: UITableViewCell {
         AMShimmer.start(for: imgStar)
     }
     
-    func showData(restaurant: Restaurant)  {
+    func showData(restaurant: Restaurant, offerIndex : Int)  {
         lblName.text = restaurant.name
         lblRating.text = "\(restaurant.average_rating)"
         lblAmount.text = "\(restaurant.cost_for_two ) for 2"
@@ -87,6 +87,17 @@ class RestaurantCell: UITableViewCell {
                 self.imgView.image = image
             }
         })
+        
+        if(offerIndex == 0){
+            imgScooter.image = UIImage.init(named: "scooter")
+            lblTime.text = "\(restaurant.delivery_time) min"
+        } else if(offerIndex == 1){
+            imgScooter.image = UIImage.init(named: "pickup")
+            lblTime.text = "\(restaurant.preparation_time) min"
+        } else if(offerIndex == 2){
+            imgScooter.image = UIImage.init(named: "DineIn")
+            lblTime.text = "\(restaurant.preparation_time) min"
+        }
     }
     
     
