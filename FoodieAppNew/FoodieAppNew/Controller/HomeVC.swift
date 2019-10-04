@@ -107,10 +107,10 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     
     func getRestaurantListapi () {
         isLoaded = false
-//        self.restaurantArray = Restaurant.getAllRestaurant()
-//        if(restaurantArray.count > 0){
-//            self.isLoaded = true
-//        }
+        //        self.restaurantArray = Restaurant.getAllRestaurant()
+        //        if(restaurantArray.count > 0){
+        //            self.isLoaded = true
+        //        }
         self.tblView.reloadData()
         self.tblViewHeight.constant = self.view.frame.height - 120
         self.view.layoutIfNeeded()
@@ -265,10 +265,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tblView.deselectRow(at: indexPath, animated: true)
         let restaurant : Restaurant = restaurantArray[indexPath.row]
-        if(restaurant.is_closed == false){
-            let vc = RestaurantDetailVC.initViewController(restaurant: restaurant)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        let vc = RestaurantDetailVC.initViewController(restaurant: restaurant)
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     @objc func filterClicked(_ sender: UIButton) {

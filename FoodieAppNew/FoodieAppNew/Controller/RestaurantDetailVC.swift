@@ -156,6 +156,10 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
             cell?.btnAdd.tag = indexPath.row
             cell?.btnPlus.tag = indexPath.row
             cell?.btnDelete.tag = indexPath.row
+            if(restaurant.is_closed == true){
+                cell?.btnAdd.isHidden = true
+                cell?.addView.isHidden = true
+            }
             cell?.btnAdd.addTarget(self, action: #selector(addClicked(_:)), for: .touchUpInside)
             cell?.btnPlus.addTarget(self, action: #selector(plusClicked(_:)), for: .touchUpInside)
             cell?.btnDelete.addTarget(self, action: #selector(deleteClicked(_:)), for: .touchUpInside)

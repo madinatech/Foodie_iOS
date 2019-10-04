@@ -90,7 +90,7 @@ class ResDetailTabSection: UIView, UICollectionViewDelegate, UICollectionViewDat
         let lbl = UILabel()
         lbl.text = menu.name
         lbl.sizeToFit()
-        return CGSize(width: lbl.frame.width + 5, height: 40)
+        return CGSize(width: lbl.frame.width + 10, height: 40)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

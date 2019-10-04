@@ -87,6 +87,7 @@ class RestaurantCell: UITableViewCell {
                 self.imgView.image = image
                 if(restaurant.is_closed == true){
                     Utils.grayScaleEffect(originalImage: self.imgView)
+                    Utils.grayScaleEffect(originalImage: self.imgStar)
                     self.imageView?.layer.cornerRadius = 10
                 }
             }
