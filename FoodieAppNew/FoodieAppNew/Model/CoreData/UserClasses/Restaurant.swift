@@ -131,4 +131,60 @@ open class Restaurant: _Restaurant {
         }
         return newRest
     }
+    
+    class func getAllCloseRestaurant() -> [Restaurant] {
+        let restAray = getAll()
+        var newRestArray = [Restaurant]()
+        for rest in restAray{
+            let  openingTimes = rest.opening_times.allObjects as! [OpeningTimes]
+            for openTime in openingTimes{
+                if(DateUtils.getTodayWeekDay() == openTime.day){
+                    let closeTime = openTime.closing_time
+                    let currentTime = DateUtils.get24TimeFromDate(date: Date())
+                    let close_time : Int = Int(closeTime?.replacingOccurrences(of: ":", with: "") ?? "") ?? 0
+                    let current_Time : Int = Int(currentTime.replacingOccurrences(of: ":", with: "") ) ?? 0
+                    if(current_Time > close_time){
+                        newRestArray.append(rest)
+                    }
+                    
+                }
+            }
+        }
+        
+        return newRestArray
+    }
+    
+    class func getAllOpenRestaurant() -> [Restaurant] {
+        let restAray = getAll()
+        var newRestArray = [Restaurant]()
+        for rest in restAray{
+            let  openingTimes = rest.opening_times.allObjects as! [OpeningTimes]
+            for openTime in openingTimes{
+                if(DateUtils.getTodayWeekDay() == openTime.day){
+                    let closeTime = openTime.closing_time
+                    let currentTime = DateUtils.get24TimeFromDate(date: Date())
+                    let close_time : Int = Int(closeTime?.replacingOccurrences(of: ":", with: "") ?? "") ?? 0
+                    let current_Time : Int = Int(currentTime.replacingOccurrences(of: ":", with: "") ) ?? 0
+                    if(current_Time <= close_time){
+                        newRestArray.append(rest)
+                    }
+                    
+                }
+            }
+        }
+        return newRestArray
+    }
+    
+    class func getAllRestaurant() -> [Restaurant] {
+        let openRestArray = getAllOpenRestaurant()
+        let closeRestArray = getAllCloseRestaurant()
+        var newRestArray = openRestArray
+        for rest in closeRestArray{
+            rest.is_closed = true
+            newRestArray.append(rest)
+        }
+        
+        return newRestArray
+    }
+    
 }

@@ -11,6 +11,7 @@ public enum RestaurantAttributes: String {
     case delivery_time = "delivery_time"
     case email = "email"
     case entity_id = "entity_id"
+    case is_closed = "is_closed"
     case name = "name"
     case phone = "phone"
     case preparation_time = "preparation_time"
@@ -74,6 +75,9 @@ open class _Restaurant: NSManagedObject {
 
     @NSManaged open
     var entity_id: Int32 // Optional scalars not supported
+
+    @NSManaged open
+    var is_closed: Bool // Optional scalars not supported
 
     @NSManaged open
     var name: String?

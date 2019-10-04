@@ -85,6 +85,10 @@ class RestaurantCell: UITableViewCell {
             if image != nil{
                   AMShimmer.stop(for:  self.imgView)
                 self.imgView.image = image
+                if(restaurant.is_closed == true){
+                    Utils.grayScaleEffect(originalImage: self.imgView)
+                    self.imageView?.layer.cornerRadius = 10
+                }
             }
         })
         

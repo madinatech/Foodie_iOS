@@ -327,6 +327,17 @@ class Utils: NSObject {
         }
     }
     
+    class func grayScaleEffect(originalImage : UIImageView)  {
+        let context = CIContext(options: nil)
+        let currentFilter = CIFilter(name: "CIPhotoEffectNoir")
+        currentFilter!.setValue(CIImage(image: originalImage.image!), forKey: kCIInputImageKey)
+        let output = currentFilter!.outputImage
+        let cgimg = context.createCGImage(output!,from: output!.extent)
+        let processedImage = UIImage(cgImage: cgimg!)
+        originalImage.image = processedImage
+//        return originalImage
+    }
+    
     class func takeScreenShot() {
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
