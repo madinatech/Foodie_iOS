@@ -125,6 +125,7 @@
                 <outlet property="backView" destination="gaq-uw-W0i" id="EOt-1f-Rid"/>
                 <outlet property="imgView" destination="nEA-4i-cey" id="N2w-Xl-PLu"/>
                 <outlet property="innerView" destination="pPu-VG-dAO" id="gFa-65-4OU"/>
+                <outlet property="lblBackTitle" destination="Rdp-73-jaC" id="U8Y-w3-dmV"/>
                 <outlet property="lblOptions" destination="Pmn-FR-hx6" id="cQH-H1-FLJ"/>
                 <outlet property="lblTitle" destination="VFq-LQ-Vkb" id="r5g-fc-Ahb"/>
             </connections>
@@ -132,6 +133,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="home-delivery-of-goods" width="170.5" height="170.5"/>
+        <image name="home-delivery-of-goods" width="42.5" height="42.5"/>
     </resources>
 </document>

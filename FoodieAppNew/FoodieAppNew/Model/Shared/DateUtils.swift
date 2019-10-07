@@ -17,6 +17,14 @@ class DateUtils: NSObject {
         return weekDay
     }
     
+    class func getNextDayOfTodayWeekDay() -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        
+        let weekDay = dateFormatter.string(from: Calendar.current.date(byAdding: .day, value: 1, to:Date())!)
+        return weekDay
+    }
+    
    class func getDateFromDatetime(_ dateString : String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")

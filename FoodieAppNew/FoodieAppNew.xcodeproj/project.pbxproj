@@ -98,6 +98,10 @@
 		341B0DA82330E12500D12504 /* CustomizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0D742330E12500D12504 /* CustomizeCell.swift */; };
 		341B0DAE2331099800D12504 /* DeliveryAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */; };
 		341B0DAF2331099800D12504 /* DeliveryAddressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */; };
+		3436255C234B0D98003AD367 /* _LocalCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436255B234B0D98003AD367 /* _LocalCart.swift */; };
+		3436255E234B0DA3003AD367 /* LocalCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436255D234B0DA3003AD367 /* LocalCart.swift */; };
+		34362560234B16E7003AD367 /* _Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436255F234B16E7003AD367 /* _Cart.swift */; };
+		34362562234B16EC003AD367 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34362561234B16EC003AD367 /* Cart.swift */; };
 		344D7D1B233DD54200809108 /* DeliveryLoactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */; };
 		344D7D1C233DD54200809108 /* DeliveryLoactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D7D1A233DD54200809108 /* DeliveryLoactionVC.swift */; };
 		344DE1B22341D7CB003D5D67 /* PastOrederSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344DE1B02341D7CB003D5D67 /* PastOrederSubCell.swift */; };
@@ -322,6 +326,10 @@
 		341B0D742330E12500D12504 /* CustomizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeCell.swift; sourceTree = "<group>"; };
 		341B0DAC2331099800D12504 /* DeliveryAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressVC.swift; sourceTree = "<group>"; };
 		341B0DAD2331099800D12504 /* DeliveryAddressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressVC.xib; sourceTree = "<group>"; };
+		3436255B234B0D98003AD367 /* _LocalCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _LocalCart.swift; sourceTree = "<group>"; };
+		3436255D234B0DA3003AD367 /* LocalCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCart.swift; sourceTree = "<group>"; };
+		3436255F234B16E7003AD367 /* _Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Cart.swift; sourceTree = "<group>"; };
+		34362561234B16EC003AD367 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		344D7D19233DD54200809108 /* DeliveryLoactionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryLoactionVC.xib; sourceTree = "<group>"; };
 		344D7D1A233DD54200809108 /* DeliveryLoactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryLoactionVC.swift; sourceTree = "<group>"; };
 		344DE1B02341D7CB003D5D67 /* PastOrederSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrederSubCell.swift; sourceTree = "<group>"; };
@@ -754,6 +762,8 @@
 		34C01C432334AA770057DEF4 /* UserClasses */ = {
 			isa = PBXGroup;
 			children = (
+				34362561234B16EC003AD367 /* Cart.swift */,
+				3436255D234B0DA3003AD367 /* LocalCart.swift */,
 				34FB4F1B234366A500E2E055 /* RecentSearch.swift */,
 				344F79E7233CE8D600A35A43 /* Favourite.swift */,
 				344F79E3233CCCBB00A35A43 /* Address.swift */,
@@ -783,6 +793,8 @@
 		34C01C552334AA770057DEF4 /* StaticClasses */ = {
 			isa = PBXGroup;
 			children = (
+				3436255F234B16E7003AD367 /* _Cart.swift */,
+				3436255B234B0D98003AD367 /* _LocalCart.swift */,
 				34FB4F1D234366AD00E2E055 /* _RecentSearch.swift */,
 				344F79E5233CE8D000A35A43 /* _Favourite.swift */,
 				344F79E1233CCCB600A35A43 /* _Address.swift */,
@@ -1321,6 +1333,7 @@
 				34C01CB72334AA780057DEF4 /* Account.swift in Sources */,
 				34C5B7DC2345DAA600D05C7C /* CityVC.swift in Sources */,
 				340D78BE233383C10084971A /* RecentSearchCell.swift in Sources */,
+				3436255E234B0DA3003AD367 /* LocalCart.swift in Sources */,
 				3410E3B2233B81AE000BA7FB /* _CustomizationGroup.swift in Sources */,
 				34899B3B233A2E2500A5FBA2 /* Cusines.swift in Sources */,
 				3410E3B4233B81AE000BA7FB /* _Price.swift in Sources */,
@@ -1382,6 +1395,7 @@
 				34C01D192334D35E0057DEF4 /* UserData.swift in Sources */,
 				34C01C3E2334A9230057DEF4 /* Utils.swift in Sources */,
 				344F79DE233CC35600A35A43 /* Area.swift in Sources */,
+				34362560234B16E7003AD367 /* _Cart.swift in Sources */,
 				3410E3B8233B81D1000BA7FB /* CustomizationGroup.swift in Sources */,
 				3400F2F22331EFC100346C9A /* FilterVC.swift in Sources */,
 				340D78C22333855B0084971A /* SearchCategoryCell.swift in Sources */,
@@ -1397,6 +1411,7 @@
 				34C01CED2334AB2C0057DEF4 /* URLSchema.swift in Sources */,
 				341B0CD32330CECF00D12504 /* AppDelegate.swift in Sources */,
 				3400F2FE2332115100346C9A /* RestaurantDetailVC.swift in Sources */,
+				34362562234B16EC003AD367 /* Cart.swift in Sources */,
 				341B0DA52330E12500D12504 /* RestaurantCell.swift in Sources */,
 				34C01CF22334AB2C0057DEF4 /* NSString+PropertyKVC.m in Sources */,
 				3400F30A2332450900346C9A /* CusinesCell.swift in Sources */,
@@ -1412,6 +1427,7 @@
 				34C01D182334D35E0057DEF4 /* VerifyUser.swift in Sources */,
 				34C01D1A2334D35E0057DEF4 /* AppExpires.swift in Sources */,
 				34899B24233A2E0900A5FBA2 /* _Offerings.swift in Sources */,
+				3436255C234B0D98003AD367 /* _LocalCart.swift in Sources */,
 				34899B2B233A2E0900A5FBA2 /* _OpeningTimes.swift in Sources */,
 				34C01C402334A9230057DEF4 /* CommonTextfield.swift in Sources */,
 				34899B082339D6C900A5FBA2 /* MyFavouritesVC.swift in Sources */,

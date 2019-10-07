@@ -111,7 +111,7 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let restaurantArray : [Restaurant] = fav.restaurant.allObjects as! [Restaurant]
         if(restaurantArray.count > 0){
             let restaurant : Restaurant = restaurantArray[0]
-            let vc = RestaurantDetailVC.initViewController(restaurant: restaurant)
+            let vc = RestaurantDetailVC.initViewController(restaurant: restaurant, selectedOffer: -1)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

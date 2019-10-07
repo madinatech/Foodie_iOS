@@ -79,12 +79,12 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        if(selectedCusines.count <= 0){
-            restaurantArray = Restaurant.getAll()
-        } else {
-            restaurantArray = Restaurant.getAllByCusines(cusinesName: selectedCusines)
-        }
-        tblView.reloadData()
+//        if(selectedCusines.count <= 0){
+//            restaurantArray = Restaurant.getAll()
+//        } else {
+//            restaurantArray = Restaurant.getAllByCusines(cusinesName: selectedCusines)
+//        }
+//        tblView.reloadData()
     }
     
     func getClientToken ()  {
@@ -265,7 +265,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tblView.deselectRow(at: indexPath, animated: true)
         let restaurant : Restaurant = restaurantArray[indexPath.row]
-        let vc = RestaurantDetailVC.initViewController(restaurant: restaurant)
+        let vc = RestaurantDetailVC.initViewController(restaurant: restaurant, selectedOffer: offerIndex)
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

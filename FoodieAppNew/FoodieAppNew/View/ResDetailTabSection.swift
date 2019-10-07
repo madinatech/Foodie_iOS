@@ -39,7 +39,7 @@ class ResDetailTabSection: UIView, UICollectionViewDelegate, UICollectionViewDat
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "TabCell", bundle: nil), forCellWithReuseIdentifier: "TabCell")
         collectionView.reloadData()
-         let selectedIndexPath = IndexPath(item: sTab, section: 0)
+        let selectedIndexPath = IndexPath(item: sTab, section: 0)
         collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .centeredHorizontally)
     }
     
@@ -62,9 +62,9 @@ class ResDetailTabSection: UIView, UICollectionViewDelegate, UICollectionViewDat
         //            }
         //        }
         //
-//        let selectedIndexPath = IndexPath(item: selectedIndex, section: 0)
-//        collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .centeredHorizontally)
-//        collectionView.scrollToItem(at: selectedIndexPath, at: .left, animated: true)
+        //        let selectedIndexPath = IndexPath(item: selectedIndex, section: 0)
+        //        collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .centeredHorizontally)
+        //        collectionView.scrollToItem(at: selectedIndexPath, at: .left, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

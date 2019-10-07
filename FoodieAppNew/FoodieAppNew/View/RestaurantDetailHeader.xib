@@ -87,10 +87,9 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKa-4P-Izr">
-                            <rect key="frame" x="20" y="132" width="235" height="24"/>
+                            <rect key="frame" x="48" y="132" width="207" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="DLV-eg-REV"/>
-                                <constraint firstAttribute="width" constant="235" id="mkI-HL-vr3"/>
                             </constraints>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -103,8 +102,8 @@
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Open until 09:00 pm " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFm-Ki-Ira">
-                            <rect key="frame" x="20" y="133" width="214" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Open until 08:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFm-Ki-Ira">
+                            <rect key="frame" x="20" y="133" width="207" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="zRJ-jy-baS"/>
                             </constraints>
@@ -192,9 +191,10 @@
                         <constraint firstItem="iU8-AI-dCh" firstAttribute="top" secondItem="ibr-su-qzr" secondAttribute="top" id="8xl-XR-IZv"/>
                         <constraint firstAttribute="bottom" secondItem="Pis-Pn-CGv" secondAttribute="bottom" constant="14" id="9ts-R8-HDi"/>
                         <constraint firstAttribute="trailing" secondItem="qLf-4s-gN2" secondAttribute="trailing" constant="20" id="AtP-jI-QNO"/>
+                        <constraint firstItem="lFm-Ki-Ira" firstAttribute="width" secondItem="oKa-4P-Izr" secondAttribute="width" id="OII-F3-EZd"/>
                         <constraint firstItem="Pis-Pn-CGv" firstAttribute="leading" secondItem="ehP-UW-apq" secondAttribute="leading" constant="20" id="OJo-7h-Tlj"/>
                         <constraint firstItem="ibr-su-qzr" firstAttribute="top" secondItem="F3B-wm-VfI" secondAttribute="bottom" constant="10" id="R0t-AR-z6O"/>
-                        <constraint firstItem="oKa-4P-Izr" firstAttribute="leading" secondItem="ehP-UW-apq" secondAttribute="leading" constant="20" id="SOn-f8-PBE"/>
+                        <constraint firstItem="oKa-4P-Izr" firstAttribute="leading" secondItem="ehP-UW-apq" secondAttribute="leading" constant="48" id="SOn-f8-PBE"/>
                         <constraint firstItem="iXI-Xt-tqr" firstAttribute="centerY" secondItem="qLf-4s-gN2" secondAttribute="centerY" id="TGC-uc-Ve8"/>
                         <constraint firstItem="lFm-Ki-Ira" firstAttribute="leading" secondItem="ehP-UW-apq" secondAttribute="leading" constant="20" id="Tac-ph-Z8K"/>
                         <constraint firstItem="iU8-AI-dCh" firstAttribute="leading" secondItem="nr6-kh-iXc" secondAttribute="trailing" constant="5" id="UMZ-TU-gSz"/>
@@ -242,6 +242,7 @@
             <connections>
                 <outlet property="collectionView" destination="F3B-wm-VfI" id="rI7-ON-6Mw"/>
                 <outlet property="contaainerView" destination="ehP-UW-apq" id="5V6-U6-x4R"/>
+                <outlet property="imgScooter" destination="zFB-rK-Id0" id="9w7-rd-aIz"/>
                 <outlet property="imgView" destination="izJ-Eb-rB5" id="Rfa-ys-Jev"/>
                 <outlet property="lblCost" destination="ibr-su-qzr" id="Za9-eD-Tj6"/>
                 <outlet property="lblOpen" destination="lFm-Ki-Ira" id="DrG-Hj-rAT"/>

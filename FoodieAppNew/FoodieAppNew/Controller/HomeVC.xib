@@ -181,11 +181,11 @@ Paul?</string>
                         <constraint firstItem="0Jb-sM-uSP" firstAttribute="centerX" secondItem="gzN-wX-RLs" secondAttribute="centerX" id="nuQ-02-gGH"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TDe-B0-yRK">
-                    <rect key="frame" x="0.0" y="131.33333333333337" width="414" height="616"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TDe-B0-yRK">
+                    <rect key="frame" x="0.0" y="131.33333333333337" width="414" height="603"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="616" id="Ctt-u2-TIa"/>
+                        <constraint firstAttribute="height" constant="603" id="Ctt-u2-TIa"/>
                     </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="d7d-Q1-717"/>
@@ -220,7 +220,7 @@ Paul?</string>
                 <constraint firstItem="Dz8-2f-iDt" firstAttribute="top" secondItem="ne2-N6-3zY" secondAttribute="bottom" constant="170" id="oWH-ws-31H"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="131.8840579710145" y="126.35869565217392"/>
+            <point key="canvasLocation" x="130.43478260869566" y="114.1304347826087"/>
         </view>
     </objects>
     <resources>

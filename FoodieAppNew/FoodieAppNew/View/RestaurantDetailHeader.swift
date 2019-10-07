@@ -18,6 +18,7 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
     @IBOutlet weak var contaainerView: UIView!
     @IBOutlet weak var lblOpen: UILabel!
     @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var imgScooter: UIImageView!
     
     var delegate :  ResDetailHeaderDelegate? = nil
     var rest = Restaurant()
@@ -28,16 +29,16 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
         return UINib(nibName: "RestaurantDetailHeader", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
     
-    func setData (restaurat : Restaurant)  {
+    func setData (restaurat : Restaurant, offerIndex : Int)  {
         rest = restaurat
-        showData()
+        showData(offerIndex: offerIndex)
         contaainerView.layer.cornerRadius = 20
         contaainerView.clipsToBounds = true
         contaainerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         collectionView.register(UINib(nibName: "CusinesCell", bundle: nil), forCellWithReuseIdentifier: "CusinesCell")
         collectionView.reloadData()
     }
-    func showData () {
+    func showData (offerIndex : Int) {
         cusinesArray = rest.cuisines.allObjects as! [Cusines]
         cusinesArray = cusinesArray.sorted(by: {
             ($0.name!.localizedLowercase) <
@@ -48,6 +49,21 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
         lblResName.text = rest.name
         lblRating.text = "\(rest.average_rating)"
         lblCost.text = "\(rest.cost_for_two ) for 2"
+        
+        if(offerIndex == 0){
+            imgScooter.image = UIImage.init(named: "scooter")
+            lblTime.text = "\(rest.delivery_time) min"
+        } else if(offerIndex == 1){
+            imgScooter.image = UIImage.init(named: "pickup")
+            lblTime.text = "\(rest.preparation_time) min"
+        } else if(offerIndex == 2){
+            imgScooter.image = UIImage.init(named: "DineIn")
+            lblTime.text = "\(rest.preparation_time) min"
+        } else {
+            imgScooter.image = UIImage.init(named: "scooter")
+            lblTime.text = "\(rest.delivery_time) min"
+        }
+
         lblTime.text = "\(rest.delivery_time) min"
         let url = URL(string: rest.images?.banner ?? "")
 //        imgView.kf.indicatorType = .activity
@@ -61,13 +77,16 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
             }
         })
         
-        print(DateUtils.getTodayWeekDay())
-        for openTime in openingTimes{
-            if(DateUtils.getTodayWeekDay() == openTime.day){
-                lblOpen.text = "Open until \(DateUtils.getStringFormat(str: openTime.closing_time ?? ""))"
+        if(rest.is_closed == true){
+             lblOpen.text = "Closed"
+        } else {
+            for openTime in openingTimes{
+                if(DateUtils.getTodayWeekDay() == openTime.day){
+                    lblOpen.text = "Open until \(DateUtils.getStringFormat(str: openTime.closing_time ?? ""))"
+                }
             }
         }
-
+       
     }
     
     

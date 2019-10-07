@@ -18,10 +18,12 @@ class RestaurantCell: UITableViewCell {
     @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var imgScooter: UIImageView!
     @IBOutlet weak var imgStar: UIImageView!
+    @IBOutlet weak var lblClosedRest: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         innerView.dropShadow()
+        lblClosedRest.isHidden = true
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -92,6 +94,19 @@ class RestaurantCell: UITableViewCell {
                 }
             }
         })
+        
+        timeView.isHidden = false
+        lblClosedRest.isHidden = true
+        if(restaurant.is_closed == true){
+            timeView.isHidden = true
+            lblClosedRest.isHidden = false
+            let openingTimes  : [OpeningTimes] = restaurant.opening_times.allObjects as! [OpeningTimes]
+            for openTime in openingTimes{
+                if(DateUtils.getNextDayOfTodayWeekDay() == openTime.day){
+                    lblClosedRest.text = "Closed - Opens next at \(DateUtils.getStringFormat(str: openTime.opening_time ?? "")) tomorrow"
+                }
+            }
+        }
         
         if(offerIndex == 0){
             imgScooter.image = UIImage.init(named: "scooter")

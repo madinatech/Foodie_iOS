@@ -20,6 +20,8 @@
                 <outlet property="blurView" destination="3c7-Pd-wqv" id="iI4-jk-URv"/>
                 <outlet property="cartHeight" destination="LAl-PJ-0wA" id="PWZ-Ij-gVR"/>
                 <outlet property="cartView" destination="Uu5-JD-Hhn" id="axH-lK-Tnm"/>
+                <outlet property="lblDisheshCount" destination="BuH-gI-DKs" id="a5C-lo-e4S"/>
+                <outlet property="lblTotalAmount" destination="Low-UT-LYZ" id="5dn-HY-Dzm"/>
                 <outlet property="tblView" destination="Xvq-cr-zqU" id="FGO-Gb-Sbg"/>
                 <outlet property="tblViewTop" destination="Ldg-6X-mju" id="OX4-AZ-5zt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

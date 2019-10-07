@@ -4,6 +4,8 @@ import UIKit
 
 class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataSource, ResDetailTabSectionDelegate , ResDetailHeaderDelegate, CustomizeDelegate {
     
+    @IBOutlet weak var lblDisheshCount: UILabel!
+    @IBOutlet weak var lblTotalAmount: UILabel!
     @IBOutlet weak var cartHeight: NSLayoutConstraint!
     @IBOutlet weak var tblViewTop: NSLayoutConstraint!
     @IBOutlet weak var cartView: UIView!
@@ -16,14 +18,14 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     var menuArray = [Menu]()
     var itemsArray = [Items]()
     var selectedMenu = Menu()
-    var addItemssArray = NSMutableArray()
-    var plusItemssArray = NSMutableArray()
-    var minusItemssArray = NSMutableArray()
     var isTabClicked = Bool()
+    var selectedOffer = Int()
+    var cart : Cart = Cart.createCartEntity()
     
-    class func initViewController(restaurant: Restaurant) -> RestaurantDetailVC {
+    class func initViewController(restaurant: Restaurant, selectedOffer : Int) -> RestaurantDetailVC {
         let vc = RestaurantDetailVC.init(nibName: "RestaurantDetailVC", bundle: nil)
         vc.restaurant = restaurant
+        vc.selectedOffer = selectedOffer
         return vc
     }
     
@@ -98,14 +100,17 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        if(menuArray.count > 0){
+            return 2
+        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if(section == 0){
             let view : RestaurantDetailHeader = RestaurantDetailHeader.instanceFromNib() as! RestaurantDetailHeader
             view.delegate = self
-            view.setData(restaurat: restaurant)
+            view.setData(restaurat: restaurant, offerIndex: selectedOffer)
             return view
         } else {
             let view : ResDetailTabSection = ResDetailTabSection.instanceFromNib() as! ResDetailTabSection
@@ -151,7 +156,6 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
                 cell = nib?[0] as? RestaurantDetailCell
             }
             cell?.selectionStyle = .none
-            
             cell?.showData(item: item)
             cell?.btnAdd.tag = indexPath.row
             cell?.btnPlus.tag = indexPath.row
@@ -164,44 +168,25 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
             cell?.btnPlus.addTarget(self, action: #selector(plusClicked(_:)), for: .touchUpInside)
             cell?.btnDelete.addTarget(self, action: #selector(deleteClicked(_:)), for: .touchUpInside)
             
-            if(addItemssArray.contains(indexPath.row)){
-                cell?.btnAdd.isHidden = true
-                cell?.addView.isHidden = false
-                cell?.lblQuantity.text = "0"
-            }
-            for index in plusItemssArray{
-                let i : Int = index as! Int
-                if(indexPath.row == i){
-                    var a : Int = Int((cell?.lblQuantity.text)!)!
-                    a = a + 1
-                    cell?.lblQuantity.text = "\(a)"
-                    if(a > 1){
-                        cell?.btnDelete.setTitle("-", for: .normal)
-                        cell?.btnDelete.setImage(nil, for: .normal)
-                    } else {
-                        cell?.btnDelete.setTitle("", for: .normal)
-                        cell?.btnDelete.setImage(UIImage.init(named: "delete"), for: .normal)
-                    }
-                }
-            }
-            for index in minusItemssArray{
-                let i : Int = index as! Int
-                if(indexPath.row == i){
-                    var a : Int = Int((cell?.lblQuantity.text)!)!
-                    a = a - 1
-                    if(a == 0){
-                        cell?.addView.isHidden = true
-                        cell?.btnAdd.isHidden = false
-                        addItemssArray.remove(indexPath.row)
-                        minusItemssArray.remove(indexPath.row)
-                        plusItemssArray.remove(indexPath.row)
-                        showCartView()
-                    }
-                    cell?.lblQuantity.text = "\(a)"
-                    if(a == 1){
-                        cell?.btnDelete.setTitle("", for: .normal)
-                        cell?.btnDelete.setImage(UIImage.init(named: "delete"), for: .normal)
-                    }
+            
+            let localItem : LocalCart = cart.getCartItem(cart: cart, selectedItem: item)
+            if(localItem.item_name != nil){
+                let quantity = localItem.item_quantity
+                if(quantity == 1){
+                    cell?.btnAdd.isHidden = true
+                    cell?.addView.isHidden = false
+                    cell?.btnDelete.setTitle("", for: .normal)
+                    cell?.btnDelete.setImage(UIImage.init(named: "delete"), for: .normal)
+                    cell?.lblQuantity.text = "\(quantity)"
+                } else if(quantity > 1){
+                    cell?.btnAdd.isHidden = true
+                    cell?.addView.isHidden = false
+                    cell?.btnDelete.setTitle("-", for: .normal)
+                    cell?.btnDelete.setImage(nil, for: .normal)
+                    cell?.lblQuantity.text = "\(quantity)"
+                } else {
+                    cell?.btnAdd.isHidden = false
+                    cell?.addView.isHidden = true
                 }
             }
             return cell!
@@ -229,9 +214,13 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     func showCartView ()  {
-        if(addItemssArray.count > 0){
+        var cartItemarray = [LocalCart]()
+        cartItemarray = cart.cart_item.allObjects as! [LocalCart]
+        if(cartItemarray.count > 0){
             cartView.isHidden = false
             cartHeight.constant = 100
+            lblTotalAmount.text = "TZS \(cart.total_amount)"
+            lblDisheshCount.text = "\(cart.total_items) dishes"
         } else {
             cartView.isHidden = true
             cartHeight.constant = 0
@@ -254,9 +243,6 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
             count = count + 1
         }
     }
-    
-    
-    
     //    ResDetailHeaderDelegate
     func backClicked() {
         self.navigationController?.popViewController(animated: true)
@@ -270,6 +256,81 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         appDelegateShared?.showLogin()
     }
     
+    func replaceCartItemAlert (item : Items, selectedIndex: Int)  {
+        let alert = UIAlertController(title: "Items already in cart", message: "Your cart contains items from other restaurant. Would you like to reset your cart for adding items from this restaurant?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { _ in
+        }))
+        alert.addAction(UIAlertAction(title: "Yes",
+                                      style: .default,
+                                      handler: {(_: UIAlertAction!) in
+                                        Cart.removeEntity()
+                                        self.cart = Cart.createCartEntity()
+                                        self.cart.restaurant_id = self.restaurant.entity_id
+                                        self.addItemsToCart(item: item, selectedIndex: selectedIndex)
+                                        UIView.setAnimationsEnabled(false)
+                                        let indexPath = IndexPath(item:selectedIndex, section: 1)
+                                        self.tblView.beginUpdates()
+                                        self.tblView.moveRow(at: indexPath, to: indexPath)
+                                        self.tblView.endUpdates()
+                                        self.tblView.reloadRows(at: [indexPath], with: .automatic)
+                                        self.showCartView()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    func addItemsToCart (item : Items, selectedIndex: Int)  {
+        if(cart.restaurant_id != restaurant.entity_id && cart.restaurant_id != 0){
+            replaceCartItemAlert(item: item, selectedIndex: selectedIndex)
+        } else {
+            cart.restaurant_id = restaurant.entity_id
+            cart.restaurant_name = restaurant.name
+            cart.total_items = cart.total_items + 1
+            let cart_item : LocalCart = cart.getCartItem(cart: cart, selectedItem: item)
+            cart_item.item_name = item.name
+            cart_item.item_id = item.entity_id
+            cart_item.item_quantity = cart_item.item_quantity + 1
+            let priceArray : [Price] = item.price.allObjects as! [Price]
+            cart_item.item_price = priceArray[0].price
+            if(cart.total_items <= 1){
+                cart.total_amount = cart_item.item_price
+            } else {
+                cart.total_amount = cart.total_amount + cart_item.item_price
+            }
+            cart_item.saveEntity()
+            cart.addCart_itemObject(cart_item)
+            cart.saveEntity()
+        }
+    }
+    
+    func removeItemsToCart (item : Items)  {
+        cart.restaurant_id = restaurant.entity_id
+        cart.restaurant_name = restaurant.name
+        cart.total_items = cart.total_items - 1
+        let cart_item : LocalCart = cart.getCartItem(cart: cart, selectedItem: item)
+        cart_item.item_name = item.name
+        cart_item.item_id = item.entity_id
+        cart_item.item_quantity = cart_item.item_quantity - 1
+        let priceArray : [Price] = item.price.allObjects as! [Price]
+        cart_item.item_price = priceArray[0].price
+        if(cart.total_items == 1){
+            cart.total_amount = cart_item.item_price
+        } else  if(cart.total_items == 1){
+            cart.total_amount  = 0
+        } else {
+            cart.total_amount = cart.total_amount - cart_item.item_price
+        }
+        cart_item.saveEntity()
+        if(cart_item.item_quantity == 0){
+            cart_item.removeEntity()
+            cart.removeCart_itemObject(cart_item)
+            Cart.removeEntity()
+        } else {
+            cart.addCart_itemObject(cart_item)
+            cart.saveEntity()
+        }
+        
+    }
+    
     @objc func addClicked(_ sender: UIButton) {
         let item = itemsArray [sender.tag]
         if(item.customization_groups.allObjects.count > 0){
@@ -281,8 +342,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
             vc.delegate = self
             present(vc, animated: true, completion: nil)
         } else {
-            addItemssArray.add(sender.tag)
-            plusItemssArray.add(sender.tag)
+            addItemsToCart(item: item, selectedIndex: sender.tag)
             UIView.setAnimationsEnabled(false)
             let indexPath = IndexPath(item: sender.tag, section: 1)
             tblView.beginUpdates()
@@ -293,22 +353,29 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         }
     }
     
+    
     @objc func plusClicked(_ sender: UIButton) {
-        plusItemssArray.add(sender.tag)
+        let item = itemsArray [sender.tag]
+        addItemsToCart(item: item, selectedIndex: sender.tag)
         UIView.setAnimationsEnabled(false)
-        tblView.beginUpdates()
         let indexPath = IndexPath(item: sender.tag, section: 1)
-        tblView.reloadRows(at: [indexPath], with: .none)
+        tblView.beginUpdates()
+        tblView.moveRow(at: indexPath, to: indexPath)
         tblView.endUpdates()
+        tblView.reloadRows(at: [indexPath], with: .automatic)
+        showCartView()
     }
     
     @objc func deleteClicked(_ sender: UIButton) {
-        minusItemssArray.add(sender.tag)
+        let item = itemsArray [sender.tag]
+        removeItemsToCart(item: item)
         UIView.setAnimationsEnabled(false)
-        tblView.beginUpdates()
         let indexPath = IndexPath(item: sender.tag, section: 1)
-        tblView.reloadRows(at: [indexPath], with: .none)
+        tblView.beginUpdates()
+        tblView.moveRow(at: indexPath, to: indexPath)
         tblView.endUpdates()
+        tblView.reloadRows(at: [indexPath], with: .automatic)
+        showCartView()
     }
     
     //    CustomizeDelegate
