@@ -112,7 +112,6 @@ class RecommendedRestaurantCell: UITableViewCell,UICollectionViewDelegate, UICol
                 cell2.backView.isHidden = true
                 cell2.innerView.isHidden = false
             }
-            
         } else if(selectedIndex == 1){
             let indexPath1 = IndexPath.init(row: 0, section: 0)
             let cell1 : HomeTopCell = collectionView.cellForItem(at: indexPath1) as! HomeTopCell

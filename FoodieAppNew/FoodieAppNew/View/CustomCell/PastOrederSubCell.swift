@@ -10,6 +10,9 @@ import UIKit
 
 class PastOrederSubCell: UITableViewCell {
 
+    @IBOutlet weak var viewHeight: NSLayoutConstraint!
+    @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var viewWidth: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

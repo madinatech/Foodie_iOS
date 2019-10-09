@@ -49,13 +49,14 @@
                             <constraint firstItem="UNG-ez-mLX" firstAttribute="leading" secondItem="qML-oK-fFD" secondAttribute="leading" id="lYk-Xp-QYL"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Cheese Pie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2L-bv-jUF">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Cheese Pie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2L-bv-jUF">
                         <rect key="frame" x="34" y="13" width="276" height="18"/>
                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="qML-oK-fFD" secondAttribute="bottom" constant="8.5" id="4OV-Mr-kq3"/>
                     <constraint firstItem="g2L-bv-jUF" firstAttribute="leading" secondItem="qML-oK-fFD" secondAttribute="trailing" constant="10" id="G6W-ut-mBS"/>
@@ -65,7 +66,14 @@
                     <constraint firstItem="qML-oK-fFD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="hce-Iw-cre"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblDesc" destination="g2L-bv-jUF" id="zQm-4K-7ba"/>
+                <outlet property="viewHeight" destination="UQ6-cx-rIP" id="EPV-ho-vuj"/>
+                <outlet property="viewWidth" destination="YhC-rM-lRr" id="dOW-x6-ZrX"/>
+            </connections>
+            <point key="canvasLocation" x="-470" y="-36"/>
         </tableViewCell>
     </objects>
 </document>

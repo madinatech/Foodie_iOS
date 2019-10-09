@@ -19,6 +19,7 @@ target 'FoodieAppNew' do
   pod 'Kingfisher'
   pod 'LinearProgressBar'
   pod 'mailcore2-ios'
+  pod 'SegmentedProgressView'
 #  pod 'JHSpinner'
   target 'FoodieAppNewTests' do
     inherit! :search_paths

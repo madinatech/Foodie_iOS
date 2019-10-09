@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodieAppNew/View/CustomCell/RecommendedRestaurantCell.swift"
-            timestampString = "592289290.185306"
+            timestampString = "592299158.782614"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "optionClicked(selectedIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodieAppNew/View/CustomCell/RecommendedRestaurantCell.swift"
-            timestampString = "592289290.185401"
+            timestampString = "592299158.782694"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"

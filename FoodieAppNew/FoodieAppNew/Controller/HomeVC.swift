@@ -190,7 +190,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         let btnFiler = UIButton.init(frame: CGRect.init(x: tblView.frame.width - 40, y: 15, width: 20, height: 20))
         btnFiler.setImage(UIImage.init(named: "settings"), for: .normal)
         btnFiler.setTitleColor(.black, for: .normal)
-        btnFiler.titleLabel?.font = UIFont.init(name: "Calibri", size: 16)
+        btnFiler.titleLabel?.font = UIFont.init(name: "Montserrat-Regular", size: 16)
         if(section == 0){
             btnFiler.isHidden = true
         } else {
