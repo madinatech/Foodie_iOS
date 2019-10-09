@@ -2,7 +2,7 @@
 import UIKit
 
 @objc protocol RecommendedDelegate {
-    func showOfferingData(index: Int)
+    func showOfferingData(index: Int, isInnerViewHidden: Bool)
 }
 
 class RecommendedRestaurantCell: UITableViewCell,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, HomeTopCellDelegate {
@@ -150,7 +150,9 @@ class RecommendedRestaurantCell: UITableViewCell,UICollectionViewDelegate, UICol
         }
         
         if(delegate != nil){
-            self.delegate?.showOfferingData(index: selectedIndex)
+            let indexPath1 = IndexPath.init(row: selectedIndex, section: 0)
+            let cell : HomeTopCell = collectionView.cellForItem(at: indexPath1) as! HomeTopCell
+            self.delegate?.showOfferingData(index: selectedIndex, isInnerViewHidden: cell.innerView.isHidden)
         }
     }
     

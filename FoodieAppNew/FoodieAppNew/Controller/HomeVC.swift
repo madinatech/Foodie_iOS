@@ -112,7 +112,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         //            self.isLoaded = true
         //        }
         self.tblView.reloadData()
-        self.tblViewHeight.constant = self.view.frame.height - 120
+        self.tblViewHeight.constant = self.view.frame.height - 200
         self.view.layoutIfNeeded()
         if(areaId == 0){
             areaId = Int(Utils.fetchString(forKey: SelectedArea_id))!
@@ -137,7 +137,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
                     self.deliveryView.isHidden = false
                     self.internetView.isHidden = true
                 } else {
-                    self.tblViewHeight.constant = self.view.frame.height - 120
+                    self.tblViewHeight.constant = self.view.frame.height - 200
                 }
                 self.view.layoutIfNeeded()
             }
@@ -294,27 +294,36 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     }
     
     //    RecommendedDelegate
-    func showOfferingData(index: Int) {
-        if(selectdTopIndexes.contains(index)){
-            selectdTopIndexes.remove(index)
-        } else {
-            selectdTopIndexes.add(index)
-        }
-        if(index == 0){
-            offerIndex = index
-            restaurantArray = Restaurant.getDeliveryUnder()
-        } else if(index == 1){
-            offerIndex = index
-            restaurantArray = Restaurant.getPickupRestaurants()
-        } else {
-            offerIndex = index
-            restaurantArray = Restaurant.getDineInRestaurants()
-        }
+    
+    func showOfferingData(index: Int, isInnerViewHidden: Bool) {
         
-        if(!selectdTopIndexes.contains(index)){
+        if(isInnerViewHidden == true){
+            if(index == 0){
+                offerIndex = index
+                restaurantArray = Restaurant.getDeliveryUnder()
+            } else if(index == 1){
+                offerIndex = index
+                restaurantArray = Restaurant.getPickupRestaurants()
+            } else {
+                offerIndex = index
+                restaurantArray = Restaurant.getDineInRestaurants()
+            }
+        } else {
             offerIndex = -1
             restaurantArray = Restaurant.getAll()
         }
+        
+//        if(selectdTopIndexes.contains(index)){
+//            selectdTopIndexes.remove(index)
+//        } else {
+//            selectdTopIndexes.add(index)
+//        }
+//       
+//        
+//        if(!selectdTopIndexes.contains(index)){
+//            offerIndex = -1
+//            restaurantArray = Restaurant.getAll()
+//        }
         
         tblView.reloadSections(IndexSet(integersIn: 1...1), with: UITableView.RowAnimation.automatic)
     }
