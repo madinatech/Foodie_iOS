@@ -67,11 +67,15 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         btnRetry.layer.borderWidth = 1
         let noDelivery = UIImage.gifImageWithName("nodelivery_1-2")
         imgView.image = noDelivery
+        tblView.isHidden = false
+        restaurantArray = Restaurant.getAllRestaurant()
         if(self.restaurantArray.count <= 0){
             self.tblViewHeight.constant = 170
             self.deliveryView.isHidden = false
             self.internetView.isHidden = true
         } else {
+            self.deliveryView.isHidden = true
+            self.internetView.isHidden = true
             self.tblViewHeight.constant = self.view.frame.height - 120
         }
     }
@@ -79,12 +83,12 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-//        if(selectedCusines.count <= 0){
-//            restaurantArray = Restaurant.getAll()
-//        } else {
-//            restaurantArray = Restaurant.getAllByCusines(cusinesName: selectedCusines)
-//        }
-//        tblView.reloadData()
+        //        if(selectedCusines.count <= 0){
+        //            restaurantArray = Restaurant.getAll()
+        //        } else {
+        //            restaurantArray = Restaurant.getAllByCusines(cusinesName: selectedCusines)
+        //        }
+        //        tblView.reloadData()
     }
     
     func getClientToken ()  {
@@ -112,7 +116,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         //            self.isLoaded = true
         //        }
         self.tblView.reloadData()
-        self.tblViewHeight.constant = self.view.frame.height - 200
+        self.tblViewHeight.constant = self.view.frame.height - 120
         self.view.layoutIfNeeded()
         if(areaId == 0){
             areaId = Int(Utils.fetchString(forKey: SelectedArea_id))!
@@ -137,7 +141,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
                     self.deliveryView.isHidden = false
                     self.internetView.isHidden = true
                 } else {
-                    self.tblViewHeight.constant = self.view.frame.height - 200
+                    self.deliveryView.isHidden = true
+                    self.internetView.isHidden = true
+                    self.tblViewHeight.constant = self.view.frame.height - 120
                 }
                 self.view.layoutIfNeeded()
             }
@@ -149,11 +155,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
             let vc = DeliveryAddressVC.initViewController(selectedAddress: selectedAddress)
             vc.delegate = self
             let nav = UINavigationController.init(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
         } else {
             let vc = DeliveryLoactionVC.initViewController()
             vc.delegate = self
             let nav = UINavigationController.init(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
         }
     }
@@ -224,14 +232,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         } else {
             return 0
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(indexPath.section == 0){
             var cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedRestaurantCell") as? RecommendedRestaurantCell
             if cell == nil {
-                var nib = Bundle.main.loadNibNamed("RecommendedRestaurantCell", owner: self, options: nil)
+                let nib = Bundle.main.loadNibNamed("RecommendedRestaurantCell", owner: self, options: nil)
                 cell = nib?[0] as? RecommendedRestaurantCell
             }
             cell?.selectionStyle = .none
@@ -242,7 +249,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         }
         var cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as? RestaurantCell
         if cell == nil {
-            var nib = Bundle.main.loadNibNamed("RestaurantCell", owner: self, options: nil)
+            let nib = Bundle.main.loadNibNamed("RestaurantCell", owner: self, options: nil)
             cell = nib?[0] as? RestaurantCell
         }
         cell?.selectionStyle = .none
@@ -250,15 +257,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
             let restaurant : Restaurant = restaurantArray[indexPath.row]
             if isLoaded == true{
                 cell?.hideLoader()
+                cell?.showData(restaurant: restaurant, offerIndex: offerIndex)
             } else {
                 cell?.showLoader()
             }
-            
-            cell?.showData(restaurant: restaurant, offerIndex: offerIndex)
         } else{
             cell?.showLoader()
         }
-        
         return cell!
     }
     
@@ -267,11 +272,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         let restaurant : Restaurant = restaurantArray[indexPath.row]
         let vc = RestaurantDetailVC.initViewController(restaurant: restaurant, selectedOffer: offerIndex)
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
     
     @objc func filterClicked(_ sender: UIButton) {
         let vc = FilterVC.initViewController(selectdCusines: selectedCusines)
+        vc.modalPresentationStyle = .fullScreen
         vc.delegate = self
         self.navigationController?.present(vc, animated: true, completion: nil)
     }
@@ -287,6 +292,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
         }
         tblView.reloadData()
     }
+    
     func resetFilter(cusinesName: [String]) {
         selectedCusines = cusinesName
         restaurantArray = Restaurant.getAll()
@@ -296,7 +302,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     //    RecommendedDelegate
     
     func showOfferingData(index: Int, isInnerViewHidden: Bool) {
-        
         if(isInnerViewHidden == true){
             if(index == 0){
                 offerIndex = index
@@ -312,19 +317,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
             offerIndex = -1
             restaurantArray = Restaurant.getAll()
         }
-        
-//        if(selectdTopIndexes.contains(index)){
-//            selectdTopIndexes.remove(index)
-//        } else {
-//            selectdTopIndexes.add(index)
-//        }
-//       
-//        
-//        if(!selectdTopIndexes.contains(index)){
-//            offerIndex = -1
-//            restaurantArray = Restaurant.getAll()
-//        }
-        
         tblView.reloadSections(IndexSet(integersIn: 1...1), with: UITableView.RowAnimation.automatic)
     }
     
@@ -361,8 +353,4 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
             GroupValues.mr_truncateAll(in: localContext)
         })
     }
-    
-    
-    
-    
 }

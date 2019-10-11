@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,19 +43,19 @@
                                     <rect key="frame" x="0.0" y="269" width="414" height="627"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llt-S3-3iU">
-                                            <rect key="frame" x="20" y="40" width="146.5" height="36"/>
+                                            <rect key="frame" x="20" y="40" width="132" height="35"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Sign in or sign up using your mobile number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFk-nN-y13">
-                                            <rect key="frame" x="20" y="96" width="374" height="58"/>
+                                            <rect key="frame" x="20" y="95" width="374" height="56"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="24"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLy-XY-2X6">
-                                            <rect key="frame" x="20" y="204" width="40" height="50"/>
+                                            <rect key="frame" x="20" y="201" width="40" height="50"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call" translatesAutoresizingMaskIntoConstraints="NO" id="PPq-T9-ayT">
                                                     <rect key="frame" x="10" y="15" width="20" height="20"/>
@@ -81,13 +80,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="MOBILE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfo-yO-fIJ">
-                                            <rect key="frame" x="70" y="204" width="158" height="22"/>
+                                            <rect key="frame" x="70" y="201" width="150" height="21"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="+255" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB3-qj-f8n">
-                                            <rect key="frame" x="104" y="228" width="40.5" height="30"/>
+                                            <rect key="frame" x="132" y="224" width="41" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="sgl-RZ-vl4"/>
                                             </constraints>
@@ -96,7 +95,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RPb-B4-WvK">
-                                            <rect key="frame" x="177" y="228" width="237" height="30"/>
+                                            <rect key="frame" x="200.5" y="224" width="213.5" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="YZc-m1-p8g"/>
                                             </constraints>
@@ -113,7 +112,7 @@
                                             </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfY-YF-d4a">
-                                            <rect key="frame" x="35" y="324" width="344" height="50"/>
+                                            <rect key="frame" x="35" y="321" width="344" height="50"/>
                                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Ty8-jE-ste">
@@ -136,13 +135,13 @@
                                             </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tanzania_iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="SWF-RU-SSc">
-                                            <rect key="frame" x="70" y="228" width="28" height="30"/>
+                                            <rect key="frame" x="70" y="224" width="56" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="dTu-ax-Stj"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-Fa-RL7">
-                                            <rect key="frame" x="65" y="262.5" width="349" height="1"/>
+                                            <rect key="frame" x="65" y="258.5" width="349" height="1"/>
                                             <color key="backgroundColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="4Ql-7E-UmO"/>
@@ -153,13 +152,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="(0)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-kf-Vpd">
-                                            <rect key="frame" x="149.5" y="232" width="24.5" height="22"/>
+                                            <rect key="frame" x="178" y="228.5" width="19.5" height="21"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                             <color key="textColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" name="White_BG"/>
                                     <constraints>
                                         <constraint firstItem="pFk-nN-y13" firstAttribute="leading" secondItem="KVp-D2-5T8" secondAttribute="leading" constant="20" id="2k8-bs-4MV"/>
                                         <constraint firstAttribute="trailing" secondItem="RPb-B4-WvK" secondAttribute="trailing" id="3it-er-SdM"/>
@@ -188,7 +187,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="White_BG"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="ubl-fR-Lvt" secondAttribute="trailing" id="D4o-jv-gIu"/>
                                 <constraint firstAttribute="bottom" secondItem="KVp-D2-5T8" secondAttribute="bottom" id="Mg7-Zq-Foh"/>
@@ -211,7 +210,7 @@
                     </connections>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="White_BG"/>
             <constraints>
                 <constraint firstItem="rQQ-El-2dL" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="5y1-Il-wem"/>
                 <constraint firstItem="5Ct-xC-oGL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="T58-G1-8na"/>
@@ -228,5 +227,8 @@
         <image name="Call" width="18" height="18"/>
         <image name="Cover111" width="1125" height="900"/>
         <image name="Tanzania_iPhone" width="28" height="19.5"/>
+        <namedColor name="White_BG">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

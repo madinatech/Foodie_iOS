@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICh-iQ-qtv">
-                    <rect key="frame" x="0.0" y="220" width="375" height="494"/>
+                    <rect key="frame" x="0.0" y="200" width="375" height="514"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-sX-w1Z">
                             <rect key="frame" x="0.0" y="5" width="375" height="494"/>
@@ -41,16 +40,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="494"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jW7-Mz-lqp">
-                                            <rect key="frame" x="20" y="20" width="50.5" height="23"/>
+                                            <rect key="frame" x="20" y="20" width="49" height="22.5"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E.g. Home, Work, Mom's house" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7oH-Sm-DUT" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="47" width="345" height="30"/>
+                                            <rect key="frame" x="20" y="46.5" width="345" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Bec-WF-bbE"/>
                                             </constraints>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="DarkGray_text"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <userDefinedRuntimeAttributes>
@@ -60,7 +59,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALr-Lk-k8g">
-                                            <rect key="frame" x="20" y="444" width="335" height="50"/>
+                                            <rect key="frame" x="20" y="441.5" width="335" height="50"/>
                                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="aFo-lI-yve"/>
@@ -77,16 +76,16 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="LINE 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmL-gf-mJI">
-                                            <rect key="frame" x="20" y="92" width="56" height="23"/>
+                                            <rect key="frame" x="20" y="91.5" width="57" height="22.5"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Flat 4B, Elite Tower, Mindu Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UdL-Im-7Vz" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="119" width="345" height="30"/>
+                                            <rect key="frame" x="20" y="118" width="345" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="95A-RN-Ta9"/>
                                             </constraints>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="DarkGray_text"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <userDefinedRuntimeAttributes>
@@ -96,16 +95,16 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="LINE 2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc5-Dp-iad">
-                                            <rect key="frame" x="20" y="164" width="59.5" height="23"/>
+                                            <rect key="frame" x="20" y="163" width="57" height="22.5"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Opp. Richmond Tower" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Gi-ds-Kk5" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="191" width="345" height="30"/>
+                                            <rect key="frame" x="20" y="189.5" width="345" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="GT9-Ts-jkH"/>
                                             </constraints>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="DarkGray_text"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <userDefinedRuntimeAttributes>
@@ -115,16 +114,16 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="CITY" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74D-Km-1kF">
-                                            <rect key="frame" x="20" y="236" width="42.5" height="23"/>
+                                            <rect key="frame" x="20" y="234.5" width="42" height="22.5"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmE-1b-fk8" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="263" width="345" height="30"/>
+                                            <rect key="frame" x="20" y="261" width="345" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="tmX-UJ-9gx"/>
                                             </constraints>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="DarkGray_text"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             <userDefinedRuntimeAttributes>
@@ -134,16 +133,16 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="AREA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhE-Gy-aRv">
-                                            <rect key="frame" x="20" y="308" width="54.5" height="23"/>
+                                            <rect key="frame" x="20" y="306" width="49.5" height="22.5"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="obM-KN-gZp" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="335" width="345" height="30"/>
+                                            <rect key="frame" x="20" y="332.5" width="345" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="F3m-n5-J71"/>
                                             </constraints>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="DarkGray_text"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             <userDefinedRuntimeAttributes>
@@ -153,7 +152,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLR-Y2-NU1">
-                                            <rect key="frame" x="20" y="263" width="345" height="30"/>
+                                            <rect key="frame" x="20" y="261" width="345" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="HzW-aa-J0p"/>
                                             </constraints>
@@ -162,7 +161,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w59-98-Tkr">
-                                            <rect key="frame" x="20" y="335" width="345" height="30"/>
+                                            <rect key="frame" x="20" y="332.5" width="345" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="b8L-3A-LxG"/>
                                             </constraints>
@@ -171,7 +170,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-ya-EB0">
-                                            <rect key="frame" x="20" y="380" width="30" height="30"/>
+                                            <rect key="frame" x="20" y="377.5" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="30" id="2iQ-bR-OAq"/>
                                                 <constraint firstAttribute="height" constant="30" id="48U-13-QE2"/>
@@ -183,9 +182,9 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Set as default address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umy-CP-sc0">
-                                            <rect key="frame" x="60" y="385" width="184.5" height="20.5"/>
+                                            <rect key="frame" x="60" y="382.5" width="170.5" height="20"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" name="DarkGray_text"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -243,7 +242,7 @@
                             </constraints>
                         </scrollView>
                     </subviews>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" name="Light_BG"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="HzS-sX-w1Z" secondAttribute="trailing" id="QPE-Cp-QSh"/>
                         <constraint firstAttribute="bottom" secondItem="HzS-sX-w1Z" secondAttribute="bottom" constant="-5" id="fI1-Mg-stB"/>
@@ -253,7 +252,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyx-4p-eli">
-                    <rect key="frame" x="20" y="70" width="40" height="40"/>
+                    <rect key="frame" x="20" y="50" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="7mo-bq-Y7N"/>
                         <constraint firstAttribute="width" constant="40" id="BAV-Vt-EK3"/>
@@ -264,7 +263,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Add Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNL-6l-bRs">
-                    <rect key="frame" x="20" y="130" width="190" height="30"/>
+                    <rect key="frame" x="20" y="110" width="174" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="r8c-q8-Gjm"/>
                     </constraints>
@@ -293,5 +292,11 @@
         <image name="Back" width="38" height="38"/>
         <image name="select" width="42.5" height="42.5"/>
         <image name="unSelect" width="42.5" height="42.5"/>
+        <namedColor name="DarkGray_text">
+            <color red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Light_BG">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

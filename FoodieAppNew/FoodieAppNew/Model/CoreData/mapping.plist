@@ -126,6 +126,10 @@
 	</dict>
 	<key>Cusines</key>
 	<dict>
+		<key>image</key>
+		<string>image</string>
+		<key>New item</key>
+		<string></string>
 		<key>entity_id</key>
 		<string>id</string>
 		<key>name</key>

@@ -11,8 +11,8 @@ let appThemeColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0
 let appLightThemeColor = UIColor.init(red: 217.0/255.0, green: 37.0/255.0, blue: 45.0/255.0, alpha: 0.2)
 let appPurpleColor = UIColor.init(red: 81.0/255.0, green: 62.0/255.0, blue: 157.0/255.0, alpha: 1.0)
 let appYellowColor = UIColor.init(red: 250.0/255.0, green: 205.0/255.0, blue: 92.0/255.0, alpha: 1.0)
-let appBlackColor = UIColor.init(red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, alpha: 1.0)
-let appLigtGrayColor = UIColor.init(red: 247.0/255.0, green: 247.0/255.0, blue: 247.0/255.0, alpha: 1.0)
+let appBlackColor = UIColor.init(named: "Black_BG")//UIColor.init(red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, alpha: 1.0)
+let appLigtGrayColor = UIColor.init(named: "Light_BG")//UIColor.init(red: 247.0/255.0, green: 247.0/255.0, blue: 247.0/255.0, alpha: 1.0)
 let appBorderColor = UIColor.init(red: 186.0/255.0, green: 186.0/255.0, blue: 186.0/255.0, alpha: 1.0)
 let appGreenColor = UIColor.init(red: 43.0/255.0, green: 183.0/255.0, blue: 124.0/255.0, alpha: 1.0)
 

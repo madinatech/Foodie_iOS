@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E86B7E42998BF2B0FA3652D083C59C25"
+               BlueprintIdentifier = "8AABDD06F1327BC62BE3ECBBB02AF715"
                BuildableName = "AlamofireNetworkActivityLogger.framework"
                BlueprintName = "AlamofireNetworkActivityLogger"
                ReferencedContainer = "container:Pods.xcodeproj">

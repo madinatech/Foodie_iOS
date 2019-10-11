@@ -44,7 +44,7 @@ class SearchCategoryCell: UITableViewCell,UICollectionViewDelegate, UICollection
         let cell : SearchCollCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollCell", for: indexPath) as! SearchCollCell
         cell.contentView.layer.cornerRadius = 20
         let cusine = cusinesArray[indexPath.row]
-        cell.lblItem.text = cusine.name
+        cell.setData(cusines: cusine)
         return cell
     }
     

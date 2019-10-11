@@ -8,11 +8,13 @@ class OrderHeaderView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var imgview: UIImageView!
     @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var imgStatus: UIImageView!
     var orderStatus = [String]()
     
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "OrderHeaderView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
+    
     func setData ()  {
         tblView.rowHeight = UITableView.automaticDimension
         tblView.estimatedRowHeight = 40
@@ -20,6 +22,9 @@ class OrderHeaderView: UIView, UITableViewDelegate, UITableViewDataSource {
         orderStatus = ["Waiting for restaurant to accept order","Chef getting ready (only applicable in future order)","Preparing your food","Driver arrived","On the way","Delivered","Cancelled (Notes)"]
 
         tblView.reloadData()
+        
+        let noDelivery = UIImage.gifImageWithName("Waiting_1")
+             imgStatus.image = noDelivery
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

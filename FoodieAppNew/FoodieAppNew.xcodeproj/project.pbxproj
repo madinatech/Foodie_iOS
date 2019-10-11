@@ -146,6 +146,23 @@
 		34899B3C233A2E2500A5FBA2 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B33233A2E2500A5FBA2 /* Items.swift */; };
 		34899B3D233A2E2500A5FBA2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B34233A2E2500A5FBA2 /* Images.swift */; };
 		34899B3E233A2E2500A5FBA2 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34899B35233A2E2500A5FBA2 /* Menu.swift */; };
+		3497EA13234DFC1F001A38EC /* OnWay_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497E9FB234DFC1F001A38EC /* OnWay_2.gif */; };
+		3497EA14234DFC1F001A38EC /* OnWay_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497E9FC234DFC1F001A38EC /* OnWay_3.gif */; };
+		3497EA15234DFC1F001A38EC /* OnWay_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497E9FD234DFC1F001A38EC /* OnWay_1.gif */; };
+		3497EA16234DFC1F001A38EC /* Deliver_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497E9FF234DFC1F001A38EC /* Deliver_1.gif */; };
+		3497EA17234DFC1F001A38EC /* Deliver_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA00234DFC1F001A38EC /* Deliver_2.gif */; };
+		3497EA18234DFC1F001A38EC /* Wailting_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA02234DFC1F001A38EC /* Wailting_2.gif */; };
+		3497EA19234DFC1F001A38EC /* Waiting_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA03234DFC1F001A38EC /* Waiting_1.gif */; };
+		3497EA1A234DFC1F001A38EC /* Chef_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA05234DFC1F001A38EC /* Chef_2.gif */; };
+		3497EA1B234DFC1F001A38EC /* Chef_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA06234DFC1F001A38EC /* Chef_1.gif */; };
+		3497EA1C234DFC1F001A38EC /* Eaten_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA08234DFC1F001A38EC /* Eaten_1.gif */; };
+		3497EA1D234DFC1F001A38EC /* Eaten_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA09234DFC1F001A38EC /* Eaten_2.gif */; };
+		3497EA1E234DFC1F001A38EC /* Cancelled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA0B234DFC1F001A38EC /* Cancelled.gif */; };
+		3497EA1F234DFC1F001A38EC /* Perparing_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA0D234DFC1F001A38EC /* Perparing_3.gif */; };
+		3497EA20234DFC1F001A38EC /* Preparing_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA0E234DFC1F001A38EC /* Preparing_1.gif */; };
+		3497EA21234DFC1F001A38EC /* Preparing_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA0F234DFC1F001A38EC /* Preparing_2.gif */; };
+		3497EA22234DFC1F001A38EC /* Collect_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA11234DFC1F001A38EC /* Collect_2.gif */; };
+		3497EA23234DFC1F001A38EC /* Collect_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3497EA12234DFC1F001A38EC /* Collect_1.gif */; };
 		34C01B55233492E90057DEF4 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01B53233492E90057DEF4 /* CreateAccountVC.swift */; };
 		34C01B56233492E90057DEF4 /* CreateAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C01B54233492E90057DEF4 /* CreateAccountVC.xib */; };
 		34C01C392334A9230057DEF4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */; };
@@ -213,23 +230,6 @@
 		34D5A624234DA87400D44A09 /* OrderHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A623234DA87400D44A09 /* OrderHeaderView.xib */; };
 		34D5A627234DBC6C00D44A09 /* OrderStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A625234DBC6C00D44A09 /* OrderStatusCell.swift */; };
 		34D5A628234DBC6C00D44A09 /* OrderStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A626234DBC6C00D44A09 /* OrderStatusCell.xib */; };
-		34D5A645234DD78D00D44A09 /* 6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A62D234DD78D00D44A09 /* 6.gif */; };
-		34D5A646234DD78D00D44A09 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A62E234DD78D00D44A09 /* 2.gif */; };
-		34D5A647234DD78D00D44A09 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A62F234DD78D00D44A09 /* 3.gif */; };
-		34D5A648234DD78D00D44A09 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A631234DD78D00D44A09 /* 2.gif */; };
-		34D5A649234DD78D00D44A09 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A632234DD78D00D44A09 /* 1.gif */; };
-		34D5A64A234DD78D00D44A09 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A634234DD78D00D44A09 /* 3.gif */; };
-		34D5A64B234DD78D00D44A09 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A635234DD78D00D44A09 /* 1.gif */; };
-		34D5A64C234DD78D00D44A09 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A637234DD78D00D44A09 /* 2.gif */; };
-		34D5A64D234DD78D00D44A09 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A638234DD78D00D44A09 /* 1.gif */; };
-		34D5A64E234DD78D00D44A09 /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A63A234DD78D00D44A09 /* 4.gif */; };
-		34D5A64F234DD78D00D44A09 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A63B234DD78D00D44A09 /* 3.gif */; };
-		34D5A650234DD78D00D44A09 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A63D234DD78D00D44A09 /* 1.gif */; };
-		34D5A651234DD78D00D44A09 /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A63F234DD78D00D44A09 /* 4.gif */; };
-		34D5A652234DD78D00D44A09 /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A640234DD78D00D44A09 /* 5.gif */; };
-		34D5A653234DD78D00D44A09 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A641234DD78D00D44A09 /* 3.gif */; };
-		34D5A654234DD78D00D44A09 /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A643234DD78D00D44A09 /* 4.gif */; };
-		34D5A655234DD78D00D44A09 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A644234DD78D00D44A09 /* 3.gif */; };
 		34FB4F112343224300E2E055 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F072343224300E2E055 /* Montserrat-Bold.otf */; };
 		34FB4F122343224300E2E055 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F082343224300E2E055 /* Montserrat-Light.otf */; };
 		34FB4F132343224300E2E055 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34FB4F092343224300E2E055 /* Montserrat-Thin.ttf */; };
@@ -395,6 +395,23 @@
 		34899B33233A2E2500A5FBA2 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		34899B34233A2E2500A5FBA2 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		34899B35233A2E2500A5FBA2 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		3497E9FB234DFC1F001A38EC /* OnWay_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = OnWay_2.gif; sourceTree = "<group>"; };
+		3497E9FC234DFC1F001A38EC /* OnWay_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = OnWay_3.gif; sourceTree = "<group>"; };
+		3497E9FD234DFC1F001A38EC /* OnWay_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = OnWay_1.gif; sourceTree = "<group>"; };
+		3497E9FF234DFC1F001A38EC /* Deliver_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Deliver_1.gif; sourceTree = "<group>"; };
+		3497EA00234DFC1F001A38EC /* Deliver_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Deliver_2.gif; sourceTree = "<group>"; };
+		3497EA02234DFC1F001A38EC /* Wailting_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Wailting_2.gif; sourceTree = "<group>"; };
+		3497EA03234DFC1F001A38EC /* Waiting_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Waiting_1.gif; sourceTree = "<group>"; };
+		3497EA05234DFC1F001A38EC /* Chef_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Chef_2.gif; sourceTree = "<group>"; };
+		3497EA06234DFC1F001A38EC /* Chef_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Chef_1.gif; sourceTree = "<group>"; };
+		3497EA08234DFC1F001A38EC /* Eaten_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Eaten_1.gif; sourceTree = "<group>"; };
+		3497EA09234DFC1F001A38EC /* Eaten_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Eaten_2.gif; sourceTree = "<group>"; };
+		3497EA0B234DFC1F001A38EC /* Cancelled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Cancelled.gif; sourceTree = "<group>"; };
+		3497EA0D234DFC1F001A38EC /* Perparing_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Perparing_3.gif; sourceTree = "<group>"; };
+		3497EA0E234DFC1F001A38EC /* Preparing_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Preparing_1.gif; sourceTree = "<group>"; };
+		3497EA0F234DFC1F001A38EC /* Preparing_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Preparing_2.gif; sourceTree = "<group>"; };
+		3497EA11234DFC1F001A38EC /* Collect_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Collect_2.gif; sourceTree = "<group>"; };
+		3497EA12234DFC1F001A38EC /* Collect_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Collect_1.gif; sourceTree = "<group>"; };
 		34C01B53233492E90057DEF4 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		34C01B54233492E90057DEF4 /* CreateAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountVC.xib; sourceTree = "<group>"; };
 		34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -481,23 +498,6 @@
 		34D5A623234DA87400D44A09 /* OrderHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderHeaderView.xib; sourceTree = "<group>"; };
 		34D5A625234DBC6C00D44A09 /* OrderStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusCell.swift; sourceTree = "<group>"; };
 		34D5A626234DBC6C00D44A09 /* OrderStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderStatusCell.xib; sourceTree = "<group>"; };
-		34D5A62D234DD78D00D44A09 /* 6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 6.gif; sourceTree = "<group>"; };
-		34D5A62E234DD78D00D44A09 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
-		34D5A62F234DD78D00D44A09 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
-		34D5A631234DD78D00D44A09 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
-		34D5A632234DD78D00D44A09 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
-		34D5A634234DD78D00D44A09 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
-		34D5A635234DD78D00D44A09 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
-		34D5A637234DD78D00D44A09 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
-		34D5A638234DD78D00D44A09 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
-		34D5A63A234DD78D00D44A09 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
-		34D5A63B234DD78D00D44A09 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
-		34D5A63D234DD78D00D44A09 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
-		34D5A63F234DD78D00D44A09 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
-		34D5A640234DD78D00D44A09 /* 5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 5.gif; sourceTree = "<group>"; };
-		34D5A641234DD78D00D44A09 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
-		34D5A643234DD78D00D44A09 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
-		34D5A644234DD78D00D44A09 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
 		34FB4F072343224300E2E055 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		34FB4F082343224300E2E055 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
 		34FB4F092343224300E2E055 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
@@ -746,12 +746,100 @@
 		344DE1B62341E37A003D5D67 /* GIF */ = {
 			isa = PBXGroup;
 			children = (
-				34D5A62B234DD78D00D44A09 /* Animations_Foodie */,
+				3497E9F9234DFC1F001A38EC /* Animations_Foodie */,
 				34C5B7ED234611C900D05C7C /* ANimated_preview.gif */,
 				34C5B7EB2346048600D05C7C /* preview.gif */,
 				344DE1B72341E37A003D5D67 /* nodelivery_1-2.gif */,
 			);
 			path = GIF;
+			sourceTree = "<group>";
+		};
+		3497E9F9234DFC1F001A38EC /* Animations_Foodie */ = {
+			isa = PBXGroup;
+			children = (
+				3497E9FA234DFC1F001A38EC /* 3.a On the way */,
+				3497E9FE234DFC1F001A38EC /* 4 Delivered */,
+				3497EA01234DFC1F001A38EC /* 1.a Waiting for restaurant to accept */,
+				3497EA04234DFC1F001A38EC /* 1.b Chef getting ready */,
+				3497EA07234DFC1F001A38EC /* 3.c Ready to be eaten */,
+				3497EA0A234DFC1F001A38EC /* 5 Cancelled */,
+				3497EA0C234DFC1F001A38EC /* 2 Preparing your food */,
+				3497EA10234DFC1F001A38EC /* 3.b Ready to be collected */,
+			);
+			path = Animations_Foodie;
+			sourceTree = "<group>";
+		};
+		3497E9FA234DFC1F001A38EC /* 3.a On the way */ = {
+			isa = PBXGroup;
+			children = (
+				3497E9FB234DFC1F001A38EC /* OnWay_2.gif */,
+				3497E9FC234DFC1F001A38EC /* OnWay_3.gif */,
+				3497E9FD234DFC1F001A38EC /* OnWay_1.gif */,
+			);
+			path = "3.a On the way";
+			sourceTree = "<group>";
+		};
+		3497E9FE234DFC1F001A38EC /* 4 Delivered */ = {
+			isa = PBXGroup;
+			children = (
+				3497E9FF234DFC1F001A38EC /* Deliver_1.gif */,
+				3497EA00234DFC1F001A38EC /* Deliver_2.gif */,
+			);
+			path = "4 Delivered";
+			sourceTree = "<group>";
+		};
+		3497EA01234DFC1F001A38EC /* 1.a Waiting for restaurant to accept */ = {
+			isa = PBXGroup;
+			children = (
+				3497EA02234DFC1F001A38EC /* Wailting_2.gif */,
+				3497EA03234DFC1F001A38EC /* Waiting_1.gif */,
+			);
+			path = "1.a Waiting for restaurant to accept";
+			sourceTree = "<group>";
+		};
+		3497EA04234DFC1F001A38EC /* 1.b Chef getting ready */ = {
+			isa = PBXGroup;
+			children = (
+				3497EA05234DFC1F001A38EC /* Chef_2.gif */,
+				3497EA06234DFC1F001A38EC /* Chef_1.gif */,
+			);
+			path = "1.b Chef getting ready";
+			sourceTree = "<group>";
+		};
+		3497EA07234DFC1F001A38EC /* 3.c Ready to be eaten */ = {
+			isa = PBXGroup;
+			children = (
+				3497EA08234DFC1F001A38EC /* Eaten_1.gif */,
+				3497EA09234DFC1F001A38EC /* Eaten_2.gif */,
+			);
+			path = "3.c Ready to be eaten";
+			sourceTree = "<group>";
+		};
+		3497EA0A234DFC1F001A38EC /* 5 Cancelled */ = {
+			isa = PBXGroup;
+			children = (
+				3497EA0B234DFC1F001A38EC /* Cancelled.gif */,
+			);
+			path = "5 Cancelled";
+			sourceTree = "<group>";
+		};
+		3497EA0C234DFC1F001A38EC /* 2 Preparing your food */ = {
+			isa = PBXGroup;
+			children = (
+				3497EA0D234DFC1F001A38EC /* Perparing_3.gif */,
+				3497EA0E234DFC1F001A38EC /* Preparing_1.gif */,
+				3497EA0F234DFC1F001A38EC /* Preparing_2.gif */,
+			);
+			path = "2 Preparing your food";
+			sourceTree = "<group>";
+		};
+		3497EA10234DFC1F001A38EC /* 3.b Ready to be collected */ = {
+			isa = PBXGroup;
+			children = (
+				3497EA11234DFC1F001A38EC /* Collect_2.gif */,
+				3497EA12234DFC1F001A38EC /* Collect_1.gif */,
+			);
+			path = "3.b Ready to be collected";
 			sourceTree = "<group>";
 		};
 		34C01C2C2334A9230057DEF4 /* Model */ = {
@@ -994,94 +1082,6 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		34D5A62B234DD78D00D44A09 /* Animations_Foodie */ = {
-			isa = PBXGroup;
-			children = (
-				34D5A62C234DD78D00D44A09 /* 3.a On the way */,
-				34D5A630234DD78D00D44A09 /* 4 Delivered */,
-				34D5A633234DD78D00D44A09 /* 1.a Waiting for restaurant to accept */,
-				34D5A636234DD78D00D44A09 /* 1.b Chef getting ready */,
-				34D5A639234DD78D00D44A09 /* 3.c Ready to be eaten */,
-				34D5A63C234DD78D00D44A09 /* 5 Cancelled */,
-				34D5A63E234DD78D00D44A09 /* 2 Preparing your food */,
-				34D5A642234DD78D00D44A09 /* 3.b Ready to be collected */,
-			);
-			path = Animations_Foodie;
-			sourceTree = "<group>";
-		};
-		34D5A62C234DD78D00D44A09 /* 3.a On the way */ = {
-			isa = PBXGroup;
-			children = (
-				34D5A62D234DD78D00D44A09 /* 6.gif */,
-				34D5A62E234DD78D00D44A09 /* 2.gif */,
-				34D5A62F234DD78D00D44A09 /* 3.gif */,
-			);
-			path = "3.a On the way";
-			sourceTree = "<group>";
-		};
-		34D5A630234DD78D00D44A09 /* 4 Delivered */ = {
-			isa = PBXGroup;
-			children = (
-				34D5A631234DD78D00D44A09 /* 2.gif */,
-				34D5A632234DD78D00D44A09 /* 1.gif */,
-			);
-			path = "4 Delivered";
-			sourceTree = "<group>";
-		};
-		34D5A633234DD78D00D44A09 /* 1.a Waiting for restaurant to accept */ = {
-			isa = PBXGroup;
-			children = (
-				34D5A634234DD78D00D44A09 /* 3.gif */,
-				34D5A635234DD78D00D44A09 /* 1.gif */,
-			);
-			path = "1.a Waiting for restaurant to accept";
-			sourceTree = "<group>";
-		};
-		34D5A636234DD78D00D44A09 /* 1.b Chef getting ready */ = {
-			isa = PBXGroup;
-			children = (
-				34D5A637234DD78D00D44A09 /* 2.gif */,
-				34D5A638234DD78D00D44A09 /* 1.gif */,
-			);
-			path = "1.b Chef getting ready";
-			sourceTree = "<group>";
-		};
-		34D5A639234DD78D00D44A09 /* 3.c Ready to be eaten */ = {
-			isa = PBXGroup;
-			children = (
-				34D5A63A234DD78D00D44A09 /* 4.gif */,
-				34D5A63B234DD78D00D44A09 /* 3.gif */,
-			);
-			path = "3.c Ready to be eaten";
-			sourceTree = "<group>";
-		};
-		34D5A63C234DD78D00D44A09 /* 5 Cancelled */ = {
-			isa = PBXGroup;
-			children = (
-				34D5A63D234DD78D00D44A09 /* 1.gif */,
-			);
-			path = "5 Cancelled";
-			sourceTree = "<group>";
-		};
-		34D5A63E234DD78D00D44A09 /* 2 Preparing your food */ = {
-			isa = PBXGroup;
-			children = (
-				34D5A63F234DD78D00D44A09 /* 4.gif */,
-				34D5A640234DD78D00D44A09 /* 5.gif */,
-				34D5A641234DD78D00D44A09 /* 3.gif */,
-			);
-			path = "2 Preparing your food";
-			sourceTree = "<group>";
-		};
-		34D5A642234DD78D00D44A09 /* 3.b Ready to be collected */ = {
-			isa = PBXGroup;
-			children = (
-				34D5A643234DD78D00D44A09 /* 4.gif */,
-				34D5A644234DD78D00D44A09 /* 3.gif */,
-			);
-			path = "3.b Ready to be collected";
-			sourceTree = "<group>";
-		};
 		34FB4F062343224300E2E055 /* Montserrat Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -1224,16 +1224,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3497EA1B234DFC1F001A38EC /* Chef_1.gif in Resources */,
 				341B0D8A2330E12500D12504 /* InfoCell.xib in Resources */,
+				3497EA1E234DFC1F001A38EC /* Cancelled.gif in Resources */,
 				34C01CB52334AA780057DEF4 /* mapping.plist in Resources */,
 				34C01CF42334AB2C0057DEF4 /* NSDateTimeAgo.bundle in Resources */,
 				34FB4F142343224300E2E055 /* Montserrat-UltraLight.otf in Resources */,
 				340D78B723335D210084971A /* RestDetailHeaderCell.xib in Resources */,
+				3497EA23234DFC1F001A38EC /* Collect_1.gif in Resources */,
 				34FB4F122343224300E2E055 /* Montserrat-Light.otf in Resources */,
 				34C5B7D42345DA9C00D05C7C /* CityCell.xib in Resources */,
 				34899B092339D6C900A5FBA2 /* MyFavouritesVC.xib in Resources */,
 				34C5B7EE234611C900D05C7C /* ANimated_preview.gif in Resources */,
+				3497EA1C234DFC1F001A38EC /* Eaten_1.gif in Resources */,
 				3400F30F2332562100346C9A /* InfoVC.xib in Resources */,
+				3497EA1F234DFC1F001A38EC /* Perparing_3.gif in Resources */,
 				3400F31323325C4000346C9A /* ViewOrderVC.xib in Resources */,
 				3400F2FB2331FC1C00346C9A /* HomeTopCell.xib in Resources */,
 				34D5A624234DA87400D44A09 /* OrderHeaderView.xib in Resources */,
@@ -1241,39 +1246,42 @@
 				341B0D1A2330D5AE00D12504 /* SearchVC.xib in Resources */,
 				34899B0D2339D9E300A5FBA2 /* FavouriteCell.xib in Resources */,
 				341B0D2A2330D6A800D12504 /* OrderListVC.xib in Resources */,
-				34D5A64A234DD78D00D44A09 /* 3.gif in Resources */,
 				341B0D842330E12500D12504 /* TabCell.xib in Resources */,
+				3497EA13234DFC1F001A38EC /* OnWay_2.gif in Resources */,
 				3400F2F32331EFC100346C9A /* FilterVC.xib in Resources */,
-				34D5A645234DD78D00D44A09 /* 6.gif in Resources */,
-				34D5A64C234DD78D00D44A09 /* 2.gif in Resources */,
 				341B0D9D2330E12500D12504 /* RestaurantCell.xib in Resources */,
+				3497EA17234DFC1F001A38EC /* Deliver_2.gif in Resources */,
 				3400F2FF2332115100346C9A /* RestaurantDetailVC.xib in Resources */,
-				34D5A655234DD78D00D44A09 /* 3.gif in Resources */,
 				34C01B56233492E90057DEF4 /* CreateAccountVC.xib in Resources */,
+				3497EA16234DFC1F001A38EC /* Deliver_1.gif in Resources */,
 				34FB4F192343224300E2E055 /* Montserrat-Hairline.otf in Resources */,
-				34D5A647234DD78D00D44A09 /* 3.gif in Resources */,
 				3410E3AE233B3798000BA7FB /* AddNewAddressVC.xib in Resources */,
 				344F79D0233C799B00A35A43 /* CustomizationVC.xib in Resources */,
+				3497EA1A234DFC1F001A38EC /* Chef_2.gif in Resources */,
 				34FB4F182343224300E2E055 /* sharefonts.net.txt in Resources */,
-				34D5A653234DD78D00D44A09 /* 3.gif in Resources */,
 				34899B112339EDB600A5FBA2 /* EditProfileVC.xib in Resources */,
 				3400F2F72331F38D00346C9A /* SortingCell.xib in Resources */,
+				3497EA18234DFC1F001A38EC /* Wailting_2.gif in Resources */,
 				341B0CE02330CED000D12504 /* LaunchScreen.storyboard in Resources */,
 				340D78B32333475F0084971A /* ItemsCell.xib in Resources */,
 				34C5B7EA2346038100D05C7C /* LoaderView.xib in Resources */,
 				341B0D832330E12500D12504 /* ManageAddressCell.xib in Resources */,
-				34D5A646234DD78D00D44A09 /* 2.gif in Resources */,
 				34C5B7E22345DABD00D05C7C /* AreaVC.xib in Resources */,
 				34FB4F112343224300E2E055 /* Montserrat-Bold.otf in Resources */,
 				344DE1BC2341FEF4003D5D67 /* InternetVc.xib in Resources */,
 				34FB4F162343224300E2E055 /* Montserrat-ExtraBold.otf in Resources */,
+				3497EA1D234DFC1F001A38EC /* Eaten_2.gif in Resources */,
+				3497EA14234DFC1F001A38EC /* OnWay_3.gif in Resources */,
 				341B0D162330D57E00D12504 /* HomeVC.xib in Resources */,
 				34D5A628234DBC6C00D44A09 /* OrderStatusCell.xib in Resources */,
+				3497EA20234DFC1F001A38EC /* Preparing_1.gif in Resources */,
 				340D78C32333855B0084971A /* SearchCategoryCell.xib in Resources */,
-				34D5A649234DD78D00D44A09 /* 1.gif in Resources */,
 				34FB4F152343224300E2E055 /* Montserrat-Regular.otf in Resources */,
 				344DE1B32341D7CB003D5D67 /* PastOrederSubCell.xib in Resources */,
+				3497EA22234DFC1F001A38EC /* Collect_2.gif in Resources */,
+				3497EA15234DFC1F001A38EC /* OnWay_1.gif in Resources */,
 				34FB4F1A2343224300E2E055 /* Montserrat-SemiBold.otf in Resources */,
+				3497EA19234DFC1F001A38EC /* Waiting_1.gif in Resources */,
 				341B0DA42330E12500D12504 /* RecommendedRestaurantCell.xib in Resources */,
 				3400F30B2332450900346C9A /* CusinesCell.xib in Resources */,
 				340D78BB233361440084971A /* ViewOrderMoreCell.xib in Resources */,
@@ -1281,11 +1289,10 @@
 				340D78C7233385CD0084971A /* SearchCollCell.xib in Resources */,
 				3400F3032332118D00346C9A /* RestaurantDetailHeader.xib in Resources */,
 				341B0D262330D67600D12504 /* UserProfileVc.xib in Resources */,
-				34D5A64E234DD78D00D44A09 /* 4.gif in Resources */,
-				34D5A654234DD78D00D44A09 /* 4.gif in Resources */,
 				341B0D872330E12500D12504 /* CustomizeCell.xib in Resources */,
 				344D7D1B233DD54200809108 /* DeliveryLoactionVC.xib in Resources */,
 				3400F31723325CB100346C9A /* CategoryCell.xib in Resources */,
+				3497EA21234DFC1F001A38EC /* Preparing_2.gif in Resources */,
 				34C5B7EC2346048600D05C7C /* preview.gif in Resources */,
 				341B0CDD2330CED000D12504 /* Assets.xcassets in Resources */,
 				341B0DA32330E12500D12504 /* RestaurantDetailCell.xib in Resources */,
@@ -1293,19 +1300,12 @@
 				344DE1B82341E37A003D5D67 /* nodelivery_1-2.gif in Resources */,
 				34CAC0E72333A44400BFBAB4 /* LoginVC.xib in Resources */,
 				341B0DAF2331099800D12504 /* DeliveryAddressVC.xib in Resources */,
-				34D5A652234DD78D00D44A09 /* 5.gif in Resources */,
 				3400F3062332292400346C9A /* ResDetailTabSection.xib in Resources */,
 				344F79D4233C8BBD00A35A43 /* CustomizeSingleCell.xib in Resources */,
 				34CAC0EB2333AF6A00BFBAB4 /* VerifyOTPVC.xib in Resources */,
-				34D5A650234DD78D00D44A09 /* 1.gif in Resources */,
-				34D5A648234DD78D00D44A09 /* 2.gif in Resources */,
 				34FB4F132343224300E2E055 /* Montserrat-Thin.ttf in Resources */,
-				34D5A64D234DD78D00D44A09 /* 1.gif in Resources */,
-				34D5A64F234DD78D00D44A09 /* 3.gif in Resources */,
 				340D78BF233383C10084971A /* RecentSearchCell.xib in Resources */,
-				34D5A64B234DD78D00D44A09 /* 1.gif in Resources */,
 				341B0D792330E12500D12504 /* PastOrderCell.xib in Resources */,
-				34D5A651234DD78D00D44A09 /* 4.gif in Resources */,
 				340D78AF2333464D0084971A /* ViewOrderTopCell.xib in Resources */,
 				34C5B7DA2345DAA600D05C7C /* CityVC.xib in Resources */,
 			);
@@ -1417,40 +1417,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FoodieAppNew/Pods-FoodieAppNew-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AMShimmer/AMShimmer.framework",
-				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
-				"${BUILT_PRODUCTS_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework",
-				"${BUILT_PRODUCTS_DIR}/FastEasyMapping/FastEasyMapping.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/LinearProgressBar/LinearProgressBar.framework",
-				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/SegmentedProgressView/SegmentedProgressView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FoodieAppNew/Pods-FoodieAppNew-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMShimmer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CBFlashyTabBarController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FastEasyMapping.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinearProgressBar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SegmentedProgressView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FoodieAppNew/Pods-FoodieAppNew-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

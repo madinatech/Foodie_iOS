@@ -63,6 +63,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         super.viewWillAppear(animated)
         blurView.isHidden = true
         isTabClicked = false
+        showCartView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -95,8 +96,15 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     @IBAction func viewOrderClicked(_ sender: Any) {
-        let vc = ViewOrderVC.initViewController()
-        self.navigationController?.present(vc, animated: true, completion: nil)
+        if(AccountManager.instance().activeAccount == nil){
+            let vc = LoginVC.initViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = ViewOrderVC.initViewController(cart: cart)
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController?.present(vc, animated: true, completion: nil)
+        }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -249,6 +257,7 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     func infoClicked() {
         let vc = InfoVC.initViewController(restaurant: restaurant)
+        vc.modalPresentationStyle = .fullScreen
         self.navigationController?.present(vc, animated: true, completion: nil)
     }
     
@@ -279,11 +288,13 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         self.present(alert, animated: true, completion: nil)
     }
     func addItemsToCart (item : Items, selectedIndex: Int)  {
+           cart  = Cart.createCartEntity()
         if(cart.restaurant_id != restaurant.entity_id && cart.restaurant_id != 0){
             replaceCartItemAlert(item: item, selectedIndex: selectedIndex)
         } else {
             cart.restaurant_id = restaurant.entity_id
             cart.restaurant_name = restaurant.name
+            cart.deliveryTime = restaurant.delivery_time
             cart.total_items = cart.total_items + 1
             let cart_item : LocalCart = cart.getCartItem(cart: cart, selectedItem: item)
             cart_item.item_name = item.name
@@ -323,12 +334,14 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
         if(cart_item.item_quantity == 0){
             cart_item.removeEntity()
             cart.removeCart_itemObject(cart_item)
-            Cart.removeEntity()
+           
         } else {
             cart.addCart_itemObject(cart_item)
             cart.saveEntity()
         }
-        
+        if(cart.total_items == 0){
+             Cart.removeEntity()
+        }
     }
     
     @objc func addClicked(_ sender: UIButton) {

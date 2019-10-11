@@ -1,14 +1,15 @@
 
 
 import UIKit
-import AMShimmer
+//import AMShimmer
+//import SkeletonView
 
 class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, InternetDelegate {
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var innerView: UIView!
     var favouriteArray = [Favourite]()
-    
+     var isLoaded = Bool()
     class func initViewController() -> MyFavouritesVC {
         let vc = MyFavouritesVC.init(nibName: "MyFavouritesVC", bundle: nil)
         return vc
@@ -16,16 +17,22 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         isLoaded = false
+        tblView.tableFooterView = UIView()
+        tblView.rowHeight = UITableView.automaticDimension
+        tblView.estimatedRowHeight = 120
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        self.favouriteArray = Favourite.getAll()
+        self.tblView.reloadData()
         loadFavuoriteRestaurant()
     }
     
     func loadFavuoriteRestaurant() {
-        AMShimmer.start(for: tblView)
+           isLoaded = false
         Manager.sharedManager().loadFavRestaurentList { (response, errorMessage) -> (Void) in
-            AMShimmer.stop(for: self.tblView)
+//            AMShimmer.stop(for: self.tblView)
             if(errorMessage.count > 0){
                 if(errorMessage.contains("Internet")){
                     self.openNoInternetView()
@@ -34,6 +41,7 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                     return
                 }
             }
+               self.isLoaded = true
             self.favouriteArray = Favourite.getAll()
             self.tblView.reloadData()
         }
@@ -57,7 +65,7 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return  120
+        return  UITableView.automaticDimension//120
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,6 +80,17 @@ class MyFavouritesVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let restaurantArray : [Restaurant] = fav.restaurant.allObjects as! [Restaurant]
         if(restaurantArray.count > 0){
             let restaurant : Restaurant = restaurantArray[0]
+            
+           if(restaurantArray.count > 0){
+            if self.isLoaded == true{
+                    cell?.hideLoader()
+                    cell?.showData(restaurant: restaurant)
+                } else {
+                    cell?.showLoader()
+                }
+            }
+            
+            
             cell?.showData(restaurant: restaurant)
         }
         return cell!

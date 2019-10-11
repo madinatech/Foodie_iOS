@@ -11,6 +11,7 @@ import CoreData
 import IQKeyboardManagerSwift
 import AlamofireNetworkActivityLogger
 import MagicalRecord
+import SkeletonView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarTintColor = appBlackColor
+        SkeletonAppearance.default.tintColor = appBlackColor!
+        SkeletonAppearance.default.gradient = SkeletonGradient.init(baseColor: UIColor.init(named: "Loader_Color")!)
         Thread.sleep(forTimeInterval: 2.0)
         NetworkActivityLogger.shared.startLogging()
         NetworkActivityLogger.shared.level = .debug
@@ -90,6 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             CustomizationGroup.mr_truncateAll(in: localContext)
             Price.mr_truncateAll(in: localContext)
             GroupValues.mr_truncateAll(in: localContext)
+            Favourite.mr_truncateAll(in: localContext)
         })
     }
     
@@ -159,5 +164,11 @@ extension UIApplication {
         } else {
             return nil
         }
+    }
+}
+extension UIColor {
+    @available(iOS 11, *)
+    var customAccent: UIColor! {
+        return UIColor(named: "Accent")
     }
 }

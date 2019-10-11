@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,10 +29,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFF-tJ-uyY">
-                    <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWM-sq-Kvu">
-                            <rect key="frame" x="35" y="477" width="305" height="40"/>
+                            <rect key="frame" x="35" y="497" width="305" height="40"/>
                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="fwz-AJ-0Fr">
@@ -56,15 +55,15 @@
                             </connections>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e40-vR-8Ad">
-                            <rect key="frame" x="0.0" y="10" width="375" height="457"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <rect key="frame" x="0.0" y="10" width="375" height="477"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="wke-Eu-KEH"/>
                                 <outlet property="delegate" destination="-1" id="aqW-hO-xly"/>
                             </connections>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ7-rv-cvv">
-                            <rect key="frame" x="35" y="527" width="305" height="40"/>
+                            <rect key="frame" x="35" y="547" width="305" height="40"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="yq3-8J-ngC">
@@ -89,7 +88,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="White_BG"/>
                     <constraints>
                         <constraint firstItem="e40-vR-8Ad" firstAttribute="top" secondItem="dFF-tJ-uyY" secondAttribute="top" constant="10" id="FgI-ZA-v4J"/>
                         <constraint firstItem="e40-vR-8Ad" firstAttribute="leading" secondItem="dFF-tJ-uyY" secondAttribute="leading" id="KCe-Cq-4xW"/>
@@ -104,8 +103,8 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V76-Uh-OCR">
-                    <rect key="frame" x="152.5" y="70" width="70" height="5"/>
-                    <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="152.5" y="50" width="70" height="5"/>
+                    <color key="backgroundColor" name="Light_BG"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="3yM-Sc-VH3"/>
                         <constraint firstAttribute="height" constant="5" id="JZD-R0-50T"/>
@@ -117,11 +116,11 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-4r-u4i">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="Black_BG"/>
             <constraints>
                 <constraint firstItem="dFF-tJ-uyY" firstAttribute="leading" secondItem="2BH-IF-QEU" secondAttribute="leading" id="2Wh-DV-xtq"/>
                 <constraint firstItem="dFF-tJ-uyY" firstAttribute="top" secondItem="kNv-4r-u4i" secondAttribute="bottom" id="Kt8-Se-1k2"/>
@@ -139,4 +138,15 @@
             <point key="canvasLocation" x="34.399999999999999" y="40.929535232383813"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="Black_BG">
+            <color red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Light_BG">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White_BG">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,24 +29,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vl-IF-tnU">
-                    <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search_bg" translatesAutoresizingMaskIntoConstraints="NO" id="r9z-ZE-GSu">
                             <rect key="frame" x="8" y="0.0" width="398" height="70"/>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search" translatesAutoresizingMaskIntoConstraints="NO" id="JPQ-CL-NEX">
-                            <rect key="frame" x="15" y="15.5" width="23" height="19"/>
+                            <rect key="frame" x="15" y="27" width="23" height="19"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="19" id="TBK-aV-06i"/>
                                 <constraint firstAttribute="width" constant="23" id="dCJ-C6-W6T"/>
                             </constraints>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Which city are you in?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jH-dx-h8s">
-                            <rect key="frame" x="46" y="10" width="319" height="30"/>
+                            <rect key="frame" x="46" y="21.5" width="319" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="XAN-ji-Vca"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -72,7 +70,7 @@
                     </variation>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dlq-fe-i6X">
-                    <rect key="frame" x="0.0" y="98" width="375" height="569"/>
+                    <rect key="frame" x="0.0" y="78" width="375" height="589"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <connections>
@@ -81,7 +79,7 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpd-4C-NVg">
-                    <rect key="frame" x="20" y="40" width="38" height="38"/>
+                    <rect key="frame" x="20" y="20" width="38" height="38"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="38" id="UGK-Sz-HNc"/>
                         <constraint firstAttribute="height" constant="38" id="wSO-c4-oCO"/>
@@ -92,13 +90,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Area" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6e-ht-lxf">
-                    <rect key="frame" x="78" y="43.5" width="141" height="31"/>
+                    <rect key="frame" x="78" y="24.5" width="128" height="29.5"/>
                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                     <color key="textColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="Light_BG"/>
             <constraints>
                 <constraint firstItem="cO9-8b-XN4" firstAttribute="trailing" secondItem="Dlq-fe-i6X" secondAttribute="trailing" id="1fo-se-tbw"/>
                 <constraint firstItem="Dlq-fe-i6X" firstAttribute="leading" secondItem="cO9-8b-XN4" secondAttribute="leading" id="4eT-an-H10"/>
@@ -119,11 +117,15 @@
                     <exclude reference="8Vl-IF-tnU"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="130" y="154"/>
         </view>
     </objects>
     <resources>
         <image name="Back" width="38" height="38"/>
         <image name="Search" width="20" height="20"/>
         <image name="Search_bg" width="16" height="16"/>
+        <namedColor name="Light_BG">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -6,6 +6,7 @@ import CoreData
 
 public enum CusinesAttributes: String {
     case entity_id = "entity_id"
+    case image = "image"
     case name = "name"
 }
 
@@ -41,6 +42,9 @@ open class _Cusines: NSManagedObject {
 
     @NSManaged open
     var entity_id: Int32 // Optional scalars not supported
+
+    @NSManaged open
+    var image: String?
 
     @NSManaged open
     var name: String?

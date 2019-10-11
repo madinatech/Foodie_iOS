@@ -18,6 +18,7 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.6.1)
   - ReachabilitySwift (4.3.0)
   - SegmentedProgressView (0.1.0)
+  - SkeletonView (1.8.2)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
@@ -34,9 +35,10 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - ReachabilitySwift
   - SegmentedProgressView
+  - SkeletonView
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - ActionSheetPicker-3.0
     - Alamofire
     - AlamofireNetworkActivityLogger
@@ -51,6 +53,8 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - ReachabilitySwift
     - SegmentedProgressView
+  trunk:
+    - SkeletonView
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
@@ -67,7 +71,8 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   SegmentedProgressView: e9e3c4037c5c871686932bcce479e0694f59053d
+  SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
 
-PODFILE CHECKSUM: eff7f124917fff14ef41e184f9ddda47a973b49a
+PODFILE CHECKSUM: 8af3575089aa0d4e638209f41194814d694df580
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.3

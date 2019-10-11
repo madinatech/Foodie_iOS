@@ -10,6 +10,8 @@ import UIKit
 
 class ViewOrderMoreCell: UITableViewCell {
 
+    @IBOutlet weak var lblTotal: UILabel!
+    @IBOutlet weak var btnAddDishes: UIButton!
     @IBOutlet weak var innerView: UIView!
     
     override func awakeFromNib() {

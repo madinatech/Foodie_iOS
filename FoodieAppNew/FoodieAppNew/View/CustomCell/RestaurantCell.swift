@@ -3,6 +3,7 @@
 import UIKit
 import AMShimmer
 import Kingfisher
+import SkeletonView
 
 class RestaurantCell: UITableViewCell {
     
@@ -33,33 +34,49 @@ class RestaurantCell: UITableViewCell {
     }
     func hideLoader ()  {
          timeView.backgroundColor = appBlackColor
-            AMShimmer.stop(for:  self.imgView)
-            AMShimmer.stop(for:  self.lblName)
-            AMShimmer.stop(for: self.lblCusines)
-            AMShimmer.stop(for:  self.lblRating)
-            AMShimmer.stop(for:  self.lblTime)
-            AMShimmer.stop(for:  self.lblAmount)
-            AMShimmer.stop(for:  self.imgBag)
-            AMShimmer.stop(for:  self.imgTable)
-            AMShimmer.stop(for:  self.timeView)
-            AMShimmer.stop(for:  self.imgScooter)
-            AMShimmer.stop(for:  self.imgStar)
+        lblClosedRest.isHidden = true
+//            AMShimmer.stop(for:  self.imgView)
+//            AMShimmer.stop(for:  self.lblName)
+//            AMShimmer.stop(for: self.lblCusines)
+//            AMShimmer.stop(for:  self.lblRating)
+//            AMShimmer.stop(for:  self.lblTime)
+//            AMShimmer.stop(for:  self.lblAmount)
+//            AMShimmer.stop(for:  self.imgBag)
+//            AMShimmer.stop(for:  self.imgTable)
+//            AMShimmer.stop(for:  self.timeView)
+//            AMShimmer.stop(for:  self.imgScooter)
+//            AMShimmer.stop(for:  self.imgStar)
         
     }
     
     func showLoader ()  {
+      
+         lblClosedRest.isHidden = true
         timeView.backgroundColor = .clear
-        AMShimmer.start(for: imgView)
-        AMShimmer.start(for: lblName)
-        AMShimmer.start(for: lblCusines)
-        AMShimmer.start(for: lblRating)
-        AMShimmer.start(for: lblTime)
-        AMShimmer.start(for: lblAmount)
-        AMShimmer.start(for: imgBag)
-        AMShimmer.start(for: imgTable)
-        AMShimmer.start(for: timeView)
-        AMShimmer.start(for: imgScooter)
-        AMShimmer.start(for: imgStar)
+        imgView.showAnimatedGradientSkeleton()
+        lblName.showAnimatedGradientSkeleton()
+        lblCusines.showAnimatedGradientSkeleton()
+        lblRating.showAnimatedGradientSkeleton()
+        lblTime.showAnimatedGradientSkeleton()
+        lblAmount.showAnimatedGradientSkeleton()
+        imgBag.showAnimatedGradientSkeleton()
+        imgTable.showAnimatedGradientSkeleton()
+        timeView.showAnimatedGradientSkeleton()
+        imgScooter.showAnimatedGradientSkeleton()
+        imgStar.showAnimatedGradientSkeleton()
+        
+        
+//        AMShimmer.start(for: imgView)
+//        AMShimmer.start(for: lblName)
+//        AMShimmer.start(for: lblCusines)
+//        AMShimmer.start(for: lblRating)
+//        AMShimmer.start(for: lblTime)
+//        AMShimmer.start(for: lblAmount)
+//        AMShimmer.start(for: imgBag)
+//        AMShimmer.start(for: imgTable)
+//        AMShimmer.start(for: timeView)
+//        AMShimmer.start(for: imgScooter)
+//        AMShimmer.start(for: imgStar)
     }
     
     func showData(restaurant: Restaurant, offerIndex : Int)  {
@@ -80,12 +97,14 @@ class RestaurantCell: UITableViewCell {
         lblCusines.text = joined
         let url = URL(string: restaurant.images?.display ?? "")
 //        imgView.kf.indicatorType = .none
-         AMShimmer.start(for: imgView)
+        imgView.showAnimatedGradientSkeleton()
+//         AMShimmer.start(for: imgView)
         imgView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: { (size1, size2) in
             
         }, completionHandler: { (image, error, cache, url) in
             if image != nil{
-                  AMShimmer.stop(for:  self.imgView)
+                self.imgView.hideSkeleton()
+//                  AMShimmer.stop(for:  self.imgView)
                 self.imgView.image = image
                 if(restaurant.is_closed == true){
                     Utils.grayScaleEffect(originalImage: self.imgView)
@@ -103,7 +122,7 @@ class RestaurantCell: UITableViewCell {
             let openingTimes  : [OpeningTimes] = restaurant.opening_times.allObjects as! [OpeningTimes]
             for openTime in openingTimes{
                 if(DateUtils.getNextDayOfTodayWeekDay() == openTime.day){
-                    lblClosedRest.text = "Closed - Opens next at \(DateUtils.getStringFormat(str: openTime.opening_time ?? "")) tomorrow"
+                    lblClosedRest.text = "Now closed, next opens at \(DateUtils.getStringFormat(str: openTime.opening_time ?? ""))"
                 }
             }
         }

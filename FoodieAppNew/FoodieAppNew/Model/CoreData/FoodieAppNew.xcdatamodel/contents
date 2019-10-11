@@ -1,194 +1,198 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18G103" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="19A583" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Address" representedClassName="Address" syncable="YES">
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="address_type" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="area_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="country" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="floor" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="house_number" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="is_default" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="is_selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="landmark" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="town" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="user_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="address_type" optional="YES" attributeType="String"/>
+        <attribute name="area_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="floor" optional="YES" attributeType="String"/>
+        <attribute name="house_number" optional="YES" attributeType="String"/>
+        <attribute name="is_default" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="is_selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="landmark" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="street" optional="YES" attributeType="String"/>
+        <attribute name="town" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="user_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="AppExpires" representedClassName="AppExpires" syncable="YES">
-        <attribute name="expires" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="update_url" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="warning" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="expires" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="update_url" optional="YES" attributeType="String"/>
+        <attribute name="version" optional="YES" attributeType="String"/>
+        <attribute name="warning" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="Area" representedClassName="Area" syncable="YES">
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="is_selected" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="is_selected" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Cart" representedClassName="Cart" syncable="YES">
-        <attribute name="cart_Quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="restaurant_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="restaurant_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="total_amount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="total_items" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="cart_item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LocalCart" syncable="YES"/>
+        <attribute name="cart_Quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="deliveryTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="restaurant_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="restaurant_name" optional="YES" attributeType="String"/>
+        <attribute name="total_amount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total_items" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="cart_item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LocalCart"/>
     </entity>
     <entity name="City" representedClassName="City" syncable="YES">
-        <attribute name="city_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="city_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="is_selected" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="areas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Area" syncable="YES"/>
+        <attribute name="city_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="city_name" optional="YES" attributeType="String"/>
+        <attribute name="is_selected" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <relationship name="areas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Area"/>
     </entity>
     <entity name="Country" representedClassName="Country" syncable="YES">
-        <attribute name="country_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="country_name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="cities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City" syncable="YES"/>
+        <attribute name="country_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="country_name" optional="YES" attributeType="String"/>
+        <relationship name="cities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City"/>
     </entity>
     <entity name="Cusines" representedClassName="Cusines" syncable="YES">
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="CustomizationGroup" representedClassName="CustomizationGroup" syncable="YES">
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="group_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="group_type" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="group_type_code" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="select_max" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="group_values" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GroupValues" syncable="YES"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="group_name" optional="YES" attributeType="String"/>
+        <attribute name="group_type" optional="YES" attributeType="String"/>
+        <attribute name="group_type_code" optional="YES" attributeType="String"/>
+        <attribute name="select_max" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="group_values" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GroupValues"/>
     </entity>
     <entity name="DeliveryOption" representedClassName="DeliveryOption" syncable="YES">
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="method" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="rate" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="img" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <attribute name="method" optional="YES" attributeType="String"/>
+        <attribute name="rate" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Favourite" representedClassName="Favourite" syncable="YES">
-        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="favourite_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="restaurant" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Restaurant" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="favourite_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="restaurant" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Restaurant"/>
     </entity>
     <entity name="GroupValues" representedClassName="GroupValues" syncable="YES">
-        <attribute name="item_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="item_price" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="item_name" optional="YES" attributeType="String"/>
+        <attribute name="item_price" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Images" representedClassName="Images" syncable="YES">
-        <attribute name="banner" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="display" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="banner" optional="YES" attributeType="String"/>
+        <attribute name="display" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Items" representedClassName="Items" syncable="YES">
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="item_type" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="item_type_code" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="max_quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="customization_groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CustomizationGroup" syncable="YES"/>
-        <relationship name="price" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Price" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="item_type" optional="YES" attributeType="String"/>
+        <attribute name="item_type_code" optional="YES" attributeType="String"/>
+        <attribute name="max_quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="customization_groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CustomizationGroup"/>
+        <relationship name="price" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Price"/>
     </entity>
     <entity name="LocalCart" representedClassName="LocalCart" syncable="YES">
-        <attribute name="added_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="item_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="item_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="item_price" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="item_quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="restaurant_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="added_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="item_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="item_name" optional="YES" attributeType="String"/>
+        <attribute name="item_price" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="item_quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="restaurant_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Location" representedClassName="Location" syncable="YES">
-        <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lng" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address1" optional="YES" attributeType="String"/>
+        <attribute name="address2" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="lat" optional="YES" attributeType="String"/>
+        <attribute name="lng" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Menu" representedClassName="Menu" syncable="YES">
-        <attribute name="end_time" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="start_time" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Items" syncable="YES"/>
+        <attribute name="end_time" optional="YES" attributeType="String"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="start_time" optional="YES" attributeType="String"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Items"/>
     </entity>
     <entity name="Offerings" representedClassName="Offerings" syncable="YES">
-        <attribute name="collection" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="delivery" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="dine_in" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="collection" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="delivery" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="dine_in" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
     <entity name="OpeningTimes" representedClassName="OpeningTimes" syncable="YES">
-        <attribute name="closing_time" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="open_status" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="opening_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="closing_time" optional="YES" attributeType="String"/>
+        <attribute name="day" optional="YES" attributeType="String"/>
+        <attribute name="open_status" optional="YES" attributeType="String"/>
+        <attribute name="opening_time" optional="YES" attributeType="String"/>
     </entity>
     <entity name="PaymentOption" representedClassName="PaymentOption" syncable="YES">
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="method" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="img" optional="YES" attributeType="String"/>
+        <attribute name="method" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Price" representedClassName="Price" syncable="YES">
-        <attribute name="price" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="valid_from" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="valid_to" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="valid_from" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="valid_to" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="RecentSearch" representedClassName="RecentSearch" syncable="YES">
-        <attribute name="added_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="added_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Restaurant" representedClassName="Restaurant" syncable="YES">
-        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="average_rating" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="cost_for_two" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="delivery_time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="is_closed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="preparation_time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="service_area" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="cuisines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cusines" syncable="YES"/>
-        <relationship name="images" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Images" syncable="YES"/>
-        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
-        <relationship name="menus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Menu" syncable="YES"/>
-        <relationship name="offerings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Offerings" syncable="YES"/>
-        <relationship name="opening_times" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OpeningTimes" syncable="YES"/>
+        <attribute name="area" optional="YES" attributeType="String"/>
+        <attribute name="average_rating" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cost_for_two" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="delivery_time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="is_closed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="preparation_time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="service_area" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="cuisines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cusines"/>
+        <relationship name="images" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Images"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location"/>
+        <relationship name="menus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Menu"/>
+        <relationship name="offerings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Offerings"/>
+        <relationship name="opening_times" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OpeningTimes"/>
     </entity>
     <entity name="UserData" representedClassName="UserData" syncable="YES">
-        <relationship name="address" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Address" syncable="YES"/>
-        <relationship name="delivery_options" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DeliveryOption" syncable="YES"/>
-        <relationship name="payment_options" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PaymentOption" syncable="YES"/>
+        <relationship name="address" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Address"/>
+        <relationship name="delivery_options" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DeliveryOption"/>
+        <relationship name="payment_options" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PaymentOption"/>
     </entity>
     <entity name="VerifyUser" representedClassName="VerifyUser" syncable="YES">
-        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="app_expires" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AppExpires" syncable="YES"/>
-        <relationship name="userData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserData" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <relationship name="app_expires" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AppExpires"/>
+        <relationship name="userData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserData"/>
     </entity>
     <elements>
         <element name="Address" positionX="18" positionY="162" width="128" height="330"/>
         <element name="AppExpires" positionX="-54" positionY="18" width="128" height="105"/>
         <element name="Area" positionX="9" positionY="153" width="128" height="90"/>
+        <element name="Cart" positionX="0" positionY="144" width="128" height="148"/>
         <element name="City" positionX="0" positionY="144" width="128" height="105"/>
         <element name="Country" positionX="-9" positionY="135" width="128" height="90"/>
-        <element name="Cusines" positionX="18" positionY="162" width="128" height="75"/>
+        <element name="Cusines" positionX="18" positionY="162" width="128" height="88"/>
         <element name="CustomizationGroup" positionX="-9" positionY="135" width="128" height="135"/>
         <element name="DeliveryOption" positionX="0" positionY="81" width="128" height="150"/>
         <element name="Favourite" positionX="27" positionY="171" width="128" height="90"/>
         <element name="GroupValues" positionX="9" positionY="153" width="128" height="75"/>
         <element name="Images" positionX="-18" positionY="126" width="128" height="75"/>
         <element name="Items" positionX="-9" positionY="117" width="128" height="165"/>
+        <element name="LocalCart" positionX="-9" positionY="135" width="128" height="135"/>
         <element name="Location" positionX="0" positionY="144" width="128" height="135"/>
         <element name="Menu" positionX="36" positionY="171" width="128" height="120"/>
         <element name="Offerings" positionX="9" positionY="153" width="128" height="90"/>
@@ -199,7 +203,5 @@
         <element name="Restaurant" positionX="-27" positionY="81" width="128" height="315"/>
         <element name="UserData" positionX="-27" positionY="72" width="128" height="90"/>
         <element name="VerifyUser" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="LocalCart" positionX="-9" positionY="135" width="128" height="135"/>
-        <element name="Cart" positionX="0" positionY="144" width="128" height="135"/>
     </elements>
 </model>

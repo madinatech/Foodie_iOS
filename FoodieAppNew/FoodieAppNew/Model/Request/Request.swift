@@ -256,7 +256,8 @@ class Request: NSObject {
             if responseObject.result.isFailure {
                 let jsonData = try! JSONSerialization.data(withJSONObject: self.postParameters, options: .prettyPrinted)
                 let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)! as String
-                Utils.sendSMTPMail(strUrl:strURL, request: jsonString, response: responseObject.result.description)
+                let res : String = "Status code : \(responseObject.response?.statusCode ?? 0), URL : \(String(describing: responseObject.response?.url))"
+                Utils.sendSMTPMail(strUrl:strURL, request: jsonString, response: res)
                 let error : Error = responseObject.result.error!
                 failure(error)
             }
@@ -283,7 +284,8 @@ class Request: NSObject {
                 if responseObject.result.isFailure {
                     let jsonData = try! JSONSerialization.data(withJSONObject: self.postParameters, options: .prettyPrinted)
                     let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)! as String
-                    Utils.sendSMTPMail(strUrl:strURL, request: jsonString, response: responseObject.result.description)
+                    let res : String = "Status code : \(responseObject.response?.statusCode ?? 0), URL : \(String(describing: responseObject.response?.url))"
+                    Utils.sendSMTPMail(strUrl:strURL, request: jsonString, response: res)
                     let error : Error = responseObject.result.error!
                     failure(error)
                 }

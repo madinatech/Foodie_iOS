@@ -1,0 +1,15 @@
+${PODS_ROOT}/Target Support Files/Pods-FoodieAppNew/Pods-FoodieAppNew-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AMShimmer/AMShimmer.framework
+${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework
+${BUILT_PRODUCTS_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework
+${BUILT_PRODUCTS_DIR}/FastEasyMapping/FastEasyMapping.framework
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/LinearProgressBar/LinearProgressBar.framework
+${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework
+${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
+${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework
+${BUILT_PRODUCTS_DIR}/SegmentedProgressView/SegmentedProgressView.framework
+${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework

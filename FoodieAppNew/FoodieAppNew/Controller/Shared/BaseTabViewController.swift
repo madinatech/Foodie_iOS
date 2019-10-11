@@ -3,7 +3,6 @@ import UIKit
 import CBFlashyTabBarController
 
 class BaseTabViewController: CBFlashyTabBarController, UITabBarControllerDelegate  {
-    
     class func initViewController() -> BaseTabViewController {
         let controller = BaseTabViewController.init(nibName: "BaseTabViewController", bundle: nil)
         return controller
@@ -14,13 +13,24 @@ class BaseTabViewController: CBFlashyTabBarController, UITabBarControllerDelegat
         setViews()
     }
     
-    
-    
+//  override func viewWillLayoutSubviews() {
+//           var tabFrame = self.tabBar.frame
+//           var aHeight : CGFloat = 100
+//           
+//           if UIDevice.isIphoneX {
+//               aHeight = 100
+//           }
+//           
+//           tabFrame.size.height = aHeight
+//           tabFrame.origin.y = self.view.frame.size.height + aHeight
+//           self.tabBar.frame = tabFrame
+//    
+//    }
     @objc func setViews() {
         
         self.tabBar.tintColor = appThemeColor
         self.tabBar.unselectedItemTintColor = UIColor.black
-        self.tabBar.barTintColor = UIColor.white
+        self.tabBar.barTintColor = appLigtGrayColor//UIColor.white
         UITabBar.appearance().isTranslucent = true
         //         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Calibri", size: 14) ?? ""], for: .normal)
         

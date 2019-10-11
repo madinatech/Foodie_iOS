@@ -6,6 +6,7 @@ import CoreData
 
 public enum CartAttributes: String {
     case cart_Quantity = "cart_Quantity"
+    case deliveryTime = "deliveryTime"
     case restaurant_id = "restaurant_id"
     case restaurant_name = "restaurant_name"
     case total_amount = "total_amount"
@@ -48,6 +49,9 @@ open class _Cart: NSManagedObject {
 
     @NSManaged open
     var cart_Quantity: Int32 // Optional scalars not supported
+
+    @NSManaged open
+    var deliveryTime: Int32 // Optional scalars not supported
 
     @NSManaged open
     var restaurant_id: Int32 // Optional scalars not supported

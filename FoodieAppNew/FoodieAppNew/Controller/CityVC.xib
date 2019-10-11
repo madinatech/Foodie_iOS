@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,7 +47,6 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="UcC-x6-jg2"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -73,7 +71,7 @@
                     </variation>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JgM-Kq-z1k">
-                    <rect key="frame" x="0.0" y="91" width="375" height="576"/>
+                    <rect key="frame" x="0.0" y="69.5" width="375" height="597.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <connections>
@@ -82,13 +80,13 @@
                     </connections>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select city" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJH-y1-GQb">
-                    <rect key="frame" x="20" y="40" width="128" height="31"/>
+                    <rect key="frame" x="20" y="20" width="116.5" height="29.5"/>
                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                     <color key="textColor" red="0.85098039219999999" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="Light_BG"/>
             <constraints>
                 <constraint firstItem="JgM-Kq-z1k" firstAttribute="top" secondItem="omZ-A2-ja5" secondAttribute="bottom" constant="5" id="JaX-tW-kVe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JgM-Kq-z1k" secondAttribute="bottom" id="JpR-70-wrx"/>
@@ -107,10 +105,14 @@
                     <exclude reference="omZ-A2-ja5"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="132" y="154"/>
         </view>
     </objects>
     <resources>
         <image name="Search" width="20" height="20"/>
         <image name="Search_bg" width="16" height="16"/>
+        <namedColor name="Light_BG">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

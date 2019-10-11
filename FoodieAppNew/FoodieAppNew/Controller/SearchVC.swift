@@ -109,9 +109,9 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tblView.frame.width, height: 50))
-        headerView.backgroundColor = UIColor.white
+        headerView.backgroundColor = UIColor.init(named: "White_BG")
         let lblTitle = UILabel.init(frame: CGRect.init(x: 15, y: 0, width: tblView.frame.width - 10, height: 50))
-        lblTitle.font = UIFont.init(name: "Calibri-Bold", size: 18)
+        lblTitle.font = UIFont.init(name: "Montserrat-Bold", size: 18)
         
         if(section == 0){
             lblTitle.text = "Recent Searches"
@@ -146,7 +146,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
         if(isSearch == true){
             var cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as? RestaurantCell
             if cell == nil {
-                var nib = Bundle.main.loadNibNamed("RestaurantCell", owner: self, options: nil)
+                let nib = Bundle.main.loadNibNamed("RestaurantCell", owner: self, options: nil)
                 cell = nib?[0] as? RestaurantCell
             }
             cell?.selectionStyle = .none
@@ -157,7 +157,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
             if(indexPath.section == 0){
                 var cell = tableView.dequeueReusableCell(withIdentifier: "RecentSearchCell") as? RecentSearchCell
                 if cell == nil {
-                    var nib = Bundle.main.loadNibNamed("RecentSearchCell", owner: self, options: nil)
+                    let nib = Bundle.main.loadNibNamed("RecentSearchCell", owner: self, options: nil)
                     cell = nib?[0] as? RecentSearchCell
                 }
                 cell?.selectionStyle = .none
@@ -167,7 +167,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
             }
             var cell = tableView.dequeueReusableCell(withIdentifier: "SearchCategoryCell") as? SearchCategoryCell
             if cell == nil {
-                var nib = Bundle.main.loadNibNamed("SearchCategoryCell", owner: self, options: nil)
+                let nib = Bundle.main.loadNibNamed("SearchCategoryCell", owner: self, options: nil)
                 cell = nib?[0] as? SearchCategoryCell
             }
             cell?.selectionStyle = .none
@@ -208,7 +208,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
             
             innerView.backgroundColor = appLigtGrayColor
-            self.view.backgroundColor = .white
+            self.view.backgroundColor = UIColor.init(named: "White_BG")
             filterViewHeight.constant = 40
             filterView.isHidden = false
             isSearch = true
@@ -221,7 +221,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource , S
             searchView.backgroundColor = UIColor.init(red: 181.0/255.0, green: 12.0/255.0, blue: 32.0/255.0, alpha: 1.0)
             txtSearch.attributedPlaceholder = NSAttributedString(string: "Search for a dish or restaurant",
                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-            innerView.backgroundColor = .white
+            innerView.backgroundColor = UIColor.init(named: "White_BG")
             self.view.backgroundColor = appThemeColor
             filterViewHeight.constant = 0
             filterView.isHidden = true

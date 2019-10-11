@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B006F569D7F1919569E2525BA92478E"
+               BlueprintIdentifier = "54C57F7F7FECB59C7FC4368C602667B3"
                BuildableName = "mailcore2-ios"
                BlueprintName = "mailcore2-ios"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -90,6 +90,7 @@ class UserProfileVc: UIViewController , UITableViewDataSource, UITableViewDelega
         if(indexPath.section == 0 && indexPath.row == 0){
             let vc = DeliveryAddressVC.initViewController(selectedAddress: Address.mr_createEntity()!)
             let nav = UINavigationController.init(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
         } else if(indexPath.section == 0 && indexPath.row == 1){
             let vc = MyFavouritesVC.initViewController()

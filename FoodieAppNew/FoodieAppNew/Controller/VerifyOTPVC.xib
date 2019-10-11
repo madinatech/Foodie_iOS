@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,13 +57,13 @@
                                     <rect key="frame" x="0.0" y="269" width="414" height="627"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Verify your login " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWe-sO-Lxq">
-                                            <rect key="frame" x="20" y="40" width="248.5" height="36"/>
+                                            <rect key="frame" x="20" y="40" width="222" height="35"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-3g-sd9">
-                                            <rect key="frame" x="35" y="344" width="344" height="50"/>
+                                            <rect key="frame" x="35" y="314" width="344" height="50"/>
                                             <color key="backgroundColor" red="0.31764705879999999" green="0.24313725489999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="tdw-Te-Y4d">
@@ -87,7 +86,7 @@
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qJs-ao-0Ur">
-                                            <rect key="frame" x="20" y="252" width="374" height="43"/>
+                                            <rect key="frame" x="20" y="222" width="374" height="43"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDn-BX-YJ0" customClass="CommonTextfield" customModule="FoodieAppNew" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="82.5" height="43"/>
@@ -170,13 +169,13 @@
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="We have sent a verification code on your mobile number/ email address. Enter the OTP to authenticate login." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dva-ZX-ry6">
-                                            <rect key="frame" x="20" y="96" width="374" height="106"/>
+                                            <rect key="frame" x="20" y="95" width="374" height="77"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" name="White_BG"/>
                                     <constraints>
                                         <constraint firstItem="OWe-sO-Lxq" firstAttribute="leading" secondItem="mp3-vx-7HY" secondAttribute="leading" constant="20" id="85s-Gi-0w2"/>
                                         <constraint firstItem="qJs-ao-0Ur" firstAttribute="top" secondItem="dva-ZX-ry6" secondAttribute="bottom" constant="50" id="GBy-a8-dwQ"/>
@@ -192,7 +191,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="White_BG"/>
                             <constraints>
                                 <constraint firstItem="EQx-tu-xXs" firstAttribute="leading" secondItem="dyX-s3-dBy" secondAttribute="leading" constant="20" id="0VC-kK-rhv"/>
                                 <constraint firstItem="EQx-tu-xXs" firstAttribute="top" secondItem="dyX-s3-dBy" secondAttribute="top" constant="70" id="BKL-RA-pGL"/>
@@ -218,7 +217,7 @@
                     </connections>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="White_BG"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Jqz-BO-bsM" secondAttribute="bottom" id="Cc3-G8-jHO"/>
                 <constraint firstItem="dyX-s3-dBy" firstAttribute="width" secondItem="EQU-pG-vI9" secondAttribute="width" id="R7h-lF-cuB"/>
@@ -234,5 +233,8 @@
     <resources>
         <image name="Back" width="38" height="38"/>
         <image name="Cover111" width="1125" height="900"/>
+        <namedColor name="White_BG">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
