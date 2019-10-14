@@ -19,6 +19,7 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
     @IBOutlet weak var lblOpen: UILabel!
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var imgScooter: UIImageView!
+    @IBOutlet weak var btnFav: UIButton!
     
     var delegate :  ResDetailHeaderDelegate? = nil
     var rest = Restaurant()
@@ -64,6 +65,12 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
             lblTime.text = "\(rest.delivery_time) min"
         }
 
+        if(rest.isFavorite == true){
+            btnFav.isSelected = true
+        } else {
+            btnFav.isSelected = false
+        }
+        
         lblTime.text = "\(rest.delivery_time) min"
         let url = URL(string: rest.images?.banner ?? "")
 //        imgView.kf.indicatorType = .activity
@@ -126,9 +133,11 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
     @IBAction func favouriteClicked(_ sender: UIButton) {
         if(sender.isSelected == true){
             sender.isSelected = false
+            rest.isFavorite = false
 //            removeFavourite()
         } else {
             sender.isSelected = true
+            rest.isFavorite = true
             addFavourite()
         }
         

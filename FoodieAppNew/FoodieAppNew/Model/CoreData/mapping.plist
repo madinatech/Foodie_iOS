@@ -181,6 +181,8 @@
 	<dict>
 		<key>preparation_time</key>
 		<string>preparation_time</string>
+		<key>isFavorite</key>
+		<string>isFavorite</string>
 		<key>service_area</key>
 		<string>service_area</string>
 		<key>status</key>

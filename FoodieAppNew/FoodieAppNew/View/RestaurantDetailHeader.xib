@@ -239,6 +239,7 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="btnFav" destination="W7y-AW-4o2" id="Pvi-vi-5Hs"/>
                 <outlet property="collectionView" destination="F3B-wm-VfI" id="rI7-ON-6Mw"/>
                 <outlet property="contaainerView" destination="ehP-UW-apq" id="5V6-U6-x4R"/>
                 <outlet property="imgScooter" destination="zFB-rK-Id0" id="9w7-rd-aIz"/>
