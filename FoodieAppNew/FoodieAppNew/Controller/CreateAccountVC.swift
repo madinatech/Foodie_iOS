@@ -8,7 +8,7 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
     @IBOutlet weak var txt2: CommonTextfield!
     @IBOutlet weak var txt3: CommonTextfield!
     @IBOutlet weak var txt4: CommonTextfield!
-      @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var txtName: CommonTextfield!
     @IBOutlet weak var txtEmail: CommonTextfield!
     
@@ -21,7 +21,7 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         innerView.layer.cornerRadius = 20
         innerView.clipsToBounds = true
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -30,7 +30,7 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         txt1.becomeFirstResponder()
+        txt1.becomeFirstResponder()
         scrollView.setContentOffset(CGPoint.init(x: 0, y: 25), animated: true)
     }
     
@@ -39,7 +39,7 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
         scrollView.setContentOffset(CGPoint.init(x: 0, y: 220), animated: true)
     }
     
-
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         scrollView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: true)
     }
@@ -54,8 +54,8 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
         let str2 = txt2.text!.trimmingCharacters(in: .whitespaces)
         let str3 = txt3.text!.trimmingCharacters(in: .whitespaces)
         let str4 = txt4.text!.trimmingCharacters(in: .whitespaces)
-          let strName = txtName.text!.trimmingCharacters(in: .whitespaces)
-          let strEmail = txtEmail.text!.trimmingCharacters(in: .whitespaces)
+        let strName = txtName.text!.trimmingCharacters(in: .whitespaces)
+        let strEmail = txtEmail.text!.trimmingCharacters(in: .whitespaces)
         
         if(str1.count <= 0 || str2.count <= 0 || str3.count <= 0 || str4.count <= 0){
             strMessage = "Please enter OTP"
@@ -74,9 +74,13 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
         verifyOtpApiCall()
     }
     func verifyOtpApiCall()  {
-        let code : String = txt1.text ?? "" + txt2.text! + txt3.text!
+        let str1 = txt1.text!.trimmingCharacters(in: .whitespaces)
+        let str2 = txt2.text!.trimmingCharacters(in: .whitespaces)
+        let str3 = txt3.text!.trimmingCharacters(in: .whitespaces)
+        let str4 = txt4.text!.trimmingCharacters(in: .whitespaces)
+        let code : String = str1 + str2 + str3
         self.startAnimating()
-        Manager.sharedManager().verifyNewUser(mobileNumber: "0\(account.mobileNumber.dropFirst(3))", code: code + txt4.text!, name: txtName.text ?? "", email: txtEmail.text ?? "") { (response, errorMessage) -> (Void) in
+        Manager.sharedManager().verifyNewUser(mobileNumber: "0\(account.mobileNumber.dropFirst(3))", code: code + str4, name: txtName.text ?? "", email: txtEmail.text ?? "") { (response, errorMessage) -> (Void) in
             self.stopAnimating()
             if(errorMessage.count > 0){
                 if(errorMessage.contains("Internet")){
@@ -111,14 +115,14 @@ class CreateAccountVC: UIViewController, UIScrollViewDelegate, NVActivityIndicat
             case txt3:
                 txt4.becomeFirstResponder()
             case txt4:
-//                txt4.becomeFirstResponder()
-                 view.endEditing(true)
+                //                txt4.becomeFirstResponder()
+                view.endEditing(true)
             default:
                 break
             }
         }
     }
-  
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""
     }
