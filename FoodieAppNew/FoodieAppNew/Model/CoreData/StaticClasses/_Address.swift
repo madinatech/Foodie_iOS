@@ -8,8 +8,6 @@ public enum AddressAttributes: String {
     case address = "address"
     case address_type = "address_type"
     case area_id = "area_id"
-    case city = "city"
-    case country = "country"
     case created_at = "created_at"
     case entity_id = "entity_id"
     case floor = "floor"
@@ -24,6 +22,12 @@ public enum AddressAttributes: String {
     case town = "town"
     case updated_at = "updated_at"
     case user_id = "user_id"
+}
+
+public enum AddressRelationships: String {
+    case area = "area"
+    case city = "city"
+    case country = "country"
 }
 
 open class _Address: NSManagedObject {
@@ -63,13 +67,7 @@ open class _Address: NSManagedObject {
     var address_type: String?
 
     @NSManaged open
-    var area_id: Int32 // Optional scalars not supported
-
-    @NSManaged open
-    var city: String?
-
-    @NSManaged open
-    var country: Int32 // Optional scalars not supported
+    var area_id: String?
 
     @NSManaged open
     var created_at: Date?
@@ -114,6 +112,15 @@ open class _Address: NSManagedObject {
     var user_id: Int32 // Optional scalars not supported
 
     // MARK: - Relationships
+
+    @NSManaged open
+    var area: Area?
+
+    @NSManaged open
+    var city: City?
+
+    @NSManaged open
+    var country: Country?
 
 }
 

@@ -124,7 +124,7 @@ class Manager: NSObject {
         request.startRequest()
     }
     
-    func addNewAddress(address: String, addressType: String, city: String, town: String, street: String, landmark : String, isDefault: Int, block : @escaping ItemLoadedBlock) {
+    func addNewAddress(address: String, addressType: String, city: String, town: String, street: String, landmark : String, isDefault: Int, areId: Int, block : @escaping ItemLoadedBlock) {
         itemLoadedBlock = block
         let request = Request.init(url: "\(kBaseUrl)\(kAddAddress)", method: RequestMethod(rawValue: "POST")!) { (success:Bool, request:Request, errorMessage:NSString) -> (Void) in
             if(request.isSuccess){
@@ -149,6 +149,8 @@ class Manager: NSObject {
         request.setParameter(street, forKey: "street")
         request.setParameter(landmark, forKey: "landmark")
         request.setParameter(isDefault, forKey: "is_default")
+        request.setParameter(areId, forKey: "area_id")
+        
         request.startRequest()
     }
     

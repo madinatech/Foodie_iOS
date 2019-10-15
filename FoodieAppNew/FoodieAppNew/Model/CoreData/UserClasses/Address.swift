@@ -9,14 +9,13 @@ open class Address: _Address {
     
     class func defaultMapping() -> FEMMapping {
         let mapping = FEMMapping(entityName: Address.entityName())
-        var dict: [String: String] = CDHelper.mapping(cls: Address.self) as! [String : String]
-        dict.removeValue(forKey: "created_at")
-        dict.removeValue(forKey: "updated_at")
+        let dict: [String: String] = CDHelper.mapping(cls: Address.self) as! [String : String]
         
         mapping.addAttributes(from: dict)
         
-        mapping.addAttribute(Address.dateTimeAttribute(for: "created_at", andKeyPath: "created_at"))
-        mapping.addAttribute(Address.dateTimeAttribute(for: "updated_at", andKeyPath: "updated_at"))
+        mapping.addRelationshipMapping(Area.defaultMapping(), forProperty: "area", keyPath: "area")
+        mapping.addRelationshipMapping(City.defaultMapping(), forProperty: "city", keyPath: "city")
+        mapping.addRelationshipMapping(Country.defaultMapping(), forProperty: "country", keyPath: "country")
         mapping.primaryKey = "entity_id"
         return mapping
     }

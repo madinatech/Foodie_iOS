@@ -16,6 +16,7 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable, InternetDe
     var selectdCity = City()
     var isCitySelectd = Bool()
     var isDefault = Int()
+    var selectdArea = Area()
     
     class func initViewController() -> AddNewAddressVC {
         let vc = AddNewAddressVC.init(nibName: "AddNewAddressVC", bundle: nil)
@@ -87,7 +88,7 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable, InternetDe
          let strArea = txtArea.text!.trimmingCharacters(in: .whitespaces)
         let address : String = strLine1 + strLine2
         self.startAnimating()
-        Manager.sharedManager().addNewAddress(address: address + strArea, addressType:txtTitle.text ?? "", city: txtCity.text ?? "", town: txtArea.text ?? "", street: txtLine1.text ?? "", landmark: txtLine2.text ?? "", isDefault: isDefault) { (response, errorMessage) -> (Void) in
+        Manager.sharedManager().addNewAddress(address: address + strArea, addressType:txtTitle.text ?? "", city: txtCity.text ?? "", town: txtArea.text ?? "", street: txtLine1.text ?? "", landmark: txtLine2.text ?? "", isDefault: isDefault, areId: Int(selectdArea.entity_id)) { (response, errorMessage) -> (Void) in
             self.stopAnimating()
             if(errorMessage.count > 0){
                 if(errorMessage.contains("Internet")){
@@ -118,6 +119,7 @@ class AddNewAddressVC: UIViewController, NVActivityIndicatorViewable, InternetDe
             ActionSheetStringPicker.show(withTitle: "Select Area", rows: areaNameArray, initialSelection: 0
                 , doneBlock: { (picker, index, value) in
                     self.txtArea.text = areaNameArray[index]
+                    self.selectdArea = Area.getAreaByName(name: self.txtArea.text ?? "")
             }, cancel: { (picker) in
                 
             }, origin: sender)
