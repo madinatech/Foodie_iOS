@@ -79,7 +79,7 @@ class DeliveryAddressVC: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "ManageAddressCell") as? ManageAddressCell
         if cell == nil {
-            var nib = Bundle.main.loadNibNamed("ManageAddressCell", owner: self, options: nil)
+            let nib = Bundle.main.loadNibNamed("ManageAddressCell", owner: self, options: nil)
             cell = nib?[0] as? ManageAddressCell
         }
         cell?.selectionStyle = .none

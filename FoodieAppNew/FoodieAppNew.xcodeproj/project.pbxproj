@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -177,7 +177,6 @@
 		34C01CB82334AA780057DEF4 /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C7D2334AA780057DEF4 /* CDHelper.swift */; };
 		34C01CB92334AA780057DEF4 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C7F2334AA780057DEF4 /* Manager.swift */; };
 		34C01CBA2334AA780057DEF4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01C812334AA780057DEF4 /* Request.swift */; };
-		34C01CBC2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CBB2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel */; };
 		34C01CEC2334AB2C0057DEF4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CBD2334AB2B0057DEF4 /* SwiftyJSON.swift */; };
 		34C01CED2334AB2C0057DEF4 /* URLSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CBE2334AB2B0057DEF4 /* URLSchema.swift */; };
 		34C01CEE2334AB2C0057DEF4 /* NSManagedObject+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CC22334AB2B0057DEF4 /* NSManagedObject+Mapping.m */; };
@@ -198,7 +197,6 @@
 		34C01CFD2334AB2C0057DEF4 /* NSDate+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CE42334AB2B0057DEF4 /* NSDate+Time.m */; };
 		34C01CFE2334AB2C0057DEF4 /* NSDate+Extentsion.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CE72334AB2B0057DEF4 /* NSDate+Extentsion.m */; };
 		34C01CFF2334AB2C0057DEF4 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CE82334AB2B0057DEF4 /* NSDate+TimeAgo.m */; };
-		34C01D002334AB2C0057DEF4 /* MD5Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CEA2334AB2B0057DEF4 /* MD5Digest.swift */; };
 		34C01D012334AB2C0057DEF4 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01CEB2334AB2B0057DEF4 /* DateUtils.swift */; };
 		34C01D0C2334D3570057DEF4 /* _PaymentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D072334D3570057DEF4 /* _PaymentOption.swift */; };
 		34C01D0D2334D3570057DEF4 /* _UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C01D082334D3570057DEF4 /* _UserData.swift */; };
@@ -226,6 +224,7 @@
 		34CAC0E72333A44400BFBAB4 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34CAC0E52333A44400BFBAB4 /* LoginVC.xib */; };
 		34CAC0EA2333AF6A00BFBAB4 /* VerifyOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */; };
 		34CAC0EB2333AF6A00BFBAB4 /* VerifyOTPVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34CAC0E92333AF6A00BFBAB4 /* VerifyOTPVC.xib */; };
+		34CB852B23600C94000B0059 /* FoodieAppNew.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 34CB852A23600C94000B0059 /* FoodieAppNew.xcdatamodel */; };
 		34D5A622234DA85F00D44A09 /* OrderHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A621234DA85F00D44A09 /* OrderHeaderView.swift */; };
 		34D5A624234DA87400D44A09 /* OrderHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A623234DA87400D44A09 /* OrderHeaderView.xib */; };
 		34D5A627234DBC6C00D44A09 /* OrderStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A625234DBC6C00D44A09 /* OrderStatusCell.swift */; };
@@ -426,7 +425,6 @@
 		34C01C7D2334AA780057DEF4 /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
 		34C01C7F2334AA780057DEF4 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		34C01C812334AA780057DEF4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		34C01CBB2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodieAppNew.xcdatamodel; sourceTree = "<group>"; };
 		34C01CBD2334AB2B0057DEF4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		34C01CBE2334AB2B0057DEF4 /* URLSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSchema.swift; sourceTree = "<group>"; };
 		34C01CC22334AB2B0057DEF4 /* NSManagedObject+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Mapping.m"; sourceTree = "<group>"; };
@@ -465,7 +463,6 @@
 		34C01CE72334AB2B0057DEF4 /* NSDate+Extentsion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extentsion.m"; sourceTree = "<group>"; };
 		34C01CE82334AB2B0057DEF4 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
 		34C01CE92334AB2B0057DEF4 /* NSDate+Extentsion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extentsion.h"; sourceTree = "<group>"; };
-		34C01CEA2334AB2B0057DEF4 /* MD5Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5Digest.swift; sourceTree = "<group>"; };
 		34C01CEB2334AB2B0057DEF4 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		34C01D072334D3570057DEF4 /* _PaymentOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _PaymentOption.swift; sourceTree = "<group>"; };
 		34C01D082334D3570057DEF4 /* _UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _UserData.swift; sourceTree = "<group>"; };
@@ -494,6 +491,7 @@
 		34CAC0E52333A44400BFBAB4 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		34CAC0E82333AF6A00BFBAB4 /* VerifyOTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPVC.swift; sourceTree = "<group>"; };
 		34CAC0E92333AF6A00BFBAB4 /* VerifyOTPVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyOTPVC.xib; sourceTree = "<group>"; };
+		34CB852A23600C94000B0059 /* FoodieAppNew.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodieAppNew.xcdatamodel; sourceTree = "<group>"; };
 		34D5A621234DA85F00D44A09 /* OrderHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHeaderView.swift; sourceTree = "<group>"; };
 		34D5A623234DA87400D44A09 /* OrderHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderHeaderView.xib; sourceTree = "<group>"; };
 		34D5A625234DBC6C00D44A09 /* OrderStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusCell.swift; sourceTree = "<group>"; };
@@ -863,7 +861,6 @@
 				344DE1B42341E344003D5D67 /* iOSDevCenters+GIF.swift */,
 				34C01CBF2334AB2B0057DEF4 /* Categories */,
 				34C01CEB2334AB2B0057DEF4 /* DateUtils.swift */,
-				34C01CEA2334AB2B0057DEF4 /* MD5Digest.swift */,
 				34C01CBD2334AB2B0057DEF4 /* SwiftyJSON.swift */,
 				34C01CBE2334AB2B0057DEF4 /* URLSchema.swift */,
 				34C01C2E2334A9230057DEF4 /* UIViewExtension.swift */,
@@ -886,7 +883,7 @@
 		34C01C422334AA770057DEF4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				34C01CBB2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel */,
+				34CB852A23600C94000B0059 /* FoodieAppNew.xcdatamodel */,
 				34C01C432334AA770057DEF4 /* UserClasses */,
 				34C01C552334AA770057DEF4 /* StaticClasses */,
 				34C01C782334AA770057DEF4 /* mapping.plist */,
@@ -1436,7 +1433,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C01C3F2334A9230057DEF4 /* Constant.swift in Sources */,
-				34C01CBC2334AAE00057DEF4 /* FoodieAppNew.xcdatamodel in Sources */,
 				3410E3AD233B3798000BA7FB /* AddNewAddressVC.swift in Sources */,
 				34C01D0D2334D3570057DEF4 /* _UserData.swift in Sources */,
 				34D5A622234DA85F00D44A09 /* OrderHeaderView.swift in Sources */,
@@ -1476,6 +1472,7 @@
 				344F79E2233CCCB600A35A43 /* _Address.swift in Sources */,
 				34C01D162334D35E0057DEF4 /* PaymentOption.swift in Sources */,
 				34899B2C233A2E0900A5FBA2 /* _Restaurant.swift in Sources */,
+				34CB852B23600C94000B0059 /* FoodieAppNew.xcdatamodel in Sources */,
 				344F79E0233CC35600A35A43 /* Country.swift in Sources */,
 				34C01D0E2334D3570057DEF4 /* _VerifyUser.swift in Sources */,
 				340D78AE2333464D0084971A /* ViewOrderTopCell.swift in Sources */,
@@ -1483,7 +1480,6 @@
 				34C01D172334D35E0057DEF4 /* DeliveryOption.swift in Sources */,
 				34C5B7D52345DA9C00D05C7C /* CityCell.swift in Sources */,
 				341B0D852330E12500D12504 /* RecommendedRestaurantCell.swift in Sources */,
-				34C01D002334AB2C0057DEF4 /* MD5Digest.swift in Sources */,
 				34899B29233A2E0900A5FBA2 /* _Items.swift in Sources */,
 				34C01CFB2334AB2C0057DEF4 /* NSDate+Hour.m in Sources */,
 				34C01CEF2334AB2C0057DEF4 /* NSManagedObject+Duplicate.m in Sources */,
@@ -1738,6 +1734,7 @@
 			baseConfigurationReference = AC1B51CE3C310DB8312F1F8F /* Pods-FoodieAppNew.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W8XTAQ2UVY;
 				INFOPLIST_FILE = FoodieAppNew/Info.plist;
@@ -1747,6 +1744,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = crossgrids.FoodieAppNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1757,6 +1755,7 @@
 			baseConfigurationReference = C923E8702BCCBF2AD3B12AAF /* Pods-FoodieAppNew.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W8XTAQ2UVY;
 				INFOPLIST_FILE = FoodieAppNew/Info.plist;
@@ -1766,6 +1765,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = crossgrids.FoodieAppNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

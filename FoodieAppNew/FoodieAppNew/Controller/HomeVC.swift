@@ -323,7 +323,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Reco
     //DeliveryAddressDelegate
     func selectedAddress(address: Address) {
         selectedAddress = address
-        areaId = Int(selectedAddress.area_id)
+        areaId = Int(address.area_id ?? "") ?? 0
         lblAddressTitle.text = selectedAddress.address_type
         clearRestaurantData()
         isLoaded = false

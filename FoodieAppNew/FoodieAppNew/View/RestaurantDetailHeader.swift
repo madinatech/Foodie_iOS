@@ -65,11 +65,11 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
             lblTime.text = "\(rest.delivery_time) min"
         }
 
-        if(rest.isFavorite == true){
-            btnFav.isSelected = true
-        } else {
-            btnFav.isSelected = false
-        }
+//        if(rest.isFavorite == true){
+//            btnFav.isSelected = true
+//        } else {
+//            btnFav.isSelected = false
+//        }
         
         lblTime.text = "\(rest.delivery_time) min"
         let url = URL(string: rest.images?.banner ?? "")
@@ -133,11 +133,11 @@ class RestaurantDetailHeader: UIView , UICollectionViewDelegate, UICollectionVie
     @IBAction func favouriteClicked(_ sender: UIButton) {
         if(sender.isSelected == true){
             sender.isSelected = false
-            rest.isFavorite = false
+//            rest.isFavorite = false
 //            removeFavourite()
         } else {
             sender.isSelected = true
-            rest.isFavorite = true
+//            rest.isFavorite = true
             addFavourite()
         }
         

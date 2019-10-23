@@ -26,7 +26,7 @@ class ManageAddressCell: UITableViewCell {
     func setData (address : Address)  {
         lblType.text = address.address_type
         lblAddress.text = address.address
-        lblAddress2.text = "\(address.town ?? "") , \(address.city ?? "")"
+        lblAddress2.text = "\(address.town ?? "") , \(address.city_name ?? "")"
     }
     
 }

@@ -7,10 +7,12 @@ import CoreData
 public enum ItemsAttributes: String {
     case desc = "desc"
     case entity_id = "entity_id"
+    case index = "index"
     case item_type = "item_type"
     case item_type_code = "item_type_code"
     case max_quantity = "max_quantity"
     case name = "name"
+    case section = "section"
 }
 
 public enum ItemsRelationships: String {
@@ -55,6 +57,9 @@ open class _Items: NSManagedObject {
     var entity_id: Int32 // Optional scalars not supported
 
     @NSManaged open
+    var index: Int32 // Optional scalars not supported
+
+    @NSManaged open
     var item_type: String?
 
     @NSManaged open
@@ -65,6 +70,9 @@ open class _Items: NSManagedObject {
 
     @NSManaged open
     var name: String?
+
+    @NSManaged open
+    var section: Int32 // Optional scalars not supported
 
     // MARK: - Relationships
 

@@ -7,8 +7,10 @@ import CoreData
 public enum VerifyUserAttributes: String {
     case email = "email"
     case entity_id = "entity_id"
+    case imei = "imei"
     case name = "name"
     case phone = "phone"
+    case token = "token"
 }
 
 public enum VerifyUserRelationships: String {
@@ -53,10 +55,16 @@ open class _VerifyUser: NSManagedObject {
     var entity_id: Int32 // Optional scalars not supported
 
     @NSManaged open
+    var imei: String?
+
+    @NSManaged open
     var name: String?
 
     @NSManaged open
     var phone: String?
+
+    @NSManaged open
+    var token: String?
 
     // MARK: - Relationships
 

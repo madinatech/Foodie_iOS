@@ -4,7 +4,7 @@
         <attribute name="address" optional="YES" attributeType="String"/>
         <attribute name="address_type" optional="YES" attributeType="String"/>
         <attribute name="area_id" optional="YES" attributeType="String"/>
-        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="city_name" optional="YES" attributeType="String"/>
         <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="floor" optional="YES" attributeType="String"/>
         <attribute name="house_number" optional="YES" attributeType="String"/>
@@ -16,11 +16,7 @@
         <attribute name="status" optional="YES" attributeType="String"/>
         <attribute name="street" optional="YES" attributeType="String"/>
         <attribute name="town" optional="YES" attributeType="String"/>
-        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="user_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="area" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area"/>
-        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City"/>
-        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country"/>
     </entity>
     <entity name="AppExpires" representedClassName="AppExpires" syncable="YES">
         <attribute name="expires" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -91,10 +87,12 @@
     <entity name="Items" representedClassName="Items" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="item_type" optional="YES" attributeType="String"/>
         <attribute name="item_type_code" optional="YES" attributeType="String"/>
         <attribute name="max_quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="section" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="customization_groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CustomizationGroup"/>
         <relationship name="price" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Price"/>
     </entity>
@@ -154,7 +152,6 @@
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="is_closed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
         <attribute name="preparation_time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
@@ -175,15 +172,17 @@
     <entity name="VerifyUser" representedClassName="VerifyUser" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="entity_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imei" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="token" optional="YES" attributeType="String"/>
         <relationship name="app_expires" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AppExpires"/>
         <relationship name="userData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserData"/>
     </entity>
     <elements>
-        <element name="Address" positionX="18" positionY="162" width="128" height="343"/>
+        <element name="Address" positionX="18" positionY="162" width="128" height="283"/>
         <element name="AppExpires" positionX="-54" positionY="18" width="128" height="105"/>
-        <element name="Area" positionX="9" positionY="153" width="128" height="90"/>
+        <element name="Area" positionX="9" positionY="153" width="128" height="88"/>
         <element name="Cart" positionX="0" positionY="144" width="128" height="148"/>
         <element name="City" positionX="0" positionY="144" width="128" height="105"/>
         <element name="Country" positionX="-9" positionY="135" width="128" height="90"/>
@@ -193,7 +192,7 @@
         <element name="Favourite" positionX="27" positionY="171" width="128" height="90"/>
         <element name="GroupValues" positionX="9" positionY="153" width="128" height="75"/>
         <element name="Images" positionX="-18" positionY="126" width="128" height="75"/>
-        <element name="Items" positionX="-9" positionY="117" width="128" height="165"/>
+        <element name="Items" positionX="-9" positionY="117" width="128" height="193"/>
         <element name="LocalCart" positionX="-9" positionY="135" width="128" height="135"/>
         <element name="Location" positionX="0" positionY="144" width="128" height="135"/>
         <element name="Menu" positionX="36" positionY="171" width="128" height="120"/>
@@ -202,8 +201,8 @@
         <element name="PaymentOption" positionX="-18" positionY="63" width="128" height="90"/>
         <element name="Price" positionX="0" positionY="144" width="128" height="90"/>
         <element name="RecentSearch" positionX="-9" positionY="135" width="128" height="75"/>
-        <element name="Restaurant" positionX="-27" positionY="81" width="128" height="328"/>
+        <element name="Restaurant" positionX="-27" positionY="81" width="128" height="313"/>
         <element name="UserData" positionX="-27" positionY="72" width="128" height="90"/>
-        <element name="VerifyUser" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="VerifyUser" positionX="-63" positionY="-18" width="128" height="163"/>
     </elements>
 </model>

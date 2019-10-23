@@ -36,6 +36,7 @@ class ViewOrderVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
         itemsArray = cart.cart_item.allObjects as! [LocalCart]
         tblView.reloadData()
     }
@@ -43,7 +44,7 @@ class ViewOrderVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func doneInClicked(_ sender: Any) {
         btnDine.isSelected = true
         btnDelivery.isSelected = false
@@ -75,20 +76,20 @@ class ViewOrderVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         }
     }
     
-   
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if(indexPath.section == 0){
-//             UITableView.automaticDimension
-//        }
+        //        if(indexPath.section == 0){
+        //             UITableView.automaticDimension
+        //        }
         if(indexPath.section == 2){
             return 470
         }
         return UITableView.automaticDimension
     }
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 50
-//    }
+    //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    //        return 50
+    //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(indexPath.section == 0){
@@ -99,6 +100,8 @@ class ViewOrderVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             }
             cell?.selectionStyle = .none
             cell?.showData(cart: cart)
+            cell?.btnAddAddress.addTarget(self, action: #selector(addAddressClicked(_:)), for: .touchUpInside)
+            cell?.btnDeliverTo.addTarget(self, action: #selector(deliverToClicked(_:)), for: .touchUpInside)
             return cell!
         } else if(indexPath.section == 1){
             var cell = tableView.dequeueReusableCell(withIdentifier: "ItemsCell") as? ItemsCell
@@ -111,8 +114,8 @@ class ViewOrderVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             cell?.showData(item: item)
             cell?.btnDelete.tag = indexPath.row
             cell?.btnPlus.tag = indexPath.row
-             cell?.btnPlus.addTarget(self, action: #selector(addClicked), for: .touchUpInside)
-             cell?.btnDelete.addTarget(self, action: #selector(deleteClicked), for: .touchUpInside)
+            cell?.btnPlus.addTarget(self, action: #selector(addClicked), for: .touchUpInside)
+            cell?.btnDelete.addTarget(self, action: #selector(deleteClicked), for: .touchUpInside)
             return cell!
             
         } else {
@@ -133,41 +136,41 @@ class ViewOrderVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     @objc func deleteClicked(_ sender: UIButton) {
-            let item : LocalCart = itemsArray[sender.tag]
-            removeItemsToCart(item: item)
+        let item : LocalCart = itemsArray[sender.tag]
+        removeItemsToCart(item: item)
         
         if(item.item_quantity == 0){
-                   item.removeEntity()
-                   cart.removeCart_itemObject(item)
-                   itemsArray = cart.cart_item.allObjects as! [LocalCart]
-                   tblView.reloadData()
-               } else {
-                 UIView.setAnimationsEnabled(false)
-                                       let indexPath = IndexPath(item: sender.tag, section: 1)
-                                       tblView.beginUpdates()
-                                       tblView.moveRow(at: indexPath, to: indexPath)
-                                       tblView.endUpdates()
-                                       tblView.reloadRows(at: [indexPath], with: .automatic)
-               }
+            item.removeEntity()
+            cart.removeCart_itemObject(item)
+            itemsArray = cart.cart_item.allObjects as! [LocalCart]
+            tblView.reloadData()
+        } else {
+            UIView.setAnimationsEnabled(false)
+            let indexPath = IndexPath(item: sender.tag, section: 1)
+            tblView.beginUpdates()
+            tblView.moveRow(at: indexPath, to: indexPath)
+            tblView.endUpdates()
+            tblView.reloadRows(at: [indexPath], with: .automatic)
         }
+    }
     
     
     @objc func addClicked(_ sender: UIButton) {
         let item : LocalCart = itemsArray[sender.tag]
         addItemsToCart(item: item)
         UIView.setAnimationsEnabled(false)
-                  let indexPath = IndexPath(item: sender.tag, section: 1)
-                  tblView.beginUpdates()
-                  tblView.moveRow(at: indexPath, to: indexPath)
-                  tblView.endUpdates()
-                  tblView.reloadRows(at: [indexPath], with: .automatic)
+        let indexPath = IndexPath(item: sender.tag, section: 1)
+        tblView.beginUpdates()
+        tblView.moveRow(at: indexPath, to: indexPath)
+        tblView.endUpdates()
+        tblView.reloadRows(at: [indexPath], with: .automatic)
     }
     
     func addItemsToCart (item : LocalCart)  {
         cart.total_items = cart.total_items + 1
         cart.total_amount = cart.total_amount + item.item_price
-//        item.item_price = item.item_price + (item.item_price / item.item_quantity)
-         item.item_quantity = item.item_quantity + 1
+        //        item.item_price = item.item_price + (item.item_price / item.item_quantity)
+        item.item_quantity = item.item_quantity + 1
         item.saveEntity()
         cart.saveEntity()
     }
@@ -176,16 +179,32 @@ class ViewOrderVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         cart.total_items = cart.total_items - 1
         cart.total_amount = cart.total_amount - item.item_price
         
-//        item.item_price = item.item_price - (item.item_price / item.item_quantity)
+        //        item.item_price = item.item_price - (item.item_price / item.item_quantity)
         item.item_quantity = item.item_quantity - 1
         if(cart.total_items == 0){
             Cart.removeEntity()
             self.dismiss(animated: true, completion: nil)
         }
         
-       
-         item.saveEntity()
+        
+        item.saveEntity()
         cart.saveEntity()
-    
+        
     }
+    
+    @objc func addAddressClicked(_ sender: UIButton) {
+        let vc = AddNewAddressVC.initViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func deliverToClicked(_ sender: UIButton) {
+        let addressArray = Address.getAll()
+        if(addressArray.count > 0){
+            let vc = DeliveryAddressVC.initViewController(selectedAddress: Address.mr_createEntity()!)
+            let nav = UINavigationController.init(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
+        }
+    }
+    
 }

@@ -20,6 +20,11 @@ open class Address: _Address {
         return mapping
     }
     
+    class func getAll() -> [Address] {
+        let pre = NSPredicate(format: "entity_id != 0")
+        return Address.mr_findAll(with: pre) as! [Address]
+    }
+    
     
     class func getUserAddress(userID: Int) -> [Address] {
         let pre = NSPredicate(format: "user_id == %d", userID)
@@ -50,7 +55,7 @@ open class Address: _Address {
                 let array : [[String: Any]] = request.serverData["address"] as! [[String: Any]]
                 
                 MagicalRecord.save({ (localContext: NSManagedObjectContext) in
-//                    Address.mr_truncateAll(in: localContext)
+                    //                    Address.mr_truncateAll(in: localContext)
                     let dict = FEMDeserializer.collection(fromRepresentation: array, mapping: Address.defaultMapping(), context: localContext)
                     
                 }, completion: { (isSuccess, error) in

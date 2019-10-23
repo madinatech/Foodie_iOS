@@ -101,8 +101,9 @@ class RestaurantDetailVC: UIViewController,UITableViewDelegate, UITableViewDataS
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
             let vc = ViewOrderVC.initViewController(cart: cart)
-            vc.modalPresentationStyle = .fullScreen
-            self.navigationController?.present(vc, animated: true, completion: nil)
+             let nav = UINavigationController.init(rootViewController: vc)
+                                   nav.modalPresentationStyle = .fullScreen
+                                   self.present(nav, animated: true, completion: nil)
         }
         
     }
