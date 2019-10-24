@@ -42,7 +42,7 @@ open class _AppExpires: NSManagedObject {
     // MARK: - Properties
 
     @NSManaged open
-    var expires: Date?
+    var expires: String?
 
     @NSManaged open
     var update_url: String?
@@ -51,7 +51,7 @@ open class _AppExpires: NSManagedObject {
     var version: String?
 
     @NSManaged open
-    var warning: Date?
+    var warning: String?
 
     // MARK: - Relationships
 

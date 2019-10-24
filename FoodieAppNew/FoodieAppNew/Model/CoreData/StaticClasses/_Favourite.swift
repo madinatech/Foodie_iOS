@@ -5,7 +5,6 @@ import Foundation
 import CoreData
 
 public enum FavouriteAttributes: String {
-    case created_at = "created_at"
     case favourite_id = "favourite_id"
 }
 
@@ -42,9 +41,6 @@ open class _Favourite: NSManagedObject {
     }
 
     // MARK: - Properties
-
-    @NSManaged open
-    var created_at: Date?
 
     @NSManaged open
     var favourite_id: Int32 // Optional scalars not supported

@@ -6,8 +6,6 @@
 	<dict>
 		<key>favourite_id</key>
 		<string>favourite_id</string>
-		<key>created_at</key>
-		<string>created_at</string>
 	</dict>
 	<key>Address</key>
 	<dict>
@@ -17,12 +15,8 @@
 		<string>address</string>
 		<key>address_type</key>
 		<string>address_type</string>
-		<key>city</key>
-		<string>city</string>
-		<key>country</key>
-		<string>country</string>
-		<key>created_at</key>
-		<string>created_at</string>
+		<key>city_name</key>
+		<string>city_name</string>
 		<key>floor</key>
 		<string>floor</string>
 		<key>house_number</key>
@@ -43,8 +37,6 @@
 		<string>street</string>
 		<key>town</key>
 		<string>town</string>
-		<key>updated_at</key>
-		<string>updated_at</string>
 		<key>user_id</key>
 		<string>user_id</string>
 	</dict>

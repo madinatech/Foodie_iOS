@@ -7,12 +7,10 @@ open class AppExpires: _AppExpires {
     
     class func defaultMapping() -> FEMMapping {
         let mapping = FEMMapping(entityName: AppExpires.entityName())
-        var dict: [String: String] = CDHelper.mapping(cls: AppExpires.self) as! [String : String]
-        dict.removeValue(forKey: "expires")
-        dict.removeValue(forKey: "warning")
+        let dict: [String: String] = CDHelper.mapping(cls: AppExpires.self) as! [String : String]
+       
         mapping.addAttributes(from: dict)
-        mapping.addAttribute(AppExpires.dateTimeAttribute(for: "expires", andKeyPath: "expires"))
-        mapping.addAttribute(AppExpires.dateTimeAttribute(for: "warning", andKeyPath: "warning"))
+      
         
         return mapping
     }

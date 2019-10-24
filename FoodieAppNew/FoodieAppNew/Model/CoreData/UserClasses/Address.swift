@@ -12,10 +12,6 @@ open class Address: _Address {
         let dict: [String: String] = CDHelper.mapping(cls: Address.self) as! [String : String]
         
         mapping.addAttributes(from: dict)
-        
-        mapping.addRelationshipMapping(Area.defaultMapping(), forProperty: "area", keyPath: "area")
-        mapping.addRelationshipMapping(City.defaultMapping(), forProperty: "city", keyPath: "city")
-        mapping.addRelationshipMapping(Country.defaultMapping(), forProperty: "country", keyPath: "country")
         mapping.primaryKey = "entity_id"
         return mapping
     }
